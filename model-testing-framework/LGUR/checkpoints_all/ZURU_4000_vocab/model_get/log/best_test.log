@@ -1,0 +1,60 @@
+Testing Epoch: 1 Iteration:468
+similarity_all:
+t2i: @R1: 0.1138, @R5: 0.2138, @R10: 0.2722, map: 0.1599
+t2i_wm: @R1: 0.1138, @R5: 0.2138, @R10: 0.2722, map: 0.1388
+Testing Epoch: 2 Iteration:468
+similarity_all:
+t2i: @R1: 0.2374, @R5: 0.3908, @R10: 0.4694, map: 0.3004
+t2i_wm: @R1: 0.2374, @R5: 0.3908, @R10: 0.4694, map: 0.2719
+Testing Epoch: 3 Iteration:468
+similarity_all:
+t2i: @R1: 0.298, @R5: 0.4754, @R10: 0.549, map: 0.3649
+t2i_wm: @R1: 0.298, @R5: 0.4754, @R10: 0.549, map: 0.3348
+Testing Epoch: 4 Iteration:468
+similarity_all:
+t2i: @R1: 0.3546, @R5: 0.527, @R10: 0.6086, map: 0.4199
+t2i_wm: @R1: 0.3546, @R5: 0.527, @R10: 0.6086, map: 0.3905
+Testing Epoch: 5 Iteration:468
+similarity_all:
+t2i: @R1: 0.3752, @R5: 0.5482, @R10: 0.6272, map: 0.4399
+t2i_wm: @R1: 0.3752, @R5: 0.5482, @R10: 0.6272, map: 0.4108
+Testing Epoch: 6 Iteration:468
+similarity_all:
+t2i: @R1: 0.4028, @R5: 0.5826, @R10: 0.6542, map: 0.4683
+t2i_wm: @R1: 0.4028, @R5: 0.5826, @R10: 0.6542, map: 0.4389
+Testing Epoch: 7 Iteration:468
+similarity_all:
+t2i: @R1: 0.4184, @R5: 0.5998, @R10: 0.6734, map: 0.4833
+t2i_wm: @R1: 0.4184, @R5: 0.5998, @R10: 0.6734, map: 0.4542
+Testing Epoch: 8 Iteration:468
+similarity_all:
+t2i: @R1: 0.427, @R5: 0.603, @R10: 0.6742, map: 0.491
+t2i_wm: @R1: 0.427, @R5: 0.603, @R10: 0.6742, map: 0.4623
+Testing Epoch: 9 Iteration:468
+similarity_all:
+t2i: @R1: 0.4416, @R5: 0.6084, @R10: 0.6818, map: 0.5033
+t2i_wm: @R1: 0.4416, @R5: 0.6084, @R10: 0.6818, map: 0.4756
+Testing Epoch: 11 Iteration:468
+similarity_all:
+t2i: @R1: 0.4552, @R5: 0.6324, @R10: 0.7044, map: 0.5183
+t2i_wm: @R1: 0.4552, @R5: 0.6324, @R10: 0.7044, map: 0.49
+Testing Epoch: 20 Iteration:468
+similarity_all:
+t2i: @R1: 0.4814, @R5: 0.6502, @R10: 0.7232, map: 0.5426
+t2i_wm: @R1: 0.4814, @R5: 0.6502, @R10: 0.7232, map: 0.5152
+Testing Epoch: 21 Iteration:468
+similarity_all:
+t2i: @R1: 0.4868, @R5: 0.6584, @R10: 0.7246, map: 0.5473
+t2i_wm: @R1: 0.4868, @R5: 0.6584, @R10: 0.7246, map: 0.5202
+Testing Epoch: 22 Iteration:468
+similarity_all:
+t2i: @R1: 0.4938, @R5: 0.658, @R10: 0.7278, map: 0.5533
+t2i_wm: @R1: 0.4938, @R5: 0.658, @R10: 0.7278, map: 0.5267
+Testing Epoch: 22 Iteration:1
+similarity_all:
+t2i: @R1: 0.652, @R5: 0.815, @R10: 0.8688, map: 0.7061
+t2i_wm: @R1: 0.652, @R5: 0.815, @R10: 0.8688, map: 0.6821
+Testing Epoch: 22 Iteration:1
+similarity_all:
+t2i: @R1: 0.652, @R5: 0.815, @R10: 0.8688, map: 0.7061
+t2i_wm: @R1: 0.652, @R5: 0.815, @R10: 0.8688, map: 0.6821

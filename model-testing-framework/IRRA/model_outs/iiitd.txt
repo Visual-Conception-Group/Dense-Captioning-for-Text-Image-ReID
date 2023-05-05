@@ -1,0 +1,792 @@
+logs/IIITD/20230418_223743_iira is not exists, create given directory
+2023-04-18 22:37:43,144 IRRA INFO: Namespace(GPU_ID=0
+ local_rank=0
+ name='iira'
+ output_dir='logs/IIITD/20230418_223743_iira'
+ log_period=100
+ eval_period=1
+ val_dataset='val'
+ resume=False
+ resume_ckpt_file=''
+ pretrain_choice='ViT-B/16'
+ temperature=0.02
+ img_aug=True
+ cmt_depth=4
+ masked_token_rate=0.8
+ masked_token_unchanged_rate=0.1
+ lr_factor=5.0
+ MLM=True
+ loss_names='sdm+mlm+id'
+ mlm_loss_weight=1.0
+ id_loss_weight=1.0
+ img_size=(384
+ 128)
+ stride_size=16
+ text_length=77
+ vocab_size=49408
+ optimizer='Adam'
+ lr=1e-05
+ bias_lr_factor=2.0
+ momentum=0.9
+ weight_decay=4e-05
+ weight_decay_bias=0.0
+ alpha=0.9
+ beta=0.999
+ num_epoch=60
+ milestones=(20
+ 50)
+ gamma=0.1
+ warmup_factor=0.1
+ warmup_epochs=5
+ warmup_method='linear'
+ lrscheduler='cosine'
+ target_lr=0
+ power=0.9
+ dataset_name='IIITD'
+ sampler='random'
+ num_instance=4
+ root_dir='./data'
+ batch_size=64
+ test_batch_size=512
+ num_workers=8
+ training=True
+ distributed=False)
+2023-04-18 22:37:43,910 IRRA.dataset INFO: => IIITD Images and Captions are loaded
+2023-04-18 22:37:43,910 IRRA.dataset INFO: IIITD Dataset statistics:
+2023-04-18 22:37:43,912 IRRA.dataset INFO: 
++--------+-------+--------+----------+
+| subset |  ids  | images | captions |
++--------+-------+--------+----------+
+| train  | 15000 | 30000  |  30000   |
+|  test  |  2500 |  5000  |   5000   |
+|  val   |  2500 |  5000  |   5000   |
++--------+-------+--------+----------+
+2023-04-18 22:37:44,011 IRRA.dataset INFO: using random sampler
+Training Model with ['sdm', 'mlm', 'id'] tasks
+2023-04-18 22:37:45,210 IRRA.model INFO: Load pretrained ViT-B/16 CLIP model with model config: {'embed_dim': 512, 'image_resolution': (384, 128), 'vision_layers': 12, 'vision_width': 768, 'vision_patch_size': 16, 'context_length': 77, 'vocab_size': 49408, 'transformer_width': 512, 'transformer_heads': 8, 'transformer_layers': 12, 'stride_size': 16}
+Resized position embedding from size:torch.Size([1, 197, 768]) to size: torch.Size([1, 193, 768]) with height:24 width: 8
+2023-04-18 22:37:48,526 IRRA INFO: Total params: 197M
+Using 5.0 times learning rate for random init module 
+2023-04-18 22:37:51,929 IRRA.train INFO: start training
+2023-04-18 22:38:24,137 IRRA.train INFO: Epoch[1] Iteration[100/469], loss: 43.3709, sdm_loss: 23.5871, id_loss: 9.6159, mlm_loss: 10.1679, mlm_acc: 0.0486, Base Lr: 1.00e-06
+2023-04-18 22:38:47,632 IRRA.train INFO: Epoch[1] Iteration[200/469], loss: 40.9572, sdm_loss: 21.3221, id_loss: 9.6159, mlm_loss: 10.0193, mlm_acc: 0.0519, Base Lr: 1.00e-06
+2023-04-18 22:39:10,788 IRRA.train INFO: Epoch[1] Iteration[300/469], loss: 39.2576, sdm_loss: 19.7190, id_loss: 9.6158, mlm_loss: 9.9228, txt_acc: 0.0001, mlm_acc: 0.0531, Base Lr: 1.00e-06
+2023-04-18 22:39:38,121 IRRA.train INFO: Epoch[1] Iteration[400/469], loss: 37.9461, sdm_loss: 18.4913, id_loss: 9.6158, mlm_loss: 9.8389, txt_acc: 0.0001, mlm_acc: 0.0544, Base Lr: 1.00e-06
+2023-04-18 22:40:07,960 IRRA.train INFO: Epoch 1 done. Time per batch: 0.290[s] Speed: 220.7[samples/s]
+2023-04-18 22:40:07,961 IRRA.train INFO: Validation Results - Epoch: 1
+2023-04-18 22:40:19,197 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 21.260 | 34.840 | 42.500 | 29.677 | 31.771 |
++------+--------+--------+--------+--------+--------+
+2023-04-18 22:41:04,642 IRRA.train INFO: Epoch[2] Iteration[100/469], loss: 30.8178, sdm_loss: 12.0248, id_loss: 9.6140, mlm_loss: 9.1790, img_acc: 0.0002, txt_acc: 0.0005, mlm_acc: 0.0592, Base Lr: 2.80e-06
+2023-04-18 22:41:44,992 IRRA.train INFO: Epoch[2] Iteration[200/469], loss: 29.4234, sdm_loss: 10.8990, id_loss: 9.6137, mlm_loss: 8.9107, img_acc: 0.0005, txt_acc: 0.0003, mlm_acc: 0.0592, Base Lr: 2.80e-06
+2023-04-18 22:42:25,405 IRRA.train INFO: Epoch[2] Iteration[300/469], loss: 28.3415, sdm_loss: 10.0874, id_loss: 9.6134, mlm_loss: 8.6406, img_acc: 0.0004, txt_acc: 0.0004, mlm_acc: 0.0592, Base Lr: 2.80e-06
+2023-04-18 22:43:05,784 IRRA.train INFO: Epoch[2] Iteration[400/469], loss: 27.4948, sdm_loss: 9.5031, id_loss: 9.6132, mlm_loss: 8.3786, img_acc: 0.0004, txt_acc: 0.0003, mlm_acc: 0.0586, Base Lr: 2.80e-06
+2023-04-18 22:43:33,893 IRRA.train INFO: Epoch 2 done. Time per batch: 0.411[s] Speed: 155.8[samples/s]
+2023-04-18 22:43:33,894 IRRA.train INFO: Validation Results - Epoch: 2
+2023-04-18 22:43:45,284 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 33.760 | 51.660 | 59.680 | 43.495 | 45.853 |
++------+--------+--------+--------+--------+--------+
+2023-04-18 22:44:31,845 IRRA.train INFO: Epoch[3] Iteration[100/469], loss: 23.3321, sdm_loss: 7.0062, id_loss: 9.6072, mlm_loss: 6.7187, img_acc: 0.0066, txt_acc: 0.0047, mlm_acc: 0.0578, Base Lr: 4.60e-06
+2023-04-18 22:45:12,150 IRRA.train INFO: Epoch[3] Iteration[200/469], loss: 22.7020, sdm_loss: 6.6448, id_loss: 9.6067, mlm_loss: 6.4506, img_acc: 0.0069, txt_acc: 0.0041, mlm_acc: 0.0579, Base Lr: 4.60e-06
+2023-04-18 22:45:52,551 IRRA.train INFO: Epoch[3] Iteration[300/469], loss: 22.2593, sdm_loss: 6.4037, id_loss: 9.6062, mlm_loss: 6.2493, img_acc: 0.0077, txt_acc: 0.0043, mlm_acc: 0.0586, Base Lr: 4.60e-06
+2023-04-18 22:46:29,693 IRRA.train INFO: Epoch[3] Iteration[400/469], loss: 21.8727, sdm_loss: 6.1642, id_loss: 9.6057, mlm_loss: 6.1028, img_acc: 0.0084, txt_acc: 0.0040, mlm_acc: 0.0590, Base Lr: 4.60e-06
+2023-04-18 22:46:52,886 IRRA.train INFO: Epoch 3 done. Time per batch: 0.393[s] Speed: 162.9[samples/s]
+2023-04-18 22:46:52,886 IRRA.train INFO: Validation Results - Epoch: 3
+2023-04-18 22:47:04,476 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 39.180 | 57.900 | 66.020 | 49.118 | 51.488 |
++------+--------+--------+--------+--------+--------+
+2023-04-18 22:47:51,802 IRRA.train INFO: Epoch[4] Iteration[100/469], loss: 20.0239, sdm_loss: 4.9489, id_loss: 9.5955, mlm_loss: 5.4795, img_acc: 0.0773, txt_acc: 0.0320, mlm_acc: 0.0584, Base Lr: 6.40e-06
+2023-04-18 22:48:32,762 IRRA.train INFO: Epoch[4] Iteration[200/469], loss: 19.8590, sdm_loss: 4.8403, id_loss: 9.5948, mlm_loss: 5.4239, img_acc: 0.0761, txt_acc: 0.0337, mlm_acc: 0.0596, Base Lr: 6.40e-06
+2023-04-18 22:49:13,773 IRRA.train INFO: Epoch[4] Iteration[300/469], loss: 19.7886, sdm_loss: 4.7977, id_loss: 9.5940, mlm_loss: 5.3969, img_acc: 0.0742, txt_acc: 0.0317, mlm_acc: 0.0600, Base Lr: 6.40e-06
+2023-04-18 22:49:54,469 IRRA.train INFO: Epoch[4] Iteration[400/469], loss: 19.6639, sdm_loss: 4.6973, id_loss: 9.5932, mlm_loss: 5.3734, img_acc: 0.0743, txt_acc: 0.0300, mlm_acc: 0.0597, Base Lr: 6.40e-06
+2023-04-18 22:50:22,530 IRRA.train INFO: Epoch 4 done. Time per batch: 0.415[s] Speed: 154.1[samples/s]
+2023-04-18 22:50:22,530 IRRA.train INFO: Validation Results - Epoch: 4
+2023-04-18 22:50:34,018 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 42.500 | 61.020 | 69.040 | 52.267 | 54.595 |
++------+--------+--------+--------+--------+--------+
+2023-04-18 22:51:20,834 IRRA.train INFO: Epoch[5] Iteration[100/469], loss: 18.9388, sdm_loss: 4.1394, id_loss: 9.5790, mlm_loss: 5.2204, img_acc: 0.2898, txt_acc: 0.1533, mlm_acc: 0.0610, Base Lr: 8.20e-06
+2023-04-18 22:52:01,326 IRRA.train INFO: Epoch[5] Iteration[200/469], loss: 18.8003, sdm_loss: 4.0213, id_loss: 9.5779, mlm_loss: 5.2012, img_acc: 0.2512, txt_acc: 0.1283, mlm_acc: 0.0611, Base Lr: 8.20e-06
+2023-04-18 22:52:41,750 IRRA.train INFO: Epoch[5] Iteration[300/469], loss: 18.6206, sdm_loss: 3.8588, id_loss: 9.5769, mlm_loss: 5.1850, img_acc: 0.2447, txt_acc: 0.1203, mlm_acc: 0.0610, Base Lr: 8.20e-06
+2023-04-18 22:53:22,791 IRRA.train INFO: Epoch[5] Iteration[400/469], loss: 18.5022, sdm_loss: 3.7510, id_loss: 9.5758, mlm_loss: 5.1753, img_acc: 0.2429, txt_acc: 0.1144, mlm_acc: 0.0615, Base Lr: 8.20e-06
+2023-04-18 22:53:46,311 IRRA.train INFO: Epoch 5 done. Time per batch: 0.403[s] Speed: 158.6[samples/s]
+2023-04-18 22:53:46,311 IRRA.train INFO: Validation Results - Epoch: 5
+2023-04-18 22:53:54,822 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 43.840 | 62.140 | 69.500 | 53.314 | 55.577 |
++------+--------+--------+--------+--------+--------+
+2023-04-18 22:54:41,179 IRRA.train INFO: Epoch[6] Iteration[100/469], loss: 17.9906, sdm_loss: 3.2985, id_loss: 9.5583, mlm_loss: 5.1338, img_acc: 0.5502, txt_acc: 0.3405, mlm_acc: 0.0633, Base Lr: 1.00e-05
+2023-04-18 22:55:21,545 IRRA.train INFO: Epoch[6] Iteration[200/469], loss: 17.8965, sdm_loss: 3.2260, id_loss: 9.5568, mlm_loss: 5.1138, img_acc: 0.4845, txt_acc: 0.2855, mlm_acc: 0.0636, Base Lr: 1.00e-05
+2023-04-18 22:56:02,054 IRRA.train INFO: Epoch[6] Iteration[300/469], loss: 17.8531, sdm_loss: 3.1964, id_loss: 9.5552, mlm_loss: 5.1015, img_acc: 0.4580, txt_acc: 0.2610, mlm_acc: 0.0640, Base Lr: 1.00e-05
+2023-04-18 22:56:42,171 IRRA.train INFO: Epoch[6] Iteration[400/469], loss: 17.8035, sdm_loss: 3.1594, id_loss: 9.5538, mlm_loss: 5.0904, img_acc: 0.4448, txt_acc: 0.2479, mlm_acc: 0.0652, Base Lr: 1.00e-05
+2023-04-18 22:57:09,588 IRRA.train INFO: Epoch 6 done. Time per batch: 0.409[s] Speed: 156.6[samples/s]
+2023-04-18 22:57:09,589 IRRA.train INFO: Validation Results - Epoch: 6
+2023-04-18 22:57:20,940 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 42.580 | 61.840 | 69.180 | 52.460 | 54.799 |
++------+--------+--------+--------+--------+--------+
+2023-04-18 22:58:04,339 IRRA.train INFO: Epoch[7] Iteration[100/469], loss: 17.2098, sdm_loss: 2.6521, id_loss: 9.5311, mlm_loss: 5.0266, img_acc: 0.7795, txt_acc: 0.5522, mlm_acc: 0.0704, Base Lr: 9.99e-06
+2023-04-18 22:58:44,788 IRRA.train INFO: Epoch[7] Iteration[200/469], loss: 16.9678, sdm_loss: 2.4550, id_loss: 9.5294, mlm_loss: 4.9834, img_acc: 0.7244, txt_acc: 0.4874, mlm_acc: 0.0725, Base Lr: 9.99e-06
+2023-04-18 22:59:25,171 IRRA.train INFO: Epoch[7] Iteration[300/469], loss: 16.9543, sdm_loss: 2.4855, id_loss: 9.5280, mlm_loss: 4.9408, img_acc: 0.6883, txt_acc: 0.4553, mlm_acc: 0.0758, Base Lr: 9.99e-06
+2023-04-18 23:00:05,561 IRRA.train INFO: Epoch[7] Iteration[400/469], loss: 16.8743, sdm_loss: 2.4465, id_loss: 9.5264, mlm_loss: 4.9014, img_acc: 0.6734, txt_acc: 0.4397, mlm_acc: 0.0798, Base Lr: 9.99e-06
+2023-04-18 23:00:33,555 IRRA.train INFO: Epoch 7 done. Time per batch: 0.409[s] Speed: 156.3[samples/s]
+2023-04-18 23:00:33,555 IRRA.train INFO: Validation Results - Epoch: 7
+2023-04-18 23:00:44,712 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 48.200 | 66.300 | 73.840 | 57.636 | 59.856 |
++------+--------+--------+--------+--------+--------+
+2023-04-18 23:01:22,034 IRRA.train INFO: Epoch[8] Iteration[100/469], loss: 16.3079, sdm_loss: 2.1250, id_loss: 9.5039, mlm_loss: 4.6790, img_acc: 0.8762, txt_acc: 0.6923, mlm_acc: 0.1084, Base Lr: 9.97e-06
+2023-04-18 23:02:02,535 IRRA.train INFO: Epoch[8] Iteration[200/469], loss: 16.2314, sdm_loss: 2.0810, id_loss: 9.5022, mlm_loss: 4.6482, img_acc: 0.8367, txt_acc: 0.6353, mlm_acc: 0.1102, Base Lr: 9.97e-06
+2023-04-18 23:02:43,165 IRRA.train INFO: Epoch[8] Iteration[300/469], loss: 16.1855, sdm_loss: 2.0829, id_loss: 9.5008, mlm_loss: 4.6018, img_acc: 0.8104, txt_acc: 0.6020, mlm_acc: 0.1189, Base Lr: 9.97e-06
+2023-04-18 23:03:23,734 IRRA.train INFO: Epoch[8] Iteration[400/469], loss: 16.1097, sdm_loss: 2.0553, id_loss: 9.4994, mlm_loss: 4.5550, img_acc: 0.7998, txt_acc: 0.5852, mlm_acc: 0.1280, Base Lr: 9.97e-06
+2023-04-18 23:03:51,852 IRRA.train INFO: Epoch 8 done. Time per batch: 0.392[s] Speed: 163.2[samples/s]
+2023-04-18 23:03:51,852 IRRA.train INFO: Validation Results - Epoch: 8
+2023-04-18 23:04:03,227 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 47.940 | 66.020 | 73.320 | 57.293 | 59.509 |
++------+--------+--------+--------+--------+--------+
+2023-04-18 23:04:47,291 IRRA.train INFO: Epoch[9] Iteration[100/469], loss: 15.4599, sdm_loss: 1.7819, id_loss: 9.4754, mlm_loss: 4.2026, img_acc: 0.9227, txt_acc: 0.7653, mlm_acc: 0.1855, Base Lr: 9.93e-06
+2023-04-18 23:05:27,991 IRRA.train INFO: Epoch[9] Iteration[200/469], loss: 15.3924, sdm_loss: 1.7673, id_loss: 9.4743, mlm_loss: 4.1508, img_acc: 0.8933, txt_acc: 0.7227, mlm_acc: 0.1997, Base Lr: 9.93e-06
+2023-04-18 23:06:08,692 IRRA.train INFO: Epoch[9] Iteration[300/469], loss: 15.3536, sdm_loss: 1.7928, id_loss: 9.4730, mlm_loss: 4.0878, img_acc: 0.8775, txt_acc: 0.7007, mlm_acc: 0.2110, Base Lr: 9.93e-06
+2023-04-18 23:06:49,477 IRRA.train INFO: Epoch[9] Iteration[400/469], loss: 15.2621, sdm_loss: 1.7591, id_loss: 9.4716, mlm_loss: 4.0314, img_acc: 0.8680, txt_acc: 0.6856, mlm_acc: 0.2211, Base Lr: 9.93e-06
+2023-04-18 23:07:17,691 IRRA.train INFO: Epoch 9 done. Time per batch: 0.414[s] Speed: 154.7[samples/s]
+2023-04-18 23:07:17,691 IRRA.train INFO: Validation Results - Epoch: 9
+2023-04-18 23:07:29,092 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 47.380 | 66.140 | 73.800 | 56.998 | 59.266 |
++------+--------+--------+--------+--------+--------+
+2023-04-18 23:08:11,332 IRRA.train INFO: Epoch[10] Iteration[100/469], loss: 14.9363, sdm_loss: 1.7740, id_loss: 9.4495, mlm_loss: 3.7129, img_acc: 0.9377, txt_acc: 0.8159, mlm_acc: 0.2722, Base Lr: 9.87e-06
+2023-04-18 23:08:45,172 IRRA.train INFO: Epoch[10] Iteration[200/469], loss: 14.8317, sdm_loss: 1.7154, id_loss: 9.4479, mlm_loss: 3.6685, img_acc: 0.9206, txt_acc: 0.7841, mlm_acc: 0.2778, Base Lr: 9.87e-06
+2023-04-18 23:09:25,735 IRRA.train INFO: Epoch[10] Iteration[300/469], loss: 14.7846, sdm_loss: 1.6983, id_loss: 9.4465, mlm_loss: 3.6397, img_acc: 0.9103, txt_acc: 0.7611, mlm_acc: 0.2837, Base Lr: 9.87e-06
+2023-04-18 23:10:06,098 IRRA.train INFO: Epoch[10] Iteration[400/469], loss: 14.7223, sdm_loss: 1.6738, id_loss: 9.4449, mlm_loss: 3.6036, img_acc: 0.9017, txt_acc: 0.7467, mlm_acc: 0.2893, Base Lr: 9.87e-06
+2023-04-18 23:10:34,410 IRRA.train INFO: Epoch 10 done. Time per batch: 0.393[s] Speed: 162.8[samples/s]
+2023-04-18 23:10:34,411 IRRA.train INFO: Validation Results - Epoch: 10
+2023-04-18 23:10:45,906 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 50.360 | 69.280 | 76.580 | 59.782 | 61.998 |
++------+--------+--------+--------+--------+--------+
+2023-04-18 23:11:32,245 IRRA.train INFO: Epoch[11] Iteration[100/469], loss: 14.3132, sdm_loss: 1.4826, id_loss: 9.4215, mlm_loss: 3.4092, img_acc: 0.9505, txt_acc: 0.8500, mlm_acc: 0.3255, Base Lr: 9.80e-06
+2023-04-18 23:12:12,597 IRRA.train INFO: Epoch[11] Iteration[200/469], loss: 14.2859, sdm_loss: 1.4796, id_loss: 9.4198, mlm_loss: 3.3865, img_acc: 0.9398, txt_acc: 0.8266, mlm_acc: 0.3280, Base Lr: 9.80e-06
+2023-04-18 23:12:53,178 IRRA.train INFO: Epoch[11] Iteration[300/469], loss: 14.1972, sdm_loss: 1.4239, id_loss: 9.4181, mlm_loss: 3.3551, img_acc: 0.9320, txt_acc: 0.8106, mlm_acc: 0.3327, Base Lr: 9.80e-06
+2023-04-18 23:13:33,645 IRRA.train INFO: Epoch[11] Iteration[400/469], loss: 14.1952, sdm_loss: 1.4460, id_loss: 9.4168, mlm_loss: 3.3324, img_acc: 0.9239, txt_acc: 0.7959, mlm_acc: 0.3359, Base Lr: 9.80e-06
+2023-04-18 23:14:01,791 IRRA.train INFO: Epoch 11 done. Time per batch: 0.411[s] Speed: 155.6[samples/s]
+2023-04-18 23:14:01,791 IRRA.train INFO: Validation Results - Epoch: 11
+2023-04-18 23:14:12,978 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 51.640 | 68.760 | 76.100 | 60.536 | 62.638 |
++------+--------+--------+--------+--------+--------+
+2023-04-18 23:15:00,568 IRRA.train INFO: Epoch[12] Iteration[100/469], loss: 14.0261, sdm_loss: 1.4860, id_loss: 9.3945, mlm_loss: 3.1456, img_acc: 0.9581, txt_acc: 0.8637, mlm_acc: 0.3692, Base Lr: 9.71e-06
+2023-04-18 23:15:32,200 IRRA.train INFO: Epoch[12] Iteration[200/469], loss: 13.9312, sdm_loss: 1.4217, id_loss: 9.3930, mlm_loss: 3.1164, img_acc: 0.9495, txt_acc: 0.8495, mlm_acc: 0.3728, Base Lr: 9.71e-06
+2023-04-18 23:16:12,446 IRRA.train INFO: Epoch[12] Iteration[300/469], loss: 13.8771, sdm_loss: 1.3823, id_loss: 9.3913, mlm_loss: 3.1036, img_acc: 0.9436, txt_acc: 0.8372, mlm_acc: 0.3758, Base Lr: 9.71e-06
+2023-04-18 23:16:52,860 IRRA.train INFO: Epoch[12] Iteration[400/469], loss: 13.8126, sdm_loss: 1.3442, id_loss: 9.3892, mlm_loss: 3.0792, img_acc: 0.9413, txt_acc: 0.8295, mlm_acc: 0.3809, Base Lr: 9.71e-06
+2023-04-18 23:17:20,788 IRRA.train INFO: Epoch 12 done. Time per batch: 0.394[s] Speed: 162.5[samples/s]
+2023-04-18 23:17:20,788 IRRA.train INFO: Validation Results - Epoch: 12
+2023-04-18 23:17:31,972 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 51.380 | 71.200 | 77.560 | 60.989 | 63.219 |
++------+--------+--------+--------+--------+--------+
+2023-04-18 23:18:15,727 IRRA.train INFO: Epoch[13] Iteration[100/469], loss: 13.5463, sdm_loss: 1.2368, id_loss: 9.3660, mlm_loss: 2.9434, img_acc: 0.9587, txt_acc: 0.8787, mlm_acc: 0.4105, Base Lr: 9.61e-06
+2023-04-18 23:18:56,013 IRRA.train INFO: Epoch[13] Iteration[200/469], loss: 13.4957, sdm_loss: 1.2271, id_loss: 9.3640, mlm_loss: 2.9046, img_acc: 0.9554, txt_acc: 0.8675, mlm_acc: 0.4147, Base Lr: 9.61e-06
+2023-04-18 23:19:36,450 IRRA.train INFO: Epoch[13] Iteration[300/469], loss: 13.4966, sdm_loss: 1.2412, id_loss: 9.3627, mlm_loss: 2.8927, img_acc: 0.9511, txt_acc: 0.8541, mlm_acc: 0.4159, Base Lr: 9.61e-06
+2023-04-18 23:20:16,794 IRRA.train INFO: Epoch[13] Iteration[400/469], loss: 13.4500, sdm_loss: 1.2168, id_loss: 9.3612, mlm_loss: 2.8721, img_acc: 0.9480, txt_acc: 0.8480, mlm_acc: 0.4186, Base Lr: 9.61e-06
+2023-04-18 23:20:44,982 IRRA.train INFO: Epoch 13 done. Time per batch: 0.410[s] Speed: 156.1[samples/s]
+2023-04-18 23:20:44,982 IRRA.train INFO: Validation Results - Epoch: 13
+2023-04-18 23:20:56,354 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 51.160 | 69.740 | 76.300 | 60.448 | 62.623 |
++------+--------+--------+--------+--------+--------+
+2023-04-18 23:21:40,890 IRRA.train INFO: Epoch[14] Iteration[100/469], loss: 13.1390, sdm_loss: 1.0527, id_loss: 9.3373, mlm_loss: 2.7490, img_acc: 0.9675, txt_acc: 0.8994, mlm_acc: 0.4399, Base Lr: 9.49e-06
+2023-04-18 23:22:21,256 IRRA.train INFO: Epoch[14] Iteration[200/469], loss: 13.1061, sdm_loss: 1.0579, id_loss: 9.3359, mlm_loss: 2.7123, img_acc: 0.9625, txt_acc: 0.8903, mlm_acc: 0.4451, Base Lr: 9.49e-06
+2023-04-18 23:22:52,099 IRRA.train INFO: Epoch[14] Iteration[300/469], loss: 13.0837, sdm_loss: 1.0534, id_loss: 9.3342, mlm_loss: 2.6962, img_acc: 0.9585, txt_acc: 0.8783, mlm_acc: 0.4485, Base Lr: 9.49e-06
+2023-04-18 23:23:32,550 IRRA.train INFO: Epoch[14] Iteration[400/469], loss: 13.0520, sdm_loss: 1.0369, id_loss: 9.3325, mlm_loss: 2.6826, img_acc: 0.9575, txt_acc: 0.8699, mlm_acc: 0.4514, Base Lr: 9.49e-06
+2023-04-18 23:24:00,486 IRRA.train INFO: Epoch 14 done. Time per batch: 0.391[s] Speed: 163.8[samples/s]
+2023-04-18 23:24:00,486 IRRA.train INFO: Validation Results - Epoch: 14
+2023-04-18 23:24:11,619 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 52.280 | 70.840 | 77.820 | 61.598 | 63.774 |
++------+--------+--------+--------+--------+--------+
+2023-04-18 23:24:58,400 IRRA.train INFO: Epoch[15] Iteration[100/469], loss: 13.0693, sdm_loss: 1.1665, id_loss: 9.3099, mlm_loss: 2.5929, img_acc: 0.9730, txt_acc: 0.9050, mlm_acc: 0.4696, Base Lr: 9.35e-06
+2023-04-18 23:25:38,714 IRRA.train INFO: Epoch[15] Iteration[200/469], loss: 12.9888, sdm_loss: 1.1021, id_loss: 9.3083, mlm_loss: 2.5784, img_acc: 0.9699, txt_acc: 0.8953, mlm_acc: 0.4718, Base Lr: 9.35e-06
+2023-04-18 23:26:19,245 IRRA.train INFO: Epoch[15] Iteration[300/469], loss: 12.9633, sdm_loss: 1.0921, id_loss: 9.3068, mlm_loss: 2.5644, img_acc: 0.9683, txt_acc: 0.8932, mlm_acc: 0.4747, Base Lr: 9.35e-06
+2023-04-18 23:26:59,566 IRRA.train INFO: Epoch[15] Iteration[400/469], loss: 12.9324, sdm_loss: 1.0816, id_loss: 9.3054, mlm_loss: 2.5454, img_acc: 0.9648, txt_acc: 0.8869, mlm_acc: 0.4778, Base Lr: 9.35e-06
+2023-04-18 23:27:27,523 IRRA.train INFO: Epoch 15 done. Time per batch: 0.411[s] Speed: 155.6[samples/s]
+2023-04-18 23:27:27,524 IRRA.train INFO: Validation Results - Epoch: 15
+2023-04-18 23:27:38,804 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 53.860 | 71.320 | 78.040 | 62.667 | 64.733 |
++------+--------+--------+--------+--------+--------+
+2023-04-18 23:28:24,970 IRRA.train INFO: Epoch[16] Iteration[100/469], loss: 12.7759, sdm_loss: 1.0244, id_loss: 9.2834, mlm_loss: 2.4682, img_acc: 0.9727, txt_acc: 0.9066, mlm_acc: 0.4946, Base Lr: 9.21e-06
+2023-04-18 23:29:05,267 IRRA.train INFO: Epoch[16] Iteration[200/469], loss: 12.7746, sdm_loss: 1.0592, id_loss: 9.2825, mlm_loss: 2.4329, img_acc: 0.9691, txt_acc: 0.9017, mlm_acc: 0.4992, Base Lr: 9.21e-06
+2023-04-18 23:29:43,616 IRRA.train INFO: Epoch[16] Iteration[300/469], loss: 12.7447, sdm_loss: 1.0460, id_loss: 9.2807, mlm_loss: 2.4180, img_acc: 0.9673, txt_acc: 0.8962, mlm_acc: 0.5023, Base Lr: 9.21e-06
+2023-04-18 23:30:17,807 IRRA.train INFO: Epoch[16] Iteration[400/469], loss: 12.7015, sdm_loss: 1.0186, id_loss: 9.2787, mlm_loss: 2.4042, img_acc: 0.9659, txt_acc: 0.8921, mlm_acc: 0.5039, Base Lr: 9.21e-06
+2023-04-18 23:30:45,762 IRRA.train INFO: Epoch 16 done. Time per batch: 0.392[s] Speed: 163.1[samples/s]
+2023-04-18 23:30:45,762 IRRA.train INFO: Validation Results - Epoch: 16
+2023-04-18 23:30:57,210 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 55.080 | 73.120 | 79.020 | 63.937 | 65.993 |
++------+--------+--------+--------+--------+--------+
+2023-04-18 23:31:43,417 IRRA.train INFO: Epoch[17] Iteration[100/469], loss: 12.5318, sdm_loss: 0.9529, id_loss: 9.2554, mlm_loss: 2.3235, img_acc: 0.9787, txt_acc: 0.9203, mlm_acc: 0.5151, Base Lr: 9.05e-06
+2023-04-18 23:32:23,781 IRRA.train INFO: Epoch[17] Iteration[200/469], loss: 12.5519, sdm_loss: 0.9909, id_loss: 9.2540, mlm_loss: 2.3069, img_acc: 0.9745, txt_acc: 0.9115, mlm_acc: 0.5205, Base Lr: 9.05e-06
+2023-04-18 23:33:04,226 IRRA.train INFO: Epoch[17] Iteration[300/469], loss: 12.5130, sdm_loss: 0.9643, id_loss: 9.2530, mlm_loss: 2.2958, img_acc: 0.9714, txt_acc: 0.9052, mlm_acc: 0.5217, Base Lr: 9.05e-06
+2023-04-18 23:33:44,577 IRRA.train INFO: Epoch[17] Iteration[400/469], loss: 12.4774, sdm_loss: 0.9430, id_loss: 9.2513, mlm_loss: 2.2831, img_acc: 0.9702, txt_acc: 0.9016, mlm_acc: 0.5239, Base Lr: 9.05e-06
+2023-04-18 23:34:12,582 IRRA.train INFO: Epoch 17 done. Time per batch: 0.410[s] Speed: 156.1[samples/s]
+2023-04-18 23:34:12,582 IRRA.train INFO: Validation Results - Epoch: 17
+2023-04-18 23:34:24,028 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 51.400 | 70.600 | 77.500 | 60.887 | 63.097 |
++------+--------+--------+--------+--------+--------+
+2023-04-18 23:35:08,495 IRRA.train INFO: Epoch[18] Iteration[100/469], loss: 12.3735, sdm_loss: 0.9454, id_loss: 9.2296, mlm_loss: 2.1986, img_acc: 0.9786, txt_acc: 0.9214, mlm_acc: 0.5427, Base Lr: 8.87e-06
+2023-04-18 23:35:49,180 IRRA.train INFO: Epoch[18] Iteration[200/469], loss: 12.3512, sdm_loss: 0.9300, id_loss: 9.2281, mlm_loss: 2.1930, img_acc: 0.9766, txt_acc: 0.9155, mlm_acc: 0.5418, Base Lr: 8.87e-06
+2023-04-18 23:36:29,472 IRRA.train INFO: Epoch[18] Iteration[300/469], loss: 12.3267, sdm_loss: 0.9087, id_loss: 9.2263, mlm_loss: 2.1917, img_acc: 0.9742, txt_acc: 0.9135, mlm_acc: 0.5429, Base Lr: 8.87e-06
+2023-04-18 23:37:01,936 IRRA.train INFO: Epoch[18] Iteration[400/469], loss: 12.2844, sdm_loss: 0.8777, id_loss: 9.2243, mlm_loss: 2.1825, img_acc: 0.9731, txt_acc: 0.9116, mlm_acc: 0.5437, Base Lr: 8.87e-06
+2023-04-18 23:37:28,894 IRRA.train INFO: Epoch 18 done. Time per batch: 0.392[s] Speed: 163.1[samples/s]
+2023-04-18 23:37:28,894 IRRA.train INFO: Validation Results - Epoch: 18
+2023-04-18 23:37:40,461 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 51.580 | 70.340 | 77.560 | 61.061 | 63.265 |
++------+--------+--------+--------+--------+--------+
+2023-04-18 23:38:24,341 IRRA.train INFO: Epoch[19] Iteration[100/469], loss: 12.1689, sdm_loss: 0.8411, id_loss: 9.2024, mlm_loss: 2.1254, img_acc: 0.9758, txt_acc: 0.9300, mlm_acc: 0.5554, Base Lr: 8.68e-06
+2023-04-18 23:39:04,598 IRRA.train INFO: Epoch[19] Iteration[200/469], loss: 12.1447, sdm_loss: 0.8262, id_loss: 9.2014, mlm_loss: 2.1171, img_acc: 0.9752, txt_acc: 0.9245, mlm_acc: 0.5561, Base Lr: 8.68e-06
+2023-04-18 23:39:45,025 IRRA.train INFO: Epoch[19] Iteration[300/469], loss: 12.1182, sdm_loss: 0.8179, id_loss: 9.1998, mlm_loss: 2.1005, img_acc: 0.9739, txt_acc: 0.9209, mlm_acc: 0.5596, Base Lr: 8.68e-06
+2023-04-18 23:40:25,296 IRRA.train INFO: Epoch[19] Iteration[400/469], loss: 12.1006, sdm_loss: 0.8079, id_loss: 9.1986, mlm_loss: 2.0941, img_acc: 0.9716, txt_acc: 0.9179, mlm_acc: 0.5602, Base Lr: 8.68e-06
+2023-04-18 23:40:53,278 IRRA.train INFO: Epoch 19 done. Time per batch: 0.410[s] Speed: 156.0[samples/s]
+2023-04-18 23:40:53,279 IRRA.train INFO: Validation Results - Epoch: 19
+2023-04-18 23:41:04,614 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 52.700 | 70.840 | 77.760 | 61.794 | 63.920 |
++------+--------+--------+--------+--------+--------+
+2023-04-18 23:41:48,429 IRRA.train INFO: Epoch[20] Iteration[100/469], loss: 11.9532, sdm_loss: 0.7253, id_loss: 9.1765, mlm_loss: 2.0515, img_acc: 0.9798, txt_acc: 0.9330, mlm_acc: 0.5691, Base Lr: 8.48e-06
+2023-04-18 23:42:28,740 IRRA.train INFO: Epoch[20] Iteration[200/469], loss: 12.0394, sdm_loss: 0.8328, id_loss: 9.1754, mlm_loss: 2.0313, img_acc: 0.9773, txt_acc: 0.9280, mlm_acc: 0.5713, Base Lr: 8.48e-06
+2023-04-18 23:43:09,132 IRRA.train INFO: Epoch[20] Iteration[300/469], loss: 12.0077, sdm_loss: 0.8106, id_loss: 9.1734, mlm_loss: 2.0236, img_acc: 0.9783, txt_acc: 0.9246, mlm_acc: 0.5727, Base Lr: 8.48e-06
+2023-04-18 23:43:49,528 IRRA.train INFO: Epoch[20] Iteration[400/469], loss: 11.9654, sdm_loss: 0.7835, id_loss: 9.1713, mlm_loss: 2.0107, img_acc: 0.9770, txt_acc: 0.9202, mlm_acc: 0.5751, Base Lr: 8.48e-06
+2023-04-18 23:44:12,097 IRRA.train INFO: Epoch 20 done. Time per batch: 0.399[s] Speed: 160.5[samples/s]
+2023-04-18 23:44:12,097 IRRA.train INFO: Validation Results - Epoch: 20
+2023-04-18 23:44:22,662 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 54.840 | 72.280 | 78.900 | 63.504 | 65.528 |
++------+--------+--------+--------+--------+--------+
+2023-04-18 23:45:06,583 IRRA.train INFO: Epoch[21] Iteration[100/469], loss: 11.8277, sdm_loss: 0.7182, id_loss: 9.1505, mlm_loss: 1.9590, img_acc: 0.9839, txt_acc: 0.9348, mlm_acc: 0.5836, Base Lr: 8.27e-06
+2023-04-18 23:45:46,920 IRRA.train INFO: Epoch[21] Iteration[200/469], loss: 11.7849, sdm_loss: 0.6783, id_loss: 9.1472, mlm_loss: 1.9593, img_acc: 0.9834, txt_acc: 0.9312, mlm_acc: 0.5824, Base Lr: 8.27e-06
+2023-04-18 23:46:27,213 IRRA.train INFO: Epoch[21] Iteration[300/469], loss: 11.7765, sdm_loss: 0.6850, id_loss: 9.1462, mlm_loss: 1.9454, img_acc: 0.9819, txt_acc: 0.9290, mlm_acc: 0.5859, Base Lr: 8.27e-06
+2023-04-18 23:47:07,632 IRRA.train INFO: Epoch[21] Iteration[400/469], loss: 11.7594, sdm_loss: 0.6716, id_loss: 9.1444, mlm_loss: 1.9434, img_acc: 0.9796, txt_acc: 0.9254, mlm_acc: 0.5867, Base Lr: 8.27e-06
+2023-04-18 23:47:35,633 IRRA.train INFO: Epoch 21 done. Time per batch: 0.409[s] Speed: 156.3[samples/s]
+2023-04-18 23:47:35,634 IRRA.train INFO: Validation Results - Epoch: 21
+2023-04-18 23:47:47,017 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 55.460 | 74.420 | 80.460 | 64.579 | 66.694 |
++------+--------+--------+--------+--------+--------+
+2023-04-18 23:48:34,195 IRRA.train INFO: Epoch[22] Iteration[100/469], loss: 11.6244, sdm_loss: 0.6227, id_loss: 9.1216, mlm_loss: 1.8801, img_acc: 0.9841, txt_acc: 0.9411, mlm_acc: 0.5995, Base Lr: 8.05e-06
+2023-04-18 23:49:14,578 IRRA.train INFO: Epoch[22] Iteration[200/469], loss: 11.6451, sdm_loss: 0.6537, id_loss: 9.1209, mlm_loss: 1.8705, img_acc: 0.9817, txt_acc: 0.9377, mlm_acc: 0.6010, Base Lr: 8.05e-06
+2023-04-18 23:49:54,955 IRRA.train INFO: Epoch[22] Iteration[300/469], loss: 11.6395, sdm_loss: 0.6563, id_loss: 9.1190, mlm_loss: 1.8642, img_acc: 0.9807, txt_acc: 0.9317, mlm_acc: 0.6024, Base Lr: 8.05e-06
+2023-04-18 23:50:35,344 IRRA.train INFO: Epoch[22] Iteration[400/469], loss: 11.6271, sdm_loss: 0.6486, id_loss: 9.1177, mlm_loss: 1.8608, img_acc: 0.9793, txt_acc: 0.9307, mlm_acc: 0.6026, Base Lr: 8.05e-06
+2023-04-18 23:51:03,626 IRRA.train INFO: Epoch 22 done. Time per batch: 0.411[s] Speed: 155.7[samples/s]
+2023-04-18 23:51:03,626 IRRA.train INFO: Validation Results - Epoch: 22
+2023-04-18 23:51:13,956 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 55.280 | 73.160 | 79.380 | 64.113 | 66.167 |
++------+--------+--------+--------+--------+--------+
+2023-04-18 23:51:56,583 IRRA.train INFO: Epoch[23] Iteration[100/469], loss: 11.6023, sdm_loss: 0.6901, id_loss: 9.1010, mlm_loss: 1.8112, img_acc: 0.9798, txt_acc: 0.9384, mlm_acc: 0.6082, Base Lr: 7.82e-06
+2023-04-18 23:52:37,105 IRRA.train INFO: Epoch[23] Iteration[200/469], loss: 11.5567, sdm_loss: 0.6390, id_loss: 9.0999, mlm_loss: 1.8178, img_acc: 0.9804, txt_acc: 0.9370, mlm_acc: 0.6077, Base Lr: 7.82e-06
+2023-04-18 23:53:17,779 IRRA.train INFO: Epoch[23] Iteration[300/469], loss: 11.5282, sdm_loss: 0.6147, id_loss: 9.0971, mlm_loss: 1.8165, img_acc: 0.9800, txt_acc: 0.9359, mlm_acc: 0.6088, Base Lr: 7.82e-06
+2023-04-18 23:53:58,049 IRRA.train INFO: Epoch[23] Iteration[400/469], loss: 11.5275, sdm_loss: 0.6234, id_loss: 9.0946, mlm_loss: 1.8096, img_acc: 0.9799, txt_acc: 0.9337, mlm_acc: 0.6099, Base Lr: 7.82e-06
+2023-04-18 23:54:26,279 IRRA.train INFO: Epoch 23 done. Time per batch: 0.408[s] Speed: 156.7[samples/s]
+2023-04-18 23:54:26,280 IRRA.train INFO: Validation Results - Epoch: 23
+2023-04-18 23:54:37,845 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 55.860 | 73.920 | 79.680 | 64.710 | 66.753 |
++------+--------+--------+--------+--------+--------+
+2023-04-18 23:55:25,073 IRRA.train INFO: Epoch[24] Iteration[100/469], loss: 11.4807, sdm_loss: 0.6182, id_loss: 9.0758, mlm_loss: 1.7866, img_acc: 0.9855, txt_acc: 0.9420, mlm_acc: 0.6157, Base Lr: 7.58e-06
+2023-04-18 23:56:05,567 IRRA.train INFO: Epoch[24] Iteration[200/469], loss: 11.4772, sdm_loss: 0.6197, id_loss: 9.0745, mlm_loss: 1.7830, img_acc: 0.9837, txt_acc: 0.9416, mlm_acc: 0.6157, Base Lr: 7.58e-06
+2023-04-18 23:56:46,994 IRRA.train INFO: Epoch[24] Iteration[300/469], loss: 11.4682, sdm_loss: 0.6243, id_loss: 9.0732, mlm_loss: 1.7707, img_acc: 0.9839, txt_acc: 0.9385, mlm_acc: 0.6185, Base Lr: 7.58e-06
+2023-04-18 23:57:27,337 IRRA.train INFO: Epoch[24] Iteration[400/469], loss: 11.4378, sdm_loss: 0.6062, id_loss: 9.0719, mlm_loss: 1.7596, img_acc: 0.9829, txt_acc: 0.9366, mlm_acc: 0.6203, Base Lr: 7.58e-06
+2023-04-18 23:57:55,513 IRRA.train INFO: Epoch 24 done. Time per batch: 0.414[s] Speed: 154.4[samples/s]
+2023-04-18 23:57:55,514 IRRA.train INFO: Validation Results - Epoch: 24
+2023-04-18 23:58:07,528 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 56.660 | 74.540 | 80.220 | 65.328 | 67.333 |
++------+--------+--------+--------+--------+--------+
+2023-04-18 23:58:45,615 IRRA.train INFO: Epoch[25] Iteration[100/469], loss: 11.3277, sdm_loss: 0.5602, id_loss: 9.0483, mlm_loss: 1.7191, img_acc: 0.9827, txt_acc: 0.9462, mlm_acc: 0.6268, Base Lr: 7.33e-06
+2023-04-18 23:59:25,984 IRRA.train INFO: Epoch[25] Iteration[200/469], loss: 11.3213, sdm_loss: 0.5514, id_loss: 9.0480, mlm_loss: 1.7220, img_acc: 0.9821, txt_acc: 0.9425, mlm_acc: 0.6255, Base Lr: 7.33e-06
+2023-04-19 00:00:06,360 IRRA.train INFO: Epoch[25] Iteration[300/469], loss: 11.3164, sdm_loss: 0.5528, id_loss: 9.0471, mlm_loss: 1.7165, img_acc: 0.9824, txt_acc: 0.9409, mlm_acc: 0.6271, Base Lr: 7.33e-06
+2023-04-19 00:00:46,799 IRRA.train INFO: Epoch[25] Iteration[400/469], loss: 11.2957, sdm_loss: 0.5398, id_loss: 9.0458, mlm_loss: 1.7101, img_acc: 0.9820, txt_acc: 0.9392, mlm_acc: 0.6287, Base Lr: 7.33e-06
+2023-04-19 00:01:14,864 IRRA.train INFO: Epoch 25 done. Time per batch: 0.393[s] Speed: 162.9[samples/s]
+2023-04-19 00:01:14,864 IRRA.train INFO: Validation Results - Epoch: 25
+2023-04-19 00:01:25,904 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 55.700 | 74.440 | 80.740 | 64.857 | 66.974 |
++------+--------+--------+--------+--------+--------+
+2023-04-19 00:02:10,483 IRRA.train INFO: Epoch[26] Iteration[100/469], loss: 11.2111, sdm_loss: 0.5110, id_loss: 9.0283, mlm_loss: 1.6718, img_acc: 0.9894, txt_acc: 0.9500, mlm_acc: 0.6372, Base Lr: 7.08e-06
+2023-04-19 00:02:50,956 IRRA.train INFO: Epoch[26] Iteration[200/469], loss: 11.1576, sdm_loss: 0.4708, id_loss: 9.0267, mlm_loss: 1.6601, img_acc: 0.9877, txt_acc: 0.9473, mlm_acc: 0.6386, Base Lr: 7.08e-06
+2023-04-19 00:03:31,258 IRRA.train INFO: Epoch[26] Iteration[300/469], loss: 11.1729, sdm_loss: 0.4856, id_loss: 9.0257, mlm_loss: 1.6616, img_acc: 0.9866, txt_acc: 0.9445, mlm_acc: 0.6380, Base Lr: 7.08e-06
+2023-04-19 00:04:11,633 IRRA.train INFO: Epoch[26] Iteration[400/469], loss: 11.1848, sdm_loss: 0.4954, id_loss: 9.0246, mlm_loss: 1.6648, img_acc: 0.9863, txt_acc: 0.9425, mlm_acc: 0.6379, Base Lr: 7.08e-06
+2023-04-19 00:04:39,652 IRRA.train INFO: Epoch 26 done. Time per batch: 0.412[s] Speed: 155.5[samples/s]
+2023-04-19 00:04:39,652 IRRA.train INFO: Validation Results - Epoch: 26
+2023-04-19 00:04:50,935 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 56.600 | 74.020 | 80.060 | 65.221 | 67.223 |
++------+--------+--------+--------+--------+--------+
+2023-04-19 00:05:32,967 IRRA.train INFO: Epoch[27] Iteration[100/469], loss: 11.1908, sdm_loss: 0.5424, id_loss: 9.0041, mlm_loss: 1.6443, img_acc: 0.9881, txt_acc: 0.9491, mlm_acc: 0.6416, Base Lr: 6.81e-06
+2023-04-19 00:06:06,518 IRRA.train INFO: Epoch[27] Iteration[200/469], loss: 11.1661, sdm_loss: 0.5256, id_loss: 9.0042, mlm_loss: 1.6363, img_acc: 0.9862, txt_acc: 0.9500, mlm_acc: 0.6434, Base Lr: 6.81e-06
+2023-04-19 00:06:46,938 IRRA.train INFO: Epoch[27] Iteration[300/469], loss: 11.1398, sdm_loss: 0.5052, id_loss: 9.0026, mlm_loss: 1.6321, img_acc: 0.9857, txt_acc: 0.9466, mlm_acc: 0.6438, Base Lr: 6.81e-06
+2023-04-19 00:07:27,397 IRRA.train INFO: Epoch[27] Iteration[400/469], loss: 11.1263, sdm_loss: 0.4958, id_loss: 9.0010, mlm_loss: 1.6295, img_acc: 0.9854, txt_acc: 0.9451, mlm_acc: 0.6442, Base Lr: 6.81e-06
+2023-04-19 00:07:55,522 IRRA.train INFO: Epoch 27 done. Time per batch: 0.392[s] Speed: 163.2[samples/s]
+2023-04-19 00:07:55,522 IRRA.train INFO: Validation Results - Epoch: 27
+2023-04-19 00:08:07,003 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 56.940 | 74.700 | 80.700 | 65.680 | 67.696 |
++------+--------+--------+--------+--------+--------+
+2023-04-19 00:08:53,241 IRRA.train INFO: Epoch[28] Iteration[100/469], loss: 11.0112, sdm_loss: 0.4471, id_loss: 8.9814, mlm_loss: 1.5827, img_acc: 0.9844, txt_acc: 0.9516, mlm_acc: 0.6526, Base Lr: 6.55e-06
+2023-04-19 00:09:33,759 IRRA.train INFO: Epoch[28] Iteration[200/469], loss: 10.9658, sdm_loss: 0.4150, id_loss: 8.9803, mlm_loss: 1.5705, img_acc: 0.9859, txt_acc: 0.9490, mlm_acc: 0.6539, Base Lr: 6.55e-06
+2023-04-19 00:10:14,292 IRRA.train INFO: Epoch[28] Iteration[300/469], loss: 10.9656, sdm_loss: 0.4158, id_loss: 8.9799, mlm_loss: 1.5699, img_acc: 0.9865, txt_acc: 0.9478, mlm_acc: 0.6561, Base Lr: 6.55e-06
+2023-04-19 00:10:54,748 IRRA.train INFO: Epoch[28] Iteration[400/469], loss: 10.9822, sdm_loss: 0.4321, id_loss: 8.9789, mlm_loss: 1.5712, img_acc: 0.9866, txt_acc: 0.9474, mlm_acc: 0.6555, Base Lr: 6.55e-06
+2023-04-19 00:11:22,761 IRRA.train INFO: Epoch 28 done. Time per batch: 0.411[s] Speed: 155.8[samples/s]
+2023-04-19 00:11:22,761 IRRA.train INFO: Validation Results - Epoch: 28
+2023-04-19 00:11:34,267 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 57.820 | 75.520 | 81.360 | 66.352 | 68.332 |
++------+--------+--------+--------+--------+--------+
+2023-04-19 00:12:20,926 IRRA.train INFO: Epoch[29] Iteration[100/469], loss: 10.9795, sdm_loss: 0.4553, id_loss: 8.9639, mlm_loss: 1.5603, img_acc: 0.9894, txt_acc: 0.9509, mlm_acc: 0.6570, Base Lr: 6.27e-06
+2023-04-19 00:12:53,470 IRRA.train INFO: Epoch[29] Iteration[200/469], loss: 10.9843, sdm_loss: 0.4578, id_loss: 8.9628, mlm_loss: 1.5637, img_acc: 0.9872, txt_acc: 0.9487, mlm_acc: 0.6570, Base Lr: 6.27e-06
+2023-04-19 00:13:32,721 IRRA.train INFO: Epoch[29] Iteration[300/469], loss: 10.9812, sdm_loss: 0.4650, id_loss: 8.9613, mlm_loss: 1.5548, img_acc: 0.9871, txt_acc: 0.9484, mlm_acc: 0.6591, Base Lr: 6.27e-06
+2023-04-19 00:14:13,186 IRRA.train INFO: Epoch[29] Iteration[400/469], loss: 10.9817, sdm_loss: 0.4687, id_loss: 8.9604, mlm_loss: 1.5526, img_acc: 0.9868, txt_acc: 0.9472, mlm_acc: 0.6599, Base Lr: 6.27e-06
+2023-04-19 00:14:41,048 IRRA.train INFO: Epoch 29 done. Time per batch: 0.392[s] Speed: 163.4[samples/s]
+2023-04-19 00:14:41,048 IRRA.train INFO: Validation Results - Epoch: 29
+2023-04-19 00:14:52,179 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 58.680 | 75.820 | 82.380 | 67.106 | 69.060 |
++------+--------+--------+--------+--------+--------+
+2023-04-19 00:15:38,833 IRRA.train INFO: Epoch[30] Iteration[100/469], loss: 10.9127, sdm_loss: 0.4359, id_loss: 8.9431, mlm_loss: 1.5336, img_acc: 0.9887, txt_acc: 0.9528, mlm_acc: 0.6626, Base Lr: 5.99e-06
+2023-04-19 00:16:19,284 IRRA.train INFO: Epoch[30] Iteration[200/469], loss: 10.9109, sdm_loss: 0.4337, id_loss: 8.9419, mlm_loss: 1.5353, img_acc: 0.9880, txt_acc: 0.9498, mlm_acc: 0.6615, Base Lr: 5.99e-06
+2023-04-19 00:16:59,543 IRRA.train INFO: Epoch[30] Iteration[300/469], loss: 10.8977, sdm_loss: 0.4256, id_loss: 8.9406, mlm_loss: 1.5316, img_acc: 0.9870, txt_acc: 0.9501, mlm_acc: 0.6631, Base Lr: 5.99e-06
+2023-04-19 00:17:40,433 IRRA.train INFO: Epoch[30] Iteration[400/469], loss: 10.8772, sdm_loss: 0.4166, id_loss: 8.9394, mlm_loss: 1.5212, img_acc: 0.9870, txt_acc: 0.9505, mlm_acc: 0.6649, Base Lr: 5.99e-06
+2023-04-19 00:18:08,680 IRRA.train INFO: Epoch 30 done. Time per batch: 0.412[s] Speed: 155.2[samples/s]
+2023-04-19 00:18:08,681 IRRA.train INFO: Validation Results - Epoch: 30
+2023-04-19 00:18:19,916 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 57.040 | 73.980 | 79.640 | 65.352 | 67.295 |
++------+--------+--------+--------+--------+--------+
+2023-04-19 00:19:03,594 IRRA.train INFO: Epoch[31] Iteration[100/469], loss: 10.9149, sdm_loss: 0.4830, id_loss: 8.9259, mlm_loss: 1.5061, img_acc: 0.9905, txt_acc: 0.9512, mlm_acc: 0.6659, Base Lr: 5.71e-06
+2023-04-19 00:19:43,880 IRRA.train INFO: Epoch[31] Iteration[200/469], loss: 10.8870, sdm_loss: 0.4642, id_loss: 8.9252, mlm_loss: 1.4976, img_acc: 0.9891, txt_acc: 0.9520, mlm_acc: 0.6678, Base Lr: 5.71e-06
+2023-04-19 00:20:16,974 IRRA.train INFO: Epoch[31] Iteration[300/469], loss: 10.8543, sdm_loss: 0.4337, id_loss: 8.9237, mlm_loss: 1.4970, img_acc: 0.9881, txt_acc: 0.9516, mlm_acc: 0.6682, Base Lr: 5.71e-06
+2023-04-19 00:20:57,455 IRRA.train INFO: Epoch[31] Iteration[400/469], loss: 10.8563, sdm_loss: 0.4363, id_loss: 8.9224, mlm_loss: 1.4976, img_acc: 0.9870, txt_acc: 0.9502, mlm_acc: 0.6687, Base Lr: 5.71e-06
+2023-04-19 00:21:25,602 IRRA.train INFO: Epoch 31 done. Time per batch: 0.395[s] Speed: 162.0[samples/s]
+2023-04-19 00:21:25,602 IRRA.train INFO: Validation Results - Epoch: 31
+2023-04-19 00:21:37,331 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 59.500 | 76.720 | 82.460 | 67.872 | 69.804 |
++------+--------+--------+--------+--------+--------+
+2023-04-19 00:22:23,822 IRRA.train INFO: Epoch[32] Iteration[100/469], loss: 10.6887, sdm_loss: 0.3197, id_loss: 8.9055, mlm_loss: 1.4635, img_acc: 0.9881, txt_acc: 0.9609, mlm_acc: 0.6757, Base Lr: 5.43e-06
+2023-04-19 00:23:03,989 IRRA.train INFO: Epoch[32] Iteration[200/469], loss: 10.7395, sdm_loss: 0.3715, id_loss: 8.9057, mlm_loss: 1.4622, img_acc: 0.9886, txt_acc: 0.9554, mlm_acc: 0.6772, Base Lr: 5.43e-06
+2023-04-19 00:23:44,405 IRRA.train INFO: Epoch[32] Iteration[300/469], loss: 10.7342, sdm_loss: 0.3601, id_loss: 8.9052, mlm_loss: 1.4690, img_acc: 0.9881, txt_acc: 0.9562, mlm_acc: 0.6758, Base Lr: 5.43e-06
+2023-04-19 00:24:24,892 IRRA.train INFO: Epoch[32] Iteration[400/469], loss: 10.7346, sdm_loss: 0.3670, id_loss: 8.9036, mlm_loss: 1.4640, img_acc: 0.9870, txt_acc: 0.9550, mlm_acc: 0.6765, Base Lr: 5.43e-06
+2023-04-19 00:24:52,931 IRRA.train INFO: Epoch 32 done. Time per batch: 0.410[s] Speed: 156.0[samples/s]
+2023-04-19 00:24:52,931 IRRA.train INFO: Validation Results - Epoch: 32
+2023-04-19 00:25:04,111 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 57.480 | 75.220 | 80.920 | 66.149 | 68.152 |
++------+--------+--------+--------+--------+--------+
+2023-04-19 00:25:48,466 IRRA.train INFO: Epoch[33] Iteration[100/469], loss: 10.7106, sdm_loss: 0.3978, id_loss: 8.8897, mlm_loss: 1.4231, img_acc: 0.9889, txt_acc: 0.9548, mlm_acc: 0.6840, Base Lr: 5.14e-06
+2023-04-19 00:26:28,844 IRRA.train INFO: Epoch[33] Iteration[200/469], loss: 10.6842, sdm_loss: 0.3563, id_loss: 8.8888, mlm_loss: 1.4391, img_acc: 0.9888, txt_acc: 0.9563, mlm_acc: 0.6807, Base Lr: 5.14e-06
+2023-04-19 00:27:07,467 IRRA.train INFO: Epoch[33] Iteration[300/469], loss: 10.6643, sdm_loss: 0.3387, id_loss: 8.8873, mlm_loss: 1.4383, img_acc: 0.9885, txt_acc: 0.9563, mlm_acc: 0.6812, Base Lr: 5.14e-06
+2023-04-19 00:27:41,601 IRRA.train INFO: Epoch[33] Iteration[400/469], loss: 10.6769, sdm_loss: 0.3519, id_loss: 8.8868, mlm_loss: 1.4382, img_acc: 0.9880, txt_acc: 0.9550, mlm_acc: 0.6815, Base Lr: 5.14e-06
+2023-04-19 00:28:09,570 IRRA.train INFO: Epoch 33 done. Time per batch: 0.393[s] Speed: 162.7[samples/s]
+2023-04-19 00:28:09,571 IRRA.train INFO: Validation Results - Epoch: 33
+2023-04-19 00:28:22,059 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 58.220 | 75.820 | 81.440 | 66.779 | 68.757 |
++------+--------+--------+--------+--------+--------+
+2023-04-19 00:29:06,079 IRRA.train INFO: Epoch[34] Iteration[100/469], loss: 10.6741, sdm_loss: 0.3545, id_loss: 8.8743, mlm_loss: 1.4453, img_acc: 0.9862, txt_acc: 0.9586, mlm_acc: 0.6807, Base Lr: 4.86e-06
+2023-04-19 00:29:46,595 IRRA.train INFO: Epoch[34] Iteration[200/469], loss: 10.6453, sdm_loss: 0.3412, id_loss: 8.8735, mlm_loss: 1.4307, img_acc: 0.9881, txt_acc: 0.9579, mlm_acc: 0.6838, Base Lr: 4.86e-06
+2023-04-19 00:30:27,089 IRRA.train INFO: Epoch[34] Iteration[300/469], loss: 10.6421, sdm_loss: 0.3409, id_loss: 8.8727, mlm_loss: 1.4285, img_acc: 0.9873, txt_acc: 0.9561, mlm_acc: 0.6835, Base Lr: 4.86e-06
+2023-04-19 00:31:07,609 IRRA.train INFO: Epoch[34] Iteration[400/469], loss: 10.6552, sdm_loss: 0.3554, id_loss: 8.8720, mlm_loss: 1.4279, img_acc: 0.9877, txt_acc: 0.9560, mlm_acc: 0.6834, Base Lr: 4.86e-06
+2023-04-19 00:31:35,787 IRRA.train INFO: Epoch 34 done. Time per batch: 0.412[s] Speed: 155.4[samples/s]
+2023-04-19 00:31:35,788 IRRA.train INFO: Validation Results - Epoch: 34
+2023-04-19 00:31:47,114 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 58.860 | 75.960 | 81.700 | 67.322 | 69.272 |
++------+--------+--------+--------+--------+--------+
+2023-04-19 00:32:31,245 IRRA.train INFO: Epoch[35] Iteration[100/469], loss: 10.6345, sdm_loss: 0.3522, id_loss: 8.8613, mlm_loss: 1.4210, img_acc: 0.9908, txt_acc: 0.9598, mlm_acc: 0.6862, Base Lr: 4.57e-06
+2023-04-19 00:33:11,694 IRRA.train INFO: Epoch[35] Iteration[200/469], loss: 10.6026, sdm_loss: 0.3402, id_loss: 8.8597, mlm_loss: 1.4027, img_acc: 0.9905, txt_acc: 0.9585, mlm_acc: 0.6889, Base Lr: 4.57e-06
+2023-04-19 00:33:52,231 IRRA.train INFO: Epoch[35] Iteration[300/469], loss: 10.6009, sdm_loss: 0.3392, id_loss: 8.8588, mlm_loss: 1.4029, img_acc: 0.9905, txt_acc: 0.9584, mlm_acc: 0.6885, Base Lr: 4.57e-06
+2023-04-19 00:34:27,901 IRRA.train INFO: Epoch[35] Iteration[400/469], loss: 10.6065, sdm_loss: 0.3431, id_loss: 8.8578, mlm_loss: 1.4056, img_acc: 0.9904, txt_acc: 0.9579, mlm_acc: 0.6880, Base Lr: 4.57e-06
+2023-04-19 00:34:51,158 IRRA.train INFO: Epoch 35 done. Time per batch: 0.391[s] Speed: 163.6[samples/s]
+2023-04-19 00:34:51,158 IRRA.train INFO: Validation Results - Epoch: 35
+2023-04-19 00:35:02,453 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 59.260 | 77.080 | 82.700 | 67.805 | 69.772 |
++------+--------+--------+--------+--------+--------+
+2023-04-19 00:35:46,920 IRRA.train INFO: Epoch[36] Iteration[100/469], loss: 10.5318, sdm_loss: 0.3081, id_loss: 8.8453, mlm_loss: 1.3784, img_acc: 0.9912, txt_acc: 0.9611, mlm_acc: 0.6931, Base Lr: 4.29e-06
+2023-04-19 00:36:27,465 IRRA.train INFO: Epoch[36] Iteration[200/469], loss: 10.5582, sdm_loss: 0.3328, id_loss: 8.8448, mlm_loss: 1.3806, img_acc: 0.9898, txt_acc: 0.9591, mlm_acc: 0.6937, Base Lr: 4.29e-06
+2023-04-19 00:37:08,022 IRRA.train INFO: Epoch[36] Iteration[300/469], loss: 10.5538, sdm_loss: 0.3237, id_loss: 8.8445, mlm_loss: 1.3856, img_acc: 0.9897, txt_acc: 0.9600, mlm_acc: 0.6924, Base Lr: 4.29e-06
+2023-04-19 00:37:48,585 IRRA.train INFO: Epoch[36] Iteration[400/469], loss: 10.5540, sdm_loss: 0.3247, id_loss: 8.8439, mlm_loss: 1.3853, img_acc: 0.9892, txt_acc: 0.9583, mlm_acc: 0.6921, Base Lr: 4.29e-06
+2023-04-19 00:38:16,818 IRRA.train INFO: Epoch 36 done. Time per batch: 0.412[s] Speed: 155.2[samples/s]
+2023-04-19 00:38:16,818 IRRA.train INFO: Validation Results - Epoch: 36
+2023-04-19 00:38:28,120 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 60.160 | 76.780 | 82.560 | 68.261 | 70.143 |
++------+--------+--------+--------+--------+--------+
+2023-04-19 00:39:15,777 IRRA.train INFO: Epoch[37] Iteration[100/469], loss: 10.5123, sdm_loss: 0.3118, id_loss: 8.8337, mlm_loss: 1.3668, img_acc: 0.9917, txt_acc: 0.9598, mlm_acc: 0.6958, Base Lr: 4.01e-06
+2023-04-19 00:39:56,243 IRRA.train INFO: Epoch[37] Iteration[200/469], loss: 10.5171, sdm_loss: 0.3215, id_loss: 8.8332, mlm_loss: 1.3624, img_acc: 0.9916, txt_acc: 0.9600, mlm_acc: 0.6966, Base Lr: 4.01e-06
+2023-04-19 00:40:36,719 IRRA.train INFO: Epoch[37] Iteration[300/469], loss: 10.5266, sdm_loss: 0.3256, id_loss: 8.8328, mlm_loss: 1.3683, img_acc: 0.9912, txt_acc: 0.9584, mlm_acc: 0.6957, Base Lr: 4.01e-06
+2023-04-19 00:41:16,991 IRRA.train INFO: Epoch[37] Iteration[400/469], loss: 10.5452, sdm_loss: 0.3462, id_loss: 8.8325, mlm_loss: 1.3665, img_acc: 0.9904, txt_acc: 0.9588, mlm_acc: 0.6965, Base Lr: 4.01e-06
+2023-04-19 00:41:40,748 IRRA.train INFO: Epoch 37 done. Time per batch: 0.404[s] Speed: 158.4[samples/s]
+2023-04-19 00:41:40,748 IRRA.train INFO: Validation Results - Epoch: 37
+2023-04-19 00:41:48,972 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 60.360 | 77.440 | 82.960 | 68.590 | 70.493 |
++------+--------+--------+--------+--------+--------+
+2023-04-19 00:42:35,511 IRRA.train INFO: Epoch[38] Iteration[100/469], loss: 10.5369, sdm_loss: 0.3409, id_loss: 8.8219, mlm_loss: 1.3741, img_acc: 0.9870, txt_acc: 0.9658, mlm_acc: 0.6967, Base Lr: 3.73e-06
+2023-04-19 00:43:15,962 IRRA.train INFO: Epoch[38] Iteration[200/469], loss: 10.5160, sdm_loss: 0.3301, id_loss: 8.8209, mlm_loss: 1.3649, img_acc: 0.9888, txt_acc: 0.9645, mlm_acc: 0.6977, Base Lr: 3.73e-06
+2023-04-19 00:43:56,136 IRRA.train INFO: Epoch[38] Iteration[300/469], loss: 10.4946, sdm_loss: 0.3126, id_loss: 8.8206, mlm_loss: 1.3613, img_acc: 0.9892, txt_acc: 0.9629, mlm_acc: 0.6991, Base Lr: 3.73e-06
+2023-04-19 00:44:36,539 IRRA.train INFO: Epoch[38] Iteration[400/469], loss: 10.4940, sdm_loss: 0.3188, id_loss: 8.8204, mlm_loss: 1.3547, img_acc: 0.9894, txt_acc: 0.9611, mlm_acc: 0.6998, Base Lr: 3.73e-06
+2023-04-19 00:45:04,488 IRRA.train INFO: Epoch 38 done. Time per batch: 0.410[s] Speed: 156.0[samples/s]
+2023-04-19 00:45:04,488 IRRA.train INFO: Validation Results - Epoch: 38
+2023-04-19 00:45:15,751 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 60.460 | 77.580 | 82.820 | 68.717 | 70.621 |
++------+--------+--------+--------+--------+--------+
+2023-04-19 00:46:02,679 IRRA.train INFO: Epoch[39] Iteration[100/469], loss: 10.4399, sdm_loss: 0.3086, id_loss: 8.8104, mlm_loss: 1.3209, img_acc: 0.9914, txt_acc: 0.9675, mlm_acc: 0.7049, Base Lr: 3.45e-06
+2023-04-19 00:46:43,112 IRRA.train INFO: Epoch[39] Iteration[200/469], loss: 10.4396, sdm_loss: 0.2963, id_loss: 8.8099, mlm_loss: 1.3335, img_acc: 0.9914, txt_acc: 0.9641, mlm_acc: 0.7026, Base Lr: 3.45e-06
+2023-04-19 00:47:23,486 IRRA.train INFO: Epoch[39] Iteration[300/469], loss: 10.4305, sdm_loss: 0.2787, id_loss: 8.8098, mlm_loss: 1.3420, img_acc: 0.9919, txt_acc: 0.9622, mlm_acc: 0.7014, Base Lr: 3.45e-06
+2023-04-19 00:48:03,839 IRRA.train INFO: Epoch[39] Iteration[400/469], loss: 10.4456, sdm_loss: 0.2933, id_loss: 8.8093, mlm_loss: 1.3431, img_acc: 0.9907, txt_acc: 0.9623, mlm_acc: 0.7014, Base Lr: 3.45e-06
+2023-04-19 00:48:31,883 IRRA.train INFO: Epoch 39 done. Time per batch: 0.411[s] Speed: 155.6[samples/s]
+2023-04-19 00:48:31,883 IRRA.train INFO: Validation Results - Epoch: 39
+2023-04-19 00:48:42,250 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 60.860 | 77.600 | 82.880 | 69.036 | 70.917 |
++------+--------+--------+--------+--------+--------+
+2023-04-19 00:49:25,160 IRRA.train INFO: Epoch[40] Iteration[100/469], loss: 10.4464, sdm_loss: 0.3047, id_loss: 8.8020, mlm_loss: 1.3397, img_acc: 0.9916, txt_acc: 0.9647, mlm_acc: 0.7023, Base Lr: 3.19e-06
+2023-04-19 00:50:05,548 IRRA.train INFO: Epoch[40] Iteration[200/469], loss: 10.4258, sdm_loss: 0.2942, id_loss: 8.8018, mlm_loss: 1.3298, img_acc: 0.9921, txt_acc: 0.9634, mlm_acc: 0.7043, Base Lr: 3.19e-06
+2023-04-19 00:50:45,993 IRRA.train INFO: Epoch[40] Iteration[300/469], loss: 10.4200, sdm_loss: 0.2840, id_loss: 8.8014, mlm_loss: 1.3346, img_acc: 0.9916, txt_acc: 0.9626, mlm_acc: 0.7029, Base Lr: 3.19e-06
+2023-04-19 00:51:26,353 IRRA.train INFO: Epoch[40] Iteration[400/469], loss: 10.4093, sdm_loss: 0.2740, id_loss: 8.8009, mlm_loss: 1.3344, img_acc: 0.9911, txt_acc: 0.9625, mlm_acc: 0.7024, Base Lr: 3.19e-06
+2023-04-19 00:51:54,425 IRRA.train INFO: Epoch 40 done. Time per batch: 0.403[s] Speed: 158.8[samples/s]
+2023-04-19 00:51:54,426 IRRA.train INFO: Validation Results - Epoch: 40
+2023-04-19 00:52:05,732 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 61.440 | 77.960 | 83.320 | 69.447 | 71.298 |
++------+--------+--------+--------+--------+--------+
+2023-04-19 00:52:51,675 IRRA.train INFO: Epoch[41] Iteration[100/469], loss: 10.4184, sdm_loss: 0.2935, id_loss: 8.7950, mlm_loss: 1.3298, img_acc: 0.9916, txt_acc: 0.9609, mlm_acc: 0.7027, Base Lr: 2.92e-06
+2023-04-19 00:53:32,117 IRRA.train INFO: Epoch[41] Iteration[200/469], loss: 10.4212, sdm_loss: 0.2970, id_loss: 8.7947, mlm_loss: 1.3296, img_acc: 0.9921, txt_acc: 0.9613, mlm_acc: 0.7041, Base Lr: 2.92e-06
+2023-04-19 00:54:12,601 IRRA.train INFO: Epoch[41] Iteration[300/469], loss: 10.4028, sdm_loss: 0.2900, id_loss: 8.7945, mlm_loss: 1.3183, img_acc: 0.9915, txt_acc: 0.9616, mlm_acc: 0.7059, Base Lr: 2.92e-06
+2023-04-19 00:54:52,972 IRRA.train INFO: Epoch[41] Iteration[400/469], loss: 10.4076, sdm_loss: 0.2936, id_loss: 8.7942, mlm_loss: 1.3197, img_acc: 0.9911, txt_acc: 0.9612, mlm_acc: 0.7062, Base Lr: 2.92e-06
+2023-04-19 00:55:20,911 IRRA.train INFO: Epoch 41 done. Time per batch: 0.410[s] Speed: 156.1[samples/s]
+2023-04-19 00:55:20,912 IRRA.train INFO: Validation Results - Epoch: 41
+2023-04-19 00:55:32,496 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 61.320 | 78.040 | 82.640 | 69.264 | 71.104 |
++------+--------+--------+--------+--------+--------+
+2023-04-19 00:56:10,605 IRRA.train INFO: Epoch[42] Iteration[100/469], loss: 10.3369, sdm_loss: 0.2748, id_loss: 8.7884, mlm_loss: 1.2737, img_acc: 0.9906, txt_acc: 0.9614, mlm_acc: 0.7153, Base Lr: 2.67e-06
+2023-04-19 00:56:51,016 IRRA.train INFO: Epoch[42] Iteration[200/469], loss: 10.3693, sdm_loss: 0.2912, id_loss: 8.7882, mlm_loss: 1.2899, img_acc: 0.9909, txt_acc: 0.9613, mlm_acc: 0.7118, Base Lr: 2.67e-06
+2023-04-19 00:57:31,560 IRRA.train INFO: Epoch[42] Iteration[300/469], loss: 10.3796, sdm_loss: 0.2874, id_loss: 8.7881, mlm_loss: 1.3040, img_acc: 0.9914, txt_acc: 0.9615, mlm_acc: 0.7091, Base Lr: 2.67e-06
+2023-04-19 00:58:12,015 IRRA.train INFO: Epoch[42] Iteration[400/469], loss: 10.3804, sdm_loss: 0.2926, id_loss: 8.7876, mlm_loss: 1.3002, img_acc: 0.9916, txt_acc: 0.9620, mlm_acc: 0.7098, Base Lr: 2.67e-06
+2023-04-19 00:58:40,223 IRRA.train INFO: Epoch 42 done. Time per batch: 0.398[s] Speed: 160.7[samples/s]
+2023-04-19 00:58:40,223 IRRA.train INFO: Validation Results - Epoch: 42
+2023-04-19 00:58:51,719 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 61.380 | 77.880 | 83.320 | 69.426 | 71.280 |
++------+--------+--------+--------+--------+--------+
+2023-04-19 00:59:36,264 IRRA.train INFO: Epoch[43] Iteration[100/469], loss: 10.3974, sdm_loss: 0.2983, id_loss: 8.7839, mlm_loss: 1.3153, img_acc: 0.9911, txt_acc: 0.9634, mlm_acc: 0.7055, Base Lr: 2.42e-06
+2023-04-19 01:00:17,105 IRRA.train INFO: Epoch[43] Iteration[200/469], loss: 10.3884, sdm_loss: 0.2888, id_loss: 8.7836, mlm_loss: 1.3159, img_acc: 0.9902, txt_acc: 0.9652, mlm_acc: 0.7063, Base Lr: 2.42e-06
+2023-04-19 01:00:57,670 IRRA.train INFO: Epoch[43] Iteration[300/469], loss: 10.3701, sdm_loss: 0.2793, id_loss: 8.7827, mlm_loss: 1.3081, img_acc: 0.9912, txt_acc: 0.9650, mlm_acc: 0.7085, Base Lr: 2.42e-06
+2023-04-19 01:01:38,332 IRRA.train INFO: Epoch[43] Iteration[400/469], loss: 10.3581, sdm_loss: 0.2705, id_loss: 8.7822, mlm_loss: 1.3054, img_acc: 0.9915, txt_acc: 0.9643, mlm_acc: 0.7093, Base Lr: 2.42e-06
+2023-04-19 01:02:06,317 IRRA.train INFO: Epoch 43 done. Time per batch: 0.414[s] Speed: 154.7[samples/s]
+2023-04-19 01:02:06,318 IRRA.train INFO: Validation Results - Epoch: 43
+2023-04-19 01:02:17,735 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 60.680 | 78.360 | 83.260 | 69.032 | 70.948 |
++------+--------+--------+--------+--------+--------+
+2023-04-19 01:03:02,030 IRRA.train INFO: Epoch[44] Iteration[100/469], loss: 10.3035, sdm_loss: 0.2369, id_loss: 8.7782, mlm_loss: 1.2884, img_acc: 0.9928, txt_acc: 0.9645, mlm_acc: 0.7133, Base Lr: 2.18e-06
+2023-04-19 01:03:33,839 IRRA.train INFO: Epoch[44] Iteration[200/469], loss: 10.3126, sdm_loss: 0.2435, id_loss: 8.7779, mlm_loss: 1.2911, img_acc: 0.9933, txt_acc: 0.9684, mlm_acc: 0.7129, Base Lr: 2.18e-06
+2023-04-19 01:04:14,158 IRRA.train INFO: Epoch[44] Iteration[300/469], loss: 10.3154, sdm_loss: 0.2434, id_loss: 8.7779, mlm_loss: 1.2941, img_acc: 0.9920, txt_acc: 0.9654, mlm_acc: 0.7126, Base Lr: 2.18e-06
+2023-04-19 01:04:54,538 IRRA.train INFO: Epoch[44] Iteration[400/469], loss: 10.3272, sdm_loss: 0.2570, id_loss: 8.7777, mlm_loss: 1.2925, img_acc: 0.9924, txt_acc: 0.9655, mlm_acc: 0.7120, Base Lr: 2.18e-06
+2023-04-19 01:05:22,527 IRRA.train INFO: Epoch 44 done. Time per batch: 0.392[s] Speed: 163.1[samples/s]
+2023-04-19 01:05:22,527 IRRA.train INFO: Validation Results - Epoch: 44
+2023-04-19 01:05:33,915 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 62.040 | 78.640 | 83.660 | 70.005 | 71.839 |
++------+--------+--------+--------+--------+--------+
+2023-04-19 01:06:20,353 IRRA.train INFO: Epoch[45] Iteration[100/469], loss: 10.3715, sdm_loss: 0.2912, id_loss: 8.7771, mlm_loss: 1.3032, img_acc: 0.9925, txt_acc: 0.9672, mlm_acc: 0.7118, Base Lr: 1.95e-06
+2023-04-19 01:07:00,847 IRRA.train INFO: Epoch[45] Iteration[200/469], loss: 10.3561, sdm_loss: 0.2901, id_loss: 8.7764, mlm_loss: 1.2896, img_acc: 0.9927, txt_acc: 0.9635, mlm_acc: 0.7141, Base Lr: 1.95e-06
+2023-04-19 01:07:41,244 IRRA.train INFO: Epoch[45] Iteration[300/469], loss: 10.3487, sdm_loss: 0.2872, id_loss: 8.7760, mlm_loss: 1.2855, img_acc: 0.9920, txt_acc: 0.9633, mlm_acc: 0.7145, Base Lr: 1.95e-06
+2023-04-19 01:08:21,610 IRRA.train INFO: Epoch[45] Iteration[400/469], loss: 10.3373, sdm_loss: 0.2789, id_loss: 8.7755, mlm_loss: 1.2829, img_acc: 0.9923, txt_acc: 0.9642, mlm_acc: 0.7153, Base Lr: 1.95e-06
+2023-04-19 01:08:49,715 IRRA.train INFO: Epoch 45 done. Time per batch: 0.411[s] Speed: 155.6[samples/s]
+2023-04-19 01:08:49,715 IRRA.train INFO: Validation Results - Epoch: 45
+2023-04-19 01:09:00,898 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 61.560 | 78.520 | 83.700 | 69.682 | 71.551 |
++------+--------+--------+--------+--------+--------+
+2023-04-19 01:09:44,603 IRRA.train INFO: Epoch[46] Iteration[100/469], loss: 10.2978, sdm_loss: 0.2466, id_loss: 8.7730, mlm_loss: 1.2782, img_acc: 0.9923, txt_acc: 0.9652, mlm_acc: 0.7125, Base Lr: 1.73e-06
+2023-04-19 01:10:22,580 IRRA.train INFO: Epoch[46] Iteration[200/469], loss: 10.3313, sdm_loss: 0.2685, id_loss: 8.7726, mlm_loss: 1.2901, img_acc: 0.9920, txt_acc: 0.9633, mlm_acc: 0.7118, Base Lr: 1.73e-06
+2023-04-19 01:10:56,444 IRRA.train INFO: Epoch[46] Iteration[300/469], loss: 10.3337, sdm_loss: 0.2740, id_loss: 8.7725, mlm_loss: 1.2872, img_acc: 0.9917, txt_acc: 0.9627, mlm_acc: 0.7127, Base Lr: 1.73e-06
+2023-04-19 01:11:37,091 IRRA.train INFO: Epoch[46] Iteration[400/469], loss: 10.3129, sdm_loss: 0.2582, id_loss: 8.7723, mlm_loss: 1.2823, img_acc: 0.9916, txt_acc: 0.9631, mlm_acc: 0.7132, Base Lr: 1.73e-06
+2023-04-19 01:12:05,441 IRRA.train INFO: Epoch 46 done. Time per batch: 0.393[s] Speed: 162.9[samples/s]
+2023-04-19 01:12:05,441 IRRA.train INFO: Validation Results - Epoch: 46
+2023-04-19 01:12:16,339 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 62.260 | 78.420 | 83.840 | 70.145 | 71.963 |
++------+--------+--------+--------+--------+--------+
+2023-04-19 01:13:02,105 IRRA.train INFO: Epoch[47] Iteration[100/469], loss: 10.2793, sdm_loss: 0.2196, id_loss: 8.7703, mlm_loss: 1.2894, img_acc: 0.9927, txt_acc: 0.9658, mlm_acc: 0.7129, Base Lr: 1.52e-06
+2023-04-19 01:13:42,694 IRRA.train INFO: Epoch[47] Iteration[200/469], loss: 10.2813, sdm_loss: 0.2326, id_loss: 8.7699, mlm_loss: 1.2788, img_acc: 0.9920, txt_acc: 0.9663, mlm_acc: 0.7143, Base Lr: 1.52e-06
+2023-04-19 01:14:23,127 IRRA.train INFO: Epoch[47] Iteration[300/469], loss: 10.2704, sdm_loss: 0.2231, id_loss: 8.7699, mlm_loss: 1.2774, img_acc: 0.9925, txt_acc: 0.9667, mlm_acc: 0.7140, Base Lr: 1.52e-06
+2023-04-19 01:15:03,639 IRRA.train INFO: Epoch[47] Iteration[400/469], loss: 10.2740, sdm_loss: 0.2258, id_loss: 8.7701, mlm_loss: 1.2782, img_acc: 0.9925, txt_acc: 0.9666, mlm_acc: 0.7137, Base Lr: 1.52e-06
+2023-04-19 01:15:31,455 IRRA.train INFO: Epoch 47 done. Time per batch: 0.410[s] Speed: 156.1[samples/s]
+2023-04-19 01:15:31,455 IRRA.train INFO: Validation Results - Epoch: 47
+2023-04-19 01:15:42,589 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 62.420 | 78.600 | 83.500 | 70.255 | 72.060 |
++------+--------+--------+--------+--------+--------+
+2023-04-19 01:16:28,855 IRRA.train INFO: Epoch[48] Iteration[100/469], loss: 10.3158, sdm_loss: 0.2555, id_loss: 8.7690, mlm_loss: 1.2912, img_acc: 0.9928, txt_acc: 0.9638, mlm_acc: 0.7121, Base Lr: 1.32e-06
+2023-04-19 01:17:09,321 IRRA.train INFO: Epoch[48] Iteration[200/469], loss: 10.2982, sdm_loss: 0.2544, id_loss: 8.7689, mlm_loss: 1.2749, img_acc: 0.9919, txt_acc: 0.9638, mlm_acc: 0.7149, Base Lr: 1.32e-06
+2023-04-19 01:17:42,060 IRRA.train INFO: Epoch[48] Iteration[300/469], loss: 10.3074, sdm_loss: 0.2594, id_loss: 8.7690, mlm_loss: 1.2790, img_acc: 0.9922, txt_acc: 0.9638, mlm_acc: 0.7155, Base Lr: 1.32e-06
+2023-04-19 01:18:22,726 IRRA.train INFO: Epoch[48] Iteration[400/469], loss: 10.3049, sdm_loss: 0.2612, id_loss: 8.7690, mlm_loss: 1.2747, img_acc: 0.9920, txt_acc: 0.9640, mlm_acc: 0.7158, Base Lr: 1.32e-06
+2023-04-19 01:18:50,793 IRRA.train INFO: Epoch 48 done. Time per batch: 0.395[s] Speed: 162.0[samples/s]
+2023-04-19 01:18:50,794 IRRA.train INFO: Validation Results - Epoch: 48
+2023-04-19 01:19:01,826 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 62.520 | 79.000 | 83.960 | 70.434 | 72.253 |
++------+--------+--------+--------+--------+--------+
+2023-04-19 01:19:47,574 IRRA.train INFO: Epoch[49] Iteration[100/469], loss: 10.2934, sdm_loss: 0.2714, id_loss: 8.7681, mlm_loss: 1.2540, img_acc: 0.9927, txt_acc: 0.9678, mlm_acc: 0.7230, Base Lr: 1.13e-06
+2023-04-19 01:20:28,322 IRRA.train INFO: Epoch[49] Iteration[200/469], loss: 10.2931, sdm_loss: 0.2613, id_loss: 8.7680, mlm_loss: 1.2639, img_acc: 0.9923, txt_acc: 0.9680, mlm_acc: 0.7193, Base Lr: 1.13e-06
+2023-04-19 01:21:08,740 IRRA.train INFO: Epoch[49] Iteration[300/469], loss: 10.3077, sdm_loss: 0.2762, id_loss: 8.7684, mlm_loss: 1.2631, img_acc: 0.9918, txt_acc: 0.9661, mlm_acc: 0.7190, Base Lr: 1.13e-06
+2023-04-19 01:21:49,271 IRRA.train INFO: Epoch[49] Iteration[400/469], loss: 10.3022, sdm_loss: 0.2687, id_loss: 8.7684, mlm_loss: 1.2652, img_acc: 0.9921, txt_acc: 0.9666, mlm_acc: 0.7180, Base Lr: 1.13e-06
+2023-04-19 01:22:17,471 IRRA.train INFO: Epoch 49 done. Time per batch: 0.411[s] Speed: 155.8[samples/s]
+2023-04-19 01:22:17,472 IRRA.train INFO: Validation Results - Epoch: 49
+2023-04-19 01:22:28,725 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 62.280 | 78.880 | 83.760 | 70.224 | 72.053 |
++------+--------+--------+--------+--------+--------+
+2023-04-19 01:23:13,200 IRRA.train INFO: Epoch[50] Iteration[100/469], loss: 10.2918, sdm_loss: 0.2491, id_loss: 8.7675, mlm_loss: 1.2752, img_acc: 0.9903, txt_acc: 0.9638, mlm_acc: 0.7156, Base Lr: 9.55e-07
+2023-04-19 01:23:53,644 IRRA.train INFO: Epoch[50] Iteration[200/469], loss: 10.3135, sdm_loss: 0.2790, id_loss: 8.7675, mlm_loss: 1.2670, img_acc: 0.9913, txt_acc: 0.9643, mlm_acc: 0.7171, Base Lr: 9.55e-07
+2023-04-19 01:24:34,156 IRRA.train INFO: Epoch[50] Iteration[300/469], loss: 10.2926, sdm_loss: 0.2606, id_loss: 8.7678, mlm_loss: 1.2642, img_acc: 0.9915, txt_acc: 0.9659, mlm_acc: 0.7186, Base Lr: 9.55e-07
+2023-04-19 01:25:05,218 IRRA.train INFO: Epoch[50] Iteration[400/469], loss: 10.2879, sdm_loss: 0.2509, id_loss: 8.7679, mlm_loss: 1.2691, img_acc: 0.9917, txt_acc: 0.9666, mlm_acc: 0.7181, Base Lr: 9.55e-07
+2023-04-19 01:25:33,312 IRRA.train INFO: Epoch 50 done. Time per batch: 0.392[s] Speed: 163.2[samples/s]
+2023-04-19 01:25:33,312 IRRA.train INFO: Validation Results - Epoch: 50
+2023-04-19 01:25:44,281 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 62.540 | 78.800 | 83.600 | 70.395 | 72.204 |
++------+--------+--------+--------+--------+--------+
+2023-04-19 01:26:30,375 IRRA.train INFO: Epoch[51] Iteration[100/469], loss: 10.3001, sdm_loss: 0.2588, id_loss: 8.7682, mlm_loss: 1.2731, img_acc: 0.9922, txt_acc: 0.9652, mlm_acc: 0.7157, Base Lr: 7.94e-07
+2023-04-19 01:27:10,832 IRRA.train INFO: Epoch[51] Iteration[200/469], loss: 10.2960, sdm_loss: 0.2604, id_loss: 8.7683, mlm_loss: 1.2673, img_acc: 0.9924, txt_acc: 0.9645, mlm_acc: 0.7180, Base Lr: 7.94e-07
+2023-04-19 01:27:51,219 IRRA.train INFO: Epoch[51] Iteration[300/469], loss: 10.2883, sdm_loss: 0.2580, id_loss: 8.7682, mlm_loss: 1.2621, img_acc: 0.9916, txt_acc: 0.9640, mlm_acc: 0.7185, Base Lr: 7.94e-07
+2023-04-19 01:28:31,561 IRRA.train INFO: Epoch[51] Iteration[400/469], loss: 10.2954, sdm_loss: 0.2637, id_loss: 8.7680, mlm_loss: 1.2638, img_acc: 0.9919, txt_acc: 0.9653, mlm_acc: 0.7180, Base Lr: 7.94e-07
+2023-04-19 01:28:59,582 IRRA.train INFO: Epoch 51 done. Time per batch: 0.411[s] Speed: 155.9[samples/s]
+2023-04-19 01:28:59,582 IRRA.train INFO: Validation Results - Epoch: 51
+2023-04-19 01:29:10,594 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 62.640 | 78.960 | 83.720 | 70.483 | 72.289 |
++------+--------+--------+--------+--------+--------+
+2023-04-19 01:29:56,111 IRRA.train INFO: Epoch[52] Iteration[100/469], loss: 10.2664, sdm_loss: 0.2471, id_loss: 8.7678, mlm_loss: 1.2515, img_acc: 0.9916, txt_acc: 0.9606, mlm_acc: 0.7186, Base Lr: 6.46e-07
+2023-04-19 01:30:36,346 IRRA.train INFO: Epoch[52] Iteration[200/469], loss: 10.2950, sdm_loss: 0.2668, id_loss: 8.7678, mlm_loss: 1.2604, img_acc: 0.9914, txt_acc: 0.9635, mlm_acc: 0.7183, Base Lr: 6.46e-07
+2023-04-19 01:31:16,735 IRRA.train INFO: Epoch[52] Iteration[300/469], loss: 10.2877, sdm_loss: 0.2619, id_loss: 8.7675, mlm_loss: 1.2583, img_acc: 0.9924, txt_acc: 0.9651, mlm_acc: 0.7188, Base Lr: 6.46e-07
+2023-04-19 01:31:55,365 IRRA.train INFO: Epoch[52] Iteration[400/469], loss: 10.2842, sdm_loss: 0.2513, id_loss: 8.7675, mlm_loss: 1.2654, img_acc: 0.9923, txt_acc: 0.9653, mlm_acc: 0.7176, Base Lr: 6.46e-07
+2023-04-19 01:32:17,124 IRRA.train INFO: Epoch 52 done. Time per batch: 0.392[s] Speed: 163.1[samples/s]
+2023-04-19 01:32:17,125 IRRA.train INFO: Validation Results - Epoch: 52
+2023-04-19 01:32:28,139 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 62.560 | 78.860 | 83.560 | 70.375 | 72.177 |
++------+--------+--------+--------+--------+--------+
+2023-04-19 01:33:12,079 IRRA.train INFO: Epoch[53] Iteration[100/469], loss: 10.2537, sdm_loss: 0.2345, id_loss: 8.7673, mlm_loss: 1.2518, img_acc: 0.9927, txt_acc: 0.9656, mlm_acc: 0.7193, Base Lr: 5.13e-07
+2023-04-19 01:33:52,459 IRRA.train INFO: Epoch[53] Iteration[200/469], loss: 10.2424, sdm_loss: 0.2282, id_loss: 8.7675, mlm_loss: 1.2467, img_acc: 0.9928, txt_acc: 0.9662, mlm_acc: 0.7207, Base Lr: 5.13e-07
+2023-04-19 01:34:33,025 IRRA.train INFO: Epoch[53] Iteration[300/469], loss: 10.2603, sdm_loss: 0.2401, id_loss: 8.7675, mlm_loss: 1.2527, img_acc: 0.9921, txt_acc: 0.9678, mlm_acc: 0.7198, Base Lr: 5.13e-07
+2023-04-19 01:35:13,529 IRRA.train INFO: Epoch[53] Iteration[400/469], loss: 10.2546, sdm_loss: 0.2319, id_loss: 8.7674, mlm_loss: 1.2553, img_acc: 0.9922, txt_acc: 0.9676, mlm_acc: 0.7197, Base Lr: 5.13e-07
+2023-04-19 01:35:41,565 IRRA.train INFO: Epoch 53 done. Time per batch: 0.411[s] Speed: 155.8[samples/s]
+2023-04-19 01:35:41,565 IRRA.train INFO: Validation Results - Epoch: 53
+2023-04-19 01:35:52,697 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 62.640 | 78.920 | 83.680 | 70.437 | 72.235 |
++------+--------+--------+--------+--------+--------+
+2023-04-19 01:36:36,757 IRRA.train INFO: Epoch[54] Iteration[100/469], loss: 10.3045, sdm_loss: 0.2786, id_loss: 8.7677, mlm_loss: 1.2582, img_acc: 0.9925, txt_acc: 0.9633, mlm_acc: 0.7197, Base Lr: 3.94e-07
+2023-04-19 01:37:17,290 IRRA.train INFO: Epoch[54] Iteration[200/469], loss: 10.2670, sdm_loss: 0.2445, id_loss: 8.7671, mlm_loss: 1.2553, img_acc: 0.9917, txt_acc: 0.9668, mlm_acc: 0.7194, Base Lr: 3.94e-07
+2023-04-19 01:37:57,776 IRRA.train INFO: Epoch[54] Iteration[300/469], loss: 10.2687, sdm_loss: 0.2442, id_loss: 8.7674, mlm_loss: 1.2572, img_acc: 0.9914, txt_acc: 0.9666, mlm_acc: 0.7194, Base Lr: 3.94e-07
+2023-04-19 01:38:38,382 IRRA.train INFO: Epoch[54] Iteration[400/469], loss: 10.2691, sdm_loss: 0.2421, id_loss: 8.7672, mlm_loss: 1.2597, img_acc: 0.9920, txt_acc: 0.9671, mlm_acc: 0.7191, Base Lr: 3.94e-07
+2023-04-19 01:39:06,126 IRRA.train INFO: Epoch 54 done. Time per batch: 0.411[s] Speed: 155.8[samples/s]
+2023-04-19 01:39:06,126 IRRA.train INFO: Validation Results - Epoch: 54
+2023-04-19 01:39:15,576 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 62.740 | 78.820 | 83.680 | 70.455 | 72.239 |
++------+--------+--------+--------+--------+--------+
+2023-04-19 01:40:01,517 IRRA.train INFO: Epoch[55] Iteration[100/469], loss: 10.2598, sdm_loss: 0.2236, id_loss: 8.7665, mlm_loss: 1.2697, img_acc: 0.9931, txt_acc: 0.9709, mlm_acc: 0.7181, Base Lr: 2.91e-07
+2023-04-19 01:40:42,744 IRRA.train INFO: Epoch[55] Iteration[200/469], loss: 10.2832, sdm_loss: 0.2583, id_loss: 8.7669, mlm_loss: 1.2580, img_acc: 0.9923, txt_acc: 0.9680, mlm_acc: 0.7195, Base Lr: 2.91e-07
+2023-04-19 01:41:23,396 IRRA.train INFO: Epoch[55] Iteration[300/469], loss: 10.2817, sdm_loss: 0.2526, id_loss: 8.7671, mlm_loss: 1.2620, img_acc: 0.9916, txt_acc: 0.9663, mlm_acc: 0.7191, Base Lr: 2.91e-07
+2023-04-19 01:42:03,745 IRRA.train INFO: Epoch[55] Iteration[400/469], loss: 10.2770, sdm_loss: 0.2488, id_loss: 8.7673, mlm_loss: 1.2609, img_acc: 0.9916, txt_acc: 0.9661, mlm_acc: 0.7190, Base Lr: 2.91e-07
+2023-04-19 01:42:31,759 IRRA.train INFO: Epoch 55 done. Time per batch: 0.412[s] Speed: 155.2[samples/s]
+2023-04-19 01:42:31,759 IRRA.train INFO: Validation Results - Epoch: 55
+2023-04-19 01:42:42,713 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 62.720 | 78.820 | 83.600 | 70.453 | 72.239 |
++------+--------+--------+--------+--------+--------+
+2023-04-19 01:43:26,050 IRRA.train INFO: Epoch[56] Iteration[100/469], loss: 10.3070, sdm_loss: 0.2650, id_loss: 8.7671, mlm_loss: 1.2749, img_acc: 0.9933, txt_acc: 0.9705, mlm_acc: 0.7173, Base Lr: 2.03e-07
+2023-04-19 01:44:06,354 IRRA.train INFO: Epoch[56] Iteration[200/469], loss: 10.2855, sdm_loss: 0.2539, id_loss: 8.7670, mlm_loss: 1.2646, img_acc: 0.9930, txt_acc: 0.9678, mlm_acc: 0.7182, Base Lr: 2.03e-07
+2023-04-19 01:44:46,803 IRRA.train INFO: Epoch[56] Iteration[300/469], loss: 10.2741, sdm_loss: 0.2401, id_loss: 8.7670, mlm_loss: 1.2670, img_acc: 0.9925, txt_acc: 0.9678, mlm_acc: 0.7181, Base Lr: 2.03e-07
+2023-04-19 01:45:27,367 IRRA.train INFO: Epoch[56] Iteration[400/469], loss: 10.2811, sdm_loss: 0.2500, id_loss: 8.7670, mlm_loss: 1.2641, img_acc: 0.9928, txt_acc: 0.9667, mlm_acc: 0.7182, Base Lr: 2.03e-07
+2023-04-19 01:45:55,363 IRRA.train INFO: Epoch 56 done. Time per batch: 0.409[s] Speed: 156.5[samples/s]
+2023-04-19 01:45:55,363 IRRA.train INFO: Validation Results - Epoch: 56
+2023-04-19 01:46:06,454 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 62.740 | 78.800 | 83.620 | 70.463 | 72.248 |
++------+--------+--------+--------+--------+--------+
+2023-04-19 01:46:41,408 IRRA.train INFO: Epoch[57] Iteration[100/469], loss: 10.2759, sdm_loss: 0.2624, id_loss: 8.7674, mlm_loss: 1.2461, img_acc: 0.9920, txt_acc: 0.9647, mlm_acc: 0.7198, Base Lr: 1.30e-07
+2023-04-19 01:47:21,864 IRRA.train INFO: Epoch[57] Iteration[200/469], loss: 10.2688, sdm_loss: 0.2386, id_loss: 8.7672, mlm_loss: 1.2630, img_acc: 0.9916, txt_acc: 0.9665, mlm_acc: 0.7180, Base Lr: 1.30e-07
+2023-04-19 01:48:02,296 IRRA.train INFO: Epoch[57] Iteration[300/469], loss: 10.2682, sdm_loss: 0.2449, id_loss: 8.7671, mlm_loss: 1.2562, img_acc: 0.9920, txt_acc: 0.9658, mlm_acc: 0.7196, Base Lr: 1.30e-07
+2023-04-19 01:48:42,657 IRRA.train INFO: Epoch[57] Iteration[400/469], loss: 10.2691, sdm_loss: 0.2433, id_loss: 8.7669, mlm_loss: 1.2589, img_acc: 0.9921, txt_acc: 0.9661, mlm_acc: 0.7198, Base Lr: 1.30e-07
+2023-04-19 01:49:10,662 IRRA.train INFO: Epoch 57 done. Time per batch: 0.391[s] Speed: 163.7[samples/s]
+2023-04-19 01:49:10,662 IRRA.train INFO: Validation Results - Epoch: 57
+2023-04-19 01:49:21,637 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 62.720 | 78.840 | 83.640 | 70.454 | 72.240 |
++------+--------+--------+--------+--------+--------+
+2023-04-19 01:50:05,590 IRRA.train INFO: Epoch[58] Iteration[100/469], loss: 10.2956, sdm_loss: 0.2668, id_loss: 8.7665, mlm_loss: 1.2624, img_acc: 0.9937, txt_acc: 0.9659, mlm_acc: 0.7174, Base Lr: 7.32e-08
+2023-04-19 01:50:45,869 IRRA.train INFO: Epoch[58] Iteration[200/469], loss: 10.2804, sdm_loss: 0.2520, id_loss: 8.7665, mlm_loss: 1.2618, img_acc: 0.9937, txt_acc: 0.9659, mlm_acc: 0.7182, Base Lr: 7.32e-08
+2023-04-19 01:51:26,274 IRRA.train INFO: Epoch[58] Iteration[300/469], loss: 10.2793, sdm_loss: 0.2547, id_loss: 8.7670, mlm_loss: 1.2576, img_acc: 0.9931, txt_acc: 0.9657, mlm_acc: 0.7191, Base Lr: 7.32e-08
+2023-04-19 01:52:06,770 IRRA.train INFO: Epoch[58] Iteration[400/469], loss: 10.2729, sdm_loss: 0.2510, id_loss: 8.7669, mlm_loss: 1.2550, img_acc: 0.9930, txt_acc: 0.9668, mlm_acc: 0.7202, Base Lr: 7.32e-08
+2023-04-19 01:52:34,817 IRRA.train INFO: Epoch 58 done. Time per batch: 0.411[s] Speed: 155.9[samples/s]
+2023-04-19 01:52:34,817 IRRA.train INFO: Validation Results - Epoch: 58
+2023-04-19 01:52:46,032 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 62.760 | 78.800 | 83.620 | 70.472 | 72.254 |
++------+--------+--------+--------+--------+--------+
+2023-04-19 01:53:31,557 IRRA.train INFO: Epoch[59] Iteration[100/469], loss: 10.2934, sdm_loss: 0.2585, id_loss: 8.7675, mlm_loss: 1.2675, img_acc: 0.9919, txt_acc: 0.9666, mlm_acc: 0.7166, Base Lr: 3.26e-08
+2023-04-19 01:54:04,471 IRRA.train INFO: Epoch[59] Iteration[200/469], loss: 10.2703, sdm_loss: 0.2358, id_loss: 8.7671, mlm_loss: 1.2674, img_acc: 0.9923, txt_acc: 0.9665, mlm_acc: 0.7174, Base Lr: 3.26e-08
+2023-04-19 01:54:45,035 IRRA.train INFO: Epoch[59] Iteration[300/469], loss: 10.2733, sdm_loss: 0.2389, id_loss: 8.7670, mlm_loss: 1.2673, img_acc: 0.9927, txt_acc: 0.9669, mlm_acc: 0.7177, Base Lr: 3.26e-08
+2023-04-19 01:55:25,473 IRRA.train INFO: Epoch[59] Iteration[400/469], loss: 10.2722, sdm_loss: 0.2414, id_loss: 8.7671, mlm_loss: 1.2637, img_acc: 0.9922, txt_acc: 0.9668, mlm_acc: 0.7184, Base Lr: 3.26e-08
+2023-04-19 01:55:53,535 IRRA.train INFO: Epoch 59 done. Time per batch: 0.394[s] Speed: 162.5[samples/s]
+2023-04-19 01:55:53,535 IRRA.train INFO: Validation Results - Epoch: 59
+2023-04-19 01:56:04,551 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 62.760 | 78.840 | 83.600 | 70.470 | 72.252 |
++------+--------+--------+--------+--------+--------+
+2023-04-19 01:56:48,192 IRRA.train INFO: Epoch[60] Iteration[100/469], loss: 10.2763, sdm_loss: 0.2377, id_loss: 8.7666, mlm_loss: 1.2720, img_acc: 0.9942, txt_acc: 0.9670, mlm_acc: 0.7173, Base Lr: 8.15e-09
+2023-04-19 01:57:28,711 IRRA.train INFO: Epoch[60] Iteration[200/469], loss: 10.2788, sdm_loss: 0.2359, id_loss: 8.7666, mlm_loss: 1.2763, img_acc: 0.9939, txt_acc: 0.9683, mlm_acc: 0.7152, Base Lr: 8.15e-09
+2023-04-19 01:58:09,199 IRRA.train INFO: Epoch[60] Iteration[300/469], loss: 10.2737, sdm_loss: 0.2353, id_loss: 8.7666, mlm_loss: 1.2718, img_acc: 0.9939, txt_acc: 0.9674, mlm_acc: 0.7163, Base Lr: 8.15e-09
+2023-04-19 01:58:49,639 IRRA.train INFO: Epoch[60] Iteration[400/469], loss: 10.2787, sdm_loss: 0.2455, id_loss: 8.7668, mlm_loss: 1.2664, img_acc: 0.9933, txt_acc: 0.9667, mlm_acc: 0.7173, Base Lr: 8.15e-09
+2023-04-19 01:59:17,777 IRRA.train INFO: Epoch 60 done. Time per batch: 0.411[s] Speed: 155.9[samples/s]
+2023-04-19 01:59:17,777 IRRA.train INFO: Validation Results - Epoch: 60
+2023-04-19 01:59:28,944 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 62.760 | 78.800 | 83.640 | 70.466 | 72.248 |
++------+--------+--------+--------+--------+--------+
+2023-04-19 01:59:29,617 IRRA.train INFO: best R1: 62.76000213623047 at epoch 58
+run_irra.sh: 15: Syntax error: Unterminated quoted string

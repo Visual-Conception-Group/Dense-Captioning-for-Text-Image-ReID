@@ -1,0 +1,15 @@
+ZURU_Augmented_Appended-test has 6016 pohtos, 6016 text
+using stride: [16, 16], and patch number is num_y24 * num_x8
+using drop_out rate is : 0.0
+using attn_drop_out rate is : 0.0
+using drop_path rate is : 0.1
+distill need to choose right cls token in the pth
+Resized position embedding from size:torch.Size([1, 197, 768]) to size: torch.Size([1, 193, 768]) with height:24 width: 8
+Loading pretrained ImageNet model......from ./deit_base_distilled_patch16_224-df68dfff.pth
+Loaded model successfully!
+load the 36 epoch param successfully
+Testing Epoch: 36 Iteration:1
+similarity_all:
+6016 0
+t2i: @R1: 0.6004, @R5: 0.766, @R10: 0.8205, map: 0.6563
+t2i_wm: @R1: 0.6001, @R5: 0.766, @R10: 0.8203, map: 0.6313

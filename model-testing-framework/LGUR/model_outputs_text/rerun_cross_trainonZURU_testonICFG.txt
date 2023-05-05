@@ -1,0 +1,14 @@
+ICFG-PEDES-val-test has 19848 pohtos, 19848 text
+using stride: [16, 16], and patch number is num_y24 * num_x8
+using drop_out rate is : 0.0
+using attn_drop_out rate is : 0.0
+using drop_path rate is : 0.1
+distill need to choose right cls token in the pth
+Resized position embedding from size:torch.Size([1, 197, 768]) to size: torch.Size([1, 193, 768]) with height:24 width: 8
+Loading pretrained ImageNet model......from ./deit_base_distilled_patch16_224-df68dfff.pth
+Loaded model successfully!
+load the 28 epoch param successfully
+Testing Epoch: 28 Iteration:1
+similarity_all:
+t2i: @R1: 0.2841, @R5: 0.4663, @R10: 0.5537, map: 0.1179
+t2i_wm: @R1: 0.2606, @R5: 0.4349, @R10: 0.5226, map: 0.1092

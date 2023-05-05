@@ -1,0 +1,87 @@
+TEST:
+2023-04-28 19:59:34,953 IRRA INFO: {'GPU_ID': 0, 'MLM': True, 'alpha': 0.9, 'batch_size': 64, 'beta': 0.999, 'bias_lr_factor': 2.0, 'cmt_depth': 4, 'dataset_name': 'IIITD', 'distributed': False, 'eval_period': 1, 'gamma': 0.1, 'id_loss_weight': 1.0, 'img_aug': True, 'img_size': [384, 128], 'local_rank': 0, 'log_period': 100, 'loss_names': 'sdm+mlm', 'lr': 1e-05, 'lr_factor': 5.0, 'lrscheduler': 'cosine', 'masked_token_rate': 0.8, 'masked_token_unchanged_rate': 0.1, 'milestones': [20, 50], 'mlm_loss_weight': 1.0, 'momentum': 0.9, 'name': 'blip_diff_anneal', 'num_epoch': 60, 'num_instance': 4, 'num_workers': 8, 'optimizer': 'Adam', 'output_dir': 'logs/IIITD_BLIP_DIFF/20230426_060821_blip_diff_anneal', 'power': 0.9, 'pretrain_choice': 'ViT-B/16', 'resume': False, 'resume_ckpt_file': '', 'root_dir': './data', 'sampler': 'random', 'stride_size': 16, 'target_lr': 0, 'temperature': 0.02, 'test_batch_size': 512, 'text_length': 77, 'training': False, 'val_dataset': 'val', 'vocab_size': 49408, 'warmup_epochs': 5, 'warmup_factor': 0.1, 'warmup_method': 'linear', 'weight_decay': 4e-05, 'weight_decay_bias': 0.0}
+2023-04-28 19:59:35,435 IRRA.dataset INFO: => IIITD Images and Captions are loaded
+2023-04-28 19:59:35,435 IRRA.dataset INFO: IIITD Dataset statistics:
+2023-04-28 19:59:35,435 IRRA.dataset INFO: 
++--------+-------+--------+----------+
+| subset |  ids  | images | captions |
++--------+-------+--------+----------+
+| train  | 15000 | 30000  |  30000   |
+|  test  |  2500 |  5000  |   5000   |
+|  val   |  2500 |  5000  |   5000   |
++--------+-------+--------+----------+
+2023-04-28 19:59:36,423 IRRA.model INFO: Load pretrained ViT-B/16 CLIP model with model config: {'embed_dim': 512, 'image_resolution': [384, 128], 'vision_layers': 12, 'vision_width': 768, 'vision_patch_size': 16, 'context_length': 77, 'vocab_size': 49408, 'transformer_width': 512, 'transformer_heads': 8, 'transformer_layers': 12, 'stride_size': 16}
+2023-04-28 19:59:47,749 IRRA.test INFO: Enter inferencing
+2023-04-28 19:59:59,229 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 78.240 | 91.400 | 94.280 | 84.069 | 85.364 |
+| i2t  | 83.840 | 96.080 | 97.920 | 83.389 | 77.599 |
++------+--------+--------+--------+--------+--------+
+
+TEST (CUHK-PEDES):
+2023-04-28 20:02:19,239 IRRA INFO: {'GPU_ID': 0, 'MLM': True, 'alpha': 0.9, 'batch_size': 64, 'beta': 0.999, 'bias_lr_factor': 2.0, 'cmt_depth': 4, 'dataset_name': 'CUHK-PEDES', 'distributed': False, 'eval_period': 1, 'gamma': 0.1, 'id_loss_weight': 1.0, 'img_aug': True, 'img_size': [384, 128], 'local_rank': 0, 'log_period': 100, 'loss_names': 'sdm+mlm', 'lr': 1e-05, 'lr_factor': 5.0, 'lrscheduler': 'cosine', 'masked_token_rate': 0.8, 'masked_token_unchanged_rate': 0.1, 'milestones': [20, 50], 'mlm_loss_weight': 1.0, 'momentum': 0.9, 'name': 'blip_diff_anneal', 'num_epoch': 60, 'num_instance': 4, 'num_workers': 8, 'optimizer': 'Adam', 'output_dir': 'logs/IIITD_BLIP_DIFF/20230426_060821_blip_diff_anneal', 'power': 0.9, 'pretrain_choice': 'ViT-B/16', 'resume': False, 'resume_ckpt_file': '', 'root_dir': './data', 'sampler': 'random', 'stride_size': 16, 'target_lr': 0, 'temperature': 0.02, 'test_batch_size': 512, 'text_length': 77, 'training': False, 'val_dataset': 'val', 'vocab_size': 49408, 'warmup_epochs': 5, 'warmup_factor': 0.1, 'warmup_method': 'linear', 'weight_decay': 4e-05, 'weight_decay_bias': 0.0}
+2023-04-28 20:02:19,989 IRRA.dataset INFO: => CUHK-PEDES Images and Captions are loaded
+2023-04-28 20:02:19,989 IRRA.dataset INFO: CUHKPEDES Dataset statistics:
+2023-04-28 20:02:19,989 IRRA.dataset INFO: 
++--------+-------+--------+----------+
+| subset |  ids  | images | captions |
++--------+-------+--------+----------+
+| train  | 11003 | 34054  |  68126   |
+|  test  |  1000 |  3074  |   6156   |
+|  val   |  1000 |  3078  |   6158   |
++--------+-------+--------+----------+
+2023-04-28 20:02:20,974 IRRA.model INFO: Load pretrained ViT-B/16 CLIP model with model config: {'embed_dim': 512, 'image_resolution': [384, 128], 'vision_layers': 12, 'vision_width': 768, 'vision_patch_size': 16, 'context_length': 77, 'vocab_size': 49408, 'transformer_width': 512, 'transformer_heads': 8, 'transformer_layers': 12, 'stride_size': 16}
+2023-04-28 20:02:28,900 IRRA.test INFO: Enter inferencing
+2023-04-28 20:02:39,257 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 45.728 | 66.975 | 74.968 | 41.313 | 26.551 |
+| i2t  | 59.239 | 83.865 | 90.599 | 36.770 | 8.989  |
++------+--------+--------+--------+--------+--------+
+
+TEST (ICFG-PEDES):
+2023-04-28 20:03:13,947 IRRA INFO: {'GPU_ID': 0, 'MLM': True, 'alpha': 0.9, 'batch_size': 64, 'beta': 0.999, 'bias_lr_factor': 2.0, 'cmt_depth': 4, 'dataset_name': 'ICFG-PEDES', 'distributed': False, 'eval_period': 1, 'gamma': 0.1, 'id_loss_weight': 1.0, 'img_aug': True, 'img_size': [384, 128], 'local_rank': 0, 'log_period': 100, 'loss_names': 'sdm+mlm', 'lr': 1e-05, 'lr_factor': 5.0, 'lrscheduler': 'cosine', 'masked_token_rate': 0.8, 'masked_token_unchanged_rate': 0.1, 'milestones': [20, 50], 'mlm_loss_weight': 1.0, 'momentum': 0.9, 'name': 'blip_diff_anneal', 'num_epoch': 60, 'num_instance': 4, 'num_workers': 8, 'optimizer': 'Adam', 'output_dir': 'logs/IIITD_BLIP_DIFF/20230426_060821_blip_diff_anneal', 'power': 0.9, 'pretrain_choice': 'ViT-B/16', 'resume': False, 'resume_ckpt_file': '', 'root_dir': './data', 'sampler': 'random', 'stride_size': 16, 'target_lr': 0, 'temperature': 0.02, 'test_batch_size': 512, 'text_length': 77, 'training': False, 'val_dataset': 'val', 'vocab_size': 49408, 'warmup_epochs': 5, 'warmup_factor': 0.1, 'warmup_method': 'linear', 'weight_decay': 4e-05, 'weight_decay_bias': 0.0}
+2023-04-28 20:03:14,670 IRRA.dataset INFO: => ICFG-PEDES Images and Captions are loaded
+2023-04-28 20:03:14,671 IRRA.dataset INFO: ICFGPEDES Dataset statistics:
+2023-04-28 20:03:14,672 IRRA.dataset INFO: 
++--------+------+--------+----------+
+| subset | ids  | images | captions |
++--------+------+--------+----------+
+| train  | 3102 | 34674  |  34674   |
+|  test  | 1000 | 19848  |  19848   |
+|  val   |  0   |   0    |    0     |
++--------+------+--------+----------+
+2023-04-28 20:03:15,679 IRRA.model INFO: Load pretrained ViT-B/16 CLIP model with model config: {'embed_dim': 512, 'image_resolution': [384, 128], 'vision_layers': 12, 'vision_width': 768, 'vision_patch_size': 16, 'context_length': 77, 'vocab_size': 49408, 'transformer_width': 512, 'transformer_heads': 8, 'transformer_layers': 12, 'stride_size': 16}
+2023-04-28 20:03:25,491 IRRA.test INFO: Enter inferencing
+2023-04-28 20:04:45,005 IRRA.eval INFO: 
++------+--------+--------+--------+--------+-------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP |
++------+--------+--------+--------+--------+-------+
+| t2i  | 37.369 | 57.265 | 65.740 | 18.548 | 1.738 |
+| i2t  | 38.024 | 60.989 | 70.199 | 17.609 | 1.369 |
++------+--------+--------+--------+--------+-------+
+
+TEST (RSTP):
+2023-04-28 20:05:18,200 IRRA INFO: {'GPU_ID': 0, 'MLM': True, 'alpha': 0.9, 'batch_size': 64, 'beta': 0.999, 'bias_lr_factor': 2.0, 'cmt_depth': 4, 'dataset_name': 'RSTPReid', 'distributed': False, 'eval_period': 1, 'gamma': 0.1, 'id_loss_weight': 1.0, 'img_aug': True, 'img_size': [384, 128], 'local_rank': 0, 'log_period': 100, 'loss_names': 'sdm+mlm', 'lr': 1e-05, 'lr_factor': 5.0, 'lrscheduler': 'cosine', 'masked_token_rate': 0.8, 'masked_token_unchanged_rate': 0.1, 'milestones': [20, 50], 'mlm_loss_weight': 1.0, 'momentum': 0.9, 'name': 'blip_diff_anneal', 'num_epoch': 60, 'num_instance': 4, 'num_workers': 8, 'optimizer': 'Adam', 'output_dir': 'logs/IIITD_BLIP_DIFF/20230426_060821_blip_diff_anneal', 'power': 0.9, 'pretrain_choice': 'ViT-B/16', 'resume': False, 'resume_ckpt_file': '', 'root_dir': './data', 'sampler': 'random', 'stride_size': 16, 'target_lr': 0, 'temperature': 0.02, 'test_batch_size': 512, 'text_length': 77, 'training': False, 'val_dataset': 'val', 'vocab_size': 49408, 'warmup_epochs': 5, 'warmup_factor': 0.1, 'warmup_method': 'linear', 'weight_decay': 4e-05, 'weight_decay_bias': 0.0}
+2023-04-28 20:05:18,356 IRRA.dataset INFO: => RSTPReid Images and Captions are loaded
+2023-04-28 20:05:18,356 IRRA.dataset INFO: RSTPReid Dataset statistics:
+2023-04-28 20:05:18,357 IRRA.dataset INFO: 
++--------+------+--------+----------+
+| subset | ids  | images | captions |
++--------+------+--------+----------+
+| train  | 3701 | 18505  |  37010   |
+|  test  | 200  |  1000  |   2000   |
+|  val   | 200  |  1000  |   2000   |
++--------+------+--------+----------+
+2023-04-28 20:05:19,503 IRRA.model INFO: Load pretrained ViT-B/16 CLIP model with model config: {'embed_dim': 512, 'image_resolution': [384, 128], 'vision_layers': 12, 'vision_width': 768, 'vision_patch_size': 16, 'context_length': 77, 'vocab_size': 49408, 'transformer_width': 512, 'transformer_heads': 8, 'transformer_layers': 12, 'stride_size': 16}
+2023-04-28 20:05:30,812 IRRA.test INFO: Enter inferencing
+2023-04-28 20:05:37,172 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 41.050 | 65.450 | 76.200 | 30.975 | 11.905 |
+| i2t  | 45.900 | 73.100 | 81.000 | 28.318 | 7.620  |
++------+--------+--------+--------+--------+--------+

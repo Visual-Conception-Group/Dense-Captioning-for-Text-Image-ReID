@@ -1,0 +1,12 @@
+Testing Epoch: 1 Iteration:547
+similarity_all:
+t2i: @R1: 0.0008685, @R5: 0.00228, @R10: 0.004234, map: 0.00131
+t2i_wm: @R1: 0.00076, @R5: 0.002063, @R10: 0.003691, map: 0.0009462
+Testing Epoch: 4 Iteration:547
+similarity_all:
+t2i: @R1: 0.001303, @R5: 0.00304, @R10: 0.004451, map: 0.001126
+t2i_wm: @R1: 0.001086, @R5: 0.002606, @R10: 0.0038, map: 0.0008273
+Testing Epoch: 1 Iteration:1967
+similarity_all:
+t2i: @R1: 0.0006514, @R5: 0.001846, @R10: 0.005103, map: 0.001155
+t2i_wm: @R1: 0.0005428, @R5: 0.001628, @R10: 0.004343, map: 0.0008189

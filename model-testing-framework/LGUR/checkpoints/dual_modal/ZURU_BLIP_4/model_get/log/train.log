@@ -1,0 +1,612 @@
+Namespace(mode='train', trained=False, bidirectional=True, using_pose=False, last_lstm=False, using_noun=False, epoch=60, start_epoch=0, epoch_decay=[20, 40, 50], wd=4e-05, batch_size=64, adam_alpha=0.9, adam_beta=0.999, lr=0.001, margin=0.3, vocab_size=425, feature_length=512, class_num=15000, part=6, caption_length_max=100, random_erasing=0.0, Save_param_every=5, save_path='./checkpoints/dual_modal/ZURU_BLIP_4/model_get', GPU_id='7', device=device(type='cuda', index=7), dataset='ZURU_BLIP_4', dataroot='', pkl_root='/raid/home/vibhu20150/Person-Re-ID/LGUR/processed_data_singledata_ZURU_BLIP_4/', test_image_num=200, data_augment=False, d_model=1024, nhead=4, dim_feedforward=2048, normalize_before=False, num_encoder_layers=3, num_decoder_layers=3, num_query=6, detr_lr=0.0001, txt_detr_lr=0.0001, txt_lstm_lr=0.001, res_y=False, noself=False, post_norm=False, n_heads=4, n_layers=2, share_query=True, ViT_layer=8, wordtype='bert')
+Model_size: 212.67774M
+lr:0.0001
+lr:0.0001
+lr:0.001
+lr:0.001
+lr:0.001
+Epoch: 1/60 Setp: 50, ranking_loss: 18.73, id_loss: 19.44, ranking_loss_dict: 26.39, id_loss_dict: 19.45,ranking_loss_dict_text: 10.49, ranking_loss_dict_image: 3.91,pred_i2t_local: 0.000 pred_t2i_local 0.000
+Epoch: 1/60 Setp: 100, ranking_loss: 9.32, id_loss: 19.70, ranking_loss_dict: 16.24, id_loss_dict: 19.70,ranking_loss_dict_text: 8.78, ranking_loss_dict_image: 1.84,pred_i2t_local: 0.000 pred_t2i_local 0.000
+Epoch: 1/60 Setp: 150, ranking_loss: 9.92, id_loss: 20.02, ranking_loss_dict: 13.56, id_loss_dict: 20.01,ranking_loss_dict_text: 5.24, ranking_loss_dict_image: 1.64,pred_i2t_local: 0.000 pred_t2i_local 0.000
+Epoch: 1/60 Setp: 200, ranking_loss: 7.22, id_loss: 20.28, ranking_loss_dict: 10.32, id_loss_dict: 20.17,ranking_loss_dict_text: 3.96, ranking_loss_dict_image: 1.40,pred_i2t_local: 0.000 pred_t2i_local 0.000
+Epoch: 1/60 , ranking_loss: 12.68, id_loss: 19.83, pred_i2t_local: 0.000, pred_t2i_local 0.000 
+lr:0.0001
+lr:0.0001
+lr:0.001
+lr:0.001
+lr:0.001
+Epoch: 2/60 Setp: 50, ranking_loss: 5.01, id_loss: 17.28, ranking_loss_dict: 9.46, id_loss_dict: 17.88,ranking_loss_dict_text: 1.53, ranking_loss_dict_image: 0.87,pred_i2t_local: 0.000 pred_t2i_local 0.000
+Epoch: 2/60 Setp: 100, ranking_loss: 3.23, id_loss: 17.88, ranking_loss_dict: 10.87, id_loss_dict: 18.32,ranking_loss_dict_text: 2.04, ranking_loss_dict_image: 0.75,pred_i2t_local: 0.000 pred_t2i_local 0.000
+Epoch: 2/60 Setp: 150, ranking_loss: 2.82, id_loss: 18.52, ranking_loss_dict: 9.16, id_loss_dict: 18.76,ranking_loss_dict_text: 0.94, ranking_loss_dict_image: 1.33,pred_i2t_local: 0.000 pred_t2i_local 0.000
+Epoch: 2/60 Setp: 200, ranking_loss: 3.21, id_loss: 18.91, ranking_loss_dict: 8.97, id_loss_dict: 19.05,ranking_loss_dict_text: 1.51, ranking_loss_dict_image: 0.09,pred_i2t_local: 0.000 pred_t2i_local 0.000
+Epoch: 2/60 , ranking_loss: 4.17, id_loss: 17.84, pred_i2t_local: 0.003, pred_t2i_local 0.002 
+lr:0.0001
+lr:0.0001
+lr:0.001
+lr:0.001
+lr:0.001
+Epoch: 3/60 Setp: 50, ranking_loss: 2.12, id_loss: 13.95, ranking_loss_dict: 8.28, id_loss_dict: 15.10,ranking_loss_dict_text: 0.69, ranking_loss_dict_image: 0.34,pred_i2t_local: 0.005 pred_t2i_local 0.003
+Epoch: 3/60 Setp: 100, ranking_loss: 3.02, id_loss: 14.92, ranking_loss_dict: 9.75, id_loss_dict: 15.94,ranking_loss_dict_text: 2.16, ranking_loss_dict_image: 1.05,pred_i2t_local: 0.003 pred_t2i_local 0.000
+Epoch: 3/60 Setp: 150, ranking_loss: 2.07, id_loss: 15.82, ranking_loss_dict: 5.94, id_loss_dict: 16.57,ranking_loss_dict_text: 0.61, ranking_loss_dict_image: 0.65,pred_i2t_local: 0.000 pred_t2i_local 0.000
+Epoch: 3/60 Setp: 200, ranking_loss: 2.55, id_loss: 16.02, ranking_loss_dict: 7.17, id_loss_dict: 16.81,ranking_loss_dict_text: 1.15, ranking_loss_dict_image: 0.15,pred_i2t_local: 0.000 pred_t2i_local 0.000
+Epoch: 3/60 , ranking_loss: 2.53, id_loss: 15.07, pred_i2t_local: 0.006, pred_t2i_local 0.004 
+lr:0.0001
+lr:0.0001
+lr:0.001
+lr:0.001
+lr:0.001
+Epoch: 4/60 Setp: 50, ranking_loss: 2.51, id_loss: 12.00, ranking_loss_dict: 7.62, id_loss_dict: 13.30,ranking_loss_dict_text: 1.16, ranking_loss_dict_image: 1.34,pred_i2t_local: 0.013 pred_t2i_local 0.005
+Epoch: 4/60 Setp: 100, ranking_loss: 2.74, id_loss: 13.00, ranking_loss_dict: 7.00, id_loss_dict: 14.35,ranking_loss_dict_text: 0.83, ranking_loss_dict_image: 0.39,pred_i2t_local: 0.000 pred_t2i_local 0.000
+Epoch: 4/60 Setp: 150, ranking_loss: 1.19, id_loss: 13.12, ranking_loss_dict: 5.95, id_loss_dict: 14.29,ranking_loss_dict_text: 0.29, ranking_loss_dict_image: 0.42,pred_i2t_local: 0.003 pred_t2i_local 0.003
+Epoch: 4/60 Setp: 200, ranking_loss: 1.95, id_loss: 13.49, ranking_loss_dict: 5.86, id_loss_dict: 14.70,ranking_loss_dict_text: 0.29, ranking_loss_dict_image: 0.18,pred_i2t_local: 0.003 pred_t2i_local 0.000
+Epoch: 4/60 , ranking_loss: 1.95, id_loss: 12.71, pred_i2t_local: 0.019, pred_t2i_local 0.010 
+lr:0.0001
+lr:0.0001
+lr:0.001
+lr:0.001
+lr:0.001
+Epoch: 5/60 Setp: 50, ranking_loss: 1.89, id_loss: 9.24, ranking_loss_dict: 8.14, id_loss_dict: 10.94,ranking_loss_dict_text: 0.35, ranking_loss_dict_image: 0.55,pred_i2t_local: 0.096 pred_t2i_local 0.036
+Epoch: 5/60 Setp: 100, ranking_loss: 1.66, id_loss: 10.12, ranking_loss_dict: 6.98, id_loss_dict: 11.63,ranking_loss_dict_text: 0.51, ranking_loss_dict_image: 1.29,pred_i2t_local: 0.031 pred_t2i_local 0.005
+Epoch: 5/60 Setp: 150, ranking_loss: 1.92, id_loss: 10.52, ranking_loss_dict: 5.77, id_loss_dict: 12.06,ranking_loss_dict_text: 0.08, ranking_loss_dict_image: 0.41,pred_i2t_local: 0.023 pred_t2i_local 0.010
+Epoch: 5/60 Setp: 200, ranking_loss: 0.68, id_loss: 11.54, ranking_loss_dict: 7.87, id_loss_dict: 12.77,ranking_loss_dict_text: 0.08, ranking_loss_dict_image: 1.79,pred_i2t_local: 0.018 pred_t2i_local 0.008
+Epoch: 5/60 , ranking_loss: 1.58, id_loss: 10.42, pred_i2t_local: 0.062, pred_t2i_local 0.030 
+lr:0.0001
+lr:0.0001
+lr:0.001
+lr:0.001
+lr:0.001
+Epoch: 6/60 Setp: 50, ranking_loss: 0.68, id_loss: 7.50, ranking_loss_dict: 4.13, id_loss_dict: 9.37,ranking_loss_dict_text: 0.19, ranking_loss_dict_image: 0.16,pred_i2t_local: 0.193 pred_t2i_local 0.107
+Epoch: 6/60 Setp: 100, ranking_loss: 1.55, id_loss: 8.32, ranking_loss_dict: 5.51, id_loss_dict: 10.27,ranking_loss_dict_text: 0.47, ranking_loss_dict_image: 0.37,pred_i2t_local: 0.141 pred_t2i_local 0.047
+Epoch: 6/60 Setp: 150, ranking_loss: 0.75, id_loss: 8.23, ranking_loss_dict: 6.76, id_loss_dict: 9.86,ranking_loss_dict_text: 0.15, ranking_loss_dict_image: 0.06,pred_i2t_local: 0.146 pred_t2i_local 0.039
+Epoch: 6/60 Setp: 200, ranking_loss: 0.97, id_loss: 9.27, ranking_loss_dict: 4.63, id_loss_dict: 10.66,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.24,pred_i2t_local: 0.094 pred_t2i_local 0.031
+Epoch: 6/60 , ranking_loss: 1.28, id_loss: 8.09, pred_i2t_local: 0.189, pred_t2i_local 0.082 
+lr:0.0001
+lr:0.0001
+lr:0.001
+lr:0.001
+lr:0.001
+Epoch: 7/60 Setp: 50, ranking_loss: 0.48, id_loss: 4.63, ranking_loss_dict: 5.64, id_loss_dict: 6.53,ranking_loss_dict_text: 0.07, ranking_loss_dict_image: 0.06,pred_i2t_local: 0.562 pred_t2i_local 0.299
+Epoch: 7/60 Setp: 100, ranking_loss: 2.59, id_loss: 5.83, ranking_loss_dict: 6.76, id_loss_dict: 7.54,ranking_loss_dict_text: 0.54, ranking_loss_dict_image: 0.46,pred_i2t_local: 0.417 pred_t2i_local 0.188
+Epoch: 7/60 Setp: 150, ranking_loss: 0.98, id_loss: 6.63, ranking_loss_dict: 3.81, id_loss_dict: 8.16,ranking_loss_dict_text: 0.88, ranking_loss_dict_image: 0.30,pred_i2t_local: 0.328 pred_t2i_local 0.130
+Epoch: 7/60 Setp: 200, ranking_loss: 1.48, id_loss: 6.55, ranking_loss_dict: 5.61, id_loss_dict: 8.37,ranking_loss_dict_text: 0.27, ranking_loss_dict_image: 0.04,pred_i2t_local: 0.312 pred_t2i_local 0.094
+Epoch: 7/60 , ranking_loss: 1.16, id_loss: 5.80, pred_i2t_local: 0.423, pred_t2i_local 0.196 
+lr:0.0001
+lr:0.0001
+lr:0.001
+lr:0.001
+lr:0.001
+Epoch: 8/60 Setp: 50, ranking_loss: 0.57, id_loss: 3.40, ranking_loss_dict: 5.22, id_loss_dict: 4.98,ranking_loss_dict_text: 0.01, ranking_loss_dict_image: 0.01,pred_i2t_local: 0.706 pred_t2i_local 0.411
+Epoch: 8/60 Setp: 100, ranking_loss: 1.68, id_loss: 3.83, ranking_loss_dict: 5.10, id_loss_dict: 5.57,ranking_loss_dict_text: 0.65, ranking_loss_dict_image: 0.07,pred_i2t_local: 0.654 pred_t2i_local 0.331
+Epoch: 8/60 Setp: 150, ranking_loss: 1.84, id_loss: 4.48, ranking_loss_dict: 5.46, id_loss_dict: 6.18,ranking_loss_dict_text: 0.56, ranking_loss_dict_image: 0.13,pred_i2t_local: 0.594 pred_t2i_local 0.336
+Epoch: 8/60 Setp: 200, ranking_loss: 0.69, id_loss: 4.34, ranking_loss_dict: 5.02, id_loss_dict: 6.04,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.06,pred_i2t_local: 0.604 pred_t2i_local 0.299
+Epoch: 8/60 , ranking_loss: 0.94, id_loss: 3.87, pred_i2t_local: 0.659, pred_t2i_local 0.360 
+lr:0.0001
+lr:0.0001
+lr:0.001
+lr:0.001
+lr:0.001
+Epoch: 9/60 Setp: 50, ranking_loss: 0.72, id_loss: 2.06, ranking_loss_dict: 3.87, id_loss_dict: 3.12,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.38,pred_i2t_local: 0.867 pred_t2i_local 0.646
+Epoch: 9/60 Setp: 100, ranking_loss: 0.83, id_loss: 2.74, ranking_loss_dict: 3.14, id_loss_dict: 3.78,ranking_loss_dict_text: 0.39, ranking_loss_dict_image: 0.05,pred_i2t_local: 0.820 pred_t2i_local 0.484
+Epoch: 9/60 Setp: 150, ranking_loss: 0.85, id_loss: 2.86, ranking_loss_dict: 2.63, id_loss_dict: 4.33,ranking_loss_dict_text: 0.32, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.755 pred_t2i_local 0.453
+Epoch: 9/60 Setp: 200, ranking_loss: 1.20, id_loss: 3.67, ranking_loss_dict: 3.83, id_loss_dict: 5.21,ranking_loss_dict_text: 0.14, ranking_loss_dict_image: 0.12,pred_i2t_local: 0.703 pred_t2i_local 0.375
+Epoch: 9/60 , ranking_loss: 0.84, id_loss: 2.59, pred_i2t_local: 0.805, pred_t2i_local 0.525 
+lr:0.0001
+lr:0.0001
+lr:0.001
+lr:0.001
+lr:0.001
+Epoch: 10/60 Setp: 50, ranking_loss: 1.84, id_loss: 1.66, ranking_loss_dict: 5.07, id_loss_dict: 2.57,ranking_loss_dict_text: 0.86, ranking_loss_dict_image: 0.06,pred_i2t_local: 0.911 pred_t2i_local 0.672
+Epoch: 10/60 Setp: 100, ranking_loss: 0.52, id_loss: 1.42, ranking_loss_dict: 4.19, id_loss_dict: 2.34,ranking_loss_dict_text: 0.15, ranking_loss_dict_image: 0.34,pred_i2t_local: 0.922 pred_t2i_local 0.719
+Epoch: 10/60 Setp: 150, ranking_loss: 0.82, id_loss: 2.06, ranking_loss_dict: 3.40, id_loss_dict: 2.88,ranking_loss_dict_text: 0.07, ranking_loss_dict_image: 0.13,pred_i2t_local: 0.870 pred_t2i_local 0.604
+Epoch: 10/60 Setp: 200, ranking_loss: 0.47, id_loss: 2.08, ranking_loss_dict: 4.70, id_loss_dict: 3.00,ranking_loss_dict_text: 0.12, ranking_loss_dict_image: 0.22,pred_i2t_local: 0.880 pred_t2i_local 0.599
+Epoch: 10/60 , ranking_loss: 0.74, id_loss: 1.78, pred_i2t_local: 0.879, pred_t2i_local 0.657 
+lr:0.0001
+lr:0.0001
+lr:0.001
+lr:0.001
+lr:0.001
+Epoch: 11/60 Setp: 50, ranking_loss: 0.07, id_loss: 1.14, ranking_loss_dict: 2.91, id_loss_dict: 1.83,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.938 pred_t2i_local 0.799
+Epoch: 11/60 Setp: 100, ranking_loss: 1.04, id_loss: 1.03, ranking_loss_dict: 4.40, id_loss_dict: 1.91,ranking_loss_dict_text: 0.03, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.927 pred_t2i_local 0.763
+Epoch: 11/60 Setp: 150, ranking_loss: 0.70, id_loss: 1.51, ranking_loss_dict: 4.30, id_loss_dict: 2.56,ranking_loss_dict_text: 0.08, ranking_loss_dict_image: 0.24,pred_i2t_local: 0.896 pred_t2i_local 0.734
+Epoch: 11/60 Setp: 200, ranking_loss: 0.79, id_loss: 2.10, ranking_loss_dict: 3.38, id_loss_dict: 3.04,ranking_loss_dict_text: 0.07, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.865 pred_t2i_local 0.630
+Epoch: 11/60 , ranking_loss: 0.66, id_loss: 1.29, pred_i2t_local: 0.918, pred_t2i_local 0.750 
+lr:0.0001
+lr:0.0001
+lr:0.001
+lr:0.001
+lr:0.001
+Epoch: 12/60 Setp: 50, ranking_loss: 0.90, id_loss: 0.85, ranking_loss_dict: 4.29, id_loss_dict: 1.37,ranking_loss_dict_text: 0.20, ranking_loss_dict_image: 0.26,pred_i2t_local: 0.956 pred_t2i_local 0.828
+Epoch: 12/60 Setp: 100, ranking_loss: 1.00, id_loss: 1.09, ranking_loss_dict: 3.46, id_loss_dict: 1.72,ranking_loss_dict_text: 0.29, ranking_loss_dict_image: 0.06,pred_i2t_local: 0.893 pred_t2i_local 0.789
+Epoch: 12/60 Setp: 150, ranking_loss: 2.06, id_loss: 1.07, ranking_loss_dict: 4.63, id_loss_dict: 1.80,ranking_loss_dict_text: 0.91, ranking_loss_dict_image: 0.40,pred_i2t_local: 0.924 pred_t2i_local 0.781
+Epoch: 12/60 Setp: 200, ranking_loss: 1.18, id_loss: 1.15, ranking_loss_dict: 3.73, id_loss_dict: 1.85,ranking_loss_dict_text: 0.63, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.932 pred_t2i_local 0.820
+Epoch: 12/60 , ranking_loss: 0.56, id_loss: 1.02, pred_i2t_local: 0.936, pred_t2i_local 0.804 
+lr:0.0001
+lr:0.0001
+lr:0.001
+lr:0.001
+lr:0.001
+Epoch: 13/60 Setp: 50, ranking_loss: 0.06, id_loss: 0.78, ranking_loss_dict: 3.07, id_loss_dict: 1.41,ranking_loss_dict_text: 0.08, ranking_loss_dict_image: 0.02,pred_i2t_local: 0.966 pred_t2i_local 0.857
+Epoch: 13/60 Setp: 100, ranking_loss: 0.12, id_loss: 0.66, ranking_loss_dict: 2.99, id_loss_dict: 1.38,ranking_loss_dict_text: 0.04, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.966 pred_t2i_local 0.846
+Epoch: 13/60 Setp: 150, ranking_loss: 0.44, id_loss: 0.92, ranking_loss_dict: 3.66, id_loss_dict: 1.63,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.34,pred_i2t_local: 0.943 pred_t2i_local 0.828
+Epoch: 13/60 Setp: 200, ranking_loss: 0.98, id_loss: 1.05, ranking_loss_dict: 3.86, id_loss_dict: 1.74,ranking_loss_dict_text: 0.18, ranking_loss_dict_image: 0.02,pred_i2t_local: 0.927 pred_t2i_local 0.805
+Epoch: 13/60 , ranking_loss: 0.54, id_loss: 0.86, pred_i2t_local: 0.947, pred_t2i_local 0.837 
+lr:0.0001
+lr:0.0001
+lr:0.001
+lr:0.001
+lr:0.001
+Epoch: 14/60 Setp: 50, ranking_loss: 0.22, id_loss: 0.77, ranking_loss_dict: 3.18, id_loss_dict: 1.31,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.953 pred_t2i_local 0.875
+Epoch: 14/60 Setp: 100, ranking_loss: 0.21, id_loss: 0.62, ranking_loss_dict: 1.77, id_loss_dict: 1.03,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.945 pred_t2i_local 0.891
+Epoch: 14/60 Setp: 150, ranking_loss: 0.00, id_loss: 0.67, ranking_loss_dict: 2.52, id_loss_dict: 1.24,ranking_loss_dict_text: 0.05, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.956 pred_t2i_local 0.885
+Epoch: 14/60 Setp: 200, ranking_loss: 0.57, id_loss: 1.01, ranking_loss_dict: 2.40, id_loss_dict: 1.72,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.948 pred_t2i_local 0.818
+Epoch: 14/60 , ranking_loss: 0.45, id_loss: 0.74, pred_i2t_local: 0.954, pred_t2i_local 0.861 
+lr:0.0001
+lr:0.0001
+lr:0.001
+lr:0.001
+lr:0.001
+Epoch: 15/60 Setp: 50, ranking_loss: 0.58, id_loss: 0.56, ranking_loss_dict: 2.37, id_loss_dict: 1.12,ranking_loss_dict_text: 0.29, ranking_loss_dict_image: 0.09,pred_i2t_local: 0.974 pred_t2i_local 0.891
+Epoch: 15/60 Setp: 100, ranking_loss: 0.38, id_loss: 1.09, ranking_loss_dict: 2.43, id_loss_dict: 1.78,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.927 pred_t2i_local 0.852
+Epoch: 15/60 Setp: 150, ranking_loss: 0.59, id_loss: 0.87, ranking_loss_dict: 3.47, id_loss_dict: 1.37,ranking_loss_dict_text: 0.06, ranking_loss_dict_image: 0.27,pred_i2t_local: 0.927 pred_t2i_local 0.872
+Epoch: 15/60 Setp: 200, ranking_loss: 0.07, id_loss: 0.74, ranking_loss_dict: 2.64, id_loss_dict: 1.34,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.03,pred_i2t_local: 0.966 pred_t2i_local 0.844
+Epoch: 15/60 , ranking_loss: 0.45, id_loss: 0.67, pred_i2t_local: 0.958, pred_t2i_local 0.878 
+lr:0.0001
+lr:0.0001
+lr:0.001
+lr:0.001
+lr:0.001
+Epoch: 16/60 Setp: 50, ranking_loss: 0.23, id_loss: 0.33, ranking_loss_dict: 2.85, id_loss_dict: 1.00,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.12,pred_i2t_local: 0.982 pred_t2i_local 0.922
+Epoch: 16/60 Setp: 100, ranking_loss: 0.56, id_loss: 0.45, ranking_loss_dict: 2.45, id_loss_dict: 0.89,ranking_loss_dict_text: 0.02, ranking_loss_dict_image: 0.06,pred_i2t_local: 0.961 pred_t2i_local 0.901
+Epoch: 16/60 Setp: 150, ranking_loss: 0.10, id_loss: 0.49, ranking_loss_dict: 2.09, id_loss_dict: 1.01,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.977 pred_t2i_local 0.904
+Epoch: 16/60 Setp: 200, ranking_loss: 0.06, id_loss: 0.45, ranking_loss_dict: 2.17, id_loss_dict: 1.05,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.964 pred_t2i_local 0.922
+Epoch: 16/60 , ranking_loss: 0.44, id_loss: 0.66, pred_i2t_local: 0.957, pred_t2i_local 0.882 
+lr:0.0001
+lr:0.0001
+lr:0.001
+lr:0.001
+lr:0.001
+Epoch: 17/60 Setp: 50, ranking_loss: 0.15, id_loss: 0.50, ranking_loss_dict: 2.60, id_loss_dict: 0.82,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.07,pred_i2t_local: 0.958 pred_t2i_local 0.924
+Epoch: 17/60 Setp: 100, ranking_loss: 0.50, id_loss: 0.97, ranking_loss_dict: 3.03, id_loss_dict: 1.42,ranking_loss_dict_text: 0.23, ranking_loss_dict_image: 0.25,pred_i2t_local: 0.951 pred_t2i_local 0.859
+Epoch: 17/60 Setp: 150, ranking_loss: 0.07, id_loss: 0.78, ranking_loss_dict: 3.48, id_loss_dict: 1.47,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.26,pred_i2t_local: 0.940 pred_t2i_local 0.831
+Epoch: 17/60 Setp: 200, ranking_loss: 0.30, id_loss: 0.67, ranking_loss_dict: 1.88, id_loss_dict: 1.29,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.01,pred_i2t_local: 0.951 pred_t2i_local 0.872
+Epoch: 17/60 , ranking_loss: 0.39, id_loss: 0.61, pred_i2t_local: 0.959, pred_t2i_local 0.893 
+lr:0.0001
+lr:0.0001
+lr:0.001
+lr:0.001
+lr:0.001
+Epoch: 18/60 Setp: 50, ranking_loss: 0.30, id_loss: 0.71, ranking_loss_dict: 2.08, id_loss_dict: 1.24,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.940 pred_t2i_local 0.919
+Epoch: 18/60 Setp: 100, ranking_loss: 0.43, id_loss: 0.72, ranking_loss_dict: 3.29, id_loss_dict: 1.29,ranking_loss_dict_text: 0.81, ranking_loss_dict_image: 0.21,pred_i2t_local: 0.945 pred_t2i_local 0.901
+Epoch: 18/60 Setp: 150, ranking_loss: 0.34, id_loss: 0.78, ranking_loss_dict: 2.81, id_loss_dict: 1.14,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.953 pred_t2i_local 0.891
+Epoch: 18/60 Setp: 200, ranking_loss: 0.69, id_loss: 0.88, ranking_loss_dict: 2.97, id_loss_dict: 1.57,ranking_loss_dict_text: 1.12, ranking_loss_dict_image: 1.11,pred_i2t_local: 0.930 pred_t2i_local 0.870
+Epoch: 18/60 , ranking_loss: 0.36, id_loss: 0.57, pred_i2t_local: 0.963, pred_t2i_local 0.899 
+lr:0.0001
+lr:0.0001
+lr:0.001
+lr:0.001
+lr:0.001
+Epoch: 19/60 Setp: 50, ranking_loss: 0.35, id_loss: 0.57, ranking_loss_dict: 2.37, id_loss_dict: 1.18,ranking_loss_dict_text: 0.09, ranking_loss_dict_image: 0.06,pred_i2t_local: 0.956 pred_t2i_local 0.924
+Epoch: 19/60 Setp: 100, ranking_loss: 0.33, id_loss: 0.75, ranking_loss_dict: 2.65, id_loss_dict: 1.13,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.951 pred_t2i_local 0.878
+Epoch: 19/60 Setp: 150, ranking_loss: 0.55, id_loss: 0.65, ranking_loss_dict: 1.71, id_loss_dict: 0.98,ranking_loss_dict_text: 0.06, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.966 pred_t2i_local 0.885
+Epoch: 19/60 Setp: 200, ranking_loss: 0.15, id_loss: 0.83, ranking_loss_dict: 2.90, id_loss_dict: 1.19,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.961 pred_t2i_local 0.865
+Epoch: 19/60 , ranking_loss: 0.34, id_loss: 0.52, pred_i2t_local: 0.967, pred_t2i_local 0.908 
+lr:1e-05
+lr:1e-05
+lr:0.0001
+lr:0.0001
+lr:0.0001
+Epoch: 20/60 Setp: 50, ranking_loss: 0.21, id_loss: 0.46, ranking_loss_dict: 2.11, id_loss_dict: 0.56,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.03,pred_i2t_local: 0.977 pred_t2i_local 0.922
+Epoch: 20/60 Setp: 100, ranking_loss: 0.20, id_loss: 0.26, ranking_loss_dict: 1.78, id_loss_dict: 0.35,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.977 pred_t2i_local 0.956
+Epoch: 20/60 Setp: 150, ranking_loss: 0.00, id_loss: 0.25, ranking_loss_dict: 1.17, id_loss_dict: 0.38,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.13,pred_i2t_local: 0.982 pred_t2i_local 0.945
+Epoch: 20/60 Setp: 200, ranking_loss: 0.03, id_loss: 0.31, ranking_loss_dict: 0.95, id_loss_dict: 0.45,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.974 pred_t2i_local 0.958
+Epoch: 20/60 , ranking_loss: 0.22, id_loss: 0.26, pred_i2t_local: 0.984, pred_t2i_local 0.953 
+lr:1e-05
+lr:1e-05
+lr:0.0001
+lr:0.0001
+lr:0.0001
+Epoch: 21/60 Setp: 50, ranking_loss: 0.46, id_loss: 0.11, ranking_loss_dict: 1.95, id_loss_dict: 0.20,ranking_loss_dict_text: 0.29, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.969
+Epoch: 21/60 Setp: 100, ranking_loss: 0.04, id_loss: 0.26, ranking_loss_dict: 1.35, id_loss_dict: 0.38,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.984 pred_t2i_local 0.948
+Epoch: 21/60 Setp: 150, ranking_loss: 0.00, id_loss: 0.07, ranking_loss_dict: 1.12, id_loss_dict: 0.12,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.984
+Epoch: 21/60 Setp: 200, ranking_loss: 0.12, id_loss: 0.25, ranking_loss_dict: 0.73, id_loss_dict: 0.32,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.984 pred_t2i_local 0.953
+Epoch: 21/60 , ranking_loss: 0.21, id_loss: 0.14, pred_i2t_local: 0.993, pred_t2i_local 0.972 
+lr:1e-05
+lr:1e-05
+lr:0.0001
+lr:0.0001
+lr:0.0001
+Epoch: 22/60 Setp: 50, ranking_loss: 0.18, id_loss: 0.13, ranking_loss_dict: 2.63, id_loss_dict: 0.23,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.997 pred_t2i_local 0.958
+Epoch: 22/60 Setp: 100, ranking_loss: 0.15, id_loss: 0.23, ranking_loss_dict: 2.05, id_loss_dict: 0.25,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.990 pred_t2i_local 0.958
+Epoch: 22/60 Setp: 150, ranking_loss: 0.06, id_loss: 0.07, ranking_loss_dict: 1.36, id_loss_dict: 0.09,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.06,pred_i2t_local: 0.997 pred_t2i_local 0.987
+Epoch: 22/60 Setp: 200, ranking_loss: 0.11, id_loss: 0.04, ranking_loss_dict: 1.16, id_loss_dict: 0.11,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.990
+Epoch: 22/60 , ranking_loss: 0.23, id_loss: 0.10, pred_i2t_local: 0.995, pred_t2i_local 0.979 
+lr:1e-05
+lr:1e-05
+lr:0.0001
+lr:0.0001
+lr:0.0001
+Epoch: 23/60 Setp: 50, ranking_loss: 0.05, id_loss: 0.14, ranking_loss_dict: 1.92, id_loss_dict: 0.18,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.990 pred_t2i_local 0.979
+Epoch: 23/60 Setp: 100, ranking_loss: 0.07, id_loss: 0.06, ranking_loss_dict: 0.90, id_loss_dict: 0.09,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.979
+Epoch: 23/60 Setp: 150, ranking_loss: 0.00, id_loss: 0.07, ranking_loss_dict: 1.07, id_loss_dict: 0.11,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.979
+Epoch: 23/60 Setp: 200, ranking_loss: 0.08, id_loss: 0.02, ranking_loss_dict: 1.67, id_loss_dict: 0.09,ranking_loss_dict_text: 0.21, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.997
+Epoch: 23/60 , ranking_loss: 0.17, id_loss: 0.08, pred_i2t_local: 0.996, pred_t2i_local 0.981 
+lr:1e-05
+lr:1e-05
+lr:0.0001
+lr:0.0001
+lr:0.0001
+Epoch: 24/60 Setp: 50, ranking_loss: 0.02, id_loss: 0.02, ranking_loss_dict: 0.72, id_loss_dict: 0.05,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.990
+Epoch: 24/60 Setp: 100, ranking_loss: 0.10, id_loss: 0.03, ranking_loss_dict: 0.66, id_loss_dict: 0.10,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.987
+Epoch: 24/60 Setp: 150, ranking_loss: 0.00, id_loss: 0.03, ranking_loss_dict: 1.76, id_loss_dict: 0.05,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.11,pred_i2t_local: 1.000 pred_t2i_local 0.992
+Epoch: 24/60 Setp: 200, ranking_loss: 1.17, id_loss: 0.27, ranking_loss_dict: 2.27, id_loss_dict: 0.36,ranking_loss_dict_text: 0.94, ranking_loss_dict_image: 0.84,pred_i2t_local: 0.969 pred_t2i_local 0.966
+Epoch: 24/60 , ranking_loss: 0.17, id_loss: 0.07, pred_i2t_local: 0.996, pred_t2i_local 0.983 
+lr:1e-05
+lr:1e-05
+lr:0.0001
+lr:0.0001
+lr:0.0001
+Epoch: 25/60 Setp: 50, ranking_loss: 0.00, id_loss: 0.15, ranking_loss_dict: 0.66, id_loss_dict: 0.17,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.982 pred_t2i_local 0.984
+Epoch: 25/60 Setp: 100, ranking_loss: 0.09, id_loss: 0.01, ranking_loss_dict: 1.84, id_loss_dict: 0.03,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.05,pred_i2t_local: 1.000 pred_t2i_local 1.000
+Epoch: 25/60 Setp: 150, ranking_loss: 0.01, id_loss: 0.13, ranking_loss_dict: 1.10, id_loss_dict: 0.16,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.984 pred_t2i_local 0.982
+Epoch: 25/60 Setp: 200, ranking_loss: 0.01, id_loss: 0.01, ranking_loss_dict: 0.75, id_loss_dict: 0.03,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.997
+Epoch: 25/60 , ranking_loss: 0.19, id_loss: 0.07, pred_i2t_local: 0.997, pred_t2i_local 0.984 
+lr:1e-05
+lr:1e-05
+lr:0.0001
+lr:0.0001
+lr:0.0001
+Epoch: 26/60 Setp: 50, ranking_loss: 0.05, id_loss: 0.04, ranking_loss_dict: 1.86, id_loss_dict: 0.06,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.02,pred_i2t_local: 1.000 pred_t2i_local 0.984
+Epoch: 26/60 Setp: 100, ranking_loss: 0.00, id_loss: 0.07, ranking_loss_dict: 1.87, id_loss_dict: 0.09,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.984
+Epoch: 26/60 Setp: 150, ranking_loss: 0.19, id_loss: 0.01, ranking_loss_dict: 1.74, id_loss_dict: 0.05,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.997
+Epoch: 26/60 Setp: 200, ranking_loss: 0.13, id_loss: 0.04, ranking_loss_dict: 2.28, id_loss_dict: 0.06,ranking_loss_dict_text: 0.09, ranking_loss_dict_image: 0.06,pred_i2t_local: 1.000 pred_t2i_local 0.979
+Epoch: 26/60 , ranking_loss: 0.16, id_loss: 0.06, pred_i2t_local: 0.997, pred_t2i_local 0.984 
+lr:1e-05
+lr:1e-05
+lr:0.0001
+lr:0.0001
+lr:0.0001
+Epoch: 27/60 Setp: 50, ranking_loss: 0.03, id_loss: 0.10, ranking_loss_dict: 1.79, id_loss_dict: 0.13,ranking_loss_dict_text: 0.27, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.961
+Epoch: 27/60 Setp: 100, ranking_loss: 0.00, id_loss: 0.05, ranking_loss_dict: 1.70, id_loss_dict: 0.10,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.32,pred_i2t_local: 1.000 pred_t2i_local 0.977
+Epoch: 27/60 Setp: 150, ranking_loss: 0.00, id_loss: 0.16, ranking_loss_dict: 1.99, id_loss_dict: 0.18,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.984 pred_t2i_local 0.984
+Epoch: 27/60 Setp: 200, ranking_loss: 0.00, id_loss: 0.06, ranking_loss_dict: 0.58, id_loss_dict: 0.12,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.984 pred_t2i_local 0.977
+Epoch: 27/60 , ranking_loss: 0.13, id_loss: 0.06, pred_i2t_local: 0.997, pred_t2i_local 0.984 
+lr:1e-05
+lr:1e-05
+lr:0.0001
+lr:0.0001
+lr:0.0001
+Epoch: 28/60 Setp: 50, ranking_loss: 0.01, id_loss: 0.01, ranking_loss_dict: 0.53, id_loss_dict: 0.05,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.997
+Epoch: 28/60 Setp: 100, ranking_loss: 0.00, id_loss: 0.02, ranking_loss_dict: 2.29, id_loss_dict: 0.05,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.997
+Epoch: 28/60 Setp: 150, ranking_loss: 0.46, id_loss: 0.01, ranking_loss_dict: 1.81, id_loss_dict: 0.03,ranking_loss_dict_text: 0.21, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.997
+Epoch: 28/60 Setp: 200, ranking_loss: 0.00, id_loss: 0.12, ranking_loss_dict: 0.24, id_loss_dict: 0.12,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.969
+Epoch: 28/60 , ranking_loss: 0.13, id_loss: 0.06, pred_i2t_local: 0.997, pred_t2i_local 0.983 
+lr:1e-05
+lr:1e-05
+lr:0.0001
+lr:0.0001
+lr:0.0001
+Epoch: 29/60 Setp: 50, ranking_loss: 0.00, id_loss: 0.02, ranking_loss_dict: 0.54, id_loss_dict: 0.05,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.990
+Epoch: 29/60 Setp: 100, ranking_loss: 1.02, id_loss: 0.33, ranking_loss_dict: 1.12, id_loss_dict: 0.34,ranking_loss_dict_text: 0.71, ranking_loss_dict_image: 0.93,pred_i2t_local: 0.969 pred_t2i_local 0.948
+Epoch: 29/60 Setp: 150, ranking_loss: 0.55, id_loss: 0.19, ranking_loss_dict: 1.18, id_loss_dict: 0.28,ranking_loss_dict_text: 0.01, ranking_loss_dict_image: 0.68,pred_i2t_local: 0.982 pred_t2i_local 0.969
+Epoch: 29/60 Setp: 200, ranking_loss: 0.52, id_loss: 0.15, ranking_loss_dict: 1.76, id_loss_dict: 0.16,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.15,pred_i2t_local: 0.984 pred_t2i_local 0.982
+Epoch: 29/60 , ranking_loss: 0.14, id_loss: 0.06, pred_i2t_local: 0.997, pred_t2i_local 0.984 
+lr:1e-05
+lr:1e-05
+lr:0.0001
+lr:0.0001
+lr:0.0001
+Epoch: 30/60 Setp: 50, ranking_loss: 0.33, id_loss: 0.07, ranking_loss_dict: 1.46, id_loss_dict: 0.06,ranking_loss_dict_text: 0.05, ranking_loss_dict_image: 0.12,pred_i2t_local: 1.000 pred_t2i_local 0.969
+Epoch: 30/60 Setp: 100, ranking_loss: 0.00, id_loss: 0.05, ranking_loss_dict: 1.52, id_loss_dict: 0.13,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.984
+Epoch: 30/60 Setp: 150, ranking_loss: 0.02, id_loss: 0.02, ranking_loss_dict: 0.73, id_loss_dict: 0.03,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.01,pred_i2t_local: 1.000 pred_t2i_local 0.997
+Epoch: 30/60 Setp: 200, ranking_loss: 0.06, id_loss: 0.07, ranking_loss_dict: 1.21, id_loss_dict: 0.10,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.02,pred_i2t_local: 1.000 pred_t2i_local 0.979
+Epoch: 30/60 , ranking_loss: 0.14, id_loss: 0.06, pred_i2t_local: 0.997, pred_t2i_local 0.984 
+lr:1e-05
+lr:1e-05
+lr:0.0001
+lr:0.0001
+lr:0.0001
+Epoch: 31/60 Setp: 50, ranking_loss: 0.00, id_loss: 0.04, ranking_loss_dict: 1.47, id_loss_dict: 0.06,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.984
+Epoch: 31/60 Setp: 100, ranking_loss: 0.18, id_loss: 0.06, ranking_loss_dict: 1.01, id_loss_dict: 0.09,ranking_loss_dict_text: 0.02, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.974
+Epoch: 31/60 Setp: 150, ranking_loss: 0.00, id_loss: 0.01, ranking_loss_dict: 0.93, id_loss_dict: 0.02,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.17,pred_i2t_local: 0.997 pred_t2i_local 1.000
+Epoch: 31/60 Setp: 200, ranking_loss: 0.06, id_loss: 0.00, ranking_loss_dict: 1.77, id_loss_dict: 0.01,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.01,pred_i2t_local: 1.000 pred_t2i_local 1.000
+Epoch: 31/60 , ranking_loss: 0.14, id_loss: 0.06, pred_i2t_local: 0.997, pred_t2i_local 0.983 
+lr:1e-05
+lr:1e-05
+lr:0.0001
+lr:0.0001
+lr:0.0001
+Epoch: 32/60 Setp: 50, ranking_loss: 1.15, id_loss: 0.10, ranking_loss_dict: 2.21, id_loss_dict: 0.14,ranking_loss_dict_text: 0.69, ranking_loss_dict_image: 0.17,pred_i2t_local: 1.000 pred_t2i_local 0.956
+Epoch: 32/60 Setp: 100, ranking_loss: 0.00, id_loss: 0.03, ranking_loss_dict: 0.89, id_loss_dict: 0.05,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.02,pred_i2t_local: 1.000 pred_t2i_local 0.987
+Epoch: 32/60 Setp: 150, ranking_loss: 0.59, id_loss: 0.05, ranking_loss_dict: 2.27, id_loss_dict: 0.06,ranking_loss_dict_text: 0.15, ranking_loss_dict_image: 0.13,pred_i2t_local: 1.000 pred_t2i_local 0.984
+Epoch: 32/60 Setp: 200, ranking_loss: 0.00, id_loss: 0.01, ranking_loss_dict: 0.27, id_loss_dict: 0.02,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.997
+Epoch: 32/60 , ranking_loss: 0.16, id_loss: 0.06, pred_i2t_local: 0.997, pred_t2i_local 0.984 
+lr:1e-05
+lr:1e-05
+lr:0.0001
+lr:0.0001
+lr:0.0001
+Epoch: 33/60 Setp: 50, ranking_loss: 0.00, id_loss: 0.12, ranking_loss_dict: 0.80, id_loss_dict: 0.14,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.984 pred_t2i_local 0.984
+Epoch: 33/60 Setp: 100, ranking_loss: 0.24, id_loss: 0.01, ranking_loss_dict: 2.39, id_loss_dict: 0.02,ranking_loss_dict_text: 0.12, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 1.000
+Epoch: 33/60 Setp: 150, ranking_loss: 0.00, id_loss: 0.00, ranking_loss_dict: 0.27, id_loss_dict: 0.02,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 1.000
+Epoch: 33/60 Setp: 200, ranking_loss: 0.03, id_loss: 0.00, ranking_loss_dict: 1.02, id_loss_dict: 0.02,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.12,pred_i2t_local: 1.000 pred_t2i_local 1.000
+Epoch: 33/60 , ranking_loss: 0.14, id_loss: 0.06, pred_i2t_local: 0.997, pred_t2i_local 0.984 
+lr:1e-05
+lr:1e-05
+lr:0.0001
+lr:0.0001
+lr:0.0001
+Epoch: 34/60 Setp: 50, ranking_loss: 0.35, id_loss: 0.16, ranking_loss_dict: 1.47, id_loss_dict: 0.15,ranking_loss_dict_text: 0.04, ranking_loss_dict_image: 0.18,pred_i2t_local: 0.984 pred_t2i_local 0.984
+Epoch: 34/60 Setp: 100, ranking_loss: 0.49, id_loss: 0.03, ranking_loss_dict: 1.67, id_loss_dict: 0.06,ranking_loss_dict_text: 0.63, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.987
+Epoch: 34/60 Setp: 150, ranking_loss: 0.02, id_loss: 0.01, ranking_loss_dict: 1.63, id_loss_dict: 0.02,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.05,pred_i2t_local: 1.000 pred_t2i_local 1.000
+Epoch: 34/60 Setp: 200, ranking_loss: 0.00, id_loss: 0.03, ranking_loss_dict: 1.19, id_loss_dict: 0.06,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.984
+Epoch: 34/60 , ranking_loss: 0.12, id_loss: 0.06, pred_i2t_local: 0.997, pred_t2i_local 0.984 
+lr:1e-05
+lr:1e-05
+lr:0.0001
+lr:0.0001
+lr:0.0001
+Epoch: 35/60 Setp: 50, ranking_loss: 0.82, id_loss: 0.00, ranking_loss_dict: 1.85, id_loss_dict: 0.03,ranking_loss_dict_text: 0.49, ranking_loss_dict_image: 0.15,pred_i2t_local: 1.000 pred_t2i_local 1.000
+Epoch: 35/60 Setp: 100, ranking_loss: 0.08, id_loss: 0.04, ranking_loss_dict: 1.13, id_loss_dict: 0.04,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.01,pred_i2t_local: 1.000 pred_t2i_local 0.984
+Epoch: 35/60 Setp: 150, ranking_loss: 0.00, id_loss: 0.24, ranking_loss_dict: 0.92, id_loss_dict: 0.26,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.984 pred_t2i_local 0.953
+Epoch: 35/60 Setp: 200, ranking_loss: 0.12, id_loss: 0.07, ranking_loss_dict: 1.09, id_loss_dict: 0.06,ranking_loss_dict_text: 0.01, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.984
+Epoch: 35/60 , ranking_loss: 0.15, id_loss: 0.06, pred_i2t_local: 0.997, pred_t2i_local 0.984 
+lr:1e-05
+lr:1e-05
+lr:0.0001
+lr:0.0001
+lr:0.0001
+Epoch: 36/60 Setp: 50, ranking_loss: 0.01, id_loss: 0.02, ranking_loss_dict: 1.58, id_loss_dict: 0.04,ranking_loss_dict_text: 0.22, ranking_loss_dict_image: 0.27,pred_i2t_local: 1.000 pred_t2i_local 0.992
+Epoch: 36/60 Setp: 100, ranking_loss: 0.00, id_loss: 0.03, ranking_loss_dict: 1.10, id_loss_dict: 0.06,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.07,pred_i2t_local: 1.000 pred_t2i_local 0.984
+Epoch: 36/60 Setp: 150, ranking_loss: 0.34, id_loss: 0.01, ranking_loss_dict: 2.25, id_loss_dict: 0.02,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.08,pred_i2t_local: 1.000 pred_t2i_local 1.000
+Epoch: 36/60 Setp: 200, ranking_loss: 0.24, id_loss: 0.18, ranking_loss_dict: 1.02, id_loss_dict: 0.19,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.984 pred_t2i_local 0.984
+Epoch: 36/60 , ranking_loss: 0.15, id_loss: 0.06, pred_i2t_local: 0.997, pred_t2i_local 0.984 
+lr:1e-05
+lr:1e-05
+lr:0.0001
+lr:0.0001
+lr:0.0001
+Epoch: 37/60 Setp: 50, ranking_loss: 0.18, id_loss: 0.01, ranking_loss_dict: 0.66, id_loss_dict: 0.05,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.997
+Epoch: 37/60 Setp: 100, ranking_loss: 0.03, id_loss: 0.19, ranking_loss_dict: 0.59, id_loss_dict: 0.24,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.984 pred_t2i_local 0.951
+Epoch: 37/60 Setp: 150, ranking_loss: 0.00, id_loss: 0.02, ranking_loss_dict: 0.65, id_loss_dict: 0.05,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.992
+Epoch: 37/60 Setp: 200, ranking_loss: 0.04, id_loss: 0.00, ranking_loss_dict: 1.32, id_loss_dict: 0.02,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.34,pred_i2t_local: 1.000 pred_t2i_local 1.000
+Epoch: 37/60 , ranking_loss: 0.13, id_loss: 0.06, pred_i2t_local: 0.997, pred_t2i_local 0.984 
+lr:1e-05
+lr:1e-05
+lr:0.0001
+lr:0.0001
+lr:0.0001
+Epoch: 38/60 Setp: 50, ranking_loss: 0.00, id_loss: 0.01, ranking_loss_dict: 0.76, id_loss_dict: 0.03,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 1.000
+Epoch: 38/60 Setp: 100, ranking_loss: 0.03, id_loss: 0.05, ranking_loss_dict: 1.09, id_loss_dict: 0.07,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.984
+Epoch: 38/60 Setp: 150, ranking_loss: 0.08, id_loss: 0.15, ranking_loss_dict: 1.69, id_loss_dict: 0.17,ranking_loss_dict_text: 0.02, ranking_loss_dict_image: 0.13,pred_i2t_local: 0.984 pred_t2i_local 0.971
+Epoch: 38/60 Setp: 200, ranking_loss: 0.00, id_loss: 0.24, ranking_loss_dict: 0.64, id_loss_dict: 0.23,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.984 pred_t2i_local 0.953
+Epoch: 38/60 , ranking_loss: 0.13, id_loss: 0.06, pred_i2t_local: 0.997, pred_t2i_local 0.985 
+lr:1e-05
+lr:1e-05
+lr:0.0001
+lr:0.0001
+lr:0.0001
+Epoch: 39/60 Setp: 50, ranking_loss: 0.48, id_loss: 0.13, ranking_loss_dict: 1.14, id_loss_dict: 0.14,ranking_loss_dict_text: 0.45, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.984 pred_t2i_local 0.984
+Epoch: 39/60 Setp: 100, ranking_loss: 0.00, id_loss: 0.04, ranking_loss_dict: 0.44, id_loss_dict: 0.05,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.984
+Epoch: 39/60 Setp: 150, ranking_loss: 0.00, id_loss: 0.06, ranking_loss_dict: 0.56, id_loss_dict: 0.14,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.05,pred_i2t_local: 1.000 pred_t2i_local 0.979
+Epoch: 39/60 Setp: 200, ranking_loss: 0.00, id_loss: 0.02, ranking_loss_dict: 0.28, id_loss_dict: 0.04,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.987
+Epoch: 39/60 , ranking_loss: 0.12, id_loss: 0.06, pred_i2t_local: 0.997, pred_t2i_local 0.985 
+lr:1.0000000000000002e-06
+lr:1.0000000000000002e-06
+lr:1e-05
+lr:1e-05
+lr:1e-05
+Epoch: 40/60 Setp: 50, ranking_loss: 0.01, id_loss: 0.00, ranking_loss_dict: 0.24, id_loss_dict: 0.01,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 1.000
+Epoch: 40/60 Setp: 100, ranking_loss: 0.00, id_loss: 0.19, ranking_loss_dict: 0.66, id_loss_dict: 0.18,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.984 pred_t2i_local 0.971
+Epoch: 40/60 Setp: 150, ranking_loss: 0.34, id_loss: 0.05, ranking_loss_dict: 1.43, id_loss_dict: 0.07,ranking_loss_dict_text: 0.01, ranking_loss_dict_image: 0.17,pred_i2t_local: 1.000 pred_t2i_local 0.977
+Epoch: 40/60 Setp: 200, ranking_loss: 0.03, id_loss: 0.06, ranking_loss_dict: 1.20, id_loss_dict: 0.06,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.982
+Epoch: 40/60 , ranking_loss: 0.13, id_loss: 0.05, pred_i2t_local: 0.997, pred_t2i_local 0.987 
+lr:1.0000000000000002e-06
+lr:1.0000000000000002e-06
+lr:1e-05
+lr:1e-05
+lr:1e-05
+Epoch: 41/60 Setp: 50, ranking_loss: 0.06, id_loss: 0.02, ranking_loss_dict: 1.11, id_loss_dict: 0.02,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.990
+Epoch: 41/60 Setp: 100, ranking_loss: 0.26, id_loss: 0.00, ranking_loss_dict: 0.82, id_loss_dict: 0.01,ranking_loss_dict_text: 0.08, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 1.000
+Epoch: 41/60 Setp: 150, ranking_loss: 0.01, id_loss: 0.00, ranking_loss_dict: 1.02, id_loss_dict: 0.01,ranking_loss_dict_text: 0.04, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 1.000
+Epoch: 41/60 Setp: 200, ranking_loss: 0.00, id_loss: 0.04, ranking_loss_dict: 0.30, id_loss_dict: 0.06,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.979
+Epoch: 41/60 , ranking_loss: 0.11, id_loss: 0.05, pred_i2t_local: 0.997, pred_t2i_local 0.987 
+lr:1.0000000000000002e-06
+lr:1.0000000000000002e-06
+lr:1e-05
+lr:1e-05
+lr:1e-05
+Epoch: 42/60 Setp: 50, ranking_loss: 0.54, id_loss: 0.04, ranking_loss_dict: 1.10, id_loss_dict: 0.03,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.982
+Epoch: 42/60 Setp: 100, ranking_loss: 0.01, id_loss: 0.00, ranking_loss_dict: 0.54, id_loss_dict: 0.02,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 1.000
+Epoch: 42/60 Setp: 150, ranking_loss: 0.87, id_loss: 0.08, ranking_loss_dict: 1.76, id_loss_dict: 0.11,ranking_loss_dict_text: 1.11, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.964
+Epoch: 42/60 Setp: 200, ranking_loss: 0.34, id_loss: 0.03, ranking_loss_dict: 1.31, id_loss_dict: 0.03,ranking_loss_dict_text: 0.22, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.984
+Epoch: 42/60 , ranking_loss: 0.12, id_loss: 0.05, pred_i2t_local: 0.997, pred_t2i_local 0.987 
+lr:1.0000000000000002e-06
+lr:1.0000000000000002e-06
+lr:1e-05
+lr:1e-05
+lr:1e-05
+Epoch: 43/60 Setp: 50, ranking_loss: 0.97, id_loss: 0.25, ranking_loss_dict: 2.13, id_loss_dict: 0.27,ranking_loss_dict_text: 0.76, ranking_loss_dict_image: 0.36,pred_i2t_local: 0.971 pred_t2i_local 0.974
+Epoch: 43/60 Setp: 100, ranking_loss: 0.47, id_loss: 0.14, ranking_loss_dict: 0.71, id_loss_dict: 0.16,ranking_loss_dict_text: 0.09, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.987 pred_t2i_local 0.974
+Epoch: 43/60 Setp: 150, ranking_loss: 0.38, id_loss: 0.01, ranking_loss_dict: 0.99, id_loss_dict: 0.01,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 1.000
+Epoch: 43/60 Setp: 200, ranking_loss: 0.00, id_loss: 0.02, ranking_loss_dict: 0.63, id_loss_dict: 0.02,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.987
+Epoch: 43/60 , ranking_loss: 0.12, id_loss: 0.05, pred_i2t_local: 0.997, pred_t2i_local 0.987 
+lr:1.0000000000000002e-06
+lr:1.0000000000000002e-06
+lr:1e-05
+lr:1e-05
+lr:1e-05
+Epoch: 44/60 Setp: 50, ranking_loss: 0.04, id_loss: 0.01, ranking_loss_dict: 0.44, id_loss_dict: 0.03,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 1.000
+Epoch: 44/60 Setp: 100, ranking_loss: 0.00, id_loss: 0.08, ranking_loss_dict: 0.20, id_loss_dict: 0.12,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.997 pred_t2i_local 0.966
+Epoch: 44/60 Setp: 150, ranking_loss: 0.02, id_loss: 0.00, ranking_loss_dict: 0.75, id_loss_dict: 0.01,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.05,pred_i2t_local: 1.000 pred_t2i_local 1.000
+Epoch: 44/60 Setp: 200, ranking_loss: 0.08, id_loss: 0.02, ranking_loss_dict: 0.91, id_loss_dict: 0.03,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.992
+Epoch: 44/60 , ranking_loss: 0.11, id_loss: 0.05, pred_i2t_local: 0.997, pred_t2i_local 0.987 
+lr:1.0000000000000002e-06
+lr:1.0000000000000002e-06
+lr:1e-05
+lr:1e-05
+lr:1e-05
+Epoch: 45/60 Setp: 50, ranking_loss: 0.00, id_loss: 0.01, ranking_loss_dict: 0.15, id_loss_dict: 0.02,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.997
+Epoch: 45/60 Setp: 100, ranking_loss: 0.00, id_loss: 0.13, ranking_loss_dict: 0.71, id_loss_dict: 0.13,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.04,pred_i2t_local: 0.984 pred_t2i_local 0.977
+Epoch: 45/60 Setp: 150, ranking_loss: 0.01, id_loss: 0.02, ranking_loss_dict: 0.82, id_loss_dict: 0.13,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.995 pred_t2i_local 1.000
+Epoch: 45/60 Setp: 200, ranking_loss: 0.07, id_loss: 0.02, ranking_loss_dict: 1.33, id_loss_dict: 0.02,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.987
+Epoch: 45/60 , ranking_loss: 0.09, id_loss: 0.05, pred_i2t_local: 0.997, pred_t2i_local 0.988 
+lr:1.0000000000000002e-06
+lr:1.0000000000000002e-06
+lr:1e-05
+lr:1e-05
+lr:1e-05
+Epoch: 46/60 Setp: 50, ranking_loss: 0.00, id_loss: 0.01, ranking_loss_dict: 0.71, id_loss_dict: 0.02,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.02,pred_i2t_local: 1.000 pred_t2i_local 1.000
+Epoch: 46/60 Setp: 100, ranking_loss: 0.00, id_loss: 0.01, ranking_loss_dict: 0.10, id_loss_dict: 0.01,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 1.000
+Epoch: 46/60 Setp: 150, ranking_loss: 0.03, id_loss: 0.01, ranking_loss_dict: 0.37, id_loss_dict: 0.02,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.990
+Epoch: 46/60 Setp: 200, ranking_loss: 0.00, id_loss: 0.02, ranking_loss_dict: 0.82, id_loss_dict: 0.03,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.992
+Epoch: 46/60 , ranking_loss: 0.11, id_loss: 0.05, pred_i2t_local: 0.997, pred_t2i_local 0.987 
+lr:1.0000000000000002e-06
+lr:1.0000000000000002e-06
+lr:1e-05
+lr:1e-05
+lr:1e-05
+Epoch: 47/60 Setp: 50, ranking_loss: 0.02, id_loss: 0.03, ranking_loss_dict: 0.91, id_loss_dict: 0.04,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.01,pred_i2t_local: 1.000 pred_t2i_local 0.990
+Epoch: 47/60 Setp: 100, ranking_loss: 0.13, id_loss: 0.07, ranking_loss_dict: 1.66, id_loss_dict: 0.06,ranking_loss_dict_text: 0.01, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.977
+Epoch: 47/60 Setp: 150, ranking_loss: 0.00, id_loss: 0.07, ranking_loss_dict: 1.30, id_loss_dict: 0.06,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.977
+Epoch: 47/60 Setp: 200, ranking_loss: 0.06, id_loss: 0.00, ranking_loss_dict: 0.54, id_loss_dict: 0.02,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 1.000
+Epoch: 47/60 , ranking_loss: 0.11, id_loss: 0.05, pred_i2t_local: 0.997, pred_t2i_local 0.987 
+lr:1.0000000000000002e-06
+lr:1.0000000000000002e-06
+lr:1e-05
+lr:1e-05
+lr:1e-05
+Epoch: 48/60 Setp: 50, ranking_loss: 0.15, id_loss: 0.05, ranking_loss_dict: 1.47, id_loss_dict: 0.12,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.997 pred_t2i_local 0.982
+Epoch: 48/60 Setp: 100, ranking_loss: 0.00, id_loss: 0.05, ranking_loss_dict: 1.14, id_loss_dict: 0.08,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.971
+Epoch: 48/60 Setp: 150, ranking_loss: 0.00, id_loss: 0.02, ranking_loss_dict: 0.89, id_loss_dict: 0.03,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.987
+Epoch: 48/60 Setp: 200, ranking_loss: 0.00, id_loss: 0.15, ranking_loss_dict: 0.41, id_loss_dict: 0.15,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.984 pred_t2i_local 0.971
+Epoch: 48/60 , ranking_loss: 0.10, id_loss: 0.05, pred_i2t_local: 0.997, pred_t2i_local 0.986 
+lr:1.0000000000000002e-06
+lr:1.0000000000000002e-06
+lr:1e-05
+lr:1e-05
+lr:1e-05
+Epoch: 49/60 Setp: 50, ranking_loss: 0.05, id_loss: 0.07, ranking_loss_dict: 0.86, id_loss_dict: 0.06,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.984
+Epoch: 49/60 Setp: 100, ranking_loss: 0.00, id_loss: 0.21, ranking_loss_dict: 0.59, id_loss_dict: 0.18,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.984 pred_t2i_local 0.969
+Epoch: 49/60 Setp: 150, ranking_loss: 0.10, id_loss: 0.05, ranking_loss_dict: 1.05, id_loss_dict: 0.06,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.969
+Epoch: 49/60 Setp: 200, ranking_loss: 0.26, id_loss: 0.03, ranking_loss_dict: 1.13, id_loss_dict: 0.11,ranking_loss_dict_text: 0.08, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.990 pred_t2i_local 0.997
+Epoch: 49/60 , ranking_loss: 0.12, id_loss: 0.05, pred_i2t_local: 0.997, pred_t2i_local 0.987 
+lr:1.0000000000000002e-07
+lr:1.0000000000000002e-07
+lr:1.0000000000000002e-06
+lr:1.0000000000000002e-06
+lr:1.0000000000000002e-06
+Epoch: 50/60 Setp: 50, ranking_loss: 0.09, id_loss: 0.01, ranking_loss_dict: 1.15, id_loss_dict: 0.01,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.997
+Epoch: 50/60 Setp: 100, ranking_loss: 0.00, id_loss: 0.00, ranking_loss_dict: 0.64, id_loss_dict: 0.01,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 1.000
+Epoch: 50/60 Setp: 150, ranking_loss: 0.00, id_loss: 0.00, ranking_loss_dict: 0.58, id_loss_dict: 0.03,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 1.000
+Epoch: 50/60 Setp: 200, ranking_loss: 0.04, id_loss: 0.06, ranking_loss_dict: 0.82, id_loss_dict: 0.06,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.953
+Epoch: 50/60 , ranking_loss: 0.11, id_loss: 0.05, pred_i2t_local: 0.997, pred_t2i_local 0.988 
+lr:1.0000000000000002e-07
+lr:1.0000000000000002e-07
+lr:1.0000000000000002e-06
+lr:1.0000000000000002e-06
+lr:1.0000000000000002e-06
+Epoch: 51/60 Setp: 50, ranking_loss: 0.00, id_loss: 0.17, ranking_loss_dict: 0.30, id_loss_dict: 0.15,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.984 pred_t2i_local 0.977
+Epoch: 51/60 Setp: 100, ranking_loss: 0.14, id_loss: 0.03, ranking_loss_dict: 0.68, id_loss_dict: 0.04,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.04,pred_i2t_local: 1.000 pred_t2i_local 0.984
+Epoch: 51/60 Setp: 150, ranking_loss: 0.70, id_loss: 0.25, ranking_loss_dict: 1.85, id_loss_dict: 0.27,ranking_loss_dict_text: 0.45, ranking_loss_dict_image: 0.34,pred_i2t_local: 0.969 pred_t2i_local 0.969
+Epoch: 51/60 Setp: 200, ranking_loss: 1.09, id_loss: 0.27, ranking_loss_dict: 1.10, id_loss_dict: 0.27,ranking_loss_dict_text: 0.62, ranking_loss_dict_image: 0.65,pred_i2t_local: 0.969 pred_t2i_local 0.969
+Epoch: 51/60 , ranking_loss: 0.11, id_loss: 0.05, pred_i2t_local: 0.997, pred_t2i_local 0.988 
+lr:1.0000000000000002e-07
+lr:1.0000000000000002e-07
+lr:1.0000000000000002e-06
+lr:1.0000000000000002e-06
+lr:1.0000000000000002e-06
+Epoch: 52/60 Setp: 50, ranking_loss: 0.01, id_loss: 0.00, ranking_loss_dict: 0.67, id_loss_dict: 0.01,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 1.000
+Epoch: 52/60 Setp: 100, ranking_loss: 0.03, id_loss: 0.03, ranking_loss_dict: 0.29, id_loss_dict: 0.04,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.992
+Epoch: 52/60 Setp: 150, ranking_loss: 0.06, id_loss: 0.03, ranking_loss_dict: 2.57, id_loss_dict: 0.04,ranking_loss_dict_text: 0.01, ranking_loss_dict_image: 0.34,pred_i2t_local: 1.000 pred_t2i_local 0.984
+Epoch: 52/60 Setp: 200, ranking_loss: 0.04, id_loss: 0.04, ranking_loss_dict: 1.56, id_loss_dict: 0.11,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.987 pred_t2i_local 0.984
+Epoch: 52/60 , ranking_loss: 0.12, id_loss: 0.05, pred_i2t_local: 0.997, pred_t2i_local 0.988 
+lr:1.0000000000000002e-07
+lr:1.0000000000000002e-07
+lr:1.0000000000000002e-06
+lr:1.0000000000000002e-06
+lr:1.0000000000000002e-06
+Epoch: 53/60 Setp: 50, ranking_loss: 0.00, id_loss: 0.00, ranking_loss_dict: 0.42, id_loss_dict: 0.01,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 1.000
+Epoch: 53/60 Setp: 100, ranking_loss: 0.00, id_loss: 0.01, ranking_loss_dict: 1.00, id_loss_dict: 0.02,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.992
+Epoch: 53/60 Setp: 150, ranking_loss: 0.00, id_loss: 0.00, ranking_loss_dict: 0.57, id_loss_dict: 0.03,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 1.000
+Epoch: 53/60 Setp: 200, ranking_loss: 0.08, id_loss: 0.04, ranking_loss_dict: 0.93, id_loss_dict: 0.04,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.974
+Epoch: 53/60 , ranking_loss: 0.12, id_loss: 0.05, pred_i2t_local: 0.997, pred_t2i_local 0.987 
+lr:1.0000000000000002e-07
+lr:1.0000000000000002e-07
+lr:1.0000000000000002e-06
+lr:1.0000000000000002e-06
+lr:1.0000000000000002e-06
+Epoch: 54/60 Setp: 50, ranking_loss: 0.00, id_loss: 0.16, ranking_loss_dict: 0.90, id_loss_dict: 0.14,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.01,pred_i2t_local: 0.984 pred_t2i_local 0.984
+Epoch: 54/60 Setp: 100, ranking_loss: 0.02, id_loss: 0.03, ranking_loss_dict: 0.48, id_loss_dict: 0.11,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.984
+Epoch: 54/60 Setp: 150, ranking_loss: 0.00, id_loss: 0.00, ranking_loss_dict: 0.42, id_loss_dict: 0.05,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 1.000
+Epoch: 54/60 Setp: 200, ranking_loss: 0.00, id_loss: 0.03, ranking_loss_dict: 0.54, id_loss_dict: 0.03,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.984
+Epoch: 54/60 , ranking_loss: 0.12, id_loss: 0.05, pred_i2t_local: 0.997, pred_t2i_local 0.988 
+lr:1.0000000000000002e-07
+lr:1.0000000000000002e-07
+lr:1.0000000000000002e-06
+lr:1.0000000000000002e-06
+lr:1.0000000000000002e-06
+Epoch: 55/60 Setp: 50, ranking_loss: 0.00, id_loss: 0.00, ranking_loss_dict: 0.71, id_loss_dict: 0.01,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.09,pred_i2t_local: 1.000 pred_t2i_local 1.000
+Epoch: 55/60 Setp: 100, ranking_loss: 0.19, id_loss: 0.15, ranking_loss_dict: 0.35, id_loss_dict: 0.14,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.984 pred_t2i_local 0.984
+Epoch: 55/60 Setp: 150, ranking_loss: 0.02, id_loss: 0.03, ranking_loss_dict: 1.51, id_loss_dict: 0.04,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.984
+Epoch: 55/60 Setp: 200, ranking_loss: 0.08, id_loss: 0.00, ranking_loss_dict: 0.81, id_loss_dict: 0.02,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.08,pred_i2t_local: 1.000 pred_t2i_local 1.000
+Epoch: 55/60 , ranking_loss: 0.12, id_loss: 0.05, pred_i2t_local: 0.997, pred_t2i_local 0.987 
+lr:1.0000000000000002e-07
+lr:1.0000000000000002e-07
+lr:1.0000000000000002e-06
+lr:1.0000000000000002e-06
+lr:1.0000000000000002e-06
+Epoch: 56/60 Setp: 50, ranking_loss: 0.06, id_loss: 0.04, ranking_loss_dict: 1.01, id_loss_dict: 0.05,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.977
+Epoch: 56/60 Setp: 100, ranking_loss: 0.00, id_loss: 0.16, ranking_loss_dict: 0.92, id_loss_dict: 0.19,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.984 pred_t2i_local 0.971
+Epoch: 56/60 Setp: 150, ranking_loss: 0.00, id_loss: 0.04, ranking_loss_dict: 0.15, id_loss_dict: 0.05,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.984
+Epoch: 56/60 Setp: 200, ranking_loss: 0.00, id_loss: 0.05, ranking_loss_dict: 0.64, id_loss_dict: 0.05,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.971
+Epoch: 56/60 , ranking_loss: 0.10, id_loss: 0.05, pred_i2t_local: 0.997, pred_t2i_local 0.987 
+lr:1.0000000000000002e-07
+lr:1.0000000000000002e-07
+lr:1.0000000000000002e-06
+lr:1.0000000000000002e-06
+lr:1.0000000000000002e-06
+Epoch: 57/60 Setp: 50, ranking_loss: 0.81, id_loss: 0.11, ranking_loss_dict: 0.84, id_loss_dict: 0.11,ranking_loss_dict_text: 0.83, ranking_loss_dict_image: 0.40,pred_i2t_local: 1.000 pred_t2i_local 0.935
+Epoch: 57/60 Setp: 100, ranking_loss: 0.55, id_loss: 0.00, ranking_loss_dict: 1.61, id_loss_dict: 0.01,ranking_loss_dict_text: 0.63, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 1.000
+Epoch: 57/60 Setp: 150, ranking_loss: 0.02, id_loss: 0.03, ranking_loss_dict: 1.14, id_loss_dict: 0.09,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.992 pred_t2i_local 0.992
+Epoch: 57/60 Setp: 200, ranking_loss: 0.58, id_loss: 0.00, ranking_loss_dict: 2.51, id_loss_dict: 0.01,ranking_loss_dict_text: 0.24, ranking_loss_dict_image: 0.02,pred_i2t_local: 1.000 pred_t2i_local 1.000
+Epoch: 57/60 , ranking_loss: 0.10, id_loss: 0.05, pred_i2t_local: 0.997, pred_t2i_local 0.987 
+lr:1.0000000000000002e-07
+lr:1.0000000000000002e-07
+lr:1.0000000000000002e-06
+lr:1.0000000000000002e-06
+lr:1.0000000000000002e-06
+Epoch: 58/60 Setp: 50, ranking_loss: 0.00, id_loss: 0.00, ranking_loss_dict: 0.79, id_loss_dict: 0.01,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 1.000
+Epoch: 58/60 Setp: 100, ranking_loss: 0.01, id_loss: 0.01, ranking_loss_dict: 0.76, id_loss_dict: 0.03,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.995
+Epoch: 58/60 Setp: 150, ranking_loss: 0.05, id_loss: 0.07, ranking_loss_dict: 1.05, id_loss_dict: 0.08,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.977
+Epoch: 58/60 Setp: 200, ranking_loss: 0.05, id_loss: 0.05, ranking_loss_dict: 0.84, id_loss_dict: 0.04,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.974
+Epoch: 58/60 , ranking_loss: 0.13, id_loss: 0.05, pred_i2t_local: 0.997, pred_t2i_local 0.987 
+lr:1.0000000000000002e-07
+lr:1.0000000000000002e-07
+lr:1.0000000000000002e-06
+lr:1.0000000000000002e-06
+lr:1.0000000000000002e-06
+Epoch: 59/60 Setp: 50, ranking_loss: 0.24, id_loss: 0.00, ranking_loss_dict: 1.19, id_loss_dict: 0.01,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.19,pred_i2t_local: 1.000 pred_t2i_local 1.000
+Epoch: 59/60 Setp: 100, ranking_loss: 0.00, id_loss: 0.14, ranking_loss_dict: 0.86, id_loss_dict: 0.14,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 0.984 pred_t2i_local 0.984
+Epoch: 59/60 Setp: 150, ranking_loss: 0.02, id_loss: 0.03, ranking_loss_dict: 1.10, id_loss_dict: 0.05,ranking_loss_dict_text: 0.01, ranking_loss_dict_image: 0.02,pred_i2t_local: 1.000 pred_t2i_local 0.984
+Epoch: 59/60 Setp: 200, ranking_loss: 0.03, id_loss: 0.02, ranking_loss_dict: 1.41, id_loss_dict: 0.03,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.984
+Epoch: 59/60 , ranking_loss: 0.11, id_loss: 0.05, pred_i2t_local: 0.997, pred_t2i_local 0.987 
+lr:1.0000000000000002e-07
+lr:1.0000000000000002e-07
+lr:1.0000000000000002e-06
+lr:1.0000000000000002e-06
+lr:1.0000000000000002e-06
+Epoch: 60/60 Setp: 50, ranking_loss: 0.04, id_loss: 0.15, ranking_loss_dict: 1.24, id_loss_dict: 0.14,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.13,pred_i2t_local: 0.984 pred_t2i_local 0.977
+Epoch: 60/60 Setp: 100, ranking_loss: 0.12, id_loss: 0.01, ranking_loss_dict: 0.57, id_loss_dict: 0.02,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 1.000
+Epoch: 60/60 Setp: 150, ranking_loss: 0.06, id_loss: 0.02, ranking_loss_dict: 2.16, id_loss_dict: 0.02,ranking_loss_dict_text: 0.03, ranking_loss_dict_image: 0.06,pred_i2t_local: 1.000 pred_t2i_local 0.987
+Epoch: 60/60 Setp: 200, ranking_loss: 0.04, id_loss: 0.02, ranking_loss_dict: 0.70, id_loss_dict: 0.02,ranking_loss_dict_text: 0.00, ranking_loss_dict_image: 0.00,pred_i2t_local: 1.000 pred_t2i_local 0.992
+Epoch: 60/60 , ranking_loss: 0.11, id_loss: 0.04, pred_i2t_local: 0.997, pred_t2i_local 0.988 
+Training Done
+Namespace(mode='train', trained=False, bidirectional=True, using_pose=False, last_lstm=False, using_noun=False, epoch=60, start_epoch=0, epoch_decay=[20, 40, 50], wd=4e-05, batch_size=64, adam_alpha=0.9, adam_beta=0.999, lr=0.001, margin=0.2, vocab_size=425, feature_length=512, class_num=15000, part=6, caption_length_max=100, random_erasing=0.0, Save_param_every=5, save_path='./checkpoints/dual_modal/ZURU_BLIP_4/model_get', GPU_id='0', device=device(type='cuda', index=0), dataset='ZURU_BLIP_4', dataroot='', pkl_root='/raid/home/vibhu20150/Person-Re-ID/LGUR/processed_data_singledata_ZURU_BLIP_4/', test_image_num=200, data_augment=False, train_dataset='ZURU_BLIP_4', d_model=1024, nhead=4, dim_feedforward=2048, normalize_before=False, num_encoder_layers=3, num_decoder_layers=3, num_query=6, detr_lr=0.0001, txt_detr_lr=0.0001, txt_lstm_lr=0.001, res_y=False, noself=False, post_norm=False, n_heads=4, n_layers=2, share_query=True, wordtype='bert')
+Training Done
+Namespace(mode='train', trained=False, bidirectional=True, using_pose=False, last_lstm=False, using_noun=False, epoch=60, start_epoch=0, epoch_decay=[20, 40, 50], wd=4e-05, batch_size=8, adam_alpha=0.9, adam_beta=0.999, lr=0.001, margin=0.2, vocab_size=5000, feature_length=512, class_num=11000, part=6, caption_length_max=100, random_erasing=0.0, Save_param_every=5, save_path='./checkpoints/dual_modal/ZURU_BLIP_4/model_get', GPU_id='1', device=device(type='cuda', index=1), dataset='CUHK-PEDES', dataroot='../../Datasets/CUHK-PEDES/', pkl_root='./processed_data_singledata_CUHK/', test_image_num=200, data_augment=False, train_dataset='ZURU_BLIP_4', d_model=1024, nhead=4, dim_feedforward=2048, normalize_before=False, num_encoder_layers=3, num_decoder_layers=3, num_query=6, detr_lr=0.0001, txt_detr_lr=0.0001, txt_lstm_lr=0.001, res_y=False, noself=False, post_norm=False, n_heads=4, n_layers=2, share_query=True, wordtype='bert', model_name='model_get')
+Namespace(mode='train', trained=False, bidirectional=True, using_pose=False, last_lstm=False, using_noun=False, epoch=60, start_epoch=0, epoch_decay=[20, 40, 50], wd=4e-05, batch_size=8, adam_alpha=0.9, adam_beta=0.999, lr=0.001, margin=0.2, vocab_size=5000, feature_length=512, class_num=11000, part=6, caption_length_max=100, random_erasing=0.0, Save_param_every=5, save_path='./checkpoints/dual_modal/ZURU_BLIP_4/model_get', GPU_id='1', device=device(type='cuda', index=1), dataset='CUHK-PEDES', dataroot='../../Datasets/CUHK-PEDES/', pkl_root='./processed_data_singledata_CUHK/', test_image_num=200, data_augment=False, train_dataset='ZURU_BLIP_4', d_model=1024, nhead=4, dim_feedforward=2048, normalize_before=False, num_encoder_layers=3, num_decoder_layers=3, num_query=6, detr_lr=0.0001, txt_detr_lr=0.0001, txt_lstm_lr=0.001, res_y=False, noself=False, post_norm=False, n_heads=4, n_layers=2, share_query=True, wordtype='bert', model_name='model_get')
+Training Done
+Namespace(mode='train', trained=False, bidirectional=True, using_pose=False, last_lstm=False, using_noun=False, epoch=60, start_epoch=0, epoch_decay=[20, 40, 50], wd=4e-05, batch_size=8, adam_alpha=0.9, adam_beta=0.999, lr=0.001, margin=0.2, vocab_size=2500, feature_length=512, class_num=3102, part=6, caption_length_max=100, random_erasing=0.0, Save_param_every=5, save_path='./checkpoints/dual_modal/ZURU_BLIP_4/model_get', GPU_id='1', device=device(type='cuda', index=1), dataset='MSMT-PEDES', dataroot='/raid/home/vibhu20150/Datasets/ICFG/ICFG_PEDES', pkl_root='/raid/home/vibhu20150/Person-Re-ID/LGUR/processed_data_singledata_ICFG/', test_image_num=200, data_augment=False, train_dataset='ZURU_BLIP_4', d_model=1024, nhead=4, dim_feedforward=2048, normalize_before=False, num_encoder_layers=3, num_decoder_layers=3, num_query=6, detr_lr=0.0001, txt_detr_lr=0.0001, txt_lstm_lr=0.001, res_y=False, noself=False, post_norm=False, n_heads=4, n_layers=2, share_query=True, wordtype='bert', model_name='model_get')
+Training Done
+Namespace(mode='train', trained=False, bidirectional=True, using_pose=False, last_lstm=False, using_noun=False, epoch=60, start_epoch=0, epoch_decay=[20, 40, 50], wd=4e-05, batch_size=8, adam_alpha=0.9, adam_beta=0.999, lr=0.001, margin=0.2, vocab_size=2690, feature_length=512, class_num=3701, part=6, caption_length_max=100, random_erasing=0.0, Save_param_every=5, save_path='./checkpoints/dual_modal/ZURU_BLIP_4/model_get', GPU_id='1', device=device(type='cuda', index=1), dataset='RSTP', dataroot='../../Datasets/RSTP/', pkl_root='/raid/home/vibhu20150/Person-Re-ID/LGUR/processed_data_singledata_RSTP/', test_image_num=200, data_augment=False, train_dataset='ZURU_BLIP_4', d_model=1024, nhead=4, dim_feedforward=2048, normalize_before=False, num_encoder_layers=3, num_decoder_layers=3, num_query=6, detr_lr=0.0001, txt_detr_lr=0.0001, txt_lstm_lr=0.001, res_y=False, noself=False, post_norm=False, n_heads=4, n_layers=2, share_query=True, wordtype='bert', model_name='model_get')
+Training Done

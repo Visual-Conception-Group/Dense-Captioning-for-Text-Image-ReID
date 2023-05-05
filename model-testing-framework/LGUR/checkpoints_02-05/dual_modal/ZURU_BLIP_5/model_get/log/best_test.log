@@ -1,0 +1,24 @@
+Testing Epoch: 1 Iteration:234
+similarity_all:
+t2i: @R1: 0.0094, @R5: 0.0236, @R10: 0.0324, map: 0.01991
+Testing Epoch: 2 Iteration:234
+similarity_all:
+t2i: @R1: 0.0388, @R5: 0.0818, @R10: 0.1176, map: 0.06398
+Testing Epoch: 3 Iteration:234
+similarity_all:
+t2i: @R1: 0.04, @R5: 0.0858, @R10: 0.1184, map: 0.0656
+Testing Epoch: 4 Iteration:234
+similarity_all:
+t2i: @R1: 0.061, @R5: 0.1246, @R10: 0.1658, map: 0.09335
+Testing Epoch: 5 Iteration:234
+similarity_all:
+t2i: @R1: 0.0794, @R5: 0.1526, @R10: 0.192, map: 0.1144
+Testing Epoch: 8 Iteration:234
+similarity_all:
+t2i: @R1: 0.0808, @R5: 0.1386, @R10: 0.1848, map: 0.112
+Testing Epoch: 9 Iteration:234
+similarity_all:
+t2i: @R1: 0.0874, @R5: 0.1558, @R10: 0.1986, map: 0.1203
+Testing Epoch: 14 Iteration:234
+similarity_all:
+t2i: @R1: 0.0968, @R5: 0.1696, @R10: 0.2098, map: 0.1312

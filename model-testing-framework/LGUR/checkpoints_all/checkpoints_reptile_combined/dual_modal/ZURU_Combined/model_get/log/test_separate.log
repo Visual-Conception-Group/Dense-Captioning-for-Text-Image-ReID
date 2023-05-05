@@ -1,0 +1,8 @@
+Testing Epoch: 1 Iteration:2187
+similarity_all:
+t2i: @R1: 0.1278, @R5: 0.2337, @R10: 0.2928, map: 0.1755
+t2i_wm: @R1: 0.1278, @R5: 0.2335, @R10: 0.2927, map: 0.1537
+Testing Epoch: 2 Iteration:2187
+similarity_all:
+t2i: @R1: 0.1853, @R5: 0.3212, @R10: 0.393, map: 0.2429
+t2i_wm: @R1: 0.1853, @R5: 0.3212, @R10: 0.3928, map: 0.2167

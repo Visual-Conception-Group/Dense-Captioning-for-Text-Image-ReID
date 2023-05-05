@@ -1,0 +1,311 @@
+dict_keys(['id', 'img_path', 'same_id_index', 'lstm_caption_id', 'bert_caption_id', 'captions'])
+combined_datasets-train has 61463 pohtos
+combined_datasets-val has 8211 pohtos, 8211 text
+using stride: [16, 16], and patch number is num_y24 * num_x8
+using drop_out rate is : 0.0
+using attn_drop_out rate is : 0.0
+using drop_path rate is : 0.1
+distill need to choose right cls token in the pth
+Resized position embedding from size:torch.Size([1, 197, 768]) to size: torch.Size([1, 193, 768]) with height:24 width: 8
+Loading pretrained ImageNet model......from ./deit_base_distilled_patch16_224-df68dfff.pth
+Loaded model successfully!
+model_get
+Testing Epoch: 1 Iteration:960
+similarity_all:
+t2i: @R1: 0.2584, @R5: 0.4398, @R10: 0.5322, map: 0.2487
+t2i_wm: @R1: 0.2331, @R5: 0.4043, @R10: 0.4996, map: 0.2188
+model_get
+Testing Epoch: 2 Iteration:960
+similarity_all:
+t2i: @R1: 0.3973, @R5: 0.5819, @R10: 0.6653, map: 0.3748
+t2i_wm: @R1: 0.3665, @R5: 0.5465, @R10: 0.6323, map: 0.3392
+model_get
+Testing Epoch: 3 Iteration:960
+similarity_all:
+t2i: @R1: 0.4467, @R5: 0.6328, @R10: 0.7093, map: 0.4216
+t2i_wm: @R1: 0.4107, @R5: 0.6005, @R10: 0.6786, map: 0.3848
+model_get
+Testing Epoch: 4 Iteration:960
+similarity_all:
+t2i: @R1: 0.4869, @R5: 0.6702, @R10: 0.7408, map: 0.4577
+t2i_wm: @R1: 0.4526, @R5: 0.6367, @R10: 0.7116, map: 0.4204
+model_get
+Testing Epoch: 5 Iteration:960
+similarity_all:
+t2i: @R1: 0.5081, @R5: 0.6855, @R10: 0.7551, map: 0.4741
+t2i_wm: @R1: 0.4684, @R5: 0.653, @R10: 0.7273, map: 0.4356
+model_get
+Testing Epoch: 6 Iteration:960
+similarity_all:
+t2i: @R1: 0.5165, @R5: 0.69, @R10: 0.7576, map: 0.4835
+t2i_wm: @R1: 0.4811, @R5: 0.6591, @R10: 0.7307, map: 0.4457
+model_get
+Testing Epoch: 7 Iteration:960
+similarity_all:
+t2i: @R1: 0.5289, @R5: 0.706, @R10: 0.7706, map: 0.4972
+t2i_wm: @R1: 0.4921, @R5: 0.6746, @R10: 0.744, map: 0.4595
+model_get
+Testing Epoch: 8 Iteration:960
+similarity_all:
+t2i: @R1: 0.5523, @R5: 0.7209, @R10: 0.7835, map: 0.515
+t2i_wm: @R1: 0.5178, @R5: 0.6893, @R10: 0.7568, map: 0.4775
+model_get
+Testing Epoch: 9 Iteration:960
+similarity_all:
+t2i: @R1: 0.5519, @R5: 0.7213, @R10: 0.7822, map: 0.5172
+t2i_wm: @R1: 0.5181, @R5: 0.6913, @R10: 0.7561, map: 0.4801
+model_get
+Testing Epoch: 10 Iteration:960
+similarity_all:
+t2i: @R1: 0.5674, @R5: 0.7351, @R10: 0.7995, map: 0.5313
+t2i_wm: @R1: 0.5334, @R5: 0.703, @R10: 0.7723, map: 0.4942
+model_get
+Testing Epoch: 11 Iteration:960
+similarity_all:
+t2i: @R1: 0.5641, @R5: 0.7295, @R10: 0.7881, map: 0.5248
+t2i_wm: @R1: 0.5293, @R5: 0.6964, @R10: 0.76, map: 0.4878
+model_get
+Testing Epoch: 12 Iteration:960
+similarity_all:
+t2i: @R1: 0.5629, @R5: 0.7302, @R10: 0.7921, map: 0.5272
+t2i_wm: @R1: 0.5297, @R5: 0.7016, @R10: 0.766, map: 0.4902
+model_get
+Testing Epoch: 13 Iteration:960
+similarity_all:
+t2i: @R1: 0.5808, @R5: 0.7469, @R10: 0.8088, map: 0.542
+t2i_wm: @R1: 0.5443, @R5: 0.7145, @R10: 0.7807, map: 0.5045
+model_get
+Testing Epoch: 14 Iteration:960
+similarity_all:
+t2i: @R1: 0.5708, @R5: 0.7391, @R10: 0.7977, map: 0.534
+t2i_wm: @R1: 0.5364, @R5: 0.7089, @R10: 0.7719, map: 0.4971
+model_get
+Testing Epoch: 15 Iteration:960
+similarity_all:
+t2i: @R1: 0.5836, @R5: 0.7413, @R10: 0.8033, map: 0.542
+t2i_wm: @R1: 0.5491, @R5: 0.7128, @R10: 0.7786, map: 0.5051
+model_get
+Testing Epoch: 16 Iteration:960
+similarity_all:
+t2i: @R1: 0.5773, @R5: 0.7495, @R10: 0.809, map: 0.5406
+t2i_wm: @R1: 0.5406, @R5: 0.7198, @R10: 0.7831, map: 0.5024
+model_get
+Testing Epoch: 17 Iteration:960
+similarity_all:
+t2i: @R1: 0.5847, @R5: 0.7455, @R10: 0.8031, map: 0.544
+t2i_wm: @R1: 0.5484, @R5: 0.716, @R10: 0.7771, map: 0.5073
+model_get
+Testing Epoch: 18 Iteration:960
+similarity_all:
+t2i: @R1: 0.5745, @R5: 0.7422, @R10: 0.8053, map: 0.5385
+t2i_wm: @R1: 0.5405, @R5: 0.711, @R10: 0.7793, map: 0.5016
+model_get
+Testing Epoch: 19 Iteration:960
+similarity_all:
+t2i: @R1: 0.5747, @R5: 0.7438, @R10: 0.8027, map: 0.5346
+t2i_wm: @R1: 0.5376, @R5: 0.7137, @R10: 0.778, map: 0.4968
+model_get
+Testing Epoch: 20 Iteration:960
+similarity_all:
+t2i: @R1: 0.6116, @R5: 0.7726, @R10: 0.8295, map: 0.5714
+t2i_wm: @R1: 0.5746, @R5: 0.7441, @R10: 0.8061, map: 0.5341
+model_get
+Testing Epoch: 21 Iteration:960
+similarity_all:
+t2i: @R1: 0.6141, @R5: 0.7765, @R10: 0.8339, map: 0.5766
+t2i_wm: @R1: 0.5786, @R5: 0.7485, @R10: 0.8099, map: 0.5396
+model_get
+Testing Epoch: 22 Iteration:960
+similarity_all:
+t2i: @R1: 0.6133, @R5: 0.7777, @R10: 0.8349, map: 0.5753
+t2i_wm: @R1: 0.5773, @R5: 0.7483, @R10: 0.8103, map: 0.5378
+model_get
+Testing Epoch: 23 Iteration:960
+similarity_all:
+t2i: @R1: 0.6152, @R5: 0.7814, @R10: 0.8346, map: 0.5764
+t2i_wm: @R1: 0.5789, @R5: 0.752, @R10: 0.8092, map: 0.5389
+model_get
+Testing Epoch: 24 Iteration:960
+similarity_all:
+t2i: @R1: 0.6222, @R5: 0.7808, @R10: 0.8398, map: 0.581
+t2i_wm: @R1: 0.588, @R5: 0.7518, @R10: 0.8139, map: 0.5443
+model_get
+Testing Epoch: 25 Iteration:960
+similarity_all:
+t2i: @R1: 0.6197, @R5: 0.7798, @R10: 0.8363, map: 0.5792
+t2i_wm: @R1: 0.5842, @R5: 0.7511, @R10: 0.8103, map: 0.5421
+model_get
+Testing Epoch: 26 Iteration:960
+similarity_all:
+t2i: @R1: 0.6222, @R5: 0.7816, @R10: 0.8392, map: 0.5825
+t2i_wm: @R1: 0.5864, @R5: 0.7523, @R10: 0.8133, map: 0.5457
+model_get
+Testing Epoch: 27 Iteration:960
+similarity_all:
+t2i: @R1: 0.6167, @R5: 0.7824, @R10: 0.8391, map: 0.5763
+t2i_wm: @R1: 0.5795, @R5: 0.7539, @R10: 0.8138, map: 0.5385
+model_get
+Testing Epoch: 28 Iteration:960
+similarity_all:
+t2i: @R1: 0.6208, @R5: 0.7824, @R10: 0.8405, map: 0.5804
+t2i_wm: @R1: 0.5845, @R5: 0.7534, @R10: 0.8151, map: 0.5432
+model_get
+Testing Epoch: 29 Iteration:960
+similarity_all:
+t2i: @R1: 0.6186, @R5: 0.7827, @R10: 0.8374, map: 0.5771
+t2i_wm: @R1: 0.5812, @R5: 0.7513, @R10: 0.8115, map: 0.5398
+model_get
+Testing Epoch: 30 Iteration:960
+similarity_all:
+t2i: @R1: 0.617, @R5: 0.7813, @R10: 0.8363, map: 0.578
+t2i_wm: @R1: 0.5804, @R5: 0.7517, @R10: 0.8117, map: 0.5409
+model_get
+Testing Epoch: 31 Iteration:960
+similarity_all:
+t2i: @R1: 0.6204, @R5: 0.7819, @R10: 0.8375, map: 0.5791
+t2i_wm: @R1: 0.582, @R5: 0.7529, @R10: 0.8126, map: 0.5417
+model_get
+Testing Epoch: 32 Iteration:960
+similarity_all:
+t2i: @R1: 0.6187, @R5: 0.7822, @R10: 0.8367, map: 0.5786
+t2i_wm: @R1: 0.5817, @R5: 0.7534, @R10: 0.8123, map: 0.5415
+model_get
+Testing Epoch: 33 Iteration:960
+similarity_all:
+t2i: @R1: 0.6161, @R5: 0.7782, @R10: 0.8369, map: 0.5764
+t2i_wm: @R1: 0.5787, @R5: 0.7502, @R10: 0.8115, map: 0.5393
+model_get
+Testing Epoch: 34 Iteration:960
+similarity_all:
+t2i: @R1: 0.616, @R5: 0.7787, @R10: 0.8363, map: 0.577
+t2i_wm: @R1: 0.579, @R5: 0.7507, @R10: 0.8107, map: 0.5397
+model_get
+Testing Epoch: 35 Iteration:960
+similarity_all:
+t2i: @R1: 0.6201, @R5: 0.7829, @R10: 0.8379, map: 0.579
+t2i_wm: @R1: 0.5829, @R5: 0.7544, @R10: 0.8124, map: 0.542
+model_get
+Testing Epoch: 36 Iteration:960
+similarity_all:
+t2i: @R1: 0.6181, @R5: 0.7819, @R10: 0.8353, map: 0.5779
+t2i_wm: @R1: 0.5814, @R5: 0.7528, @R10: 0.8092, map: 0.5407
+model_get
+Testing Epoch: 37 Iteration:960
+similarity_all:
+t2i: @R1: 0.6155, @R5: 0.7794, @R10: 0.8363, map: 0.5765
+t2i_wm: @R1: 0.5789, @R5: 0.7507, @R10: 0.8114, map: 0.5393
+model_get
+Testing Epoch: 38 Iteration:960
+similarity_all:
+t2i: @R1: 0.6148, @R5: 0.7797, @R10: 0.8342, map: 0.5755
+t2i_wm: @R1: 0.5796, @R5: 0.7496, @R10: 0.8094, map: 0.5385
+model_get
+Testing Epoch: 39 Iteration:960
+similarity_all:
+t2i: @R1: 0.619, @R5: 0.782, @R10: 0.8395, map: 0.5784
+t2i_wm: @R1: 0.5817, @R5: 0.753, @R10: 0.8142, map: 0.5408
+model_get
+Testing Epoch: 40 Iteration:960
+similarity_all:
+t2i: @R1: 0.6198, @R5: 0.7841, @R10: 0.8403, map: 0.5795
+t2i_wm: @R1: 0.5825, @R5: 0.7544, @R10: 0.8155, map: 0.542
+model_get
+Testing Epoch: 41 Iteration:960
+similarity_all:
+t2i: @R1: 0.6201, @R5: 0.785, @R10: 0.8402, map: 0.5807
+t2i_wm: @R1: 0.5835, @R5: 0.7552, @R10: 0.816, map: 0.5434
+model_get
+Testing Epoch: 42 Iteration:960
+similarity_all:
+t2i: @R1: 0.6203, @R5: 0.7857, @R10: 0.8401, map: 0.5804
+t2i_wm: @R1: 0.583, @R5: 0.7552, @R10: 0.8159, map: 0.543
+model_get
+Testing Epoch: 43 Iteration:960
+similarity_all:
+t2i: @R1: 0.6208, @R5: 0.7842, @R10: 0.8396, map: 0.5811
+t2i_wm: @R1: 0.584, @R5: 0.7541, @R10: 0.8156, map: 0.5439
+model_get
+Testing Epoch: 44 Iteration:960
+similarity_all:
+t2i: @R1: 0.6225, @R5: 0.7852, @R10: 0.8397, map: 0.5818
+t2i_wm: @R1: 0.5851, @R5: 0.7542, @R10: 0.8146, map: 0.5447
+model_get
+Testing Epoch: 45 Iteration:960
+similarity_all:
+t2i: @R1: 0.6209, @R5: 0.7861, @R10: 0.839, map: 0.581
+t2i_wm: @R1: 0.5847, @R5: 0.7546, @R10: 0.8149, map: 0.5439
+model_get
+Testing Epoch: 46 Iteration:960
+similarity_all:
+t2i: @R1: 0.6223, @R5: 0.7867, @R10: 0.8388, map: 0.5817
+t2i_wm: @R1: 0.5853, @R5: 0.7557, @R10: 0.8149, map: 0.5446
+model_get
+Testing Epoch: 47 Iteration:960
+similarity_all:
+t2i: @R1: 0.6223, @R5: 0.7855, @R10: 0.8383, map: 0.5813
+t2i_wm: @R1: 0.5858, @R5: 0.754, @R10: 0.8145, map: 0.544
+model_get
+Testing Epoch: 48 Iteration:960
+similarity_all:
+t2i: @R1: 0.6223, @R5: 0.7863, @R10: 0.8398, map: 0.5814
+t2i_wm: @R1: 0.5845, @R5: 0.7548, @R10: 0.816, map: 0.544
+model_get
+Testing Epoch: 49 Iteration:960
+similarity_all:
+t2i: @R1: 0.6231, @R5: 0.786, @R10: 0.84, map: 0.5823
+t2i_wm: @R1: 0.5856, @R5: 0.7541, @R10: 0.8155, map: 0.545
+model_get
+Testing Epoch: 50 Iteration:960
+similarity_all:
+t2i: @R1: 0.6234, @R5: 0.7863, @R10: 0.8397, map: 0.5823
+t2i_wm: @R1: 0.5856, @R5: 0.7541, @R10: 0.8154, map: 0.545
+model_get
+Testing Epoch: 51 Iteration:960
+similarity_all:
+t2i: @R1: 0.6229, @R5: 0.786, @R10: 0.8392, map: 0.5821
+t2i_wm: @R1: 0.5853, @R5: 0.7541, @R10: 0.8146, map: 0.5449
+model_get
+Testing Epoch: 52 Iteration:960
+similarity_all:
+t2i: @R1: 0.6223, @R5: 0.7865, @R10: 0.8394, map: 0.5818
+t2i_wm: @R1: 0.5848, @R5: 0.7544, @R10: 0.8151, map: 0.5445
+model_get
+Testing Epoch: 53 Iteration:960
+similarity_all:
+t2i: @R1: 0.622, @R5: 0.7864, @R10: 0.8394, map: 0.5816
+t2i_wm: @R1: 0.5843, @R5: 0.7545, @R10: 0.8152, map: 0.5442
+model_get
+Testing Epoch: 54 Iteration:960
+similarity_all:
+t2i: @R1: 0.6215, @R5: 0.7865, @R10: 0.8394, map: 0.5812
+t2i_wm: @R1: 0.584, @R5: 0.7545, @R10: 0.815, map: 0.5439
+model_get
+Testing Epoch: 55 Iteration:960
+similarity_all:
+t2i: @R1: 0.6218, @R5: 0.7869, @R10: 0.8391, map: 0.5816
+t2i_wm: @R1: 0.5846, @R5: 0.7547, @R10: 0.8151, map: 0.5443
+model_get
+Testing Epoch: 56 Iteration:960
+similarity_all:
+t2i: @R1: 0.6216, @R5: 0.7864, @R10: 0.8391, map: 0.5815
+t2i_wm: @R1: 0.5842, @R5: 0.7541, @R10: 0.8154, map: 0.5443
+model_get
+Testing Epoch: 57 Iteration:960
+similarity_all:
+t2i: @R1: 0.622, @R5: 0.7864, @R10: 0.8389, map: 0.5817
+t2i_wm: @R1: 0.5846, @R5: 0.7542, @R10: 0.8149, map: 0.5444
+model_get
+Testing Epoch: 58 Iteration:960
+similarity_all:
+t2i: @R1: 0.6222, @R5: 0.7867, @R10: 0.839, map: 0.5818
+t2i_wm: @R1: 0.5851, @R5: 0.7547, @R10: 0.8151, map: 0.5446
+model_get
+Testing Epoch: 59 Iteration:960
+similarity_all:
+t2i: @R1: 0.622, @R5: 0.7865, @R10: 0.8391, map: 0.5817
+t2i_wm: @R1: 0.5849, @R5: 0.7546, @R10: 0.8152, map: 0.5444
+model_get
+Testing Epoch: 60 Iteration:960
+similarity_all:
+t2i: @R1: 0.622, @R5: 0.7866, @R10: 0.8391, map: 0.5814
+t2i_wm: @R1: 0.5845, @R5: 0.7547, @R10: 0.8151, map: 0.5441

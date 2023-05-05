@@ -1,0 +1,17 @@
+True
+test
+TEST TRAIN DATASET ZURU
+Loading Cross Dataset Vocab!
+/raid/home/vibhu20150/Person-Re-ID/SSAN/processed_data_CUHK-PEDES/ZURU_test_save.pkl
+NOOOOOOOO
+
+
+
+
+
+NOOOOOOOOO
+CUHK-PEDES-test has 3074 pohtos, 6156 text
+Load the 47 epoch parameter successfully
+Missing Keys:  <All keys matched successfully>
+SSAN
+Testing Epoch: 48

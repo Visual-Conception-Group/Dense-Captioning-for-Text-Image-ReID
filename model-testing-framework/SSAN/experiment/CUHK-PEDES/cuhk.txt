@@ -1,0 +1,2050 @@
+Namespace(model_name='SSAN', mode='train', epoch=60, epoch_decay=[20, 40], epoch_begin=5, batch_size=64, adam_alpha=0.9, adam_beta=0.999, lr=0.001, margin=0.2, cr_beta=0.1, vocab_size=5000, feature_length=1024, class_num=11000, part=6, caption_length_max=100, save_path='./checkpoints/CUHK-PEDES/SSAN', GPU_id='0', device=device(type='cuda', index=0), dataset='CUHK-PEDES', dataroot='')
+/raid/home/vibhu20150/anaconda3/envs/lgur/lib/python3.10/site-packages/torchvision/transforms/transforms.py:329: UserWarning: Argument 'interpolation' of type int is deprecated since 0.13 and will be removed in 0.15. Please use InterpolationMode enum.
+  warnings.warn(
+/raid/home/vibhu20150/anaconda3/envs/lgur/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/raid/home/vibhu20150/anaconda3/envs/lgur/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+lr:0.001
+lr:0.0001
+CUHK-PEDES-train has 68120 pohtos
+CUHK-PEDES-val has 3078 pohtos, 6158 text
+Epoch: 1/60 Setp: 50, ranking_loss: 29.24, id_loss: 42.56
+Epoch: 1/60 Setp: 100, ranking_loss: 26.40, id_loss: 42.04
+Epoch: 1/60 Setp: 150, ranking_loss: 25.36, id_loss: 40.96
+Epoch: 1/60 Setp: 200, ranking_loss: 22.69, id_loss: 38.40
+Epoch: 1/60 Setp: 250, ranking_loss: 21.13, id_loss: 38.79
+Epoch: 1/60 Setp: 300, ranking_loss: 21.70, id_loss: 35.56
+Epoch: 1/60 Setp: 350, ranking_loss: 20.59, id_loss: 34.53
+Epoch: 1/60 Setp: 400, ranking_loss: 20.46, id_loss: 33.92
+Epoch: 1/60 Setp: 450, ranking_loss: 18.72, id_loss: 32.30
+Epoch: 1/60 Setp: 500, ranking_loss: 18.16, id_loss: 33.62
+Epoch: 1/60 Setp: 550, ranking_loss: 17.00, id_loss: 30.61
+Epoch: 1/60 Setp: 600, ranking_loss: 14.23, id_loss: 31.58
+Epoch: 1/60 Setp: 650, ranking_loss: 15.70, id_loss: 30.13
+Epoch: 1/60 Setp: 700, ranking_loss: 17.14, id_loss: 29.34
+Epoch: 1/60 Setp: 750, ranking_loss: 15.26, id_loss: 29.19
+Epoch: 1/60 Setp: 800, ranking_loss: 14.66, id_loss: 27.43
+Epoch: 1/60 Setp: 850, ranking_loss: 13.69, id_loss: 26.41
+Epoch: 1/60 Setp: 900, ranking_loss: 14.31, id_loss: 24.72
+Epoch: 1/60 Setp: 950, ranking_loss: 12.55, id_loss: 27.80
+Epoch: 1/60 Setp: 1000, ranking_loss: 17.85, id_loss: 25.88
+Epoch: 1/60 Setp: 1050, ranking_loss: 13.84, id_loss: 24.78
+Epoch: 1/60 , ranking_loss: 18.75, id_loss: 32.60
+SSAN
+Testing Epoch: 1
+lr:0.001
+lr:0.0001
+similarity_global:
+t2i: @R1: 0.3462, @R5: 0.5905, @R10: 0.6952, map: 0.3054
+similarity_local:
+t2i: @R1: 0.3472, @R5: 0.5862, @R10: 0.6942, map: 0.3073
+similarity_non_local:
+t2i: @R1: 0.3487, @R5: 0.5823, @R10: 0.6887, map: 0.307
+similarity_all:
+t2i: @R1: 0.3754, @R5: 0.6129, @R10: 0.7173, map: 0.3309
+Epoch: 2/60 Setp: 50, ranking_loss: 11.68, id_loss: 22.24
+Epoch: 2/60 Setp: 100, ranking_loss: 12.86, id_loss: 21.81
+Epoch: 2/60 Setp: 150, ranking_loss: 15.30, id_loss: 25.26
+Epoch: 2/60 Setp: 200, ranking_loss: 11.33, id_loss: 22.95
+Epoch: 2/60 Setp: 250, ranking_loss: 12.91, id_loss: 21.27
+Epoch: 2/60 Setp: 300, ranking_loss: 11.35, id_loss: 21.61
+Epoch: 2/60 Setp: 350, ranking_loss: 9.90, id_loss: 21.72
+Epoch: 2/60 Setp: 400, ranking_loss: 12.61, id_loss: 20.52
+Epoch: 2/60 Setp: 450, ranking_loss: 12.48, id_loss: 19.57
+Epoch: 2/60 Setp: 500, ranking_loss: 11.38, id_loss: 20.27
+Epoch: 2/60 Setp: 550, ranking_loss: 11.62, id_loss: 20.24
+Epoch: 2/60 Setp: 600, ranking_loss: 12.74, id_loss: 22.84
+Epoch: 2/60 Setp: 650, ranking_loss: 10.18, id_loss: 21.53
+Epoch: 2/60 Setp: 700, ranking_loss: 10.18, id_loss: 20.04
+Epoch: 2/60 Setp: 750, ranking_loss: 9.95, id_loss: 18.73
+Epoch: 2/60 Setp: 800, ranking_loss: 10.14, id_loss: 19.40
+Epoch: 2/60 Setp: 850, ranking_loss: 12.43, id_loss: 18.98
+Epoch: 2/60 Setp: 900, ranking_loss: 10.81, id_loss: 20.07
+Epoch: 2/60 Setp: 950, ranking_loss: 11.35, id_loss: 20.40
+Epoch: 2/60 Setp: 1000, ranking_loss: 9.30, id_loss: 19.04
+Epoch: 2/60 Setp: 1050, ranking_loss: 10.94, id_loss: 18.68
+Epoch: 2/60 , ranking_loss: 11.97, id_loss: 20.48
+SSAN
+Testing Epoch: 2
+lr:0.001
+lr:0.0001
+similarity_global:
+t2i: @R1: 0.4224, @R5: 0.6695, @R10: 0.7608, map: 0.3735
+similarity_local:
+t2i: @R1: 0.4435, @R5: 0.6783, @R10: 0.7666, map: 0.389
+similarity_non_local:
+t2i: @R1: 0.4526, @R5: 0.6785, @R10: 0.7707, map: 0.3948
+similarity_all:
+t2i: @R1: 0.4661, @R5: 0.6924, @R10: 0.7853, map: 0.4088
+Epoch: 3/60 Setp: 50, ranking_loss: 7.23, id_loss: 14.01
+Epoch: 3/60 Setp: 100, ranking_loss: 11.12, id_loss: 15.33
+Epoch: 3/60 Setp: 150, ranking_loss: 9.82, id_loss: 14.59
+Epoch: 3/60 Setp: 200, ranking_loss: 11.92, id_loss: 16.54
+Epoch: 3/60 Setp: 250, ranking_loss: 10.63, id_loss: 16.58
+Epoch: 3/60 Setp: 300, ranking_loss: 9.98, id_loss: 15.84
+Epoch: 3/60 Setp: 350, ranking_loss: 9.93, id_loss: 14.83
+Epoch: 3/60 Setp: 400, ranking_loss: 10.33, id_loss: 14.86
+Epoch: 3/60 Setp: 450, ranking_loss: 8.83, id_loss: 15.73
+Epoch: 3/60 Setp: 500, ranking_loss: 11.92, id_loss: 15.54
+Epoch: 3/60 Setp: 550, ranking_loss: 9.96, id_loss: 16.59
+Epoch: 3/60 Setp: 600, ranking_loss: 10.53, id_loss: 15.94
+Epoch: 3/60 Setp: 650, ranking_loss: 11.13, id_loss: 16.18
+Epoch: 3/60 Setp: 700, ranking_loss: 10.86, id_loss: 16.56
+Epoch: 3/60 Setp: 750, ranking_loss: 9.10, id_loss: 15.53
+Epoch: 3/60 Setp: 800, ranking_loss: 11.45, id_loss: 15.28
+Epoch: 3/60 Setp: 850, ranking_loss: 9.52, id_loss: 14.07
+Epoch: 3/60 Setp: 900, ranking_loss: 9.29, id_loss: 14.33
+Epoch: 3/60 Setp: 950, ranking_loss: 10.14, id_loss: 14.43
+Epoch: 3/60 Setp: 1000, ranking_loss: 10.89, id_loss: 15.25
+Epoch: 3/60 Setp: 1050, ranking_loss: 8.59, id_loss: 12.98
+Epoch: 3/60 , ranking_loss: 9.67, id_loss: 15.45
+SSAN
+Testing Epoch: 3
+lr:0.001
+lr:0.0001
+similarity_global:
+t2i: @R1: 0.4795, @R5: 0.7096, @R10: 0.7933, map: 0.4158
+similarity_local:
+t2i: @R1: 0.4886, @R5: 0.7119, @R10: 0.7975, map: 0.4271
+similarity_non_local:
+t2i: @R1: 0.4864, @R5: 0.7096, @R10: 0.7967, map: 0.4275
+similarity_all:
+t2i: @R1: 0.5094, @R5: 0.7246, @R10: 0.8102, map: 0.4466
+Epoch: 4/60 Setp: 50, ranking_loss: 8.48, id_loss: 11.86
+Epoch: 4/60 Setp: 100, ranking_loss: 6.92, id_loss: 11.28
+Epoch: 4/60 Setp: 150, ranking_loss: 8.89, id_loss: 11.34
+Epoch: 4/60 Setp: 200, ranking_loss: 8.93, id_loss: 11.39
+Epoch: 4/60 Setp: 250, ranking_loss: 9.27, id_loss: 12.74
+Epoch: 4/60 Setp: 300, ranking_loss: 7.42, id_loss: 12.85
+Epoch: 4/60 Setp: 350, ranking_loss: 8.38, id_loss: 14.20
+Epoch: 4/60 Setp: 400, ranking_loss: 8.83, id_loss: 11.97
+Epoch: 4/60 Setp: 450, ranking_loss: 6.93, id_loss: 13.44
+Epoch: 4/60 Setp: 500, ranking_loss: 9.80, id_loss: 11.46
+Epoch: 4/60 Setp: 550, ranking_loss: 9.13, id_loss: 13.23
+Epoch: 4/60 Setp: 600, ranking_loss: 9.79, id_loss: 14.28
+Epoch: 4/60 Setp: 650, ranking_loss: 8.90, id_loss: 12.84
+Epoch: 4/60 Setp: 700, ranking_loss: 7.48, id_loss: 13.06
+Epoch: 4/60 Setp: 750, ranking_loss: 10.25, id_loss: 12.68
+Epoch: 4/60 Setp: 800, ranking_loss: 8.47, id_loss: 12.12
+Epoch: 4/60 Setp: 850, ranking_loss: 8.85, id_loss: 12.60
+Epoch: 4/60 Setp: 900, ranking_loss: 7.34, id_loss: 11.48
+Epoch: 4/60 Setp: 950, ranking_loss: 9.76, id_loss: 13.99
+Epoch: 4/60 Setp: 1000, ranking_loss: 8.06, id_loss: 12.32
+Epoch: 4/60 Setp: 1050, ranking_loss: 10.19, id_loss: 12.44
+Epoch: 4/60 , ranking_loss: 8.27, id_loss: 12.57
+SSAN
+Testing Epoch: 4
+lr:0.001
+lr:0.0001
+similarity_global:
+t2i: @R1: 0.4906, @R5: 0.722, @R10: 0.8025, map: 0.4252
+similarity_local:
+t2i: @R1: 0.4987, @R5: 0.7246, @R10: 0.8076, map: 0.4385
+similarity_non_local:
+t2i: @R1: 0.495, @R5: 0.72, @R10: 0.8037, map: 0.4383
+similarity_all:
+t2i: @R1: 0.5209, @R5: 0.7395, @R10: 0.8176, map: 0.456
+Epoch: 5/60 Setp: 50, ranking_loss: 5.58, id_loss: 9.54
+Epoch: 5/60 Setp: 100, ranking_loss: 7.62, id_loss: 9.67
+Epoch: 5/60 Setp: 150, ranking_loss: 7.23, id_loss: 10.00
+Epoch: 5/60 Setp: 200, ranking_loss: 7.58, id_loss: 10.74
+Epoch: 5/60 Setp: 250, ranking_loss: 6.83, id_loss: 10.57
+Epoch: 5/60 Setp: 300, ranking_loss: 7.62, id_loss: 9.95
+Epoch: 5/60 Setp: 350, ranking_loss: 6.74, id_loss: 9.45
+Epoch: 5/60 Setp: 400, ranking_loss: 7.71, id_loss: 10.63
+Epoch: 5/60 Setp: 450, ranking_loss: 8.08, id_loss: 9.83
+Epoch: 5/60 Setp: 500, ranking_loss: 6.35, id_loss: 11.45
+Epoch: 5/60 Setp: 550, ranking_loss: 8.10, id_loss: 11.37
+Epoch: 5/60 Setp: 600, ranking_loss: 7.86, id_loss: 11.55
+Epoch: 5/60 Setp: 650, ranking_loss: 9.56, id_loss: 10.84
+Epoch: 5/60 Setp: 700, ranking_loss: 7.79, id_loss: 10.76
+Epoch: 5/60 Setp: 750, ranking_loss: 7.26, id_loss: 11.76
+Epoch: 5/60 Setp: 800, ranking_loss: 8.02, id_loss: 12.04
+Epoch: 5/60 Setp: 850, ranking_loss: 7.04, id_loss: 9.81
+Epoch: 5/60 Setp: 900, ranking_loss: 6.86, id_loss: 11.23
+Epoch: 5/60 Setp: 950, ranking_loss: 6.28, id_loss: 10.87
+Epoch: 5/60 Setp: 1000, ranking_loss: 8.05, id_loss: 11.80
+Epoch: 5/60 Setp: 1050, ranking_loss: 4.33, id_loss: 11.27
+Epoch: 5/60 , ranking_loss: 7.30, id_loss: 10.61
+SSAN
+Testing Epoch: 5
+lr:0.001
+lr:0.0001
+similarity_global:
+t2i: @R1: 0.5174, @R5: 0.7413, @R10: 0.8209, map: 0.4453
+similarity_local:
+t2i: @R1: 0.53, @R5: 0.7442, @R10: 0.8225, map: 0.4636
+similarity_non_local:
+t2i: @R1: 0.5283, @R5: 0.74, @R10: 0.821, map: 0.4647
+similarity_all:
+t2i: @R1: 0.5442, @R5: 0.7571, @R10: 0.8344, map: 0.4801
+Epoch: 6/60 Setp: 50, ranking_loss: 4.75, id_loss: 7.79
+Epoch: 6/60 Setp: 100, ranking_loss: 7.41, id_loss: 9.71
+Epoch: 6/60 Setp: 150, ranking_loss: 4.87, id_loss: 8.22
+Epoch: 6/60 Setp: 200, ranking_loss: 7.43, id_loss: 7.88
+Epoch: 6/60 Setp: 250, ranking_loss: 6.57, id_loss: 7.96
+Epoch: 6/60 Setp: 300, ranking_loss: 7.15, id_loss: 8.36
+Epoch: 6/60 Setp: 350, ranking_loss: 6.10, id_loss: 8.68
+Epoch: 6/60 Setp: 400, ranking_loss: 5.95, id_loss: 8.54
+Epoch: 6/60 Setp: 450, ranking_loss: 7.44, id_loss: 8.73
+Epoch: 6/60 Setp: 500, ranking_loss: 5.86, id_loss: 9.45
+Epoch: 6/60 Setp: 550, ranking_loss: 8.81, id_loss: 10.03
+Epoch: 6/60 Setp: 600, ranking_loss: 3.97, id_loss: 7.85
+Epoch: 6/60 Setp: 650, ranking_loss: 5.94, id_loss: 8.41
+Epoch: 6/60 Setp: 700, ranking_loss: 7.51, id_loss: 9.79
+Epoch: 6/60 Setp: 750, ranking_loss: 7.93, id_loss: 9.83
+Epoch: 6/60 Setp: 800, ranking_loss: 6.38, id_loss: 9.87
+Epoch: 6/60 Setp: 850, ranking_loss: 8.03, id_loss: 9.02
+Epoch: 6/60 Setp: 900, ranking_loss: 7.81, id_loss: 10.02
+Epoch: 6/60 Setp: 950, ranking_loss: 5.94, id_loss: 8.98
+Epoch: 6/60 Setp: 1000, ranking_loss: 6.26, id_loss: 10.81
+Epoch: 6/60 Setp: 1050, ranking_loss: 4.06, id_loss: 8.76
+Epoch: 6/60 , ranking_loss: 6.85, id_loss: 9.12
+SSAN
+Testing Epoch: 6
+lr:0.001
+lr:0.0001
+similarity_global:
+t2i: @R1: 0.527, @R5: 0.7424, @R10: 0.8245, map: 0.4537
+similarity_local:
+t2i: @R1: 0.5432, @R5: 0.7541, @R10: 0.8277, map: 0.4693
+similarity_non_local:
+t2i: @R1: 0.5427, @R5: 0.7533, @R10: 0.8272, map: 0.4725
+similarity_all:
+t2i: @R1: 0.5614, @R5: 0.7683, @R10: 0.8431, map: 0.4884
+Epoch: 7/60 Setp: 50, ranking_loss: 4.59, id_loss: 6.93
+Epoch: 7/60 Setp: 100, ranking_loss: 6.89, id_loss: 7.94
+Epoch: 7/60 Setp: 150, ranking_loss: 7.10, id_loss: 6.97
+Epoch: 7/60 Setp: 200, ranking_loss: 5.74, id_loss: 6.80
+Epoch: 7/60 Setp: 250, ranking_loss: 4.65, id_loss: 7.42
+Epoch: 7/60 Setp: 300, ranking_loss: 6.53, id_loss: 7.09
+Epoch: 7/60 Setp: 350, ranking_loss: 6.11, id_loss: 6.71
+Epoch: 7/60 Setp: 400, ranking_loss: 5.98, id_loss: 7.98
+Epoch: 7/60 Setp: 450, ranking_loss: 6.57, id_loss: 7.66
+Epoch: 7/60 Setp: 500, ranking_loss: 5.42, id_loss: 7.25
+Epoch: 7/60 Setp: 550, ranking_loss: 6.58, id_loss: 7.96
+Epoch: 7/60 Setp: 600, ranking_loss: 6.55, id_loss: 8.21
+Epoch: 7/60 Setp: 650, ranking_loss: 7.28, id_loss: 8.51
+Epoch: 7/60 Setp: 700, ranking_loss: 7.37, id_loss: 8.05
+Epoch: 7/60 Setp: 750, ranking_loss: 6.70, id_loss: 8.14
+Epoch: 7/60 Setp: 800, ranking_loss: 7.66, id_loss: 9.12
+Epoch: 7/60 Setp: 850, ranking_loss: 7.79, id_loss: 9.49
+Epoch: 7/60 Setp: 900, ranking_loss: 6.00, id_loss: 8.63
+Epoch: 7/60 Setp: 950, ranking_loss: 6.81, id_loss: 9.43
+Epoch: 7/60 Setp: 1000, ranking_loss: 6.94, id_loss: 8.82
+Epoch: 7/60 Setp: 1050, ranking_loss: 6.25, id_loss: 8.87
+Epoch: 7/60 , ranking_loss: 6.13, id_loss: 7.79
+SSAN
+Testing Epoch: 7
+lr:0.001
+lr:0.0001
+similarity_global:
+t2i: @R1: 0.5221, @R5: 0.7507, @R10: 0.8293, map: 0.4507
+similarity_local:
+t2i: @R1: 0.5486, @R5: 0.758, @R10: 0.8301, map: 0.4753
+similarity_non_local:
+t2i: @R1: 0.5435, @R5: 0.7592, @R10: 0.8326, map: 0.476
+similarity_all:
+t2i: @R1: 0.5658, @R5: 0.7736, @R10: 0.8451, map: 0.4935
+Epoch: 8/60 Setp: 50, ranking_loss: 4.08, id_loss: 5.25
+Epoch: 8/60 Setp: 100, ranking_loss: 4.17, id_loss: 5.27
+Epoch: 8/60 Setp: 150, ranking_loss: 5.31, id_loss: 5.59
+Epoch: 8/60 Setp: 200, ranking_loss: 3.87, id_loss: 4.51
+Epoch: 8/60 Setp: 250, ranking_loss: 6.53, id_loss: 6.87
+Epoch: 8/60 Setp: 300, ranking_loss: 6.30, id_loss: 5.86
+Epoch: 8/60 Setp: 350, ranking_loss: 4.03, id_loss: 6.01
+Epoch: 8/60 Setp: 400, ranking_loss: 4.98, id_loss: 6.33
+Epoch: 8/60 Setp: 450, ranking_loss: 3.56, id_loss: 5.86
+Epoch: 8/60 Setp: 500, ranking_loss: 6.25, id_loss: 6.90
+Epoch: 8/60 Setp: 550, ranking_loss: 5.68, id_loss: 6.48
+Epoch: 8/60 Setp: 600, ranking_loss: 3.47, id_loss: 6.05
+Epoch: 8/60 Setp: 650, ranking_loss: 6.40, id_loss: 7.33
+Epoch: 8/60 Setp: 700, ranking_loss: 6.18, id_loss: 6.23
+Epoch: 8/60 Setp: 750, ranking_loss: 5.84, id_loss: 8.20
+Epoch: 8/60 Setp: 800, ranking_loss: 6.21, id_loss: 6.92
+Epoch: 8/60 Setp: 850, ranking_loss: 7.20, id_loss: 7.14
+Epoch: 8/60 Setp: 900, ranking_loss: 5.55, id_loss: 7.17
+Epoch: 8/60 Setp: 950, ranking_loss: 6.25, id_loss: 7.55
+Epoch: 8/60 Setp: 1000, ranking_loss: 4.38, id_loss: 7.41
+Epoch: 8/60 Setp: 1050, ranking_loss: 4.98, id_loss: 6.70
+Epoch: 8/60 , ranking_loss: 5.64, id_loss: 6.80
+SSAN
+Testing Epoch: 8
+lr:0.001
+lr:0.0001
+similarity_global:
+t2i: @R1: 0.5437, @R5: 0.7613, @R10: 0.8358, map: 0.4633
+similarity_local:
+t2i: @R1: 0.5513, @R5: 0.7657, @R10: 0.8363, map: 0.479
+similarity_non_local:
+t2i: @R1: 0.5499, @R5: 0.7614, @R10: 0.8318, map: 0.4775
+similarity_all:
+t2i: @R1: 0.5719, @R5: 0.7813, @R10: 0.8474, map: 0.498
+Epoch: 9/60 Setp: 50, ranking_loss: 3.22, id_loss: 4.75
+Epoch: 9/60 Setp: 100, ranking_loss: 4.27, id_loss: 5.33
+Epoch: 9/60 Setp: 150, ranking_loss: 4.42, id_loss: 4.45
+Epoch: 9/60 Setp: 200, ranking_loss: 6.60, id_loss: 4.77
+Epoch: 9/60 Setp: 250, ranking_loss: 6.08, id_loss: 4.84
+Epoch: 9/60 Setp: 300, ranking_loss: 4.06, id_loss: 4.45
+Epoch: 9/60 Setp: 350, ranking_loss: 5.68, id_loss: 5.92
+Epoch: 9/60 Setp: 400, ranking_loss: 7.44, id_loss: 5.01
+Epoch: 9/60 Setp: 450, ranking_loss: 4.65, id_loss: 4.43
+Epoch: 9/60 Setp: 500, ranking_loss: 5.45, id_loss: 6.67
+Epoch: 9/60 Setp: 550, ranking_loss: 4.30, id_loss: 5.65
+Epoch: 9/60 Setp: 600, ranking_loss: 4.75, id_loss: 6.25
+Epoch: 9/60 Setp: 650, ranking_loss: 4.90, id_loss: 6.04
+Epoch: 9/60 Setp: 700, ranking_loss: 5.16, id_loss: 5.39
+Epoch: 9/60 Setp: 750, ranking_loss: 3.63, id_loss: 4.68
+Epoch: 9/60 Setp: 800, ranking_loss: 6.28, id_loss: 5.41
+Epoch: 9/60 Setp: 850, ranking_loss: 4.10, id_loss: 5.44
+Epoch: 9/60 Setp: 900, ranking_loss: 5.03, id_loss: 6.45
+Epoch: 9/60 Setp: 950, ranking_loss: 4.86, id_loss: 7.63
+Epoch: 9/60 Setp: 1000, ranking_loss: 5.71, id_loss: 6.66
+Epoch: 9/60 Setp: 1050, ranking_loss: 6.38, id_loss: 7.01
+Epoch: 9/60 , ranking_loss: 5.15, id_loss: 5.90
+SSAN
+Testing Epoch: 9
+lr:0.001
+lr:0.0001
+similarity_global:
+t2i: @R1: 0.5362, @R5: 0.7653, @R10: 0.8365, map: 0.4622
+similarity_local:
+t2i: @R1: 0.5542, @R5: 0.7733, @R10: 0.8428, map: 0.4837
+similarity_non_local:
+t2i: @R1: 0.5533, @R5: 0.7662, @R10: 0.8355, map: 0.4796
+similarity_all:
+t2i: @R1: 0.5744, @R5: 0.7861, @R10: 0.8566, map: 0.4995
+Epoch: 10/60 Setp: 50, ranking_loss: 4.76, id_loss: 4.23
+Epoch: 10/60 Setp: 100, ranking_loss: 2.59, id_loss: 4.50
+Epoch: 10/60 Setp: 150, ranking_loss: 4.16, id_loss: 3.81
+Epoch: 10/60 Setp: 200, ranking_loss: 3.23, id_loss: 4.88
+Epoch: 10/60 Setp: 250, ranking_loss: 4.80, id_loss: 5.37
+Epoch: 10/60 Setp: 300, ranking_loss: 4.46, id_loss: 4.35
+Epoch: 10/60 Setp: 350, ranking_loss: 3.81, id_loss: 4.88
+Epoch: 10/60 Setp: 400, ranking_loss: 4.27, id_loss: 4.65
+Epoch: 10/60 Setp: 450, ranking_loss: 4.81, id_loss: 4.43
+Epoch: 10/60 Setp: 500, ranking_loss: 5.59, id_loss: 5.49
+Epoch: 10/60 Setp: 550, ranking_loss: 3.01, id_loss: 5.66
+Epoch: 10/60 Setp: 600, ranking_loss: 4.79, id_loss: 5.87
+Epoch: 10/60 Setp: 650, ranking_loss: 6.08, id_loss: 5.83
+Epoch: 10/60 Setp: 700, ranking_loss: 3.94, id_loss: 4.98
+Epoch: 10/60 Setp: 750, ranking_loss: 5.49, id_loss: 5.39
+Epoch: 10/60 Setp: 800, ranking_loss: 6.29, id_loss: 5.65
+Epoch: 10/60 Setp: 850, ranking_loss: 4.53, id_loss: 5.95
+Epoch: 10/60 Setp: 900, ranking_loss: 5.62, id_loss: 4.45
+Epoch: 10/60 Setp: 950, ranking_loss: 5.62, id_loss: 5.56
+Epoch: 10/60 Setp: 1000, ranking_loss: 5.07, id_loss: 7.09
+Epoch: 10/60 Setp: 1050, ranking_loss: 4.95, id_loss: 4.89
+Epoch: 10/60 , ranking_loss: 4.73, id_loss: 5.18
+SSAN
+Testing Epoch: 10
+lr:0.001
+lr:0.0001
+similarity_global:
+t2i: @R1: 0.5471, @R5: 0.7699, @R10: 0.8426, map: 0.468
+similarity_local:
+t2i: @R1: 0.5581, @R5: 0.7688, @R10: 0.8438, map: 0.4857
+similarity_non_local:
+t2i: @R1: 0.5521, @R5: 0.7614, @R10: 0.8342, map: 0.4837
+similarity_all:
+t2i: @R1: 0.5797, @R5: 0.7809, @R10: 0.854, map: 0.5047
+Epoch: 11/60 Setp: 50, ranking_loss: 3.10, id_loss: 3.72
+Epoch: 11/60 Setp: 100, ranking_loss: 3.90, id_loss: 3.12
+Epoch: 11/60 Setp: 150, ranking_loss: 3.29, id_loss: 4.08
+Epoch: 11/60 Setp: 200, ranking_loss: 3.09, id_loss: 3.92
+Epoch: 11/60 Setp: 250, ranking_loss: 4.06, id_loss: 4.50
+Epoch: 11/60 Setp: 300, ranking_loss: 3.02, id_loss: 4.34
+Epoch: 11/60 Setp: 350, ranking_loss: 4.32, id_loss: 5.08
+Epoch: 11/60 Setp: 400, ranking_loss: 6.30, id_loss: 3.92
+Epoch: 11/60 Setp: 450, ranking_loss: 3.01, id_loss: 4.56
+Epoch: 11/60 Setp: 500, ranking_loss: 3.34, id_loss: 4.27
+Epoch: 11/60 Setp: 550, ranking_loss: 1.85, id_loss: 5.19
+Epoch: 11/60 Setp: 600, ranking_loss: 3.37, id_loss: 3.65
+Epoch: 11/60 Setp: 650, ranking_loss: 3.76, id_loss: 5.51
+Epoch: 11/60 Setp: 700, ranking_loss: 4.65, id_loss: 4.85
+Epoch: 11/60 Setp: 750, ranking_loss: 3.65, id_loss: 4.49
+Epoch: 11/60 Setp: 800, ranking_loss: 4.62, id_loss: 4.21
+Epoch: 11/60 Setp: 850, ranking_loss: 5.23, id_loss: 4.95
+Epoch: 11/60 Setp: 900, ranking_loss: 5.02, id_loss: 5.26
+Epoch: 11/60 Setp: 950, ranking_loss: 6.47, id_loss: 5.15
+Epoch: 11/60 Setp: 1000, ranking_loss: 5.47, id_loss: 5.61
+Epoch: 11/60 Setp: 1050, ranking_loss: 5.34, id_loss: 4.55
+Epoch: 11/60 , ranking_loss: 4.41, id_loss: 4.57
+SSAN
+Testing Epoch: 11
+lr:0.001
+lr:0.0001
+similarity_global:
+t2i: @R1: 0.5469, @R5: 0.7691, @R10: 0.8428, map: 0.4693
+similarity_local:
+t2i: @R1: 0.5619, @R5: 0.774, @R10: 0.8462, map: 0.4876
+similarity_non_local:
+t2i: @R1: 0.5627, @R5: 0.7717, @R10: 0.8431, map: 0.4892
+similarity_all:
+t2i: @R1: 0.583, @R5: 0.7907, @R10: 0.8603, map: 0.5082
+Epoch: 12/60 Setp: 50, ranking_loss: 3.58, id_loss: 3.58
+Epoch: 12/60 Setp: 100, ranking_loss: 2.78, id_loss: 3.93
+Epoch: 12/60 Setp: 150, ranking_loss: 4.50, id_loss: 2.24
+Epoch: 12/60 Setp: 200, ranking_loss: 3.94, id_loss: 3.52
+Epoch: 12/60 Setp: 250, ranking_loss: 3.93, id_loss: 3.70
+Epoch: 12/60 Setp: 300, ranking_loss: 3.09, id_loss: 3.76
+Epoch: 12/60 Setp: 350, ranking_loss: 4.13, id_loss: 4.46
+Epoch: 12/60 Setp: 400, ranking_loss: 3.59, id_loss: 4.33
+Epoch: 12/60 Setp: 450, ranking_loss: 4.08, id_loss: 4.40
+Epoch: 12/60 Setp: 500, ranking_loss: 4.60, id_loss: 4.56
+Epoch: 12/60 Setp: 550, ranking_loss: 4.47, id_loss: 4.83
+Epoch: 12/60 Setp: 600, ranking_loss: 6.22, id_loss: 3.72
+Epoch: 12/60 Setp: 650, ranking_loss: 5.02, id_loss: 3.55
+Epoch: 12/60 Setp: 700, ranking_loss: 3.90, id_loss: 3.78
+Epoch: 12/60 Setp: 750, ranking_loss: 3.41, id_loss: 5.02
+Epoch: 12/60 Setp: 800, ranking_loss: 5.73, id_loss: 4.50
+Epoch: 12/60 Setp: 850, ranking_loss: 4.60, id_loss: 5.31
+Epoch: 12/60 Setp: 900, ranking_loss: 3.63, id_loss: 5.06
+Epoch: 12/60 Setp: 950, ranking_loss: 4.50, id_loss: 4.66
+Epoch: 12/60 Setp: 1000, ranking_loss: 5.04, id_loss: 4.28
+Epoch: 12/60 Setp: 1050, ranking_loss: 4.15, id_loss: 4.75
+Epoch: 12/60 , ranking_loss: 4.22, id_loss: 4.09
+SSAN
+Testing Epoch: 12
+lr:0.001
+lr:0.0001
+similarity_global:
+t2i: @R1: 0.546, @R5: 0.7671, @R10: 0.8399, map: 0.4697
+similarity_local:
+t2i: @R1: 0.565, @R5: 0.772, @R10: 0.8456, map: 0.4912
+similarity_non_local:
+t2i: @R1: 0.5641, @R5: 0.7697, @R10: 0.8413, map: 0.4918
+similarity_all:
+t2i: @R1: 0.5866, @R5: 0.7899, @R10: 0.8564, map: 0.5109
+Epoch: 13/60 Setp: 50, ranking_loss: 3.24, id_loss: 3.21
+Epoch: 13/60 Setp: 100, ranking_loss: 3.44, id_loss: 2.80
+Epoch: 13/60 Setp: 150, ranking_loss: 2.58, id_loss: 2.20
+Epoch: 13/60 Setp: 200, ranking_loss: 2.29, id_loss: 3.87
+Epoch: 13/60 Setp: 250, ranking_loss: 3.10, id_loss: 2.70
+Epoch: 13/60 Setp: 300, ranking_loss: 3.71, id_loss: 3.00
+Epoch: 13/60 Setp: 350, ranking_loss: 3.92, id_loss: 3.35
+Epoch: 13/60 Setp: 400, ranking_loss: 3.39, id_loss: 3.35
+Epoch: 13/60 Setp: 450, ranking_loss: 3.51, id_loss: 3.62
+Epoch: 13/60 Setp: 500, ranking_loss: 2.70, id_loss: 3.53
+Epoch: 13/60 Setp: 550, ranking_loss: 4.95, id_loss: 3.74
+Epoch: 13/60 Setp: 600, ranking_loss: 2.78, id_loss: 4.17
+Epoch: 13/60 Setp: 650, ranking_loss: 5.44, id_loss: 2.60
+Epoch: 13/60 Setp: 700, ranking_loss: 5.38, id_loss: 4.05
+Epoch: 13/60 Setp: 750, ranking_loss: 3.74, id_loss: 4.15
+Epoch: 13/60 Setp: 800, ranking_loss: 4.39, id_loss: 4.42
+Epoch: 13/60 Setp: 850, ranking_loss: 3.69, id_loss: 4.07
+Epoch: 13/60 Setp: 900, ranking_loss: 4.60, id_loss: 4.17
+Epoch: 13/60 Setp: 950, ranking_loss: 3.54, id_loss: 4.02
+Epoch: 13/60 Setp: 1000, ranking_loss: 4.05, id_loss: 4.74
+Epoch: 13/60 Setp: 1050, ranking_loss: 4.06, id_loss: 4.71
+Epoch: 13/60 , ranking_loss: 3.92, id_loss: 3.70
+SSAN
+Testing Epoch: 13
+lr:0.001
+lr:0.0001
+similarity_global:
+t2i: @R1: 0.5453, @R5: 0.7683, @R10: 0.8439, map: 0.4693
+similarity_local:
+t2i: @R1: 0.5697, @R5: 0.7788, @R10: 0.8472, map: 0.4907
+similarity_non_local:
+t2i: @R1: 0.5677, @R5: 0.7736, @R10: 0.8417, map: 0.4882
+similarity_all:
+t2i: @R1: 0.5861, @R5: 0.7975, @R10: 0.8579, map: 0.5094
+Epoch: 14/60 Setp: 50, ranking_loss: 1.89, id_loss: 2.56
+Epoch: 14/60 Setp: 100, ranking_loss: 3.80, id_loss: 2.75
+Epoch: 14/60 Setp: 150, ranking_loss: 4.02, id_loss: 2.50
+Epoch: 14/60 Setp: 200, ranking_loss: 2.31, id_loss: 2.53
+Epoch: 14/60 Setp: 250, ranking_loss: 3.65, id_loss: 2.64
+Epoch: 14/60 Setp: 300, ranking_loss: 3.18, id_loss: 3.39
+Epoch: 14/60 Setp: 350, ranking_loss: 2.94, id_loss: 3.24
+Epoch: 14/60 Setp: 400, ranking_loss: 2.82, id_loss: 2.99
+Epoch: 14/60 Setp: 450, ranking_loss: 3.53, id_loss: 3.16
+Epoch: 14/60 Setp: 500, ranking_loss: 4.11, id_loss: 3.93
+Epoch: 14/60 Setp: 550, ranking_loss: 3.16, id_loss: 2.88
+Epoch: 14/60 Setp: 600, ranking_loss: 4.74, id_loss: 4.15
+Epoch: 14/60 Setp: 650, ranking_loss: 2.53, id_loss: 3.39
+Epoch: 14/60 Setp: 700, ranking_loss: 3.61, id_loss: 3.71
+Epoch: 14/60 Setp: 750, ranking_loss: 3.12, id_loss: 3.50
+Epoch: 14/60 Setp: 800, ranking_loss: 3.88, id_loss: 4.73
+Epoch: 14/60 Setp: 850, ranking_loss: 3.06, id_loss: 3.32
+Epoch: 14/60 Setp: 900, ranking_loss: 5.18, id_loss: 3.35
+Epoch: 14/60 Setp: 950, ranking_loss: 2.39, id_loss: 2.79
+Epoch: 14/60 Setp: 1000, ranking_loss: 3.98, id_loss: 3.93
+Epoch: 14/60 Setp: 1050, ranking_loss: 4.97, id_loss: 6.18
+Epoch: 14/60 , ranking_loss: 3.74, id_loss: 3.36
+SSAN
+Testing Epoch: 14
+lr:0.001
+lr:0.0001
+similarity_global:
+t2i: @R1: 0.5474, @R5: 0.7697, @R10: 0.8451, map: 0.4707
+similarity_local:
+t2i: @R1: 0.5671, @R5: 0.7814, @R10: 0.8498, map: 0.4905
+similarity_non_local:
+t2i: @R1: 0.5651, @R5: 0.7727, @R10: 0.8428, map: 0.4905
+similarity_all:
+t2i: @R1: 0.59, @R5: 0.7972, @R10: 0.8613, map: 0.5119
+Epoch: 15/60 Setp: 50, ranking_loss: 2.79, id_loss: 2.47
+Epoch: 15/60 Setp: 100, ranking_loss: 3.01, id_loss: 1.99
+Epoch: 15/60 Setp: 150, ranking_loss: 5.35, id_loss: 3.15
+Epoch: 15/60 Setp: 200, ranking_loss: 2.86, id_loss: 2.67
+Epoch: 15/60 Setp: 250, ranking_loss: 2.76, id_loss: 3.17
+Epoch: 15/60 Setp: 300, ranking_loss: 4.13, id_loss: 2.80
+Epoch: 15/60 Setp: 350, ranking_loss: 2.68, id_loss: 2.24
+Epoch: 15/60 Setp: 400, ranking_loss: 3.96, id_loss: 3.60
+Epoch: 15/60 Setp: 450, ranking_loss: 2.64, id_loss: 3.35
+Epoch: 15/60 Setp: 500, ranking_loss: 4.94, id_loss: 2.68
+Epoch: 15/60 Setp: 550, ranking_loss: 3.94, id_loss: 3.80
+Epoch: 15/60 Setp: 600, ranking_loss: 3.20, id_loss: 3.80
+Epoch: 15/60 Setp: 650, ranking_loss: 3.40, id_loss: 3.52
+Epoch: 15/60 Setp: 700, ranking_loss: 4.23, id_loss: 3.33
+Epoch: 15/60 Setp: 750, ranking_loss: 4.74, id_loss: 3.39
+Epoch: 15/60 Setp: 800, ranking_loss: 3.26, id_loss: 3.37
+Epoch: 15/60 Setp: 850, ranking_loss: 4.94, id_loss: 4.21
+Epoch: 15/60 Setp: 900, ranking_loss: 4.38, id_loss: 2.83
+Epoch: 15/60 Setp: 950, ranking_loss: 3.57, id_loss: 3.71
+Epoch: 15/60 Setp: 1000, ranking_loss: 3.35, id_loss: 2.95
+Epoch: 15/60 Setp: 1050, ranking_loss: 5.94, id_loss: 4.45
+Epoch: 15/60 , ranking_loss: 3.63, id_loss: 3.10
+SSAN
+Testing Epoch: 15
+lr:0.001
+lr:0.0001
+similarity_global:
+t2i: @R1: 0.5492, @R5: 0.7652, @R10: 0.8386, map: 0.4693
+similarity_local:
+t2i: @R1: 0.5724, @R5: 0.7791, @R10: 0.8491, map: 0.4918
+similarity_non_local:
+t2i: @R1: 0.5697, @R5: 0.7749, @R10: 0.8418, map: 0.4913
+similarity_all:
+t2i: @R1: 0.5911, @R5: 0.7912, @R10: 0.8561, map: 0.5116
+Epoch: 16/60 Setp: 50, ranking_loss: 3.15, id_loss: 2.42
+Epoch: 16/60 Setp: 100, ranking_loss: 2.21, id_loss: 3.01
+Epoch: 16/60 Setp: 150, ranking_loss: 3.67, id_loss: 3.12
+Epoch: 16/60 Setp: 200, ranking_loss: 3.10, id_loss: 2.22
+Epoch: 16/60 Setp: 250, ranking_loss: 3.81, id_loss: 3.19
+Epoch: 16/60 Setp: 300, ranking_loss: 4.28, id_loss: 3.02
+Epoch: 16/60 Setp: 350, ranking_loss: 2.15, id_loss: 2.27
+Epoch: 16/60 Setp: 400, ranking_loss: 4.34, id_loss: 4.21
+Epoch: 16/60 Setp: 450, ranking_loss: 3.25, id_loss: 3.08
+Epoch: 16/60 Setp: 500, ranking_loss: 4.01, id_loss: 2.82
+Epoch: 16/60 Setp: 550, ranking_loss: 3.56, id_loss: 2.66
+Epoch: 16/60 Setp: 600, ranking_loss: 4.16, id_loss: 2.73
+Epoch: 16/60 Setp: 650, ranking_loss: 4.18, id_loss: 3.30
+Epoch: 16/60 Setp: 700, ranking_loss: 3.60, id_loss: 2.55
+Epoch: 16/60 Setp: 750, ranking_loss: 4.97, id_loss: 3.39
+Epoch: 16/60 Setp: 800, ranking_loss: 3.39, id_loss: 3.10
+Epoch: 16/60 Setp: 850, ranking_loss: 2.85, id_loss: 3.54
+Epoch: 16/60 Setp: 900, ranking_loss: 2.69, id_loss: 3.40
+Epoch: 16/60 Setp: 950, ranking_loss: 3.50, id_loss: 3.37
+Epoch: 16/60 Setp: 1000, ranking_loss: 3.97, id_loss: 3.56
+Epoch: 16/60 Setp: 1050, ranking_loss: 3.36, id_loss: 4.24
+Epoch: 16/60 , ranking_loss: 3.44, id_loss: 2.89
+SSAN
+Testing Epoch: 16
+lr:0.001
+lr:0.0001
+similarity_global:
+t2i: @R1: 0.5489, @R5: 0.7683, @R10: 0.8397, map: 0.4693
+similarity_local:
+t2i: @R1: 0.5739, @R5: 0.7839, @R10: 0.849, map: 0.496
+similarity_non_local:
+t2i: @R1: 0.5729, @R5: 0.7749, @R10: 0.8415, map: 0.494
+similarity_all:
+t2i: @R1: 0.5932, @R5: 0.7968, @R10: 0.8574, map: 0.514
+Epoch: 17/60 Setp: 50, ranking_loss: 3.24, id_loss: 1.22
+Epoch: 17/60 Setp: 100, ranking_loss: 1.61, id_loss: 2.48
+Epoch: 17/60 Setp: 150, ranking_loss: 2.52, id_loss: 1.46
+Epoch: 17/60 Setp: 200, ranking_loss: 3.37, id_loss: 1.76
+Epoch: 17/60 Setp: 250, ranking_loss: 2.29, id_loss: 1.84
+Epoch: 17/60 Setp: 300, ranking_loss: 2.35, id_loss: 2.23
+Epoch: 17/60 Setp: 350, ranking_loss: 3.52, id_loss: 2.93
+Epoch: 17/60 Setp: 400, ranking_loss: 3.68, id_loss: 1.57
+Epoch: 17/60 Setp: 450, ranking_loss: 2.95, id_loss: 2.67
+Epoch: 17/60 Setp: 500, ranking_loss: 2.00, id_loss: 2.03
+Epoch: 17/60 Setp: 550, ranking_loss: 3.89, id_loss: 2.78
+Epoch: 17/60 Setp: 600, ranking_loss: 2.79, id_loss: 2.83
+Epoch: 17/60 Setp: 650, ranking_loss: 2.98, id_loss: 2.51
+Epoch: 17/60 Setp: 700, ranking_loss: 3.33, id_loss: 3.48
+Epoch: 17/60 Setp: 750, ranking_loss: 3.47, id_loss: 2.56
+Epoch: 17/60 Setp: 800, ranking_loss: 5.16, id_loss: 3.82
+Epoch: 17/60 Setp: 850, ranking_loss: 2.97, id_loss: 2.75
+Epoch: 17/60 Setp: 900, ranking_loss: 5.41, id_loss: 3.28
+Epoch: 17/60 Setp: 950, ranking_loss: 3.13, id_loss: 2.76
+Epoch: 17/60 Setp: 1000, ranking_loss: 4.83, id_loss: 2.42
+Epoch: 17/60 Setp: 1050, ranking_loss: 4.46, id_loss: 4.34
+Epoch: 17/60 , ranking_loss: 3.26, id_loss: 2.67
+SSAN
+Testing Epoch: 17
+lr:0.001
+lr:0.0001
+similarity_global:
+t2i: @R1: 0.5578, @R5: 0.7718, @R10: 0.8438, map: 0.4775
+similarity_local:
+t2i: @R1: 0.5698, @R5: 0.7829, @R10: 0.8519, map: 0.4972
+similarity_non_local:
+t2i: @R1: 0.5698, @R5: 0.7731, @R10: 0.8452, map: 0.4938
+similarity_all:
+t2i: @R1: 0.5955, @R5: 0.7951, @R10: 0.8631, map: 0.5175
+Epoch: 18/60 Setp: 50, ranking_loss: 3.26, id_loss: 2.62
+Epoch: 18/60 Setp: 100, ranking_loss: 3.38, id_loss: 1.83
+Epoch: 18/60 Setp: 150, ranking_loss: 3.06, id_loss: 1.58
+Epoch: 18/60 Setp: 200, ranking_loss: 3.82, id_loss: 1.72
+Epoch: 18/60 Setp: 250, ranking_loss: 2.63, id_loss: 2.27
+Epoch: 18/60 Setp: 300, ranking_loss: 4.44, id_loss: 1.90
+Epoch: 18/60 Setp: 350, ranking_loss: 2.59, id_loss: 2.15
+Epoch: 18/60 Setp: 400, ranking_loss: 2.67, id_loss: 1.19
+Epoch: 18/60 Setp: 450, ranking_loss: 5.95, id_loss: 2.45
+Epoch: 18/60 Setp: 500, ranking_loss: 3.49, id_loss: 2.75
+Epoch: 18/60 Setp: 550, ranking_loss: 4.44, id_loss: 2.70
+Epoch: 18/60 Setp: 600, ranking_loss: 4.27, id_loss: 2.69
+Epoch: 18/60 Setp: 650, ranking_loss: 3.00, id_loss: 3.18
+Epoch: 18/60 Setp: 700, ranking_loss: 2.54, id_loss: 2.40
+Epoch: 18/60 Setp: 750, ranking_loss: 2.55, id_loss: 3.28
+Epoch: 18/60 Setp: 800, ranking_loss: 3.07, id_loss: 3.11
+Epoch: 18/60 Setp: 850, ranking_loss: 4.14, id_loss: 3.84
+Epoch: 18/60 Setp: 900, ranking_loss: 3.20, id_loss: 3.10
+Epoch: 18/60 Setp: 950, ranking_loss: 4.94, id_loss: 3.99
+Epoch: 18/60 Setp: 1000, ranking_loss: 3.70, id_loss: 3.06
+Epoch: 18/60 Setp: 1050, ranking_loss: 3.26, id_loss: 3.80
+Epoch: 18/60 , ranking_loss: 3.18, id_loss: 2.55
+SSAN
+Testing Epoch: 18
+lr:0.001
+lr:0.0001
+similarity_global:
+t2i: @R1: 0.5448, @R5: 0.765, @R10: 0.8399, map: 0.4674
+similarity_local:
+t2i: @R1: 0.5736, @R5: 0.7736, @R10: 0.8451, map: 0.4919
+similarity_non_local:
+t2i: @R1: 0.5698, @R5: 0.7736, @R10: 0.8431, map: 0.4911
+similarity_all:
+t2i: @R1: 0.5945, @R5: 0.7925, @R10: 0.8603, map: 0.5113
+Epoch: 19/60 Setp: 50, ranking_loss: 1.93, id_loss: 2.15
+Epoch: 19/60 Setp: 100, ranking_loss: 2.18, id_loss: 1.97
+Epoch: 19/60 Setp: 150, ranking_loss: 1.76, id_loss: 1.83
+Epoch: 19/60 Setp: 200, ranking_loss: 2.01, id_loss: 1.78
+Epoch: 19/60 Setp: 250, ranking_loss: 2.66, id_loss: 2.26
+Epoch: 19/60 Setp: 300, ranking_loss: 2.99, id_loss: 2.49
+Epoch: 19/60 Setp: 350, ranking_loss: 3.83, id_loss: 2.54
+Epoch: 19/60 Setp: 400, ranking_loss: 2.33, id_loss: 2.74
+Epoch: 19/60 Setp: 450, ranking_loss: 3.27, id_loss: 2.42
+Epoch: 19/60 Setp: 500, ranking_loss: 1.70, id_loss: 1.89
+Epoch: 19/60 Setp: 550, ranking_loss: 2.77, id_loss: 2.85
+Epoch: 19/60 Setp: 600, ranking_loss: 3.43, id_loss: 2.59
+Epoch: 19/60 Setp: 650, ranking_loss: 2.26, id_loss: 2.35
+Epoch: 19/60 Setp: 700, ranking_loss: 2.51, id_loss: 2.89
+Epoch: 19/60 Setp: 750, ranking_loss: 3.86, id_loss: 2.26
+Epoch: 19/60 Setp: 800, ranking_loss: 3.75, id_loss: 2.29
+Epoch: 19/60 Setp: 850, ranking_loss: 1.85, id_loss: 2.20
+Epoch: 19/60 Setp: 900, ranking_loss: 2.84, id_loss: 2.63
+Epoch: 19/60 Setp: 950, ranking_loss: 3.63, id_loss: 2.96
+Epoch: 19/60 Setp: 1000, ranking_loss: 3.25, id_loss: 3.00
+Epoch: 19/60 Setp: 1050, ranking_loss: 2.97, id_loss: 3.16
+Epoch: 19/60 , ranking_loss: 3.06, id_loss: 2.45
+SSAN
+Testing Epoch: 19
+lr:0.001
+lr:0.0001
+similarity_global:
+t2i: @R1: 0.5581, @R5: 0.7753, @R10: 0.85, map: 0.4773
+similarity_local:
+t2i: @R1: 0.5802, @R5: 0.7835, @R10: 0.8545, map: 0.4968
+similarity_non_local:
+t2i: @R1: 0.5703, @R5: 0.7819, @R10: 0.8495, map: 0.4949
+similarity_all:
+t2i: @R1: 0.5965, @R5: 0.8007, @R10: 0.8704, map: 0.5178
+Epoch: 20/60 Setp: 50, ranking_loss: 3.26, id_loss: 1.60
+Epoch: 20/60 Setp: 100, ranking_loss: 2.63, id_loss: 1.24
+Epoch: 20/60 Setp: 150, ranking_loss: 2.45, id_loss: 2.84
+Epoch: 20/60 Setp: 200, ranking_loss: 2.98, id_loss: 2.04
+Epoch: 20/60 Setp: 250, ranking_loss: 3.25, id_loss: 1.74
+Epoch: 20/60 Setp: 300, ranking_loss: 2.28, id_loss: 2.50
+Epoch: 20/60 Setp: 350, ranking_loss: 2.72, id_loss: 2.16
+Epoch: 20/60 Setp: 400, ranking_loss: 3.14, id_loss: 1.97
+Epoch: 20/60 Setp: 450, ranking_loss: 3.47, id_loss: 1.46
+Epoch: 20/60 Setp: 500, ranking_loss: 2.04, id_loss: 2.12
+Epoch: 20/60 Setp: 550, ranking_loss: 1.87, id_loss: 1.48
+Epoch: 20/60 Setp: 600, ranking_loss: 2.75, id_loss: 4.03
+Epoch: 20/60 Setp: 650, ranking_loss: 2.35, id_loss: 2.03
+Epoch: 20/60 Setp: 700, ranking_loss: 2.90, id_loss: 2.39
+Epoch: 20/60 Setp: 750, ranking_loss: 3.91, id_loss: 2.58
+Epoch: 20/60 Setp: 800, ranking_loss: 3.85, id_loss: 2.48
+Epoch: 20/60 Setp: 850, ranking_loss: 3.00, id_loss: 2.80
+Epoch: 20/60 Setp: 900, ranking_loss: 2.73, id_loss: 2.07
+Epoch: 20/60 Setp: 950, ranking_loss: 3.12, id_loss: 2.70
+Epoch: 20/60 Setp: 1000, ranking_loss: 3.36, id_loss: 2.91
+Epoch: 20/60 Setp: 1050, ranking_loss: 3.20, id_loss: 2.37
+Epoch: 20/60 , ranking_loss: 2.93, id_loss: 2.29
+SSAN
+Testing Epoch: 20
+lr:0.0001
+lr:1e-05
+similarity_global:
+t2i: @R1: 0.5609, @R5: 0.7749, @R10: 0.8449, map: 0.4744
+similarity_local:
+t2i: @R1: 0.5713, @R5: 0.7847, @R10: 0.8532, map: 0.494
+similarity_non_local:
+t2i: @R1: 0.5671, @R5: 0.7748, @R10: 0.8461, map: 0.4901
+similarity_all:
+t2i: @R1: 0.5947, @R5: 0.7993, @R10: 0.8668, map: 0.5149
+Epoch: 21/60 Setp: 50, ranking_loss: 4.64, id_loss: 0.63
+Epoch: 21/60 Setp: 100, ranking_loss: 3.40, id_loss: 1.15
+Epoch: 21/60 Setp: 150, ranking_loss: 1.77, id_loss: 1.07
+Epoch: 21/60 Setp: 200, ranking_loss: 3.12, id_loss: 0.92
+Epoch: 21/60 Setp: 250, ranking_loss: 0.60, id_loss: 0.58
+Epoch: 21/60 Setp: 300, ranking_loss: 0.84, id_loss: 1.54
+Epoch: 21/60 Setp: 350, ranking_loss: 2.39, id_loss: 0.65
+Epoch: 21/60 Setp: 400, ranking_loss: 0.88, id_loss: 1.04
+Epoch: 21/60 Setp: 450, ranking_loss: 2.65, id_loss: 1.74
+Epoch: 21/60 Setp: 500, ranking_loss: 1.44, id_loss: 1.27
+Epoch: 21/60 Setp: 550, ranking_loss: 1.85, id_loss: 1.27
+Epoch: 21/60 Setp: 600, ranking_loss: 1.20, id_loss: 0.83
+Epoch: 21/60 Setp: 650, ranking_loss: 1.43, id_loss: 0.43
+Epoch: 21/60 Setp: 700, ranking_loss: 2.41, id_loss: 1.69
+Epoch: 21/60 Setp: 750, ranking_loss: 1.94, id_loss: 0.87
+Epoch: 21/60 Setp: 800, ranking_loss: 2.26, id_loss: 0.75
+Epoch: 21/60 Setp: 850, ranking_loss: 1.04, id_loss: 0.51
+Epoch: 21/60 Setp: 900, ranking_loss: 1.79, id_loss: 1.17
+Epoch: 21/60 Setp: 950, ranking_loss: 1.27, id_loss: 0.70
+Epoch: 21/60 Setp: 1000, ranking_loss: 1.72, id_loss: 0.76
+Epoch: 21/60 Setp: 1050, ranking_loss: 1.67, id_loss: 1.13
+Epoch: 21/60 , ranking_loss: 2.04, id_loss: 0.97
+SSAN
+Testing Epoch: 21
+lr:0.0001
+lr:1e-05
+similarity_global:
+t2i: @R1: 0.5757, @R5: 0.7869, @R10: 0.8595, map: 0.4953
+similarity_local:
+t2i: @R1: 0.5883, @R5: 0.7983, @R10: 0.8651, map: 0.5119
+similarity_non_local:
+t2i: @R1: 0.5969, @R5: 0.799, @R10: 0.8636, map: 0.5187
+similarity_all:
+t2i: @R1: 0.6146, @R5: 0.8126, @R10: 0.8756, map: 0.5348
+Epoch: 22/60 Setp: 50, ranking_loss: 1.65, id_loss: 0.31
+Epoch: 22/60 Setp: 100, ranking_loss: 1.19, id_loss: 0.52
+Epoch: 22/60 Setp: 150, ranking_loss: 1.75, id_loss: 0.53
+Epoch: 22/60 Setp: 200, ranking_loss: 1.80, id_loss: 0.58
+Epoch: 22/60 Setp: 250, ranking_loss: 1.84, id_loss: 0.35
+Epoch: 22/60 Setp: 300, ranking_loss: 2.75, id_loss: 0.54
+Epoch: 22/60 Setp: 350, ranking_loss: 1.69, id_loss: 0.72
+Epoch: 22/60 Setp: 400, ranking_loss: 1.60, id_loss: 0.37
+Epoch: 22/60 Setp: 450, ranking_loss: 2.05, id_loss: 0.80
+Epoch: 22/60 Setp: 500, ranking_loss: 1.57, id_loss: 0.55
+Epoch: 22/60 Setp: 550, ranking_loss: 1.29, id_loss: 0.90
+Epoch: 22/60 Setp: 600, ranking_loss: 1.79, id_loss: 0.81
+Epoch: 22/60 Setp: 650, ranking_loss: 1.41, id_loss: 0.95
+Epoch: 22/60 Setp: 700, ranking_loss: 0.98, id_loss: 0.37
+Epoch: 22/60 Setp: 750, ranking_loss: 3.24, id_loss: 0.81
+Epoch: 22/60 Setp: 800, ranking_loss: 1.22, id_loss: 0.54
+Epoch: 22/60 Setp: 850, ranking_loss: 2.56, id_loss: 0.49
+Epoch: 22/60 Setp: 900, ranking_loss: 1.35, id_loss: 0.54
+Epoch: 22/60 Setp: 950, ranking_loss: 0.88, id_loss: 0.64
+Epoch: 22/60 Setp: 1000, ranking_loss: 1.65, id_loss: 0.58
+Epoch: 22/60 Setp: 1050, ranking_loss: 2.24, id_loss: 0.48
+Epoch: 22/60 , ranking_loss: 1.76, id_loss: 0.51
+SSAN
+Testing Epoch: 22
+lr:0.0001
+lr:1e-05
+similarity_global:
+t2i: @R1: 0.5817, @R5: 0.7884, @R10: 0.8595, map: 0.4991
+similarity_local:
+t2i: @R1: 0.5906, @R5: 0.8009, @R10: 0.8633, map: 0.5136
+similarity_non_local:
+t2i: @R1: 0.5965, @R5: 0.798, @R10: 0.8655, map: 0.5194
+similarity_all:
+t2i: @R1: 0.6137, @R5: 0.8113, @R10: 0.8764, map: 0.5354
+Epoch: 23/60 Setp: 50, ranking_loss: 0.90, id_loss: 0.64
+Epoch: 23/60 Setp: 100, ranking_loss: 2.28, id_loss: 0.15
+Epoch: 23/60 Setp: 150, ranking_loss: 2.87, id_loss: 0.54
+Epoch: 23/60 Setp: 200, ranking_loss: 1.21, id_loss: 0.24
+Epoch: 23/60 Setp: 250, ranking_loss: 2.12, id_loss: 0.34
+Epoch: 23/60 Setp: 300, ranking_loss: 1.41, id_loss: 0.51
+Epoch: 23/60 Setp: 350, ranking_loss: 2.11, id_loss: 0.43
+Epoch: 23/60 Setp: 400, ranking_loss: 0.78, id_loss: 0.44
+Epoch: 23/60 Setp: 450, ranking_loss: 1.27, id_loss: 0.41
+Epoch: 23/60 Setp: 500, ranking_loss: 1.49, id_loss: 0.28
+Epoch: 23/60 Setp: 550, ranking_loss: 1.37, id_loss: 0.28
+Epoch: 23/60 Setp: 600, ranking_loss: 1.76, id_loss: 0.36
+Epoch: 23/60 Setp: 650, ranking_loss: 1.61, id_loss: 0.37
+Epoch: 23/60 Setp: 700, ranking_loss: 0.95, id_loss: 0.16
+Epoch: 23/60 Setp: 750, ranking_loss: 1.20, id_loss: 0.29
+Epoch: 23/60 Setp: 800, ranking_loss: 2.41, id_loss: 0.41
+Epoch: 23/60 Setp: 850, ranking_loss: 1.60, id_loss: 0.29
+Epoch: 23/60 Setp: 900, ranking_loss: 1.50, id_loss: 0.38
+Epoch: 23/60 Setp: 950, ranking_loss: 1.87, id_loss: 0.44
+Epoch: 23/60 Setp: 1000, ranking_loss: 2.15, id_loss: 0.35
+Epoch: 23/60 Setp: 1050, ranking_loss: 0.92, id_loss: 0.21
+Epoch: 23/60 , ranking_loss: 1.66, id_loss: 0.39
+SSAN
+Testing Epoch: 23
+lr:0.0001
+lr:1e-05
+similarity_global:
+t2i: @R1: 0.5815, @R5: 0.792, @R10: 0.86, map: 0.4997
+similarity_local:
+t2i: @R1: 0.5939, @R5: 0.8045, @R10: 0.8623, map: 0.5153
+similarity_non_local:
+t2i: @R1: 0.5945, @R5: 0.8016, @R10: 0.8652, map: 0.5204
+similarity_all:
+t2i: @R1: 0.6171, @R5: 0.816, @R10: 0.8764, map: 0.538
+Epoch: 24/60 Setp: 50, ranking_loss: 0.61, id_loss: 0.14
+Epoch: 24/60 Setp: 100, ranking_loss: 1.55, id_loss: 0.42
+Epoch: 24/60 Setp: 150, ranking_loss: 1.90, id_loss: 0.21
+Epoch: 24/60 Setp: 200, ranking_loss: 2.22, id_loss: 0.35
+Epoch: 24/60 Setp: 250, ranking_loss: 1.10, id_loss: 0.23
+Epoch: 24/60 Setp: 300, ranking_loss: 1.12, id_loss: 0.28
+Epoch: 24/60 Setp: 350, ranking_loss: 1.59, id_loss: 0.36
+Epoch: 24/60 Setp: 400, ranking_loss: 0.81, id_loss: 0.14
+Epoch: 24/60 Setp: 450, ranking_loss: 1.31, id_loss: 0.31
+Epoch: 24/60 Setp: 500, ranking_loss: 1.75, id_loss: 0.19
+Epoch: 24/60 Setp: 550, ranking_loss: 1.89, id_loss: 0.93
+Epoch: 24/60 Setp: 600, ranking_loss: 2.13, id_loss: 0.11
+Epoch: 24/60 Setp: 650, ranking_loss: 2.19, id_loss: 0.19
+Epoch: 24/60 Setp: 700, ranking_loss: 1.25, id_loss: 0.44
+Epoch: 24/60 Setp: 750, ranking_loss: 0.60, id_loss: 0.13
+Epoch: 24/60 Setp: 800, ranking_loss: 1.14, id_loss: 0.31
+Epoch: 24/60 Setp: 850, ranking_loss: 2.25, id_loss: 0.43
+Epoch: 24/60 Setp: 900, ranking_loss: 1.45, id_loss: 0.44
+Epoch: 24/60 Setp: 950, ranking_loss: 0.76, id_loss: 0.38
+Epoch: 24/60 Setp: 1000, ranking_loss: 0.96, id_loss: 0.44
+Epoch: 24/60 Setp: 1050, ranking_loss: 2.29, id_loss: 0.27
+Epoch: 24/60 , ranking_loss: 1.57, id_loss: 0.33
+SSAN
+Testing Epoch: 24
+lr:0.0001
+lr:1e-05
+similarity_global:
+t2i: @R1: 0.5854, @R5: 0.7934, @R10: 0.8616, map: 0.5018
+similarity_local:
+t2i: @R1: 0.5952, @R5: 0.8016, @R10: 0.8652, map: 0.5166
+similarity_non_local:
+t2i: @R1: 0.5994, @R5: 0.802, @R10: 0.8647, map: 0.5212
+similarity_all:
+t2i: @R1: 0.6192, @R5: 0.8168, @R10: 0.8766, map: 0.5386
+Epoch: 25/60 Setp: 50, ranking_loss: 1.69, id_loss: 0.10
+Epoch: 25/60 Setp: 100, ranking_loss: 1.41, id_loss: 0.39
+Epoch: 25/60 Setp: 150, ranking_loss: 1.33, id_loss: 0.23
+Epoch: 25/60 Setp: 200, ranking_loss: 1.97, id_loss: 0.33
+Epoch: 25/60 Setp: 250, ranking_loss: 1.17, id_loss: 0.12
+Epoch: 25/60 Setp: 300, ranking_loss: 1.25, id_loss: 0.43
+Epoch: 25/60 Setp: 350, ranking_loss: 2.18, id_loss: 0.34
+Epoch: 25/60 Setp: 400, ranking_loss: 0.57, id_loss: 0.17
+Epoch: 25/60 Setp: 450, ranking_loss: 2.19, id_loss: 0.22
+Epoch: 25/60 Setp: 500, ranking_loss: 2.49, id_loss: 0.59
+Epoch: 25/60 Setp: 550, ranking_loss: 0.96, id_loss: 0.28
+Epoch: 25/60 Setp: 600, ranking_loss: 1.31, id_loss: 0.32
+Epoch: 25/60 Setp: 650, ranking_loss: 1.49, id_loss: 0.30
+Epoch: 25/60 Setp: 700, ranking_loss: 0.88, id_loss: 0.29
+Epoch: 25/60 Setp: 750, ranking_loss: 1.51, id_loss: 0.18
+Epoch: 25/60 Setp: 800, ranking_loss: 1.00, id_loss: 0.11
+Epoch: 25/60 Setp: 850, ranking_loss: 0.99, id_loss: 0.59
+Epoch: 25/60 Setp: 900, ranking_loss: 1.37, id_loss: 0.38
+Epoch: 25/60 Setp: 950, ranking_loss: 1.67, id_loss: 0.38
+Epoch: 25/60 Setp: 1000, ranking_loss: 1.85, id_loss: 0.51
+Epoch: 25/60 Setp: 1050, ranking_loss: 1.57, id_loss: 0.34
+Epoch: 25/60 , ranking_loss: 1.47, id_loss: 0.31
+SSAN
+Testing Epoch: 25
+lr:0.0001
+lr:1e-05
+similarity_global:
+t2i: @R1: 0.5804, @R5: 0.792, @R10: 0.859, map: 0.5008
+similarity_local:
+t2i: @R1: 0.5969, @R5: 0.8024, @R10: 0.8631, map: 0.5188
+similarity_non_local:
+t2i: @R1: 0.5978, @R5: 0.8024, @R10: 0.8641, map: 0.5213
+similarity_all:
+t2i: @R1: 0.6198, @R5: 0.8162, @R10: 0.8761, map: 0.5391
+Epoch: 26/60 Setp: 50, ranking_loss: 0.89, id_loss: 0.23
+Epoch: 26/60 Setp: 100, ranking_loss: 2.42, id_loss: 0.23
+Epoch: 26/60 Setp: 150, ranking_loss: 1.81, id_loss: 0.46
+Epoch: 26/60 Setp: 200, ranking_loss: 1.13, id_loss: 0.21
+Epoch: 26/60 Setp: 250, ranking_loss: 1.84, id_loss: 0.79
+Epoch: 26/60 Setp: 300, ranking_loss: 0.74, id_loss: 0.24
+Epoch: 26/60 Setp: 350, ranking_loss: 0.75, id_loss: 0.05
+Epoch: 26/60 Setp: 400, ranking_loss: 1.05, id_loss: 0.32
+Epoch: 26/60 Setp: 450, ranking_loss: 1.74, id_loss: 0.28
+Epoch: 26/60 Setp: 500, ranking_loss: 1.56, id_loss: 0.44
+Epoch: 26/60 Setp: 550, ranking_loss: 1.28, id_loss: 0.48
+Epoch: 26/60 Setp: 600, ranking_loss: 1.17, id_loss: 0.18
+Epoch: 26/60 Setp: 650, ranking_loss: 1.08, id_loss: 0.33
+Epoch: 26/60 Setp: 700, ranking_loss: 1.85, id_loss: 0.41
+Epoch: 26/60 Setp: 750, ranking_loss: 0.89, id_loss: 0.42
+Epoch: 26/60 Setp: 800, ranking_loss: 1.07, id_loss: 0.21
+Epoch: 26/60 Setp: 850, ranking_loss: 1.82, id_loss: 0.21
+Epoch: 26/60 Setp: 900, ranking_loss: 1.72, id_loss: 0.78
+Epoch: 26/60 Setp: 950, ranking_loss: 1.04, id_loss: 0.08
+Epoch: 26/60 Setp: 1000, ranking_loss: 1.69, id_loss: 0.14
+Epoch: 26/60 Setp: 1050, ranking_loss: 1.13, id_loss: 0.48
+Epoch: 26/60 , ranking_loss: 1.39, id_loss: 0.29
+SSAN
+Testing Epoch: 26
+lr:0.0001
+lr:1e-05
+similarity_global:
+t2i: @R1: 0.5843, @R5: 0.7926, @R10: 0.8586, map: 0.5008
+similarity_local:
+t2i: @R1: 0.5978, @R5: 0.7999, @R10: 0.8647, map: 0.5188
+similarity_non_local:
+t2i: @R1: 0.6005, @R5: 0.7998, @R10: 0.8605, map: 0.521
+similarity_all:
+t2i: @R1: 0.6213, @R5: 0.8126, @R10: 0.8748, map: 0.5393
+Epoch: 27/60 Setp: 50, ranking_loss: 2.14, id_loss: 0.50
+Epoch: 27/60 Setp: 100, ranking_loss: 1.21, id_loss: 0.06
+Epoch: 27/60 Setp: 150, ranking_loss: 2.39, id_loss: 0.29
+Epoch: 27/60 Setp: 200, ranking_loss: 2.35, id_loss: 0.15
+Epoch: 27/60 Setp: 250, ranking_loss: 1.62, id_loss: 0.30
+Epoch: 27/60 Setp: 300, ranking_loss: 1.15, id_loss: 0.28
+Epoch: 27/60 Setp: 350, ranking_loss: 0.77, id_loss: 0.14
+Epoch: 27/60 Setp: 400, ranking_loss: 0.66, id_loss: 0.06
+Epoch: 27/60 Setp: 450, ranking_loss: 1.52, id_loss: 0.21
+Epoch: 27/60 Setp: 500, ranking_loss: 1.44, id_loss: 0.14
+Epoch: 27/60 Setp: 550, ranking_loss: 0.77, id_loss: 0.42
+Epoch: 27/60 Setp: 600, ranking_loss: 1.05, id_loss: 0.24
+Epoch: 27/60 Setp: 650, ranking_loss: 0.89, id_loss: 0.13
+Epoch: 27/60 Setp: 700, ranking_loss: 2.01, id_loss: 0.47
+Epoch: 27/60 Setp: 750, ranking_loss: 1.01, id_loss: 0.11
+Epoch: 27/60 Setp: 800, ranking_loss: 1.17, id_loss: 0.07
+Epoch: 27/60 Setp: 850, ranking_loss: 1.34, id_loss: 0.37
+Epoch: 27/60 Setp: 900, ranking_loss: 0.97, id_loss: 0.35
+Epoch: 27/60 Setp: 950, ranking_loss: 2.01, id_loss: 0.42
+Epoch: 27/60 Setp: 1000, ranking_loss: 0.89, id_loss: 0.59
+Epoch: 27/60 Setp: 1050, ranking_loss: 1.82, id_loss: 0.20
+Epoch: 27/60 , ranking_loss: 1.37, id_loss: 0.28
+SSAN
+Testing Epoch: 27
+lr:0.0001
+lr:1e-05
+similarity_global:
+t2i: @R1: 0.584, @R5: 0.792, @R10: 0.8569, map: 0.5009
+similarity_local:
+t2i: @R1: 0.5965, @R5: 0.8022, @R10: 0.8642, map: 0.5171
+similarity_non_local:
+t2i: @R1: 0.5952, @R5: 0.8004, @R10: 0.862, map: 0.5193
+similarity_all:
+t2i: @R1: 0.6205, @R5: 0.8152, @R10: 0.8767, map: 0.5383
+Epoch: 28/60 Setp: 50, ranking_loss: 1.12, id_loss: 0.20
+Epoch: 28/60 Setp: 100, ranking_loss: 1.49, id_loss: 0.20
+Epoch: 28/60 Setp: 150, ranking_loss: 0.75, id_loss: 0.32
+Epoch: 28/60 Setp: 200, ranking_loss: 0.74, id_loss: 0.54
+Epoch: 28/60 Setp: 250, ranking_loss: 1.45, id_loss: 0.22
+Epoch: 28/60 Setp: 300, ranking_loss: 1.54, id_loss: 0.28
+Epoch: 28/60 Setp: 350, ranking_loss: 1.32, id_loss: 0.25
+Epoch: 28/60 Setp: 400, ranking_loss: 1.32, id_loss: 0.29
+Epoch: 28/60 Setp: 450, ranking_loss: 2.66, id_loss: 0.31
+Epoch: 28/60 Setp: 500, ranking_loss: 2.46, id_loss: 0.49
+Epoch: 28/60 Setp: 550, ranking_loss: 1.50, id_loss: 0.41
+Epoch: 28/60 Setp: 600, ranking_loss: 1.48, id_loss: 0.28
+Epoch: 28/60 Setp: 650, ranking_loss: 1.10, id_loss: 0.06
+Epoch: 28/60 Setp: 700, ranking_loss: 0.93, id_loss: 0.23
+Epoch: 28/60 Setp: 750, ranking_loss: 0.88, id_loss: 0.23
+Epoch: 28/60 Setp: 800, ranking_loss: 1.30, id_loss: 0.13
+Epoch: 28/60 Setp: 850, ranking_loss: 1.04, id_loss: 0.61
+Epoch: 28/60 Setp: 900, ranking_loss: 0.89, id_loss: 0.43
+Epoch: 28/60 Setp: 950, ranking_loss: 1.08, id_loss: 0.19
+Epoch: 28/60 Setp: 1000, ranking_loss: 1.68, id_loss: 0.32
+Epoch: 28/60 Setp: 1050, ranking_loss: 2.32, id_loss: 0.53
+Epoch: 28/60 , ranking_loss: 1.29, id_loss: 0.27
+SSAN
+Testing Epoch: 28
+lr:0.0001
+lr:1e-05
+similarity_global:
+t2i: @R1: 0.582, @R5: 0.791, @R10: 0.8584, map: 0.4997
+similarity_local:
+t2i: @R1: 0.5942, @R5: 0.7998, @R10: 0.862, map: 0.5162
+similarity_non_local:
+t2i: @R1: 0.5927, @R5: 0.7951, @R10: 0.8608, map: 0.5199
+similarity_all:
+t2i: @R1: 0.6132, @R5: 0.812, @R10: 0.8745, map: 0.5369
+Epoch: 29/60 Setp: 50, ranking_loss: 0.62, id_loss: 0.15
+Epoch: 29/60 Setp: 100, ranking_loss: 1.06, id_loss: 0.16
+Epoch: 29/60 Setp: 150, ranking_loss: 0.84, id_loss: 0.12
+Epoch: 29/60 Setp: 200, ranking_loss: 1.68, id_loss: 0.15
+Epoch: 29/60 Setp: 250, ranking_loss: 1.00, id_loss: 0.35
+Epoch: 29/60 Setp: 300, ranking_loss: 1.03, id_loss: 0.45
+Epoch: 29/60 Setp: 350, ranking_loss: 1.53, id_loss: 0.17
+Epoch: 29/60 Setp: 400, ranking_loss: 0.78, id_loss: 0.07
+Epoch: 29/60 Setp: 450, ranking_loss: 1.84, id_loss: 0.31
+Epoch: 29/60 Setp: 500, ranking_loss: 1.64, id_loss: 0.30
+Epoch: 29/60 Setp: 550, ranking_loss: 1.48, id_loss: 0.06
+Epoch: 29/60 Setp: 600, ranking_loss: 0.84, id_loss: 0.21
+Epoch: 29/60 Setp: 650, ranking_loss: 0.80, id_loss: 0.14
+Epoch: 29/60 Setp: 700, ranking_loss: 1.10, id_loss: 0.41
+Epoch: 29/60 Setp: 750, ranking_loss: 1.13, id_loss: 0.35
+Epoch: 29/60 Setp: 800, ranking_loss: 1.03, id_loss: 0.16
+Epoch: 29/60 Setp: 850, ranking_loss: 1.43, id_loss: 0.43
+Epoch: 29/60 Setp: 900, ranking_loss: 0.57, id_loss: 0.33
+Epoch: 29/60 Setp: 950, ranking_loss: 0.94, id_loss: 0.31
+Epoch: 29/60 Setp: 1000, ranking_loss: 1.70, id_loss: 0.13
+Epoch: 29/60 Setp: 1050, ranking_loss: 0.88, id_loss: 0.09
+Epoch: 29/60 , ranking_loss: 1.28, id_loss: 0.26
+SSAN
+Testing Epoch: 29
+lr:0.0001
+lr:1e-05
+similarity_global:
+t2i: @R1: 0.581, @R5: 0.7913, @R10: 0.8597, map: 0.4983
+similarity_local:
+t2i: @R1: 0.5945, @R5: 0.7988, @R10: 0.8629, map: 0.5157
+similarity_non_local:
+t2i: @R1: 0.5963, @R5: 0.7985, @R10: 0.8628, map: 0.5201
+similarity_all:
+t2i: @R1: 0.6185, @R5: 0.8126, @R10: 0.8741, map: 0.5374
+Epoch: 30/60 Setp: 50, ranking_loss: 1.14, id_loss: 0.15
+Epoch: 30/60 Setp: 100, ranking_loss: 1.05, id_loss: 0.05
+Epoch: 30/60 Setp: 150, ranking_loss: 2.51, id_loss: 0.20
+Epoch: 30/60 Setp: 200, ranking_loss: 1.80, id_loss: 0.15
+Epoch: 30/60 Setp: 250, ranking_loss: 1.00, id_loss: 0.23
+Epoch: 30/60 Setp: 300, ranking_loss: 1.11, id_loss: 0.16
+Epoch: 30/60 Setp: 350, ranking_loss: 1.44, id_loss: 0.23
+Epoch: 30/60 Setp: 400, ranking_loss: 1.65, id_loss: 0.40
+Epoch: 30/60 Setp: 450, ranking_loss: 0.56, id_loss: 0.47
+Epoch: 30/60 Setp: 500, ranking_loss: 1.62, id_loss: 0.17
+Epoch: 30/60 Setp: 550, ranking_loss: 0.66, id_loss: 0.17
+Epoch: 30/60 Setp: 600, ranking_loss: 1.84, id_loss: 0.24
+Epoch: 30/60 Setp: 650, ranking_loss: 1.91, id_loss: 0.33
+Epoch: 30/60 Setp: 700, ranking_loss: 1.24, id_loss: 0.16
+Epoch: 30/60 Setp: 750, ranking_loss: 1.53, id_loss: 0.25
+Epoch: 30/60 Setp: 800, ranking_loss: 1.08, id_loss: 0.07
+Epoch: 30/60 Setp: 850, ranking_loss: 1.18, id_loss: 0.07
+Epoch: 30/60 Setp: 900, ranking_loss: 0.87, id_loss: 0.07
+Epoch: 30/60 Setp: 950, ranking_loss: 0.62, id_loss: 0.29
+Epoch: 30/60 Setp: 1000, ranking_loss: 1.23, id_loss: 0.45
+Epoch: 30/60 Setp: 1050, ranking_loss: 0.65, id_loss: 0.23
+Epoch: 30/60 , ranking_loss: 1.21, id_loss: 0.26
+SSAN
+Testing Epoch: 30
+lr:0.0001
+lr:1e-05
+similarity_global:
+t2i: @R1: 0.5771, @R5: 0.7925, @R10: 0.8602, map: 0.4973
+similarity_local:
+t2i: @R1: 0.5935, @R5: 0.8027, @R10: 0.8638, map: 0.5161
+similarity_non_local:
+t2i: @R1: 0.5939, @R5: 0.7981, @R10: 0.8616, map: 0.5197
+similarity_all:
+t2i: @R1: 0.6119, @R5: 0.8137, @R10: 0.8764, map: 0.5358
+Epoch: 31/60 Setp: 50, ranking_loss: 1.52, id_loss: 0.05
+Epoch: 31/60 Setp: 100, ranking_loss: 1.36, id_loss: 0.10
+Epoch: 31/60 Setp: 150, ranking_loss: 1.35, id_loss: 0.24
+Epoch: 31/60 Setp: 200, ranking_loss: 1.08, id_loss: 0.15
+Epoch: 31/60 Setp: 250, ranking_loss: 0.99, id_loss: 0.18
+Epoch: 31/60 Setp: 300, ranking_loss: 1.06, id_loss: 0.06
+Epoch: 31/60 Setp: 350, ranking_loss: 1.11, id_loss: 0.04
+Epoch: 31/60 Setp: 400, ranking_loss: 1.13, id_loss: 0.25
+Epoch: 31/60 Setp: 450, ranking_loss: 1.01, id_loss: 0.10
+Epoch: 31/60 Setp: 500, ranking_loss: 1.43, id_loss: 0.30
+Epoch: 31/60 Setp: 550, ranking_loss: 1.42, id_loss: 0.19
+Epoch: 31/60 Setp: 600, ranking_loss: 1.29, id_loss: 0.14
+Epoch: 31/60 Setp: 650, ranking_loss: 1.08, id_loss: 0.20
+Epoch: 31/60 Setp: 700, ranking_loss: 0.49, id_loss: 0.18
+Epoch: 31/60 Setp: 750, ranking_loss: 0.91, id_loss: 0.39
+Epoch: 31/60 Setp: 800, ranking_loss: 1.50, id_loss: 0.58
+Epoch: 31/60 Setp: 850, ranking_loss: 1.08, id_loss: 0.10
+Epoch: 31/60 Setp: 900, ranking_loss: 1.29, id_loss: 0.37
+Epoch: 31/60 Setp: 950, ranking_loss: 0.85, id_loss: 0.26
+Epoch: 31/60 Setp: 1000, ranking_loss: 1.28, id_loss: 0.36
+Epoch: 31/60 Setp: 1050, ranking_loss: 1.08, id_loss: 0.09
+Epoch: 31/60 , ranking_loss: 1.19, id_loss: 0.25
+SSAN
+Testing Epoch: 31
+lr:0.0001
+lr:1e-05
+similarity_global:
+t2i: @R1: 0.5851, @R5: 0.7917, @R10: 0.8587, map: 0.4996
+similarity_local:
+t2i: @R1: 0.5968, @R5: 0.7998, @R10: 0.8664, map: 0.5176
+similarity_non_local:
+t2i: @R1: 0.5973, @R5: 0.7968, @R10: 0.8636, map: 0.5202
+similarity_all:
+t2i: @R1: 0.62, @R5: 0.811, @R10: 0.8779, map: 0.5385
+Epoch: 32/60 Setp: 50, ranking_loss: 0.55, id_loss: 0.16
+Epoch: 32/60 Setp: 100, ranking_loss: 1.41, id_loss: 0.26
+Epoch: 32/60 Setp: 150, ranking_loss: 0.83, id_loss: 0.30
+Epoch: 32/60 Setp: 200, ranking_loss: 1.22, id_loss: 0.08
+Epoch: 32/60 Setp: 250, ranking_loss: 1.42, id_loss: 0.33
+Epoch: 32/60 Setp: 300, ranking_loss: 1.39, id_loss: 0.33
+Epoch: 32/60 Setp: 350, ranking_loss: 1.95, id_loss: 0.21
+Epoch: 32/60 Setp: 400, ranking_loss: 0.36, id_loss: 0.38
+Epoch: 32/60 Setp: 450, ranking_loss: 0.85, id_loss: 0.13
+Epoch: 32/60 Setp: 500, ranking_loss: 2.69, id_loss: 0.35
+Epoch: 32/60 Setp: 550, ranking_loss: 1.23, id_loss: 0.07
+Epoch: 32/60 Setp: 600, ranking_loss: 1.13, id_loss: 0.33
+Epoch: 32/60 Setp: 650, ranking_loss: 0.99, id_loss: 0.17
+Epoch: 32/60 Setp: 700, ranking_loss: 2.52, id_loss: 0.25
+Epoch: 32/60 Setp: 750, ranking_loss: 1.50, id_loss: 0.20
+Epoch: 32/60 Setp: 800, ranking_loss: 1.70, id_loss: 0.25
+Epoch: 32/60 Setp: 850, ranking_loss: 0.62, id_loss: 0.18
+Epoch: 32/60 Setp: 900, ranking_loss: 1.60, id_loss: 0.45
+Epoch: 32/60 Setp: 950, ranking_loss: 1.28, id_loss: 0.16
+Epoch: 32/60 Setp: 1000, ranking_loss: 2.57, id_loss: 0.09
+Epoch: 32/60 Setp: 1050, ranking_loss: 1.26, id_loss: 0.22
+Epoch: 32/60 , ranking_loss: 1.17, id_loss: 0.25
+SSAN
+Testing Epoch: 32
+lr:0.0001
+lr:1e-05
+similarity_global:
+t2i: @R1: 0.584, @R5: 0.7918, @R10: 0.8612, map: 0.5009
+similarity_local:
+t2i: @R1: 0.6004, @R5: 0.8011, @R10: 0.8623, map: 0.5197
+similarity_non_local:
+t2i: @R1: 0.5991, @R5: 0.798, @R10: 0.8628, map: 0.5214
+similarity_all:
+t2i: @R1: 0.6156, @R5: 0.8131, @R10: 0.8789, map: 0.538
+Epoch: 33/60 Setp: 50, ranking_loss: 0.68, id_loss: 0.23
+Epoch: 33/60 Setp: 100, ranking_loss: 1.34, id_loss: 0.07
+Epoch: 33/60 Setp: 150, ranking_loss: 0.78, id_loss: 0.04
+Epoch: 33/60 Setp: 200, ranking_loss: 0.66, id_loss: 0.07
+Epoch: 33/60 Setp: 250, ranking_loss: 1.16, id_loss: 0.42
+Epoch: 33/60 Setp: 300, ranking_loss: 1.67, id_loss: 0.28
+Epoch: 33/60 Setp: 350, ranking_loss: 1.00, id_loss: 0.29
+Epoch: 33/60 Setp: 400, ranking_loss: 0.48, id_loss: 0.11
+Epoch: 33/60 Setp: 450, ranking_loss: 1.46, id_loss: 0.26
+Epoch: 33/60 Setp: 500, ranking_loss: 1.79, id_loss: 0.09
+Epoch: 33/60 Setp: 550, ranking_loss: 0.77, id_loss: 0.26
+Epoch: 33/60 Setp: 600, ranking_loss: 0.42, id_loss: 0.31
+Epoch: 33/60 Setp: 650, ranking_loss: 0.97, id_loss: 0.17
+Epoch: 33/60 Setp: 700, ranking_loss: 0.59, id_loss: 0.59
+Epoch: 33/60 Setp: 750, ranking_loss: 1.29, id_loss: 0.32
+Epoch: 33/60 Setp: 800, ranking_loss: 0.96, id_loss: 0.34
+Epoch: 33/60 Setp: 850, ranking_loss: 0.92, id_loss: 0.26
+Epoch: 33/60 Setp: 900, ranking_loss: 1.94, id_loss: 0.48
+Epoch: 33/60 Setp: 950, ranking_loss: 0.94, id_loss: 0.50
+Epoch: 33/60 Setp: 1000, ranking_loss: 0.67, id_loss: 0.19
+Epoch: 33/60 Setp: 1050, ranking_loss: 0.51, id_loss: 0.10
+Epoch: 33/60 , ranking_loss: 1.12, id_loss: 0.24
+SSAN
+Testing Epoch: 33
+lr:0.0001
+lr:1e-05
+similarity_global:
+t2i: @R1: 0.5823, @R5: 0.7912, @R10: 0.8573, map: 0.4992
+similarity_local:
+t2i: @R1: 0.5966, @R5: 0.8001, @R10: 0.8651, map: 0.5178
+similarity_non_local:
+t2i: @R1: 0.5999, @R5: 0.7991, @R10: 0.8628, map: 0.522
+similarity_all:
+t2i: @R1: 0.6205, @R5: 0.812, @R10: 0.8756, map: 0.5391
+Epoch: 34/60 Setp: 50, ranking_loss: 1.25, id_loss: 0.10
+Epoch: 34/60 Setp: 100, ranking_loss: 1.11, id_loss: 0.04
+Epoch: 34/60 Setp: 150, ranking_loss: 1.38, id_loss: 0.08
+Epoch: 34/60 Setp: 200, ranking_loss: 0.93, id_loss: 0.41
+Epoch: 34/60 Setp: 250, ranking_loss: 1.33, id_loss: 0.11
+Epoch: 34/60 Setp: 300, ranking_loss: 0.86, id_loss: 0.36
+Epoch: 34/60 Setp: 350, ranking_loss: 1.75, id_loss: 0.38
+Epoch: 34/60 Setp: 400, ranking_loss: 1.15, id_loss: 0.09
+Epoch: 34/60 Setp: 450, ranking_loss: 1.01, id_loss: 0.11
+Epoch: 34/60 Setp: 500, ranking_loss: 0.71, id_loss: 0.34
+Epoch: 34/60 Setp: 550, ranking_loss: 1.46, id_loss: 0.43
+Epoch: 34/60 Setp: 600, ranking_loss: 1.09, id_loss: 0.61
+Epoch: 34/60 Setp: 650, ranking_loss: 1.25, id_loss: 0.28
+Epoch: 34/60 Setp: 700, ranking_loss: 0.94, id_loss: 0.16
+Epoch: 34/60 Setp: 750, ranking_loss: 1.14, id_loss: 0.29
+Epoch: 34/60 Setp: 800, ranking_loss: 0.75, id_loss: 0.32
+Epoch: 34/60 Setp: 850, ranking_loss: 0.50, id_loss: 0.35
+Epoch: 34/60 Setp: 900, ranking_loss: 1.99, id_loss: 0.66
+Epoch: 34/60 Setp: 950, ranking_loss: 1.66, id_loss: 0.55
+Epoch: 34/60 Setp: 1000, ranking_loss: 0.76, id_loss: 0.06
+Epoch: 34/60 Setp: 1050, ranking_loss: 1.18, id_loss: 0.06
+Epoch: 34/60 , ranking_loss: 1.13, id_loss: 0.24
+SSAN
+Testing Epoch: 34
+lr:0.0001
+lr:1e-05
+similarity_global:
+t2i: @R1: 0.5853, @R5: 0.7926, @R10: 0.8592, map: 0.5001
+similarity_local:
+t2i: @R1: 0.5955, @R5: 0.8012, @R10: 0.8636, map: 0.5181
+similarity_non_local:
+t2i: @R1: 0.5978, @R5: 0.7993, @R10: 0.86, map: 0.5206
+similarity_all:
+t2i: @R1: 0.6163, @R5: 0.8136, @R10: 0.8745, map: 0.5383
+Epoch: 35/60 Setp: 50, ranking_loss: 0.55, id_loss: 0.14
+Epoch: 35/60 Setp: 100, ranking_loss: 0.82, id_loss: 0.22
+Epoch: 35/60 Setp: 150, ranking_loss: 1.06, id_loss: 0.04
+Epoch: 35/60 Setp: 200, ranking_loss: 0.85, id_loss: 0.27
+Epoch: 35/60 Setp: 250, ranking_loss: 0.98, id_loss: 0.06
+Epoch: 35/60 Setp: 300, ranking_loss: 0.75, id_loss: 0.42
+Epoch: 35/60 Setp: 350, ranking_loss: 1.46, id_loss: 0.22
+Epoch: 35/60 Setp: 400, ranking_loss: 0.35, id_loss: 0.04
+Epoch: 35/60 Setp: 450, ranking_loss: 0.61, id_loss: 0.33
+Epoch: 35/60 Setp: 500, ranking_loss: 1.52, id_loss: 0.42
+Epoch: 35/60 Setp: 550, ranking_loss: 1.29, id_loss: 0.16
+Epoch: 35/60 Setp: 600, ranking_loss: 0.96, id_loss: 0.14
+Epoch: 35/60 Setp: 650, ranking_loss: 1.51, id_loss: 0.41
+Epoch: 35/60 Setp: 700, ranking_loss: 1.27, id_loss: 0.05
+Epoch: 35/60 Setp: 750, ranking_loss: 0.90, id_loss: 0.17
+Epoch: 35/60 Setp: 800, ranking_loss: 1.93, id_loss: 0.41
+Epoch: 35/60 Setp: 850, ranking_loss: 0.87, id_loss: 0.27
+Epoch: 35/60 Setp: 900, ranking_loss: 1.63, id_loss: 0.22
+Epoch: 35/60 Setp: 950, ranking_loss: 0.87, id_loss: 0.12
+Epoch: 35/60 Setp: 1000, ranking_loss: 0.86, id_loss: 0.09
+Epoch: 35/60 Setp: 1050, ranking_loss: 1.32, id_loss: 0.37
+Epoch: 35/60 , ranking_loss: 1.06, id_loss: 0.24
+SSAN
+Testing Epoch: 35
+lr:0.0001
+lr:1e-05
+similarity_global:
+t2i: @R1: 0.5822, @R5: 0.7912, @R10: 0.8582, map: 0.4985
+similarity_local:
+t2i: @R1: 0.6, @R5: 0.7973, @R10: 0.8642, map: 0.5194
+similarity_non_local:
+t2i: @R1: 0.5971, @R5: 0.8003, @R10: 0.8618, map: 0.5214
+similarity_all:
+t2i: @R1: 0.6197, @R5: 0.8144, @R10: 0.8748, map: 0.5397
+Epoch: 36/60 Setp: 50, ranking_loss: 0.82, id_loss: 0.18
+Epoch: 36/60 Setp: 100, ranking_loss: 1.66, id_loss: 0.19
+Epoch: 36/60 Setp: 150, ranking_loss: 0.51, id_loss: 0.09
+Epoch: 36/60 Setp: 200, ranking_loss: 1.60, id_loss: 0.07
+Epoch: 36/60 Setp: 250, ranking_loss: 1.78, id_loss: 0.24
+Epoch: 36/60 Setp: 300, ranking_loss: 0.79, id_loss: 0.30
+Epoch: 36/60 Setp: 350, ranking_loss: 0.83, id_loss: 0.40
+Epoch: 36/60 Setp: 400, ranking_loss: 0.57, id_loss: 0.11
+Epoch: 36/60 Setp: 450, ranking_loss: 0.36, id_loss: 0.05
+Epoch: 36/60 Setp: 500, ranking_loss: 0.60, id_loss: 0.36
+Epoch: 36/60 Setp: 550, ranking_loss: 1.18, id_loss: 0.41
+Epoch: 36/60 Setp: 600, ranking_loss: 0.97, id_loss: 0.21
+Epoch: 36/60 Setp: 650, ranking_loss: 0.70, id_loss: 0.05
+Epoch: 36/60 Setp: 700, ranking_loss: 1.80, id_loss: 0.27
+Epoch: 36/60 Setp: 750, ranking_loss: 1.14, id_loss: 0.26
+Epoch: 36/60 Setp: 800, ranking_loss: 0.78, id_loss: 0.10
+Epoch: 36/60 Setp: 850, ranking_loss: 0.94, id_loss: 0.18
+Epoch: 36/60 Setp: 900, ranking_loss: 0.96, id_loss: 0.26
+Epoch: 36/60 Setp: 950, ranking_loss: 0.43, id_loss: 0.24
+Epoch: 36/60 Setp: 1000, ranking_loss: 1.29, id_loss: 0.33
+Epoch: 36/60 Setp: 1050, ranking_loss: 0.60, id_loss: 0.13
+Epoch: 36/60 , ranking_loss: 1.06, id_loss: 0.24
+SSAN
+Testing Epoch: 36
+lr:0.0001
+lr:1e-05
+similarity_global:
+t2i: @R1: 0.587, @R5: 0.7926, @R10: 0.8592, map: 0.4989
+similarity_local:
+t2i: @R1: 0.5989, @R5: 0.7985, @R10: 0.8647, map: 0.5192
+similarity_non_local:
+t2i: @R1: 0.5965, @R5: 0.8006, @R10: 0.8651, map: 0.521
+similarity_all:
+t2i: @R1: 0.6187, @R5: 0.815, @R10: 0.8753, map: 0.539
+Epoch: 37/60 Setp: 50, ranking_loss: 0.53, id_loss: 0.31
+Epoch: 37/60 Setp: 100, ranking_loss: 1.33, id_loss: 0.10
+Epoch: 37/60 Setp: 150, ranking_loss: 0.29, id_loss: 0.18
+Epoch: 37/60 Setp: 200, ranking_loss: 2.15, id_loss: 0.73
+Epoch: 37/60 Setp: 250, ranking_loss: 0.53, id_loss: 0.27
+Epoch: 37/60 Setp: 300, ranking_loss: 0.54, id_loss: 0.18
+Epoch: 37/60 Setp: 350, ranking_loss: 1.59, id_loss: 0.42
+Epoch: 37/60 Setp: 400, ranking_loss: 1.27, id_loss: 0.49
+Epoch: 37/60 Setp: 450, ranking_loss: 0.50, id_loss: 0.34
+Epoch: 37/60 Setp: 500, ranking_loss: 0.77, id_loss: 0.07
+Epoch: 37/60 Setp: 550, ranking_loss: 0.71, id_loss: 0.54
+Epoch: 37/60 Setp: 600, ranking_loss: 0.66, id_loss: 0.26
+Epoch: 37/60 Setp: 650, ranking_loss: 0.42, id_loss: 0.21
+Epoch: 37/60 Setp: 700, ranking_loss: 1.02, id_loss: 0.03
+Epoch: 37/60 Setp: 750, ranking_loss: 0.86, id_loss: 0.28
+Epoch: 37/60 Setp: 800, ranking_loss: 1.70, id_loss: 0.06
+Epoch: 37/60 Setp: 850, ranking_loss: 1.68, id_loss: 0.21
+Epoch: 37/60 Setp: 900, ranking_loss: 1.10, id_loss: 0.60
+Epoch: 37/60 Setp: 950, ranking_loss: 1.11, id_loss: 0.22
+Epoch: 37/60 Setp: 1000, ranking_loss: 0.94, id_loss: 0.40
+Epoch: 37/60 Setp: 1050, ranking_loss: 1.28, id_loss: 0.36
+Epoch: 37/60 , ranking_loss: 1.04, id_loss: 0.23
+SSAN
+Testing Epoch: 37
+lr:0.0001
+lr:1e-05
+similarity_global:
+t2i: @R1: 0.5817, @R5: 0.7931, @R10: 0.8569, map: 0.4977
+similarity_local:
+t2i: @R1: 0.5991, @R5: 0.8033, @R10: 0.8639, map: 0.5184
+similarity_non_local:
+t2i: @R1: 0.5966, @R5: 0.7983, @R10: 0.8621, map: 0.5209
+similarity_all:
+t2i: @R1: 0.6171, @R5: 0.815, @R10: 0.8751, map: 0.5384
+Epoch: 38/60 Setp: 50, ranking_loss: 0.67, id_loss: 0.28
+Epoch: 38/60 Setp: 100, ranking_loss: 0.53, id_loss: 0.18
+Epoch: 38/60 Setp: 150, ranking_loss: 0.95, id_loss: 0.19
+Epoch: 38/60 Setp: 200, ranking_loss: 0.96, id_loss: 0.25
+Epoch: 38/60 Setp: 250, ranking_loss: 0.58, id_loss: 0.21
+Epoch: 38/60 Setp: 300, ranking_loss: 1.24, id_loss: 0.21
+Epoch: 38/60 Setp: 350, ranking_loss: 0.53, id_loss: 0.23
+Epoch: 38/60 Setp: 400, ranking_loss: 1.54, id_loss: 0.17
+Epoch: 38/60 Setp: 450, ranking_loss: 1.27, id_loss: 0.27
+Epoch: 38/60 Setp: 500, ranking_loss: 0.60, id_loss: 0.08
+Epoch: 38/60 Setp: 550, ranking_loss: 1.50, id_loss: 0.21
+Epoch: 38/60 Setp: 600, ranking_loss: 1.36, id_loss: 0.24
+Epoch: 38/60 Setp: 650, ranking_loss: 0.83, id_loss: 0.39
+Epoch: 38/60 Setp: 700, ranking_loss: 2.05, id_loss: 0.21
+Epoch: 38/60 Setp: 750, ranking_loss: 1.75, id_loss: 0.42
+Epoch: 38/60 Setp: 800, ranking_loss: 0.39, id_loss: 0.05
+Epoch: 38/60 Setp: 850, ranking_loss: 0.62, id_loss: 0.58
+Epoch: 38/60 Setp: 900, ranking_loss: 1.11, id_loss: 0.10
+Epoch: 38/60 Setp: 950, ranking_loss: 0.69, id_loss: 0.34
+Epoch: 38/60 Setp: 1000, ranking_loss: 1.13, id_loss: 0.11
+Epoch: 38/60 Setp: 1050, ranking_loss: 0.92, id_loss: 0.30
+Epoch: 38/60 , ranking_loss: 1.01, id_loss: 0.23
+SSAN
+Testing Epoch: 38
+lr:0.0001
+lr:1e-05
+similarity_global:
+t2i: @R1: 0.5789, @R5: 0.7865, @R10: 0.8582, map: 0.4959
+similarity_local:
+t2i: @R1: 0.5995, @R5: 0.8012, @R10: 0.8629, map: 0.5192
+similarity_non_local:
+t2i: @R1: 0.595, @R5: 0.7965, @R10: 0.8629, map: 0.5202
+similarity_all:
+t2i: @R1: 0.6155, @R5: 0.8133, @R10: 0.8737, map: 0.5376
+Epoch: 39/60 Setp: 50, ranking_loss: 1.34, id_loss: 0.03
+Epoch: 39/60 Setp: 100, ranking_loss: 0.67, id_loss: 0.19
+Epoch: 39/60 Setp: 150, ranking_loss: 0.46, id_loss: 0.18
+Epoch: 39/60 Setp: 200, ranking_loss: 1.49, id_loss: 0.15
+Epoch: 39/60 Setp: 250, ranking_loss: 0.36, id_loss: 0.57
+Epoch: 39/60 Setp: 300, ranking_loss: 0.66, id_loss: 0.08
+Epoch: 39/60 Setp: 350, ranking_loss: 1.31, id_loss: 0.17
+Epoch: 39/60 Setp: 400, ranking_loss: 0.88, id_loss: 0.05
+Epoch: 39/60 Setp: 450, ranking_loss: 0.71, id_loss: 0.27
+Epoch: 39/60 Setp: 500, ranking_loss: 1.27, id_loss: 0.17
+Epoch: 39/60 Setp: 550, ranking_loss: 1.45, id_loss: 0.25
+Epoch: 39/60 Setp: 600, ranking_loss: 1.25, id_loss: 0.54
+Epoch: 39/60 Setp: 650, ranking_loss: 0.80, id_loss: 0.15
+Epoch: 39/60 Setp: 700, ranking_loss: 0.68, id_loss: 0.14
+Epoch: 39/60 Setp: 750, ranking_loss: 0.59, id_loss: 0.34
+Epoch: 39/60 Setp: 800, ranking_loss: 0.68, id_loss: 0.09
+Epoch: 39/60 Setp: 850, ranking_loss: 0.50, id_loss: 0.39
+Epoch: 39/60 Setp: 900, ranking_loss: 0.67, id_loss: 0.08
+Epoch: 39/60 Setp: 950, ranking_loss: 1.23, id_loss: 0.44
+Epoch: 39/60 Setp: 1000, ranking_loss: 0.65, id_loss: 0.09
+Epoch: 39/60 Setp: 1050, ranking_loss: 1.26, id_loss: 0.78
+Epoch: 39/60 , ranking_loss: 1.00, id_loss: 0.23
+SSAN
+Testing Epoch: 39
+lr:0.0001
+lr:1e-05
+similarity_global:
+t2i: @R1: 0.5796, @R5: 0.7878, @R10: 0.8556, map: 0.4967
+similarity_local:
+t2i: @R1: 0.5973, @R5: 0.8014, @R10: 0.8639, map: 0.5184
+similarity_non_local:
+t2i: @R1: 0.5997, @R5: 0.7946, @R10: 0.861, map: 0.5208
+similarity_all:
+t2i: @R1: 0.6158, @R5: 0.8128, @R10: 0.8725, map: 0.538
+Epoch: 40/60 Setp: 50, ranking_loss: 1.41, id_loss: 0.27
+Epoch: 40/60 Setp: 100, ranking_loss: 1.63, id_loss: 0.05
+Epoch: 40/60 Setp: 150, ranking_loss: 0.91, id_loss: 0.14
+Epoch: 40/60 Setp: 200, ranking_loss: 0.89, id_loss: 0.36
+Epoch: 40/60 Setp: 250, ranking_loss: 1.87, id_loss: 0.34
+Epoch: 40/60 Setp: 300, ranking_loss: 2.29, id_loss: 0.17
+Epoch: 40/60 Setp: 350, ranking_loss: 1.33, id_loss: 0.02
+Epoch: 40/60 Setp: 400, ranking_loss: 0.71, id_loss: 0.06
+Epoch: 40/60 Setp: 450, ranking_loss: 1.28, id_loss: 0.10
+Epoch: 40/60 Setp: 500, ranking_loss: 0.76, id_loss: 0.20
+Epoch: 40/60 Setp: 550, ranking_loss: 0.43, id_loss: 0.12
+Epoch: 40/60 Setp: 600, ranking_loss: 0.29, id_loss: 0.20
+Epoch: 40/60 Setp: 650, ranking_loss: 0.69, id_loss: 0.36
+Epoch: 40/60 Setp: 700, ranking_loss: 0.42, id_loss: 0.40
+Epoch: 40/60 Setp: 750, ranking_loss: 0.47, id_loss: 0.06
+Epoch: 40/60 Setp: 800, ranking_loss: 0.98, id_loss: 0.07
+Epoch: 40/60 Setp: 850, ranking_loss: 1.92, id_loss: 0.25
+Epoch: 40/60 Setp: 900, ranking_loss: 1.08, id_loss: 0.04
+Epoch: 40/60 Setp: 950, ranking_loss: 1.22, id_loss: 0.15
+Epoch: 40/60 Setp: 1000, ranking_loss: 0.79, id_loss: 0.42
+Epoch: 40/60 Setp: 1050, ranking_loss: 1.21, id_loss: 0.15
+Epoch: 40/60 , ranking_loss: 0.98, id_loss: 0.23
+SSAN
+Testing Epoch: 40
+lr:1e-05
+lr:1.0000000000000002e-06
+similarity_global:
+t2i: @R1: 0.5773, @R5: 0.7895, @R10: 0.8602, map: 0.4965
+similarity_local:
+t2i: @R1: 0.5991, @R5: 0.8024, @R10: 0.8652, map: 0.5203
+similarity_non_local:
+t2i: @R1: 0.5978, @R5: 0.7964, @R10: 0.8597, map: 0.5209
+similarity_all:
+t2i: @R1: 0.6164, @R5: 0.8141, @R10: 0.8777, map: 0.5393
+Epoch: 41/60 Setp: 50, ranking_loss: 0.88, id_loss: 0.27
+Epoch: 41/60 Setp: 100, ranking_loss: 0.48, id_loss: 0.22
+Epoch: 41/60 Setp: 150, ranking_loss: 0.93, id_loss: 0.09
+Epoch: 41/60 Setp: 200, ranking_loss: 1.51, id_loss: 0.17
+Epoch: 41/60 Setp: 250, ranking_loss: 0.69, id_loss: 0.15
+Epoch: 41/60 Setp: 300, ranking_loss: 1.27, id_loss: 0.10
+Epoch: 41/60 Setp: 350, ranking_loss: 1.03, id_loss: 0.43
+Epoch: 41/60 Setp: 400, ranking_loss: 0.97, id_loss: 0.16
+Epoch: 41/60 Setp: 450, ranking_loss: 1.03, id_loss: 0.10
+Epoch: 41/60 Setp: 500, ranking_loss: 1.17, id_loss: 0.22
+Epoch: 41/60 Setp: 550, ranking_loss: 1.34, id_loss: 0.16
+Epoch: 41/60 Setp: 600, ranking_loss: 0.79, id_loss: 0.14
+Epoch: 41/60 Setp: 650, ranking_loss: 0.60, id_loss: 0.14
+Epoch: 41/60 Setp: 700, ranking_loss: 0.79, id_loss: 0.17
+Epoch: 41/60 Setp: 750, ranking_loss: 1.40, id_loss: 0.33
+Epoch: 41/60 Setp: 800, ranking_loss: 0.63, id_loss: 0.11
+Epoch: 41/60 Setp: 850, ranking_loss: 1.87, id_loss: 0.36
+Epoch: 41/60 Setp: 900, ranking_loss: 1.07, id_loss: 0.39
+Epoch: 41/60 Setp: 950, ranking_loss: 0.67, id_loss: 0.17
+Epoch: 41/60 Setp: 1000, ranking_loss: 0.69, id_loss: 0.10
+Epoch: 41/60 Setp: 1050, ranking_loss: 1.28, id_loss: 0.13
+Epoch: 41/60 , ranking_loss: 0.95, id_loss: 0.17
+SSAN
+Testing Epoch: 41
+lr:1e-05
+lr:1.0000000000000002e-06
+similarity_global:
+t2i: @R1: 0.581, @R5: 0.7895, @R10: 0.8612, map: 0.4983
+similarity_local:
+t2i: @R1: 0.6008, @R5: 0.803, @R10: 0.8633, map: 0.5211
+similarity_non_local:
+t2i: @R1: 0.6007, @R5: 0.7972, @R10: 0.8599, map: 0.5231
+similarity_all:
+t2i: @R1: 0.6202, @R5: 0.8142, @R10: 0.8771, map: 0.5407
+Epoch: 42/60 Setp: 50, ranking_loss: 0.56, id_loss: 0.07
+Epoch: 42/60 Setp: 100, ranking_loss: 2.52, id_loss: 0.11
+Epoch: 42/60 Setp: 150, ranking_loss: 1.30, id_loss: 0.04
+Epoch: 42/60 Setp: 200, ranking_loss: 1.73, id_loss: 0.05
+Epoch: 42/60 Setp: 250, ranking_loss: 0.74, id_loss: 0.13
+Epoch: 42/60 Setp: 300, ranking_loss: 1.29, id_loss: 0.11
+Epoch: 42/60 Setp: 350, ranking_loss: 1.22, id_loss: 0.03
+Epoch: 42/60 Setp: 400, ranking_loss: 1.36, id_loss: 0.26
+Epoch: 42/60 Setp: 450, ranking_loss: 0.72, id_loss: 0.15
+Epoch: 42/60 Setp: 500, ranking_loss: 1.92, id_loss: 0.41
+Epoch: 42/60 Setp: 550, ranking_loss: 0.70, id_loss: 0.06
+Epoch: 42/60 Setp: 600, ranking_loss: 1.65, id_loss: 0.08
+Epoch: 42/60 Setp: 650, ranking_loss: 1.26, id_loss: 0.10
+Epoch: 42/60 Setp: 700, ranking_loss: 1.05, id_loss: 0.11
+Epoch: 42/60 Setp: 750, ranking_loss: 0.88, id_loss: 0.09
+Epoch: 42/60 Setp: 800, ranking_loss: 0.31, id_loss: 0.16
+Epoch: 42/60 Setp: 850, ranking_loss: 0.77, id_loss: 0.26
+Epoch: 42/60 Setp: 900, ranking_loss: 1.12, id_loss: 0.16
+Epoch: 42/60 Setp: 950, ranking_loss: 0.84, id_loss: 0.04
+Epoch: 42/60 Setp: 1000, ranking_loss: 0.70, id_loss: 0.26
+Epoch: 42/60 Setp: 1050, ranking_loss: 0.84, id_loss: 0.11
+Epoch: 42/60 , ranking_loss: 0.93, id_loss: 0.17
+SSAN
+Testing Epoch: 42
+lr:1e-05
+lr:1.0000000000000002e-06
+similarity_global:
+t2i: @R1: 0.5802, @R5: 0.7874, @R10: 0.8621, map: 0.4979
+similarity_local:
+t2i: @R1: 0.5986, @R5: 0.802, @R10: 0.8642, map: 0.5203
+similarity_non_local:
+t2i: @R1: 0.5994, @R5: 0.7967, @R10: 0.8607, map: 0.5226
+similarity_all:
+t2i: @R1: 0.6161, @R5: 0.8162, @R10: 0.8776, map: 0.5392
+Epoch: 43/60 Setp: 50, ranking_loss: 1.06, id_loss: 0.26
+Epoch: 43/60 Setp: 100, ranking_loss: 1.10, id_loss: 0.16
+Epoch: 43/60 Setp: 150, ranking_loss: 1.19, id_loss: 0.13
+Epoch: 43/60 Setp: 200, ranking_loss: 1.01, id_loss: 0.10
+Epoch: 43/60 Setp: 250, ranking_loss: 0.34, id_loss: 0.17
+Epoch: 43/60 Setp: 300, ranking_loss: 0.53, id_loss: 0.20
+Epoch: 43/60 Setp: 350, ranking_loss: 1.11, id_loss: 0.26
+Epoch: 43/60 Setp: 400, ranking_loss: 0.93, id_loss: 0.07
+Epoch: 43/60 Setp: 450, ranking_loss: 0.58, id_loss: 0.10
+Epoch: 43/60 Setp: 500, ranking_loss: 0.29, id_loss: 0.03
+Epoch: 43/60 Setp: 550, ranking_loss: 0.63, id_loss: 0.08
+Epoch: 43/60 Setp: 600, ranking_loss: 1.27, id_loss: 0.17
+Epoch: 43/60 Setp: 650, ranking_loss: 1.76, id_loss: 0.30
+Epoch: 43/60 Setp: 700, ranking_loss: 1.01, id_loss: 0.18
+Epoch: 43/60 Setp: 750, ranking_loss: 0.76, id_loss: 0.15
+Epoch: 43/60 Setp: 800, ranking_loss: 0.34, id_loss: 0.04
+Epoch: 43/60 Setp: 850, ranking_loss: 0.85, id_loss: 0.09
+Epoch: 43/60 Setp: 900, ranking_loss: 0.36, id_loss: 0.27
+Epoch: 43/60 Setp: 950, ranking_loss: 0.95, id_loss: 0.12
+Epoch: 43/60 Setp: 1000, ranking_loss: 1.96, id_loss: 0.11
+Epoch: 43/60 Setp: 1050, ranking_loss: 1.33, id_loss: 0.21
+Epoch: 43/60 , ranking_loss: 0.91, id_loss: 0.16
+SSAN
+Testing Epoch: 43
+lr:1e-05
+lr:1.0000000000000002e-06
+similarity_global:
+t2i: @R1: 0.5799, @R5: 0.7884, @R10: 0.86, map: 0.4988
+similarity_local:
+t2i: @R1: 0.6007, @R5: 0.8029, @R10: 0.8629, map: 0.5206
+similarity_non_local:
+t2i: @R1: 0.5994, @R5: 0.7983, @R10: 0.8629, map: 0.523
+similarity_all:
+t2i: @R1: 0.6163, @R5: 0.8134, @R10: 0.8774, map: 0.5393
+Epoch: 44/60 Setp: 50, ranking_loss: 0.75, id_loss: 0.14
+Epoch: 44/60 Setp: 100, ranking_loss: 0.94, id_loss: 0.14
+Epoch: 44/60 Setp: 150, ranking_loss: 1.10, id_loss: 0.05
+Epoch: 44/60 Setp: 200, ranking_loss: 1.28, id_loss: 0.25
+Epoch: 44/60 Setp: 250, ranking_loss: 1.63, id_loss: 0.30
+Epoch: 44/60 Setp: 300, ranking_loss: 0.95, id_loss: 0.13
+Epoch: 44/60 Setp: 350, ranking_loss: 0.39, id_loss: 0.16
+Epoch: 44/60 Setp: 400, ranking_loss: 0.63, id_loss: 0.23
+Epoch: 44/60 Setp: 450, ranking_loss: 1.02, id_loss: 0.17
+Epoch: 44/60 Setp: 500, ranking_loss: 1.22, id_loss: 0.09
+Epoch: 44/60 Setp: 550, ranking_loss: 1.00, id_loss: 0.12
+Epoch: 44/60 Setp: 600, ranking_loss: 0.77, id_loss: 0.12
+Epoch: 44/60 Setp: 650, ranking_loss: 0.86, id_loss: 0.19
+Epoch: 44/60 Setp: 700, ranking_loss: 0.86, id_loss: 0.34
+Epoch: 44/60 Setp: 750, ranking_loss: 1.61, id_loss: 0.05
+Epoch: 44/60 Setp: 800, ranking_loss: 0.54, id_loss: 0.21
+Epoch: 44/60 Setp: 850, ranking_loss: 0.64, id_loss: 0.14
+Epoch: 44/60 Setp: 900, ranking_loss: 1.27, id_loss: 0.13
+Epoch: 44/60 Setp: 950, ranking_loss: 1.23, id_loss: 0.14
+Epoch: 44/60 Setp: 1000, ranking_loss: 0.50, id_loss: 0.09
+Epoch: 44/60 Setp: 1050, ranking_loss: 0.51, id_loss: 0.09
+Epoch: 44/60 , ranking_loss: 0.91, id_loss: 0.16
+SSAN
+Testing Epoch: 44
+lr:1e-05
+lr:1.0000000000000002e-06
+similarity_global:
+t2i: @R1: 0.5814, @R5: 0.7882, @R10: 0.8599, map: 0.499
+similarity_local:
+t2i: @R1: 0.6026, @R5: 0.8017, @R10: 0.8641, map: 0.5217
+similarity_non_local:
+t2i: @R1: 0.601, @R5: 0.7986, @R10: 0.8626, map: 0.5239
+similarity_all:
+t2i: @R1: 0.6168, @R5: 0.8137, @R10: 0.8777, map: 0.5401
+Epoch: 45/60 Setp: 50, ranking_loss: 1.43, id_loss: 0.24
+Epoch: 45/60 Setp: 100, ranking_loss: 1.40, id_loss: 0.16
+Epoch: 45/60 Setp: 150, ranking_loss: 0.39, id_loss: 0.14
+Epoch: 45/60 Setp: 200, ranking_loss: 1.32, id_loss: 0.11
+Epoch: 45/60 Setp: 250, ranking_loss: 1.68, id_loss: 0.20
+Epoch: 45/60 Setp: 300, ranking_loss: 1.34, id_loss: 0.23
+Epoch: 45/60 Setp: 350, ranking_loss: 0.22, id_loss: 0.11
+Epoch: 45/60 Setp: 400, ranking_loss: 1.34, id_loss: 0.23
+Epoch: 45/60 Setp: 450, ranking_loss: 0.45, id_loss: 0.12
+Epoch: 45/60 Setp: 500, ranking_loss: 1.89, id_loss: 0.04
+Epoch: 45/60 Setp: 550, ranking_loss: 0.69, id_loss: 0.21
+Epoch: 45/60 Setp: 600, ranking_loss: 1.21, id_loss: 0.32
+Epoch: 45/60 Setp: 650, ranking_loss: 1.44, id_loss: 0.14
+Epoch: 45/60 Setp: 700, ranking_loss: 0.22, id_loss: 0.32
+Epoch: 45/60 Setp: 750, ranking_loss: 0.32, id_loss: 0.14
+Epoch: 45/60 Setp: 800, ranking_loss: 0.69, id_loss: 0.21
+Epoch: 45/60 Setp: 850, ranking_loss: 0.73, id_loss: 0.11
+Epoch: 45/60 Setp: 900, ranking_loss: 1.03, id_loss: 0.29
+Epoch: 45/60 Setp: 950, ranking_loss: 0.85, id_loss: 0.45
+Epoch: 45/60 Setp: 1000, ranking_loss: 0.90, id_loss: 0.03
+Epoch: 45/60 Setp: 1050, ranking_loss: 0.39, id_loss: 0.11
+Epoch: 45/60 , ranking_loss: 0.91, id_loss: 0.16
+SSAN
+Testing Epoch: 45
+lr:1e-05
+lr:1.0000000000000002e-06
+similarity_global:
+t2i: @R1: 0.5812, @R5: 0.7891, @R10: 0.859, map: 0.499
+similarity_local:
+t2i: @R1: 0.6015, @R5: 0.8029, @R10: 0.8647, map: 0.5211
+similarity_non_local:
+t2i: @R1: 0.6018, @R5: 0.7986, @R10: 0.8618, map: 0.5238
+similarity_all:
+t2i: @R1: 0.6185, @R5: 0.8149, @R10: 0.8776, map: 0.5403
+Epoch: 46/60 Setp: 50, ranking_loss: 1.70, id_loss: 0.25
+Epoch: 46/60 Setp: 100, ranking_loss: 0.45, id_loss: 0.18
+Epoch: 46/60 Setp: 150, ranking_loss: 0.60, id_loss: 0.08
+Epoch: 46/60 Setp: 200, ranking_loss: 0.30, id_loss: 0.06
+Epoch: 46/60 Setp: 250, ranking_loss: 0.54, id_loss: 0.18
+Epoch: 46/60 Setp: 300, ranking_loss: 0.62, id_loss: 0.15
+Epoch: 46/60 Setp: 350, ranking_loss: 0.51, id_loss: 0.10
+Epoch: 46/60 Setp: 400, ranking_loss: 1.25, id_loss: 0.12
+Epoch: 46/60 Setp: 450, ranking_loss: 0.34, id_loss: 0.31
+Epoch: 46/60 Setp: 500, ranking_loss: 1.03, id_loss: 0.19
+Epoch: 46/60 Setp: 550, ranking_loss: 1.72, id_loss: 0.03
+Epoch: 46/60 Setp: 600, ranking_loss: 1.29, id_loss: 0.02
+Epoch: 46/60 Setp: 650, ranking_loss: 1.27, id_loss: 0.18
+Epoch: 46/60 Setp: 700, ranking_loss: 1.15, id_loss: 0.04
+Epoch: 46/60 Setp: 750, ranking_loss: 1.71, id_loss: 0.12
+Epoch: 46/60 Setp: 800, ranking_loss: 0.61, id_loss: 0.04
+Epoch: 46/60 Setp: 850, ranking_loss: 0.45, id_loss: 0.06
+Epoch: 46/60 Setp: 900, ranking_loss: 1.51, id_loss: 0.16
+Epoch: 46/60 Setp: 950, ranking_loss: 1.37, id_loss: 0.07
+Epoch: 46/60 Setp: 1000, ranking_loss: 0.38, id_loss: 0.30
+Epoch: 46/60 Setp: 1050, ranking_loss: 0.79, id_loss: 0.04
+Epoch: 46/60 , ranking_loss: 0.87, id_loss: 0.16
+SSAN
+Testing Epoch: 46
+lr:1e-05
+lr:1.0000000000000002e-06
+similarity_global:
+t2i: @R1: 0.582, @R5: 0.7892, @R10: 0.8608, map: 0.4998
+similarity_local:
+t2i: @R1: 0.5999, @R5: 0.8029, @R10: 0.8662, map: 0.5211
+similarity_non_local:
+t2i: @R1: 0.6007, @R5: 0.7998, @R10: 0.8631, map: 0.5239
+similarity_all:
+t2i: @R1: 0.6158, @R5: 0.815, @R10: 0.8779, map: 0.54
+Epoch: 47/60 Setp: 50, ranking_loss: 0.53, id_loss: 0.17
+Epoch: 47/60 Setp: 100, ranking_loss: 0.43, id_loss: 0.07
+Epoch: 47/60 Setp: 150, ranking_loss: 1.64, id_loss: 0.07
+Epoch: 47/60 Setp: 200, ranking_loss: 1.53, id_loss: 0.26
+Epoch: 47/60 Setp: 250, ranking_loss: 0.66, id_loss: 0.12
+Epoch: 47/60 Setp: 300, ranking_loss: 1.69, id_loss: 0.23
+Epoch: 47/60 Setp: 350, ranking_loss: 0.61, id_loss: 0.04
+Epoch: 47/60 Setp: 400, ranking_loss: 1.11, id_loss: 0.02
+Epoch: 47/60 Setp: 450, ranking_loss: 0.93, id_loss: 0.09
+Epoch: 47/60 Setp: 500, ranking_loss: 0.36, id_loss: 0.06
+Epoch: 47/60 Setp: 550, ranking_loss: 1.01, id_loss: 0.09
+Epoch: 47/60 Setp: 600, ranking_loss: 1.30, id_loss: 0.18
+Epoch: 47/60 Setp: 650, ranking_loss: 0.87, id_loss: 0.11
+Epoch: 47/60 Setp: 700, ranking_loss: 0.92, id_loss: 0.03
+Epoch: 47/60 Setp: 750, ranking_loss: 1.19, id_loss: 0.09
+Epoch: 47/60 Setp: 800, ranking_loss: 0.75, id_loss: 0.03
+Epoch: 47/60 Setp: 850, ranking_loss: 1.12, id_loss: 0.11
+Epoch: 47/60 Setp: 900, ranking_loss: 0.73, id_loss: 0.13
+Epoch: 47/60 Setp: 950, ranking_loss: 0.89, id_loss: 0.07
+Epoch: 47/60 Setp: 1000, ranking_loss: 0.42, id_loss: 0.12
+Epoch: 47/60 Setp: 1050, ranking_loss: 0.90, id_loss: 0.04
+Epoch: 47/60 , ranking_loss: 0.89, id_loss: 0.15
+SSAN
+Testing Epoch: 47
+lr:1e-05
+lr:1.0000000000000002e-06
+similarity_global:
+t2i: @R1: 0.5804, @R5: 0.7904, @R10: 0.8607, map: 0.4992
+similarity_local:
+t2i: @R1: 0.6013, @R5: 0.8037, @R10: 0.8647, map: 0.5215
+similarity_non_local:
+t2i: @R1: 0.602, @R5: 0.8001, @R10: 0.8615, map: 0.5241
+similarity_all:
+t2i: @R1: 0.6161, @R5: 0.8146, @R10: 0.8756, map: 0.5397
+Epoch: 48/60 Setp: 50, ranking_loss: 0.61, id_loss: 0.03
+Epoch: 48/60 Setp: 100, ranking_loss: 0.41, id_loss: 0.02
+Epoch: 48/60 Setp: 150, ranking_loss: 0.44, id_loss: 0.30
+Epoch: 48/60 Setp: 200, ranking_loss: 0.53, id_loss: 0.20
+Epoch: 48/60 Setp: 250, ranking_loss: 1.09, id_loss: 0.03
+Epoch: 48/60 Setp: 300, ranking_loss: 0.98, id_loss: 0.20
+Epoch: 48/60 Setp: 350, ranking_loss: 1.39, id_loss: 0.23
+Epoch: 48/60 Setp: 400, ranking_loss: 0.32, id_loss: 0.21
+Epoch: 48/60 Setp: 450, ranking_loss: 0.89, id_loss: 0.13
+Epoch: 48/60 Setp: 500, ranking_loss: 0.31, id_loss: 0.02
+Epoch: 48/60 Setp: 550, ranking_loss: 0.98, id_loss: 0.05
+Epoch: 48/60 Setp: 600, ranking_loss: 0.40, id_loss: 0.30
+Epoch: 48/60 Setp: 650, ranking_loss: 0.45, id_loss: 0.09
+Epoch: 48/60 Setp: 700, ranking_loss: 0.60, id_loss: 0.18
+Epoch: 48/60 Setp: 750, ranking_loss: 1.33, id_loss: 0.17
+Epoch: 48/60 Setp: 800, ranking_loss: 0.53, id_loss: 0.11
+Epoch: 48/60 Setp: 850, ranking_loss: 0.54, id_loss: 0.33
+Epoch: 48/60 Setp: 900, ranking_loss: 0.54, id_loss: 0.21
+Epoch: 48/60 Setp: 950, ranking_loss: 0.72, id_loss: 0.13
+Epoch: 48/60 Setp: 1000, ranking_loss: 0.99, id_loss: 0.12
+Epoch: 48/60 Setp: 1050, ranking_loss: 0.61, id_loss: 0.15
+Epoch: 48/60 , ranking_loss: 0.90, id_loss: 0.15
+SSAN
+Testing Epoch: 48
+lr:1e-05
+lr:1.0000000000000002e-06
+similarity_global:
+t2i: @R1: 0.5796, @R5: 0.7894, @R10: 0.8618, map: 0.4986
+similarity_local:
+t2i: @R1: 0.6, @R5: 0.8042, @R10: 0.8642, map: 0.5209
+similarity_non_local:
+t2i: @R1: 0.6017, @R5: 0.7985, @R10: 0.8621, map: 0.5238
+similarity_all:
+t2i: @R1: 0.6151, @R5: 0.8142, @R10: 0.878, map: 0.5397
+Epoch: 49/60 Setp: 50, ranking_loss: 1.46, id_loss: 0.03
+Epoch: 49/60 Setp: 100, ranking_loss: 0.38, id_loss: 0.11
+Epoch: 49/60 Setp: 150, ranking_loss: 1.80, id_loss: 0.11
+Epoch: 49/60 Setp: 200, ranking_loss: 0.68, id_loss: 0.06
+Epoch: 49/60 Setp: 250, ranking_loss: 1.08, id_loss: 0.13
+Epoch: 49/60 Setp: 300, ranking_loss: 1.85, id_loss: 0.23
+Epoch: 49/60 Setp: 350, ranking_loss: 0.48, id_loss: 0.26
+Epoch: 49/60 Setp: 400, ranking_loss: 1.96, id_loss: 0.13
+Epoch: 49/60 Setp: 450, ranking_loss: 0.91, id_loss: 0.03
+Epoch: 49/60 Setp: 500, ranking_loss: 1.23, id_loss: 0.21
+Epoch: 49/60 Setp: 550, ranking_loss: 0.87, id_loss: 0.25
+Epoch: 49/60 Setp: 600, ranking_loss: 0.71, id_loss: 0.35
+Epoch: 49/60 Setp: 650, ranking_loss: 0.64, id_loss: 0.27
+Epoch: 49/60 Setp: 700, ranking_loss: 1.21, id_loss: 0.15
+Epoch: 49/60 Setp: 750, ranking_loss: 0.63, id_loss: 0.04
+Epoch: 49/60 Setp: 800, ranking_loss: 0.95, id_loss: 0.10
+Epoch: 49/60 Setp: 850, ranking_loss: 0.84, id_loss: 0.23
+Epoch: 49/60 Setp: 900, ranking_loss: 0.70, id_loss: 0.08
+Epoch: 49/60 Setp: 950, ranking_loss: 0.51, id_loss: 0.16
+Epoch: 49/60 Setp: 1000, ranking_loss: 0.70, id_loss: 0.13
+Epoch: 49/60 Setp: 1050, ranking_loss: 0.90, id_loss: 0.05
+Epoch: 49/60 , ranking_loss: 0.91, id_loss: 0.15
+SSAN
+Testing Epoch: 49
+lr:1e-05
+lr:1.0000000000000002e-06
+similarity_global:
+t2i: @R1: 0.581, @R5: 0.7905, @R10: 0.8605, map: 0.4985
+similarity_local:
+t2i: @R1: 0.5984, @R5: 0.8037, @R10: 0.8642, map: 0.52
+similarity_non_local:
+t2i: @R1: 0.5987, @R5: 0.7977, @R10: 0.8602, map: 0.523
+similarity_all:
+t2i: @R1: 0.6153, @R5: 0.8146, @R10: 0.8764, map: 0.5394
+Epoch: 50/60 Setp: 50, ranking_loss: 1.81, id_loss: 0.22
+Epoch: 50/60 Setp: 100, ranking_loss: 1.44, id_loss: 0.09
+Epoch: 50/60 Setp: 150, ranking_loss: 1.69, id_loss: 0.07
+Epoch: 50/60 Setp: 200, ranking_loss: 0.50, id_loss: 0.15
+Epoch: 50/60 Setp: 250, ranking_loss: 0.38, id_loss: 0.06
+Epoch: 50/60 Setp: 300, ranking_loss: 0.53, id_loss: 0.24
+Epoch: 50/60 Setp: 350, ranking_loss: 1.31, id_loss: 0.13
+Epoch: 50/60 Setp: 400, ranking_loss: 1.02, id_loss: 0.25
+Epoch: 50/60 Setp: 450, ranking_loss: 1.71, id_loss: 0.31
+Epoch: 50/60 Setp: 500, ranking_loss: 1.25, id_loss: 0.03
+Epoch: 50/60 Setp: 550, ranking_loss: 0.79, id_loss: 0.08
+Epoch: 50/60 Setp: 600, ranking_loss: 0.87, id_loss: 0.19
+Epoch: 50/60 Setp: 650, ranking_loss: 0.70, id_loss: 0.28
+Epoch: 50/60 Setp: 700, ranking_loss: 0.72, id_loss: 0.27
+Epoch: 50/60 Setp: 750, ranking_loss: 0.93, id_loss: 0.03
+Epoch: 50/60 Setp: 800, ranking_loss: 0.99, id_loss: 0.26
+Epoch: 50/60 Setp: 850, ranking_loss: 0.66, id_loss: 0.07
+Epoch: 50/60 Setp: 900, ranking_loss: 1.14, id_loss: 0.18
+Epoch: 50/60 Setp: 950, ranking_loss: 1.37, id_loss: 0.09
+Epoch: 50/60 Setp: 1000, ranking_loss: 0.77, id_loss: 0.16
+Epoch: 50/60 Setp: 1050, ranking_loss: 1.20, id_loss: 0.09
+Epoch: 50/60 , ranking_loss: 0.88, id_loss: 0.15
+SSAN
+Testing Epoch: 50
+lr:1e-05
+lr:1.0000000000000002e-06
+similarity_global:
+t2i: @R1: 0.5792, @R5: 0.791, @R10: 0.8607, map: 0.4978
+similarity_local:
+t2i: @R1: 0.6002, @R5: 0.8029, @R10: 0.8662, map: 0.521
+similarity_non_local:
+t2i: @R1: 0.5971, @R5: 0.7985, @R10: 0.8621, map: 0.5224
+similarity_all:
+t2i: @R1: 0.6164, @R5: 0.8142, @R10: 0.8774, map: 0.5397
+Epoch: 51/60 Setp: 50, ranking_loss: 0.70, id_loss: 0.39
+Epoch: 51/60 Setp: 100, ranking_loss: 0.89, id_loss: 0.16
+Epoch: 51/60 Setp: 150, ranking_loss: 1.18, id_loss: 0.18
+Epoch: 51/60 Setp: 200, ranking_loss: 0.80, id_loss: 0.24
+Epoch: 51/60 Setp: 250, ranking_loss: 0.46, id_loss: 0.08
+Epoch: 51/60 Setp: 300, ranking_loss: 0.67, id_loss: 0.06
+Epoch: 51/60 Setp: 350, ranking_loss: 0.58, id_loss: 0.17
+Epoch: 51/60 Setp: 400, ranking_loss: 1.07, id_loss: 0.16
+Epoch: 51/60 Setp: 450, ranking_loss: 1.06, id_loss: 0.15
+Epoch: 51/60 Setp: 500, ranking_loss: 0.85, id_loss: 0.19
+Epoch: 51/60 Setp: 550, ranking_loss: 0.88, id_loss: 0.42
+Epoch: 51/60 Setp: 600, ranking_loss: 0.81, id_loss: 0.23
+Epoch: 51/60 Setp: 650, ranking_loss: 0.75, id_loss: 0.03
+Epoch: 51/60 Setp: 700, ranking_loss: 0.73, id_loss: 0.09
+Epoch: 51/60 Setp: 750, ranking_loss: 0.88, id_loss: 0.06
+Epoch: 51/60 Setp: 800, ranking_loss: 0.36, id_loss: 0.03
+Epoch: 51/60 Setp: 850, ranking_loss: 1.16, id_loss: 0.09
+Epoch: 51/60 Setp: 900, ranking_loss: 0.35, id_loss: 0.20
+Epoch: 51/60 Setp: 950, ranking_loss: 0.69, id_loss: 0.15
+Epoch: 51/60 Setp: 1000, ranking_loss: 1.20, id_loss: 0.04
+Epoch: 51/60 Setp: 1050, ranking_loss: 0.66, id_loss: 0.17
+Epoch: 51/60 , ranking_loss: 0.87, id_loss: 0.15
+SSAN
+Testing Epoch: 51
+lr:1e-05
+lr:1.0000000000000002e-06
+similarity_global:
+t2i: @R1: 0.5796, @R5: 0.7897, @R10: 0.8599, map: 0.4979
+similarity_local:
+t2i: @R1: 0.5995, @R5: 0.804, @R10: 0.8654, map: 0.5212
+similarity_non_local:
+t2i: @R1: 0.6005, @R5: 0.799, @R10: 0.8631, map: 0.5241
+similarity_all:
+t2i: @R1: 0.6179, @R5: 0.812, @R10: 0.8766, map: 0.5406
+Epoch: 52/60 Setp: 50, ranking_loss: 0.54, id_loss: 0.09
+Epoch: 52/60 Setp: 100, ranking_loss: 1.02, id_loss: 0.10
+Epoch: 52/60 Setp: 150, ranking_loss: 0.98, id_loss: 0.15
+Epoch: 52/60 Setp: 200, ranking_loss: 0.52, id_loss: 0.03
+Epoch: 52/60 Setp: 250, ranking_loss: 0.57, id_loss: 0.16
+Epoch: 52/60 Setp: 300, ranking_loss: 1.20, id_loss: 0.13
+Epoch: 52/60 Setp: 350, ranking_loss: 0.97, id_loss: 0.12
+Epoch: 52/60 Setp: 400, ranking_loss: 1.12, id_loss: 0.16
+Epoch: 52/60 Setp: 450, ranking_loss: 1.49, id_loss: 0.32
+Epoch: 52/60 Setp: 500, ranking_loss: 1.38, id_loss: 0.17
+Epoch: 52/60 Setp: 550, ranking_loss: 1.13, id_loss: 0.02
+Epoch: 52/60 Setp: 600, ranking_loss: 0.45, id_loss: 0.01
+Epoch: 52/60 Setp: 650, ranking_loss: 1.28, id_loss: 0.03
+Epoch: 52/60 Setp: 700, ranking_loss: 1.85, id_loss: 0.04
+Epoch: 52/60 Setp: 750, ranking_loss: 0.73, id_loss: 0.41
+Epoch: 52/60 Setp: 800, ranking_loss: 0.64, id_loss: 0.03
+Epoch: 52/60 Setp: 850, ranking_loss: 0.59, id_loss: 0.16
+Epoch: 52/60 Setp: 900, ranking_loss: 0.80, id_loss: 0.14
+Epoch: 52/60 Setp: 950, ranking_loss: 1.24, id_loss: 0.09
+Epoch: 52/60 Setp: 1000, ranking_loss: 1.41, id_loss: 0.21
+Epoch: 52/60 Setp: 1050, ranking_loss: 1.36, id_loss: 0.06
+Epoch: 52/60 , ranking_loss: 0.88, id_loss: 0.15
+SSAN
+Testing Epoch: 52
+lr:1e-05
+lr:1.0000000000000002e-06
+similarity_global:
+t2i: @R1: 0.5799, @R5: 0.7897, @R10: 0.8605, map: 0.498
+similarity_local:
+t2i: @R1: 0.6005, @R5: 0.802, @R10: 0.8647, map: 0.5206
+similarity_non_local:
+t2i: @R1: 0.5982, @R5: 0.798, @R10: 0.862, map: 0.5239
+similarity_all:
+t2i: @R1: 0.6163, @R5: 0.8116, @R10: 0.8764, map: 0.54
+Epoch: 53/60 Setp: 50, ranking_loss: 0.51, id_loss: 0.10
+Epoch: 53/60 Setp: 100, ranking_loss: 1.47, id_loss: 0.31
+Epoch: 53/60 Setp: 150, ranking_loss: 0.65, id_loss: 0.19
+Epoch: 53/60 Setp: 200, ranking_loss: 0.87, id_loss: 0.20
+Epoch: 53/60 Setp: 250, ranking_loss: 0.61, id_loss: 0.02
+Epoch: 53/60 Setp: 300, ranking_loss: 0.90, id_loss: 0.25
+Epoch: 53/60 Setp: 350, ranking_loss: 1.00, id_loss: 0.05
+Epoch: 53/60 Setp: 400, ranking_loss: 1.43, id_loss: 0.03
+Epoch: 53/60 Setp: 450, ranking_loss: 0.37, id_loss: 0.22
+Epoch: 53/60 Setp: 500, ranking_loss: 0.77, id_loss: 0.11
+Epoch: 53/60 Setp: 550, ranking_loss: 1.04, id_loss: 0.12
+Epoch: 53/60 Setp: 600, ranking_loss: 0.64, id_loss: 0.11
+Epoch: 53/60 Setp: 650, ranking_loss: 0.29, id_loss: 0.13
+Epoch: 53/60 Setp: 700, ranking_loss: 0.43, id_loss: 0.09
+Epoch: 53/60 Setp: 750, ranking_loss: 1.36, id_loss: 0.12
+Epoch: 53/60 Setp: 800, ranking_loss: 0.88, id_loss: 0.27
+Epoch: 53/60 Setp: 850, ranking_loss: 0.31, id_loss: 0.13
+Epoch: 53/60 Setp: 900, ranking_loss: 1.50, id_loss: 0.08
+Epoch: 53/60 Setp: 950, ranking_loss: 0.88, id_loss: 0.13
+Epoch: 53/60 Setp: 1000, ranking_loss: 1.41, id_loss: 0.15
+Epoch: 53/60 Setp: 1050, ranking_loss: 0.51, id_loss: 0.10
+Epoch: 53/60 , ranking_loss: 0.86, id_loss: 0.15
+SSAN
+Testing Epoch: 53
+lr:1e-05
+lr:1.0000000000000002e-06
+similarity_global:
+t2i: @R1: 0.5799, @R5: 0.7897, @R10: 0.8607, map: 0.4981
+similarity_local:
+t2i: @R1: 0.5994, @R5: 0.8032, @R10: 0.8654, map: 0.5208
+similarity_non_local:
+t2i: @R1: 0.6023, @R5: 0.7994, @R10: 0.8613, map: 0.5251
+similarity_all:
+t2i: @R1: 0.6176, @R5: 0.8131, @R10: 0.8772, map: 0.5406
+Epoch: 54/60 Setp: 50, ranking_loss: 1.79, id_loss: 0.04
+Epoch: 54/60 Setp: 100, ranking_loss: 0.76, id_loss: 0.25
+Epoch: 54/60 Setp: 150, ranking_loss: 0.68, id_loss: 0.12
+Epoch: 54/60 Setp: 200, ranking_loss: 0.44, id_loss: 0.20
+Epoch: 54/60 Setp: 250, ranking_loss: 0.50, id_loss: 0.02
+Epoch: 54/60 Setp: 300, ranking_loss: 0.45, id_loss: 0.18
+Epoch: 54/60 Setp: 350, ranking_loss: 0.95, id_loss: 0.28
+Epoch: 54/60 Setp: 400, ranking_loss: 1.28, id_loss: 0.21
+Epoch: 54/60 Setp: 450, ranking_loss: 0.98, id_loss: 0.15
+Epoch: 54/60 Setp: 500, ranking_loss: 1.03, id_loss: 0.19
+Epoch: 54/60 Setp: 550, ranking_loss: 0.78, id_loss: 0.02
+Epoch: 54/60 Setp: 600, ranking_loss: 1.11, id_loss: 0.16
+Epoch: 54/60 Setp: 650, ranking_loss: 0.54, id_loss: 0.03
+Epoch: 54/60 Setp: 700, ranking_loss: 0.39, id_loss: 0.02
+Epoch: 54/60 Setp: 750, ranking_loss: 0.80, id_loss: 0.02
+Epoch: 54/60 Setp: 800, ranking_loss: 0.88, id_loss: 0.17
+Epoch: 54/60 Setp: 850, ranking_loss: 0.49, id_loss: 0.15
+Epoch: 54/60 Setp: 900, ranking_loss: 0.70, id_loss: 0.15
+Epoch: 54/60 Setp: 950, ranking_loss: 0.45, id_loss: 0.03
+Epoch: 54/60 Setp: 1000, ranking_loss: 1.57, id_loss: 0.06
+Epoch: 54/60 Setp: 1050, ranking_loss: 0.37, id_loss: 0.02
+Epoch: 54/60 , ranking_loss: 0.87, id_loss: 0.15
+SSAN
+Testing Epoch: 54
+lr:1e-05
+lr:1.0000000000000002e-06
+similarity_global:
+t2i: @R1: 0.5804, @R5: 0.7905, @R10: 0.8612, map: 0.4986
+similarity_local:
+t2i: @R1: 0.5999, @R5: 0.805, @R10: 0.8649, map: 0.5212
+similarity_non_local:
+t2i: @R1: 0.6017, @R5: 0.799, @R10: 0.8625, map: 0.5249
+similarity_all:
+t2i: @R1: 0.6189, @R5: 0.8133, @R10: 0.8779, map: 0.5413
+Epoch: 55/60 Setp: 50, ranking_loss: 0.40, id_loss: 0.11
+Epoch: 55/60 Setp: 100, ranking_loss: 0.39, id_loss: 0.11
+Epoch: 55/60 Setp: 150, ranking_loss: 0.81, id_loss: 0.14
+Epoch: 55/60 Setp: 200, ranking_loss: 1.57, id_loss: 0.25
+Epoch: 55/60 Setp: 250, ranking_loss: 0.93, id_loss: 0.11
+Epoch: 55/60 Setp: 300, ranking_loss: 0.49, id_loss: 0.08
+Epoch: 55/60 Setp: 350, ranking_loss: 0.32, id_loss: 0.12
+Epoch: 55/60 Setp: 400, ranking_loss: 0.65, id_loss: 0.56
+Epoch: 55/60 Setp: 450, ranking_loss: 1.37, id_loss: 0.13
+Epoch: 55/60 Setp: 500, ranking_loss: 0.87, id_loss: 0.02
+Epoch: 55/60 Setp: 550, ranking_loss: 0.35, id_loss: 0.11
+Epoch: 55/60 Setp: 600, ranking_loss: 1.22, id_loss: 0.05
+Epoch: 55/60 Setp: 650, ranking_loss: 1.02, id_loss: 0.07
+Epoch: 55/60 Setp: 700, ranking_loss: 0.29, id_loss: 0.11
+Epoch: 55/60 Setp: 750, ranking_loss: 0.57, id_loss: 0.04
+Epoch: 55/60 Setp: 800, ranking_loss: 1.30, id_loss: 0.02
+Epoch: 55/60 Setp: 850, ranking_loss: 0.69, id_loss: 0.16
+Epoch: 55/60 Setp: 900, ranking_loss: 0.43, id_loss: 0.21
+Epoch: 55/60 Setp: 950, ranking_loss: 0.38, id_loss: 0.19
+Epoch: 55/60 Setp: 1000, ranking_loss: 0.77, id_loss: 0.14
+Epoch: 55/60 Setp: 1050, ranking_loss: 1.06, id_loss: 0.09
+Epoch: 55/60 , ranking_loss: 0.87, id_loss: 0.15
+SSAN
+Testing Epoch: 55
+lr:1e-05
+lr:1.0000000000000002e-06
+similarity_global:
+t2i: @R1: 0.5794, @R5: 0.7902, @R10: 0.8615, map: 0.4982
+similarity_local:
+t2i: @R1: 0.6002, @R5: 0.8033, @R10: 0.8641, map: 0.5209
+similarity_non_local:
+t2i: @R1: 0.6023, @R5: 0.7981, @R10: 0.861, map: 0.5252
+similarity_all:
+t2i: @R1: 0.6176, @R5: 0.8118, @R10: 0.8772, map: 0.5401
+Epoch: 56/60 Setp: 50, ranking_loss: 0.29, id_loss: 0.12
+Epoch: 56/60 Setp: 100, ranking_loss: 0.60, id_loss: 0.17
+Epoch: 56/60 Setp: 150, ranking_loss: 0.70, id_loss: 0.08
+Epoch: 56/60 Setp: 200, ranking_loss: 0.40, id_loss: 0.04
+Epoch: 56/60 Setp: 250, ranking_loss: 1.72, id_loss: 0.13
+Epoch: 56/60 Setp: 300, ranking_loss: 0.74, id_loss: 0.16
+Epoch: 56/60 Setp: 350, ranking_loss: 0.99, id_loss: 0.21
+Epoch: 56/60 Setp: 400, ranking_loss: 1.25, id_loss: 0.38
+Epoch: 56/60 Setp: 450, ranking_loss: 0.63, id_loss: 0.14
+Epoch: 56/60 Setp: 500, ranking_loss: 1.35, id_loss: 0.34
+Epoch: 56/60 Setp: 550, ranking_loss: 1.06, id_loss: 0.22
+Epoch: 56/60 Setp: 600, ranking_loss: 1.70, id_loss: 0.21
+Epoch: 56/60 Setp: 650, ranking_loss: 0.39, id_loss: 0.45
+Epoch: 56/60 Setp: 700, ranking_loss: 0.52, id_loss: 0.22
+Epoch: 56/60 Setp: 750, ranking_loss: 0.59, id_loss: 0.27
+Epoch: 56/60 Setp: 800, ranking_loss: 0.86, id_loss: 0.21
+Epoch: 56/60 Setp: 850, ranking_loss: 1.16, id_loss: 0.14
+Epoch: 56/60 Setp: 900, ranking_loss: 0.93, id_loss: 0.24
+Epoch: 56/60 Setp: 950, ranking_loss: 0.40, id_loss: 0.32
+Epoch: 56/60 Setp: 1000, ranking_loss: 2.04, id_loss: 0.18
+Epoch: 56/60 Setp: 1050, ranking_loss: 0.47, id_loss: 0.03
+Epoch: 56/60 , ranking_loss: 0.84, id_loss: 0.15
+SSAN
+Testing Epoch: 56
+lr:1e-05
+lr:1.0000000000000002e-06
+similarity_global:
+t2i: @R1: 0.5809, @R5: 0.7904, @R10: 0.861, map: 0.4986
+similarity_local:
+t2i: @R1: 0.6002, @R5: 0.803, @R10: 0.8647, map: 0.5208
+similarity_non_local:
+t2i: @R1: 0.6, @R5: 0.796, @R10: 0.8607, map: 0.5246
+similarity_all:
+t2i: @R1: 0.6187, @R5: 0.8134, @R10: 0.8763, map: 0.541
+Epoch: 57/60 Setp: 50, ranking_loss: 2.03, id_loss: 0.14
+Epoch: 57/60 Setp: 100, ranking_loss: 1.23, id_loss: 0.02
+Epoch: 57/60 Setp: 150, ranking_loss: 0.67, id_loss: 0.02
+Epoch: 57/60 Setp: 200, ranking_loss: 1.41, id_loss: 0.11
+Epoch: 57/60 Setp: 250, ranking_loss: 0.86, id_loss: 0.02
+Epoch: 57/60 Setp: 300, ranking_loss: 0.91, id_loss: 0.02
+Epoch: 57/60 Setp: 350, ranking_loss: 1.06, id_loss: 0.11
+Epoch: 57/60 Setp: 400, ranking_loss: 0.52, id_loss: 0.11
+Epoch: 57/60 Setp: 450, ranking_loss: 0.59, id_loss: 0.31
+Epoch: 57/60 Setp: 500, ranking_loss: 0.70, id_loss: 0.36
+Epoch: 57/60 Setp: 550, ranking_loss: 0.94, id_loss: 0.28
+Epoch: 57/60 Setp: 600, ranking_loss: 1.16, id_loss: 0.07
+Epoch: 57/60 Setp: 650, ranking_loss: 0.65, id_loss: 0.09
+Epoch: 57/60 Setp: 700, ranking_loss: 1.01, id_loss: 0.08
+Epoch: 57/60 Setp: 750, ranking_loss: 0.96, id_loss: 0.18
+Epoch: 57/60 Setp: 800, ranking_loss: 0.95, id_loss: 0.17
+Epoch: 57/60 Setp: 850, ranking_loss: 0.97, id_loss: 0.20
+Epoch: 57/60 Setp: 900, ranking_loss: 0.76, id_loss: 0.05
+Epoch: 57/60 Setp: 950, ranking_loss: 0.57, id_loss: 0.14
+Epoch: 57/60 Setp: 1000, ranking_loss: 0.70, id_loss: 0.02
+Epoch: 57/60 Setp: 1050, ranking_loss: 0.62, id_loss: 0.09
+Epoch: 57/60 , ranking_loss: 0.87, id_loss: 0.15
+SSAN
+Testing Epoch: 57
+lr:1e-05
+lr:1.0000000000000002e-06
+similarity_global:
+t2i: @R1: 0.5801, @R5: 0.7905, @R10: 0.8607, map: 0.4991
+similarity_local:
+t2i: @R1: 0.6007, @R5: 0.8037, @R10: 0.8639, map: 0.521
+similarity_non_local:
+t2i: @R1: 0.601, @R5: 0.7975, @R10: 0.8613, map: 0.5243
+similarity_all:
+t2i: @R1: 0.6184, @R5: 0.8129, @R10: 0.8766, map: 0.5406
+Epoch: 58/60 Setp: 50, ranking_loss: 1.01, id_loss: 0.13
+Epoch: 58/60 Setp: 100, ranking_loss: 0.48, id_loss: 0.14
+Epoch: 58/60 Setp: 150, ranking_loss: 1.03, id_loss: 0.12
+Epoch: 58/60 Setp: 200, ranking_loss: 0.93, id_loss: 0.19
+Epoch: 58/60 Setp: 250, ranking_loss: 1.04, id_loss: 0.03
+Epoch: 58/60 Setp: 300, ranking_loss: 0.38, id_loss: 0.20
+Epoch: 58/60 Setp: 350, ranking_loss: 1.24, id_loss: 0.08
+Epoch: 58/60 Setp: 400, ranking_loss: 0.31, id_loss: 0.18
+Epoch: 58/60 Setp: 450, ranking_loss: 0.60, id_loss: 0.08
+Epoch: 58/60 Setp: 500, ranking_loss: 0.35, id_loss: 0.20
+Epoch: 58/60 Setp: 550, ranking_loss: 0.94, id_loss: 0.13
+Epoch: 58/60 Setp: 600, ranking_loss: 1.39, id_loss: 0.37
+Epoch: 58/60 Setp: 650, ranking_loss: 0.88, id_loss: 0.26
+Epoch: 58/60 Setp: 700, ranking_loss: 0.35, id_loss: 0.21
+Epoch: 58/60 Setp: 750, ranking_loss: 0.67, id_loss: 0.25
+Epoch: 58/60 Setp: 800, ranking_loss: 1.04, id_loss: 0.29
+Epoch: 58/60 Setp: 850, ranking_loss: 1.12, id_loss: 0.04
+Epoch: 58/60 Setp: 900, ranking_loss: 1.18, id_loss: 0.14
+Epoch: 58/60 Setp: 950, ranking_loss: 0.71, id_loss: 0.12
+Epoch: 58/60 Setp: 1000, ranking_loss: 0.98, id_loss: 0.29
+Epoch: 58/60 Setp: 1050, ranking_loss: 1.25, id_loss: 0.09
+Epoch: 58/60 , ranking_loss: 0.86, id_loss: 0.15
+SSAN
+Testing Epoch: 58
+lr:1e-05
+lr:1.0000000000000002e-06
+similarity_global:
+t2i: @R1: 0.5836, @R5: 0.7921, @R10: 0.8629, map: 0.5
+similarity_local:
+t2i: @R1: 0.6007, @R5: 0.803, @R10: 0.8639, map: 0.5209
+similarity_non_local:
+t2i: @R1: 0.5991, @R5: 0.7975, @R10: 0.8616, map: 0.524
+similarity_all:
+t2i: @R1: 0.6189, @R5: 0.8142, @R10: 0.8764, map: 0.5411
+Epoch: 59/60 Setp: 50, ranking_loss: 0.60, id_loss: 0.15
+Epoch: 59/60 Setp: 100, ranking_loss: 1.35, id_loss: 0.11
+Epoch: 59/60 Setp: 150, ranking_loss: 0.87, id_loss: 0.02
+Epoch: 59/60 Setp: 200, ranking_loss: 0.54, id_loss: 0.10
+Epoch: 59/60 Setp: 250, ranking_loss: 0.43, id_loss: 0.14
+Epoch: 59/60 Setp: 300, ranking_loss: 0.38, id_loss: 0.22
+Epoch: 59/60 Setp: 350, ranking_loss: 1.44, id_loss: 0.32
+Epoch: 59/60 Setp: 400, ranking_loss: 1.21, id_loss: 0.21
+Epoch: 59/60 Setp: 450, ranking_loss: 0.81, id_loss: 0.05
+Epoch: 59/60 Setp: 500, ranking_loss: 0.62, id_loss: 0.46
+Epoch: 59/60 Setp: 550, ranking_loss: 2.44, id_loss: 0.25
+Epoch: 59/60 Setp: 600, ranking_loss: 1.49, id_loss: 0.12
+Epoch: 59/60 Setp: 650, ranking_loss: 1.28, id_loss: 0.02
+Epoch: 59/60 Setp: 700, ranking_loss: 1.07, id_loss: 0.17
+Epoch: 59/60 Setp: 750, ranking_loss: 0.32, id_loss: 0.09
+Epoch: 59/60 Setp: 800, ranking_loss: 0.90, id_loss: 0.06
+Epoch: 59/60 Setp: 850, ranking_loss: 0.99, id_loss: 0.30
+Epoch: 59/60 Setp: 900, ranking_loss: 0.18, id_loss: 0.01
+Epoch: 59/60 Setp: 950, ranking_loss: 0.50, id_loss: 0.06
+Epoch: 59/60 Setp: 1000, ranking_loss: 0.51, id_loss: 0.09
+Epoch: 59/60 Setp: 1050, ranking_loss: 0.94, id_loss: 0.24
+Epoch: 59/60 , ranking_loss: 0.86, id_loss: 0.15
+SSAN
+Testing Epoch: 59
+lr:1e-05
+lr:1.0000000000000002e-06
+similarity_global:
+t2i: @R1: 0.5814, @R5: 0.7917, @R10: 0.8607, map: 0.4985
+similarity_local:
+t2i: @R1: 0.6012, @R5: 0.8042, @R10: 0.8664, map: 0.5212
+similarity_non_local:
+t2i: @R1: 0.6002, @R5: 0.7996, @R10: 0.8608, map: 0.524
+similarity_all:
+t2i: @R1: 0.6184, @R5: 0.8142, @R10: 0.8764, map: 0.5405
+Epoch: 60/60 Setp: 50, ranking_loss: 0.31, id_loss: 0.05
+Epoch: 60/60 Setp: 100, ranking_loss: 0.34, id_loss: 0.02
+Epoch: 60/60 Setp: 150, ranking_loss: 0.62, id_loss: 0.11
+Epoch: 60/60 Setp: 200, ranking_loss: 0.85, id_loss: 0.13
+Epoch: 60/60 Setp: 250, ranking_loss: 0.70, id_loss: 0.19
+Epoch: 60/60 Setp: 300, ranking_loss: 1.21, id_loss: 0.32
+Epoch: 60/60 Setp: 350, ranking_loss: 0.35, id_loss: 0.15
+Epoch: 60/60 Setp: 400, ranking_loss: 1.18, id_loss: 0.55
+Epoch: 60/60 Setp: 450, ranking_loss: 1.11, id_loss: 0.15
+Epoch: 60/60 Setp: 500, ranking_loss: 1.93, id_loss: 0.38
+Epoch: 60/60 Setp: 550, ranking_loss: 0.79, id_loss: 0.21
+Epoch: 60/60 Setp: 600, ranking_loss: 1.34, id_loss: 0.11
+Epoch: 60/60 Setp: 650, ranking_loss: 0.75, id_loss: 0.16
+Epoch: 60/60 Setp: 700, ranking_loss: 0.79, id_loss: 0.04
+Epoch: 60/60 Setp: 750, ranking_loss: 0.69, id_loss: 0.10
+Epoch: 60/60 Setp: 800, ranking_loss: 0.54, id_loss: 0.15
+Epoch: 60/60 Setp: 850, ranking_loss: 1.05, id_loss: 0.10
+Epoch: 60/60 Setp: 900, ranking_loss: 0.66, id_loss: 0.16
+Epoch: 60/60 Setp: 950, ranking_loss: 1.08, id_loss: 0.09
+Epoch: 60/60 Setp: 1000, ranking_loss: 0.59, id_loss: 0.44
+Epoch: 60/60 Setp: 1050, ranking_loss: 1.12, id_loss: 0.15
+Epoch: 60/60 , ranking_loss: 0.85, id_loss: 0.15
+SSAN
+Testing Epoch: 60
+Training Done
+similarity_global:
+t2i: @R1: 0.5796, @R5: 0.79, @R10: 0.862, map: 0.4981
+similarity_local:
+t2i: @R1: 0.5987, @R5: 0.8042, @R10: 0.8649, map: 0.5201
+similarity_non_local:
+t2i: @R1: 0.6002, @R5: 0.7983, @R10: 0.8615, map: 0.5241
+similarity_all:
+t2i: @R1: 0.6172, @R5: 0.8144, @R10: 0.8774, map: 0.5402

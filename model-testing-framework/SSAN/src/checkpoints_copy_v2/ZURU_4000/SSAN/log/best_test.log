@@ -1,0 +1,78 @@
+Testing Epoch: 1
+similarity_global:
+t2i: @R1: 0.1572, @R5: 0.2832, @R10: 0.3632, map: 0.2116
+Testing Epoch: 1
+similarity_local:
+t2i: @R1: 0.1596, @R5: 0.29, @R10: 0.3592, map: 0.215
+Testing Epoch: 1
+similarity_non_local:
+t2i: @R1: 0.1608, @R5: 0.2884, @R10: 0.3582, map: 0.2154
+Testing Epoch: 1
+similarity_all:
+t2i: @R1: 0.1804, @R5: 0.3242, @R10: 0.3988, map: 0.239
+Testing Epoch: 2
+similarity_global:
+t2i: @R1: 0.2316, @R5: 0.3868, @R10: 0.4626, map: 0.2939
+Testing Epoch: 2
+similarity_local:
+t2i: @R1: 0.2434, @R5: 0.3992, @R10: 0.4832, map: 0.3063
+Testing Epoch: 2
+similarity_non_local:
+t2i: @R1: 0.2444, @R5: 0.3994, @R10: 0.4838, map: 0.3076
+Testing Epoch: 2
+similarity_all:
+t2i: @R1: 0.269, @R5: 0.433, @R10: 0.5138, map: 0.334
+Testing Epoch: 3
+similarity_local:
+t2i: @R1: 0.2746, @R5: 0.4348, @R10: 0.5178, map: 0.3382
+Testing Epoch: 3
+similarity_all:
+t2i: @R1: 0.2936, @R5: 0.4606, @R10: 0.5388, map: 0.3591
+Testing Epoch: 4
+similarity_local:
+t2i: @R1: 0.2978, @R5: 0.4646, @R10: 0.545, map: 0.3629
+Testing Epoch: 4
+similarity_all:
+t2i: @R1: 0.3104, @R5: 0.4774, @R10: 0.5592, map: 0.3754
+Testing Epoch: 5
+similarity_all:
+t2i: @R1: 0.3302, @R5: 0.4988, @R10: 0.5762, map: 0.3943
+Testing Epoch: 7
+similarity_all:
+t2i: @R1: 0.3366, @R5: 0.5034, @R10: 0.5796, map: 0.4005
+Testing Epoch: 8
+similarity_all:
+t2i: @R1: 0.3494, @R5: 0.521, @R10: 0.6022, map: 0.4148
+Testing Epoch: 11
+similarity_all:
+t2i: @R1: 0.3504, @R5: 0.521, @R10: 0.5922, map: 0.4144
+Testing Epoch: 12
+similarity_all:
+t2i: @R1: 0.3656, @R5: 0.5332, @R10: 0.6082, map: 0.4287
+Testing Epoch: 20
+similarity_all:
+t2i: @R1: 0.3664, @R5: 0.538, @R10: 0.6088, map: 0.4296
+Testing Epoch: 21
+similarity_all:
+t2i: @R1: 0.3722, @R5: 0.5524, @R10: 0.6228, map: 0.4375
+Testing Epoch: 22
+similarity_all:
+t2i: @R1: 0.379, @R5: 0.5604, @R10: 0.6304, map: 0.4442
+Testing Epoch: 23
+similarity_all:
+t2i: @R1: 0.3856, @R5: 0.562, @R10: 0.6318, map: 0.4497
+Testing Epoch: 24
+similarity_all:
+t2i: @R1: 0.3892, @R5: 0.5664, @R10: 0.6346, map: 0.4536
+Testing Epoch: 27
+similarity_all:
+t2i: @R1: 0.3916, @R5: 0.5738, @R10: 0.6428, map: 0.4564
+Testing Epoch: 27
+similarity_global:
+t2i: @R1: 0.507, @R5: 0.6842, @R10: 0.7572, map: 0.5704
+Testing Epoch: 27
+similarity_local:
+t2i: @R1: 0.5554, @R5: 0.7362, @R10: 0.801, map: 0.6173
+Testing Epoch: 27
+similarity_all:
+t2i: @R1: 0.5668, @R5: 0.747, @R10: 0.8096, map: 0.6274

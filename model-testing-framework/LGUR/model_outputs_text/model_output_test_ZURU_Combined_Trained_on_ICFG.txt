@@ -1,0 +1,17 @@
+dict_keys(['id', 'img_path', 'same_id_index', 'lstm_caption_id', 'bert_caption_id', 'captions'])
+MSMT-PEDES-train has 34664 pohtos
+MSMT-PEDES-test has 19848 pohtos, 19848 text
+ERROR POSSIBLE STOP! Because of val set
+using stride: [16, 16], and patch number is num_y24 * num_x8
+using drop_out rate is : 0.0
+using attn_drop_out rate is : 0.0
+using drop_path rate is : 0.1
+distill need to choose right cls token in the pth
+Resized position embedding from size:torch.Size([1, 197, 768]) to size: torch.Size([1, 193, 768]) with height:24 width: 8
+Loading pretrained ImageNet model......from /raid/home/vibhu20150/Person-Re-ID/LGUR/deit_base_distilled_patch16_224-df68dfff.pth
+Loaded model successfully!
+load the 52 epoch param successfully
+Testing Epoch: 52 Iteration:1
+similarity_all:
+t2i: @R1: 0.2879, @R5: 0.4714, @R10: 0.56, map: 0.1203
+t2i_wm: @R1: 0.2654, @R5: 0.4413, @R10: 0.5273, map: 0.1115

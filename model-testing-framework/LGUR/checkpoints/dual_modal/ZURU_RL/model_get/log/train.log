@@ -1,0 +1,19 @@
+Namespace(mode='train', trained=False, bidirectional=True, using_pose=False, last_lstm=False, using_noun=False, epoch=60, start_epoch=0, epoch_decay=[20, 40, 50], wd=4e-05, batch_size=64, adam_alpha=0.9, adam_beta=0.999, lr=0.001, margin=0.3, vocab_size=101, feature_length=512, class_num=15000, part=6, caption_length_max=100, random_erasing=0.0, Save_param_every=5, save_path='./checkpoints/dual_modal/ZURU_RL/model_get', GPU_id='0', device=device(type='cuda', index=0), dataset='ZURU_RL', dataroot='', pkl_root='/raid/home/vibhu20150/Person-Re-ID/LGUR/processed_data_singledata_ZURU_RL/', test_image_num=200, data_augment=False, d_model=1024, nhead=4, dim_feedforward=2048, normalize_before=False, num_encoder_layers=3, num_decoder_layers=3, num_query=6, detr_lr=0.0001, txt_detr_lr=0.0001, txt_lstm_lr=0.001, res_y=False, noself=False, post_norm=False, n_heads=4, n_layers=2, share_query=True, ViT_layer=8, wordtype='bert')
+Model_size: 212.67774M
+lr:0.0001
+lr:0.0001
+lr:0.001
+lr:0.001
+lr:0.001
+Epoch: 1/60 Setp: 50, ranking_loss: 24.25, id_loss: 19.39, ranking_loss_dict: 30.84, id_loss_dict: 19.42,ranking_loss_dict_text: 24.70, ranking_loss_dict_image: 3.62,pred_i2t_local: 0.000 pred_t2i_local 0.000
+Epoch: 1/60 Setp: 100, ranking_loss: 16.30, id_loss: 19.53, ranking_loss_dict: 17.38, id_loss_dict: 19.55,ranking_loss_dict_text: 9.81, ranking_loss_dict_image: 2.05,pred_i2t_local: 0.000 pred_t2i_local 0.000
+Epoch: 1/60 Setp: 150, ranking_loss: 16.66, id_loss: 19.92, ranking_loss_dict: 21.14, id_loss_dict: 19.96,ranking_loss_dict_text: 12.24, ranking_loss_dict_image: 3.05,pred_i2t_local: 0.000 pred_t2i_local 0.000
+Epoch: 1/60 Setp: 200, ranking_loss: 13.11, id_loss: 20.18, ranking_loss_dict: 15.79, id_loss_dict: 20.13,ranking_loss_dict_text: 12.66, ranking_loss_dict_image: 1.57,pred_i2t_local: 0.000 pred_t2i_local 0.000
+Epoch: 1/60 , ranking_loss: 18.20, id_loss: 19.76, pred_i2t_local: 0.000, pred_t2i_local 0.000 
+lr:0.0001
+lr:0.0001
+lr:0.001
+lr:0.001
+lr:0.001
+Epoch: 2/60 Setp: 50, ranking_loss: 12.20, id_loss: 17.77, ranking_loss_dict: 15.67, id_loss_dict: 18.14,ranking_loss_dict_text: 12.55, ranking_loss_dict_image: 2.56,pred_i2t_local: 0.000 pred_t2i_local 0.000
+Epoch: 2/60 Setp: 100, ranking_loss: 13.28, id_loss: 18.16, ranking_loss_dict: 17.55, id_loss_dict: 18.46,ranking_loss_dict_text: 11.37, ranking_loss_dict_image: 3.39,pred_i2t_local: 0.000 pred_t2i_local 0.000
