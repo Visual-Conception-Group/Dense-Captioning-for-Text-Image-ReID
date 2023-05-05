@@ -32,6 +32,4 @@ SSAN requires further dataset preprocessing when doing cross-dataset testing sin
 
 Currently all logs are provided as is in the checkpoints or the logs folder of the respcetive models directory. Drive link with .pth files will be updated later. 
 
-Note: "ZURU" for all purposes serves as an alias to IIITD-2OK dataset and its extensions.
-
 We thank and acknowledge the authors of [LGUR](https://github.com/ZhiyinShao-H/LGUR), [IRRA](https://github.com/anosorae/irra), and [SSAN](https://github.com/zifyloo/SSAN) for realeasing their codes on which we were able to benchmark the new proposed dataset. 
