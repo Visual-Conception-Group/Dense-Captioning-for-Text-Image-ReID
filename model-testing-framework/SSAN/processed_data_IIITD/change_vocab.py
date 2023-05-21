@@ -40,7 +40,7 @@ def main(og_dict, word2Ind_new: Word2Index, new_dataset):
         if un_idx in new_caption_ids:
             new_caption_ids = list(filter(lambda x: x != un_idx, new_caption_ids))
 
-        # new_caption_ids = list(filter(lambda x: x <= 2500 and x >= 0, new_caption_ids))
+        new_caption_ids = list(filter(lambda x: x <= 3000 and x >= 0, new_caption_ids))
 
         og_dict["lstm_caption_id"][i] = new_caption_ids
     

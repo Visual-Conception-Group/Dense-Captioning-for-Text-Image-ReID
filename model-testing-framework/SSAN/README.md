@@ -15,4 +15,3 @@ sh experiments/Dataset-Name/test.sh
 
 For cross-dataset testing run the relevant `change_vocab.py` script with the appropriate vocab size to generate the relevant vocabularies required for cross-dataset testing.
 
-Note: ZURU in this context is used as an identifier for IIITD dataset.

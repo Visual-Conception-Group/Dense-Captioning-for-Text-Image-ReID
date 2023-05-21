@@ -4,7 +4,7 @@ cd ../../src
 
 python test.py --model_name 'SSAN' \
 --GPU_id 4 \
---test_dataset 'ZURU' \
+--test_dataset 'IIITD' \
 --part 6 \
 --lr 0.001 \
 --dataset 'RSTP' \

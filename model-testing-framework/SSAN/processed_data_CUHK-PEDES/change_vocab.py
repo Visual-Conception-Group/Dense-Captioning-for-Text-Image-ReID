@@ -52,7 +52,7 @@ def main(og_dict, word2Ind_new: Word2Index, new_dataset):
 
 if __name__ == '__main__':
     og_dict = read_dict("test_save.pkl")
-    new_datasets = ["CUHK-PEDES", "ICFG-PEDES", "RSTP", "ZURU"]
+    new_datasets = ["CUHK-PEDES", "ICFG-PEDES", "RSTP", "IIITD"]
     for new_dataset in new_datasets:
         word2id_file_path = f"../processed_data_{new_dataset}/word2Ind.pkl"
 

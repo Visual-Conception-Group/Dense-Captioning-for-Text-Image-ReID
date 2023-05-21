@@ -3,7 +3,7 @@
 cd ../../src
 
 python test.py --model_name 'SSAN' \
---test_dataset 'ZURU' \
+--test_dataset 'IIITD' \
 --GPU_id 4 \
 --part 6 \
 --lr 0.001 \

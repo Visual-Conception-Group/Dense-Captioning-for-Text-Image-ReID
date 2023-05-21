@@ -42,7 +42,7 @@ class CUHKPEDEDataset(data.Dataset):
             self.img_path = [os.path.join("/raid/home/vibhu20150/Datasets/CUHK-PEDES/", img_path) for img_path in data_save['img_path']]
         elif opt.dataset == "RSTP":
             self.img_path = [os.path.join("/raid/home/vibhu20150/Datasets/RSTP/", img_path) for img_path in data_save['img_path']]
-        elif opt.dataset == "ZURU":
+        elif opt.dataset == "IIITD":
             self.img_path = data_save['img_path']
         
         self.label = data_save['id']
@@ -118,7 +118,7 @@ class CUHKPEDE_img_dateset(data.Dataset):
             self.img_path = [os.path.join("/raid/home/vibhu20150/Datasets/CUHK-PEDES/", img_path) for img_path in data_save['img_path']]
         elif opt.dataset == "RSTP":
             self.img_path = [os.path.join("/raid/home/vibhu20150/Datasets/RSTP/", img_path) for img_path in data_save['img_path']]
-        elif opt.dataset == "ZURU":
+        elif opt.dataset == "IIITD":
             self.img_path = data_save['img_path']
             
         self.label = data_save['id']
@@ -228,7 +228,7 @@ class CUHKPEDE_txt_dateset(data.Dataset):
 #         # if opt.dataset == 'ICFG-PEDES' or opt.dataset == 'ICFG-PEDES-val':
 #         data_save = read_dict(os.path.join("/raid/home/vibhu20150/Person-Re-ID/SSAN/", 'processed_data_'+opt.dataset, opt.mode + '_save.pkl'))
 #         self.img_path = [os.path.join("/raid/home/vibhu20150/Datasets/ICFG/ICFG_PEDES/", img_path[5:]) for img_path in data_save['img_path']]
-#         # elif opt.dataset == 'ZURU':
+#         # elif opt.dataset == 'IIITD':
 #         #     data_save = read_dict(os.path.join("/raid/home/vibhu20150/Person-Re-ID/SSAN/", 'processed_data_'+opt.dataset, opt.mode + '_save.pkl'))
 #         #     self.img_path = [os.path.join("/raid/home/vibhu20150/Datasets/ICFG/ICFG_PEDES/", img_path[5:]) for img_path in data_save['img_path']]
 #         # else:
