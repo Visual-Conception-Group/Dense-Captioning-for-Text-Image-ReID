@@ -257,7 +257,7 @@ similarity_all:
 t2i: @R1: 0.1035, @R5: 0.277, @R10: 0.386, map: 0.07101
 i2t: @R1: 0.11, @R5: 0.261, @R10: 0.36, map: 0.07939
 
-TEST (ZURU):
+TEST (IIITD):
 Testing Epoch: 12 Iteration:1
 similarity_all:
 t2i: @R1: 0.1244, @R5: 0.2252, @R10: 0.2888, map: 0.1714

@@ -259,7 +259,7 @@ similarity_all:
 t2i: @R1: 0.4625, @R5: 0.6795, @R10: 0.7685, map: 0.3309
 t2i_wm: @R1: 0.37, @R5: 0.5875, @R10: 0.6765, map: 0.2845
 
-TEST (ZURU):
+TEST (IIITD):
 Testing Epoch: 31 Iteration:1
 similarity_all:
 t2i: @R1: 0.2882, @R5: 0.444, @R10: 0.5154, map: 0.3481
@@ -289,7 +289,7 @@ t2i: @R1: 0.4625, @R5: 0.6795, @R10: 0.7685, map: 0.3309
 t2i_wm: @R1: 0.37, @R5: 0.5875, @R10: 0.6765, map: 0.2845
 i2t: @R1: 0.606, @R5: 0.833, @R10: 0.891, map: 0.3601
 
-TEST (ZURU):
+TEST (IIITD):
 Testing Epoch: 31 Iteration:1
 similarity_all:
 t2i: @R1: 0.2882, @R5: 0.444, @R10: 0.5154, map: 0.3481

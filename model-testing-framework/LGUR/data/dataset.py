@@ -44,13 +44,13 @@ class CUHKPEDEDataset(data.Dataset):
         elif opt.dataset == 'ICFG-PEDES-val':
             # self.img_path = [os.path.join('/home/Vibhu/LGUR/datasets/icfgpedes/ICFG_PEDES', img_path.split('/')[-3],img_path.split('/')[-2],img_path.split('/')[-1]) for img_path in data_save['img_path']]
             self.img_path = [os.path.join('../../Datasets/ICFG/ICFG_PEDES', img_path.split('/')[-3],img_path.split('/')[-2],img_path.split('/')[-1]) for img_path in data_save['img_path']]
-        elif opt.dataset == 'ZURU' or opt.dataset == 'ZURU_BLIP_1' or opt.dataset == 'ZURU_BLIP_2' or opt.dataset == 'ZURU_BLIP_3' or opt.dataset == 'ZURU_BLIP_4' or opt.dataset == 'ZURU_BLIP_5' or opt.dataset == 'ZURU_RL' or opt.dataset == 'ZURU_RL_v2' or opt.dataset == 'ZURU_Train_17.5K':
+        elif opt.dataset == 'IIITD' or opt.dataset == 'IIITD_BLIP_1' or opt.dataset == 'IIITD_BLIP_2' or opt.dataset == 'IIITD_BLIP_3' or opt.dataset == 'IIITD_BLIP_4' or opt.dataset == 'IIITD_BLIP_5' or opt.dataset == 'IIITD_RL' or opt.dataset == 'IIITD_RL_v2' or opt.dataset == 'IIITD_Train_17.5K':
             self.img_path = [os.path.join(opt.dataroot,  img_path) for img_path in data_save['img_path']]
-        elif opt.dataset == "ZURU_Combined":
+        elif opt.dataset == "IIITD_Combined":
             self.img_path = [os.path.join(opt.dataroot,  img_path) for img_path in data_save['img_path']]
-        elif opt.dataset == "ZURU_Augmented":
+        elif opt.dataset == "IIITD_Augmented":
             self.img_path = [os.path.join(opt.dataroot,  img_path) for img_path in data_save['img_path']]
-        elif opt.dataset == "ZURU_Augmented_Appended":
+        elif opt.dataset == "IIITD_Augmented_Appended":
             self.img_path = [os.path.join(opt.dataroot,  img_path) for img_path in data_save['img_path']]
         elif opt.dataset == "combined_datasets":
             self.img_path = [os.path.join(opt.dataroot,  img_path) for img_path in data_save['img_path']]
@@ -112,13 +112,13 @@ class CUHKPEDE_img_dateset(data.Dataset):
         elif opt.dataset == 'ICFG-PEDES-val':
             # self.img_path = [os.path.join('/home/Vibhu/LGUR/datasets/icfgpedes/ICFG_PEDES', img_path.split('/')[-3],img_path.split('/')[-2],img_path.split('/')[-1]) for img_path in data_save['img_path']]
             self.img_path = [os.path.join('../../Datasets/ICFG/ICFG_PEDES', img_path.split('/')[-3],img_path.split('/')[-2],img_path.split('/')[-1]) for img_path in data_save['img_path']]
-        elif opt.dataset == 'ZURU' or opt.dataset == 'ZURU_BLIP_1' or opt.dataset == 'ZURU_BLIP_2' or opt.dataset == 'ZURU_BLIP_3' or opt.dataset == 'ZURU_BLIP_4' or opt.dataset == 'ZURU_BLIP_5' or opt.dataset == 'ZURU_RL' or opt.dataset == 'ZURU_RL_v2' or opt.dataset == 'ZURU_Train_17.5K':
+        elif opt.dataset == 'IIITD' or opt.dataset == 'IIITD_BLIP_1' or opt.dataset == 'IIITD_BLIP_2' or opt.dataset == 'IIITD_BLIP_3' or opt.dataset == 'IIITD_BLIP_4' or opt.dataset == 'IIITD_BLIP_5' or opt.dataset == 'IIITD_RL' or opt.dataset == 'IIITD_RL_v2' or opt.dataset == 'IIITD_Train_17.5K':
             self.img_path = [os.path.join(opt.dataroot,  img_path) for img_path in data_save['img_path']]
-        elif opt.dataset == 'ZURU_Combined':
+        elif opt.dataset == 'IIITD_Combined':
             self.img_path = [os.path.join(opt.dataroot,  img_path) for img_path in data_save['img_path']]
-        elif opt.dataset == 'ZURU_Augmented':
+        elif opt.dataset == 'IIITD_Augmented':
             self.img_path = [os.path.join(opt.dataroot,  img_path) for img_path in data_save['img_path']]
-        elif opt.dataset == 'ZURU_Augmented_Appended':
+        elif opt.dataset == 'IIITD_Augmented_Appended':
             self.img_path = [os.path.join(opt.dataroot,  img_path) for img_path in data_save['img_path']]
         elif opt.dataset == "combined_datasets":
             self.img_path = [os.path.join(opt.dataroot,  img_path) for img_path in data_save['img_path']]

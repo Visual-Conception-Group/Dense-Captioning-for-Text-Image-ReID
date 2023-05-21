@@ -11,7 +11,7 @@
 # import time
 import json
 
-fd = open("../../Datasets/ZURU-IIITD-OUTPUTDELIVERY/JsonOutput/Filtered.json")
+fd = open("../../Datasets/IIITD-IIITD-OUTPUTDELIVERY/JsonOutput/Filtered.json")
 data = json.load(fd)
 fd.close()
 
