@@ -37,10 +37,8 @@ class Word2Index(object):
 def parse_args():
     parser = argparse.ArgumentParser(description='Command for data pre_processing')
     parser.add_argument('--img_root', default='', type=str)
-    # parser.add_argument('--json_root', default='/raid/home/vibhu20150/Person-Re-ID/LGUR/IIITD-ICFG-FORMAT.json', type=str)
-    parser.add_argument('--json_root', default='./IIITD-ICFG-FORMAT.json', type=str)
-    # parser.add_argument('--out_root', default='./processed_data_singledata_IIITD', type=str) # processed_data_spa_img
-    parser.add_argument('--out_root', default='./processed_data_singledata_IIITD', type=str) # processed_data_spa_img
+    parser.add_argument('--json_root', default='../../IIITD-20K-Dataset/IIITD-20K-ICFG-FORMAT.json', type=str)
+    parser.add_argument('--out_root', default='./processed_data_singledata_IIITD', type=str)
     parser.add_argument('--min_word_count', default='2', type=int)
     parser.add_argument('--shuffle', default=False, type=bool)
     args = parser.parse_args()
