@@ -50,13 +50,13 @@ if __name__ == '__main__':
     save_train_configs(args.output_dir, args)
 
     # get image-text pair datasets dataloader
-    # train_loader, val_img_loader, val_txt_loader, num_classes = build_dataloader(args)
+    train_loader, val_img_loader, val_txt_loader, num_classes = build_dataloader(args)
     
-    temp_dataset_name = args.dataset_name
-    train_loader, _, __, ___ = build_dataloader(args)
-    args.dataset_name = 'IIITD'
-    _, val_img_loader, val_txt_loader, num_classes = build_dataloader(args)
-    args.dataset_name = temp_dataset_name
+    # temp_dataset_name = args.dataset_name
+    # train_loader, _, __, ___ = build_dataloader(args)
+    # args.dataset_name = 'IIITD'
+    # _, val_img_loader, val_txt_loader, num_classes = build_dataloader(args)
+    # args.dataset_name = temp_dataset_name
 
     model = build_model(args, num_classes)
     logger.info('Total params: %2.fM' % (sum(p.numel() for p in model.parameters()) / 1000000.0))
