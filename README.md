@@ -6,6 +6,24 @@ The repository will be update later with links and codes for the IIITD dataset a
 
 IIITD-20K dataset comprises of 20,000 identities captured in the wild and provides a rich dataset for Text-to-Image ReID. With a minimum of 26 words for a description, each image is densely captioned. We further provide synthetically generated images and fine-grained captions using Stable-diffusion and BLIP models trained on the orignal dataset. 
 
+
+## IIITD-20K Dataset
+
+1. Download the dataset from [link](https://drive.google.com/file/d/1oG0a4WQfkEeL_NKajtMQvY4yFnZ5jDJ8/view)
+2. Unzip the zip file to IIIT-20K-Dataset directory 
+3. Run the required formatter python script from IIITD-20K-Dataset (format_ICFG.py/format_CUHK.py/format_RSTPs.py)
+
+To download:
+```bash
+git clone https://github.com/vibsterD/Dense-Captioning-for-Text-Image-ReID.git
+cd Dense-Captioning-for-Text-Image-ReID/
+pip install gdown 
+gdown <dataset_gdrive_link> --fuzzy
+unzip IIITD-20K.zip -d ./IIITD-20K-Dataset
+cd IIITD-20K-Dataset/
+python format_<type>.py
+```
+
 ### Dataset Meta 
 
 <img src="./figures/dataset-meta.png">

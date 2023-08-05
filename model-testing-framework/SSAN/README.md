@@ -3,12 +3,12 @@
 After creating the neccessary dataset structures and preprocessing. 
 
 #### Training and Testing
-~~~
+~~~bash
 sh experiments/Dataset-Name/train.sh 
 sh experiments/Dataset-Name/train.sh 
 ~~~
 #### Evaluation
-~~~
+~~~bash
 sh experiments/Dataset-Name/test.sh 
 sh experiments/Dataset-Name/test.sh 
 ~~~
