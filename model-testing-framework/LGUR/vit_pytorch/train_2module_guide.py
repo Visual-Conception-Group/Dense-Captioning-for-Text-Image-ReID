@@ -51,8 +51,8 @@ if __name__ == '__main__':
 
     opt.dataset = 'CUHK-PEDES'
 
-    if opt.dataset == 'MSMT-PEDES':
-        opt.pkl_root = '/data1/zhiying/text-image/MSMT-PEDES/3-1/'
+    if opt.dataset == 'ICFG-PEDES':
+        opt.pkl_root = '/data1/zhiying/text-image/ICFG-PEDES/3-1/'
         opt.class_num = 3102
         opt.vocab_size = 2500
         # opt.class_num = 2802

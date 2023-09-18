@@ -15,26 +15,21 @@ from .icfgpedes import ICFGPEDES
 from .rstpreid import RSTPReid
 from .iiitd import IIITD
 from .iiitd_13K import IIITD_13K
-from .iiitd_175K import IIITD_175K
-from .iiitd_blip_diff import IIITD_BLIP_DIFF
-from .iiitd_blip_diff_aug_1 import IIITD_BLIP_DIFF_AUG_1
-from .iiitd_blip_diff_aug_2 import IIITD_BLIP_DIFF_AUG_2
+from .iiitd_blip_ldm import IIITD_BLIP_LDM
+from .iiitd_blip_ldm_b1 import IIITD_BLIP_LDM_B1
+from .iiitd_blip_ldm_b2 import IIITD_BLIP_LDM_B2
 from .iiitd_blip import IIITD_BLIP
-from .iiitd_blip_aug import IIITD_BLIP_AUG
-from .cuhkpedes_diff_blip import CUHKPEDES_DIFF_BLIP
-from .cuhkpedes_diff_blip_aug import CUHKPEDES_DIFF_BLIP_AUG
-from .sairam_iiitd_b1_appended import Sairam_IIITD_B1_APPENDED
-from .sairam_iiitd_b1_b2_appended import Sairam_IIITD_B1_B2_APPENDED
+from .iiitd_blip_only import IIITD_BLIP_only
+from .iiitd_b1_30k_ids import IIITD_B1_30K_IDs
+from .iiitd_b1_b2_45k_ids import IIITD_B1_B2_45K_IDs
 
 
 __factory = {'CUHK-PEDES': CUHKPEDES, 'ICFG-PEDES': ICFGPEDES, \
-    'RSTPReid': RSTPReid, 'IIITD': IIITD, 'IIITD_17.5K': IIITD_175K,\
-        'IIITD_BLIP_DIFF': IIITD_BLIP_DIFF, 'IIITD_BLIP_DIFF_AUG_1': IIITD_BLIP_DIFF_AUG_1, 'IIITD_BLIP_DIFF_AUG_2': IIITD_BLIP_DIFF_AUG_2,\
-            'IIITD_BLIP': IIITD_BLIP, 'IIITD_BLIP_AUG':IIITD_BLIP_AUG,\
-                'CUHKPEDES_DIFF_BLIP_AUG':CUHKPEDES_DIFF_BLIP_AUG, 'CUHKPEDES_DIFF_BLIP':CUHKPEDES_DIFF_BLIP,
-                'Sairam_IIITD_B1_APPENDED':Sairam_IIITD_B1_APPENDED, \
-                    'Sairam_IIITD_B1_B2_APPENDED': Sairam_IIITD_B1_B2_APPENDED, \
-                        'IIITD_13K':IIITD_13K}
+    'RSTPReid': RSTPReid, 'IIITD': IIITD, 'IIITD_BLIP_LDM': IIITD_BLIP_LDM, \
+    'IIITD_BLIP_LDM_B1': IIITD_BLIP_LDM_B1, 'IIITD_BLIP_LDM_B2': IIITD_BLIP_LDM_B2,\
+    'IIITD_BLIP': IIITD_BLIP, 'IIITD_BLIP_only':IIITD_BLIP_only,\
+    'IIITD_B1_30K_IDs':IIITD_B1_30K_IDs, 'IIITD_B1_B2_45K_IDs': IIITD_B1_B2_45K_IDs, \
+    'IIITD_13K':IIITD_13K}
 
 
 def build_transforms(img_size=(384, 128), aug=False, is_train=True):

@@ -1,0 +1,1 @@
+Baseline training on CUHK-PEDES. No augmentation. 

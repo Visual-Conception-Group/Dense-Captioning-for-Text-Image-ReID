@@ -1,0 +1,1 @@
+Experiments with ICFG-PEDES dataset. Base model experiments. No augmentation. 

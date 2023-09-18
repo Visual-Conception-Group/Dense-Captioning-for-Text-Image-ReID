@@ -1,0 +1,1 @@
+Only B1+B2 (BLIP+LDM)

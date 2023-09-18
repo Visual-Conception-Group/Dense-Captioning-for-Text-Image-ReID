@@ -1,8 +1,10 @@
-miniconda3/
-temp/
-ALBEF.pth
-Miniconda3-latest-Linux-x86_64.sh
 __pycache__/
 *.pyc
-
 .DS_Store
+*.zip
+
+*.pth.tar
+*.pth
+*.tar
+
+events.out.tf*

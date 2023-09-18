@@ -1,0 +1,1 @@
+Baseline training on IIITD-20k. No augmentation. 

@@ -36,23 +36,11 @@ class CUHKPEDEDataset(data.Dataset):
         self.flip_flag = (self.opt.mode == 'train')
         data_save = read_dict(opt.pkl_root + opt.mode + '_save.pkl')
         print(data_save.keys())
-        if opt.dataset == 'CUHK-PEDES' or opt.dataset == 'CUHK-PEDES-stable-all':
+        if opt.dataset == 'CUHK-PEDES' or opt.dataset == 'CUHK-PEDES-BLIP-LDM':
             self.img_path = [os.path.join(opt.dataroot,  img_path) for img_path in data_save['img_path']]
-        elif opt.dataset == 'MSMT-PEDES':
-            # self.img_path = [os.path.join('/home/Vibhu/LGUR/datasets/icfgpedes/ICFG_PEDES', img_path.split('/')[-3],img_path.split('/')[-2],img_path.split('/')[-1]) for img_path in data_save['img_path']]
+        elif opt.dataset == 'ICFG-PEDES':
             self.img_path = [os.path.join('../../Datasets/ICFG/ICFG_PEDES', img_path.split('/')[-3],img_path.split('/')[-2],img_path.split('/')[-1]) for img_path in data_save['img_path']]
-        elif opt.dataset == 'ICFG-PEDES-val':
-            # self.img_path = [os.path.join('/home/Vibhu/LGUR/datasets/icfgpedes/ICFG_PEDES', img_path.split('/')[-3],img_path.split('/')[-2],img_path.split('/')[-1]) for img_path in data_save['img_path']]
-            self.img_path = [os.path.join('../../Datasets/ICFG/ICFG_PEDES', img_path.split('/')[-3],img_path.split('/')[-2],img_path.split('/')[-1]) for img_path in data_save['img_path']]
-        elif opt.dataset == 'IIITD' or opt.dataset == 'IIITD_BLIP_1' or opt.dataset == 'IIITD_BLIP_2' or opt.dataset == 'IIITD_BLIP_3' or opt.dataset == 'IIITD_BLIP_4' or opt.dataset == 'IIITD_BLIP_5' or opt.dataset == 'IIITD_RL' or opt.dataset == 'IIITD_RL_v2' or opt.dataset == 'IIITD_Train_17.5K':
-            self.img_path = [os.path.join(opt.dataroot,  img_path) for img_path in data_save['img_path']]
-        elif opt.dataset == "IIITD_Combined":
-            self.img_path = [os.path.join(opt.dataroot,  img_path) for img_path in data_save['img_path']]
-        elif opt.dataset == "IIITD_Augmented":
-            self.img_path = [os.path.join(opt.dataroot,  img_path) for img_path in data_save['img_path']]
-        elif opt.dataset == "IIITD_Augmented_Appended":
-            self.img_path = [os.path.join(opt.dataroot,  img_path) for img_path in data_save['img_path']]
-        elif opt.dataset == "combined_datasets":
+        elif opt.dataset == 'IIITD' or opt.dataset == 'IIITD_BLIP_1' or opt.dataset == 'IIITD_BLIP_2' or opt.dataset == 'IIITD_BLIP_3' or opt.dataset == 'IIITD_BLIP_LDM_4' or opt.dataset == 'IIITD_BLIP_LDM_5':
             self.img_path = [os.path.join(opt.dataroot,  img_path) for img_path in data_save['img_path']]
         elif opt.dataset == "RSTP":
             self.img_path = [os.path.join(opt.dataroot,  img_path) for img_path in data_save['img_path']]
@@ -104,26 +92,15 @@ class CUHKPEDE_img_dateset(data.Dataset):
 
         data_save = read_dict(opt.pkl_root + opt.mode + '_save.pkl')
 
-        if opt.dataset == 'CUHK-PEDES' or opt.dataset == 'CUHK-PEDES-stable-all':
+        if opt.dataset == 'CUHK-PEDES' or opt.dataset == 'CUHK-PEDES-BLIP-LDM':
             self.img_path = [os.path.join(opt.dataroot,  img_path) for img_path in data_save['img_path']]
-        elif opt.dataset == 'MSMT-PEDES':
-            # self.img_path = [os.path.join('/home/Vibhu/LGUR/datasets/icfgpedes/ICFG_PEDES', img_path.split('/')[-3],img_path.split('/')[-2],img_path.split('/')[-1]) for img_path in data_save['img_path']]
+        elif opt.dataset == 'ICFG-PEDES':
             self.img_path = [os.path.join('../../Datasets/ICFG/ICFG_PEDES', img_path.split('/')[-3],img_path.split('/')[-2],img_path.split('/')[-1]) for img_path in data_save['img_path']]
-        elif opt.dataset == 'ICFG-PEDES-val':
-            # self.img_path = [os.path.join('/home/Vibhu/LGUR/datasets/icfgpedes/ICFG_PEDES', img_path.split('/')[-3],img_path.split('/')[-2],img_path.split('/')[-1]) for img_path in data_save['img_path']]
-            self.img_path = [os.path.join('../../Datasets/ICFG/ICFG_PEDES', img_path.split('/')[-3],img_path.split('/')[-2],img_path.split('/')[-1]) for img_path in data_save['img_path']]
-        elif opt.dataset == 'IIITD' or opt.dataset == 'IIITD_BLIP_1' or opt.dataset == 'IIITD_BLIP_2' or opt.dataset == 'IIITD_BLIP_3' or opt.dataset == 'IIITD_BLIP_4' or opt.dataset == 'IIITD_BLIP_5' or opt.dataset == 'IIITD_RL' or opt.dataset == 'IIITD_RL_v2' or opt.dataset == 'IIITD_Train_17.5K':
-            self.img_path = [os.path.join(opt.dataroot,  img_path) for img_path in data_save['img_path']]
-        elif opt.dataset == 'IIITD_Combined':
-            self.img_path = [os.path.join(opt.dataroot,  img_path) for img_path in data_save['img_path']]
-        elif opt.dataset == 'IIITD_Augmented':
-            self.img_path = [os.path.join(opt.dataroot,  img_path) for img_path in data_save['img_path']]
-        elif opt.dataset == 'IIITD_Augmented_Appended':
-            self.img_path = [os.path.join(opt.dataroot,  img_path) for img_path in data_save['img_path']]
-        elif opt.dataset == "combined_datasets":
+        elif opt.dataset == 'IIITD' or opt.dataset == 'IIITD_BLIP_1' or opt.dataset == 'IIITD_BLIP_2' or opt.dataset == 'IIITD_BLIP_3' or opt.dataset == 'IIITD_BLIP_LDM_4' or opt.dataset == 'IIITD_BLIP_LDM_5':
             self.img_path = [os.path.join(opt.dataroot,  img_path) for img_path in data_save['img_path']]
         elif opt.dataset == "RSTP":
             self.img_path = [os.path.join(opt.dataroot,  img_path) for img_path in data_save['img_path']]
+
 
         self.label = data_save['id']
 

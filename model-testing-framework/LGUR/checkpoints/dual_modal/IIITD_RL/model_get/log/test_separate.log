@@ -1,4 +1,0 @@
-Testing Epoch: 1 Iteration:234
-similarity_all:
-t2i: @R1: 0.0008, @R5: 0.0032, @R10: 0.0046, map: 0.003303
-i2t: @R1: 0.0008, @R5: 0.0028, @R10: 0.0044, map: 0.002144

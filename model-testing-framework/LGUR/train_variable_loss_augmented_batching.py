@@ -86,12 +86,7 @@ if __name__ == '__main__':
     opt.feature_length = 512
 
 
-    if opt.dataset == 'ICFG-PEDES-val':
-        opt.pkl_root = './processed_data_singledata_ICFG_val/'
-        opt.class_num = 2602
-        opt.vocab_size = 2400
-        opt.dataroot = '/raid/home/vibhu20150/Datasets/ICFG/ICFG_PEDES'
-    elif opt.dataset == 'MSMT-PEDES':
+    if opt.dataset == 'ICFG-PEDES':
         opt.pkl_root = '/raid/home/vibhu20150/Person-Re-ID/LGUR/processed_data_singledata_ICFG/'
         opt.class_num = 3102
         opt.vocab_size = 2500
@@ -101,7 +96,7 @@ if __name__ == '__main__':
         opt.class_num = 11000
         opt.vocab_size = 5000
         opt.dataroot = '../../Datasets/CUHK-PEDES/'
-    elif opt.dataset == 'CUHK-PEDES-stable-all':
+    elif opt.dataset == 'CUHK-PEDES-BLIP-LDM': #please change validation code
         opt.pkl_root = './processed_data_singledata_CUHK_stable_diff_all/'  
         opt.class_num = 10997
         opt.vocab_size = 1200
@@ -117,51 +112,24 @@ if __name__ == '__main__':
         opt.class_num = 15000 
         opt.vocab_size = 3373
         opt.dataroot = '' # expects absolute paths
-    elif opt.dataset == 'IIITD_Train_17.5K':
-        # opt.pkl_root = '/home/Vibhu/git-stuff/Person-Re-ID/LGUR/processed_data_singledata_IIITD/'
-        opt.pkl_root = '/raid/home/vibhu20150/Person-Re-ID/LGUR/processed_data_singledata_IIITD_Train_17.5K/'
-        opt.class_num = 17500
-        opt.vocab_size = 3511
-        opt.dataroot = '' # expects absolute paths
     elif opt.dataset == 'IIITD_BLIP_3':
         # opt.pkl_root = '/home/Vibhu/git-stuff/Person-Re-ID/LGUR/processed_data_singledata_IIITD/'
         opt.pkl_root = '/raid/home/vibhu20150/Person-Re-ID/LGUR/processed_data_singledata_IIITD_BLIP_3/'
         opt.class_num = 15000 
         opt.vocab_size = 268
         opt.dataroot = '' # expects absolute paths
-    elif opt.dataset == 'IIITD_BLIP_4':
+    elif opt.dataset == 'IIITD_BLIP_LDM_4':
         # opt.pkl_root = '/home/Vibhu/git-stuff/Person-Re-ID/LGUR/processed_data_singledata_IIITD/'
-        opt.pkl_root = '/raid/home/vibhu20150/Person-Re-ID/LGUR/processed_data_singledata_IIITD_BLIP_4/'
-        opt.class_num = 15000 
-        opt.vocab_size = 1037
-        opt.dataroot = '' # expects absolute paths
-    elif opt.dataset == 'IIITD_BLIP_5':
-        # opt.pkl_root = '/home/Vibhu/git-stuff/Person-Re-ID/LGUR/processed_data_singledata_IIITD/'
-        opt.pkl_root = '/raid/home/vibhu20150/Person-Re-ID/LGUR/processed_data_singledata_IIITD_BLIP_5/'
+        opt.pkl_root = '/raid/home/vibhu20150/Person-Re-ID/LGUR/processed_data_singledata_IIITD_BLIP_LDM_4/'
         opt.class_num = 15000 
         opt.vocab_size = 425
         opt.dataroot = '' # expects absolute paths
-    elif opt.dataset == 'IIITD_Combined':
-        opt.pkl_root = '/raid/home/vibhu20150/Person-Re-ID/LGUR/processed_data_singledata_IIITD_Combined/'
-        opt.class_num = 17500
-        opt.vocab_size = 3520
+    elif opt.dataset == 'IIITD_BLIP_LDM_5':
+        # opt.pkl_root = '/home/Vibhu/git-stuff/Person-Re-ID/LGUR/processed_data_singledata_IIITD/'
+        opt.pkl_root = '/raid/home/vibhu20150/Person-Re-ID/LGUR/processed_data_singledata_IIITD_BLIP_LDM_5/'
+        opt.class_num = 15000 
+        opt.vocab_size = 1037
         opt.dataroot = '' # expects absolute paths
-    elif opt.dataset == 'IIITD_Augmented':
-        opt.pkl_root = '/raid/home/vibhu20150/Person-Re-ID/LGUR/processed_data_singledata_IIITD_Augmented/'
-        opt.class_num = 1217
-        opt.vocab_size = 750
-        opt.dataroot = '' # expects absolute paths
-    elif opt.dataset == 'IIITD_Augmented_Appended':
-        opt.pkl_root = '/raid/home/vibhu20150/Person-Re-ID/LGUR/processed_data_singledata_IIITD_Augmented_Appended/'
-        opt.class_num = 17500+2264
-        opt.vocab_size = 3550
-        opt.dataroot = '' # expects absolute paths
-    elif opt.dataset == 'combined_datasets':
-        # opt.pkl_root = '/home/Vibhu/LGUR/processed_data_singledata_ICFG/'
-        opt.pkl_root = '/raid/home/vibhu20150/Person-Re-ID/LGUR/processed_data_singledata_combined_datasets/'
-        opt.class_num = 17602
-        opt.vocab_size = 4601
-        opt.dataroot = ''
 
     opt.d_model = 1024
     opt.nhead = 4
@@ -201,12 +169,12 @@ if __name__ == '__main__':
     upper_limit = 1
 
     opt.mode = 'train'
-    opt.dataset = 'IIITD_BLIP_4' #ALSO CHANGE PKL ROOT
-    opt.pkl_root = '/raid/home/vibhu20150/Person-Re-ID/LGUR/processed_data_singledata_IIITD_BLIP_4/'
+    opt.dataset = 'IIITD_BLIP_LDM_4' #ALSO CHANGE PKL ROOT
+    opt.pkl_root = '/raid/home/vibhu20150/Person-Re-ID/LGUR/processed_data_singledata_IIITD_BLIP_LDM_4/'
     train_dataloader_aug_1 = get_dataloader(opt)
 
-    opt.dataset = 'IIITD_BLIP_5' #ALSO CHANGE PKL ROOT
-    opt.pkl_root = '/raid/home/vibhu20150/Person-Re-ID/LGUR/processed_data_singledata_IIITD_BLIP_5/'
+    opt.dataset = 'IIITD_BLIP_LDM_5' #ALSO CHANGE PKL ROOT
+    opt.pkl_root = '/raid/home/vibhu20150/Person-Re-ID/LGUR/processed_data_singledata_IIITD_BLIP_LDM_5/'
     train_dataloader_aug_2 = get_dataloader(opt)
 
     opt.dataset = 'IIITD'

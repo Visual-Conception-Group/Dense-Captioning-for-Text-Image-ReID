@@ -1,0 +1,1 @@
+Baseline training on IIITD-13k (13k-2k-5k split for train-val-test). No augmentation. 

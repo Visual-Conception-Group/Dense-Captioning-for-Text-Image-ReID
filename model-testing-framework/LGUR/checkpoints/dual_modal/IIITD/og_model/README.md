@@ -1,0 +1,1 @@
+Experiments with IIITD-20K dataset. Base model experiments. No augmentation. 

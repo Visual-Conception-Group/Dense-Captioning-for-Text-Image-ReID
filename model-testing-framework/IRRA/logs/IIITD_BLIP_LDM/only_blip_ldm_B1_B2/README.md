@@ -1,0 +1,1 @@
+Only B1+B2 (BLIP+LDM) used for training. No original image-text pairs used. 

@@ -1,0 +1,1 @@
+Experiments with RSTPReid dataset. Base model experiments. No augmentation. 

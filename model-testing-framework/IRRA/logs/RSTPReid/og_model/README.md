@@ -1,0 +1,1 @@
+Baseline training on RSTPReid. No augmentation. 

@@ -12,7 +12,7 @@ class IIITD_BLIP(BaseDataset):
         super(IIITD_BLIP, self).__init__()
         self.dataset_dir = op.join(root, self.dataset_dir)
         self.img_dir = self.dataset_dir
-        self.anno_path = op.join(self.dataset_dir, 'JsonOutput/ZURU-ICFG-FORMAT-RELATIVE-PATHS.json')
+        self.anno_path = op.join(self.dataset_dir, 'JsonOutput/IIITD-ICFG-FORMAT-RELATIVE-PATHS.json')
         self._check_before_run()
 
         self.train_annos, self.test_annos, self.val_annos = self._split_anno(self.anno_path)

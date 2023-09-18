@@ -1,0 +1,1 @@
+Baseline training on ICFG-PEDES. No augmentation. Using the provided checkpoint from the original paper since we are not using val set for ICFG-PEDES. 

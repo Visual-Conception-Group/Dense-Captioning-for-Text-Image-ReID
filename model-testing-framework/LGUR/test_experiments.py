@@ -88,7 +88,7 @@ if __name__ == '__main__':
     opt.train_dataset = 'IIITD'
     opt.dataset = 'IIITD'
 
-    if opt.dataset == 'MSMT-PEDES':
+    if opt.dataset == 'ICFG-PEDES':
         opt.pkl_root = './processed_data_singledata_ICFG/'
         opt.class_num = 3102
         opt.vocab_size = 2500

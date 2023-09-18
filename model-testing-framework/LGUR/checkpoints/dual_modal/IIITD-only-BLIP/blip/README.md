@@ -1,0 +1,1 @@
+Only trained on BLIP captions with original images. No original image-text pairs. 
