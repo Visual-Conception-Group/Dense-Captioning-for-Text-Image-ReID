@@ -35,7 +35,8 @@ python format_<type>.py
 <img src="./figures/augmented-synthetic-dataset.png">
 2. Cross Dataset Setting
 <img src="./figures/cross-dataset.png">
-<img src="./figures/cross-dataset-synthetic.png">
+<img src="./figures/cross-dataset-synthetic-1.png">
+<img src="./figures/cross-dataset-synthetic-2.png">
 
 ### Model Testing Frameworks 
 Please refer to the basic instructions from the respective repositories. But use the edited the code we provide in this repository for reproduction.
